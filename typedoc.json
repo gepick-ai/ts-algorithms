@@ -1,0 +1,31 @@
+{
+  "externalPattern": [
+    "**/node_modules/**",
+    "**/lib/**/*.ts"
+  ],
+  "entryPointStrategy": "packages",
+  "entryPoints": [
+    "packages/basic/*",
+    "packages/leetcode/*"
+  ],
+  "packageOptions": {
+    "entryPoints": [
+      "src/**/index.ts"
+    ]
+  },
+  "name": "Gepick API Docs",
+  "readme": "./README.md",
+  "out": "./docs/gh-pages/docs",
+  "navigationLeaves": [
+    "browser",
+    "common",
+    "node"
+  ],
+  "router": "structure-dir",
+  "hideGenerator": true,
+  "plugin": [
+    "typedoc-github-theme"
+  ],
+  "logLevel": "Error"
+  // "showConfig":true
+}

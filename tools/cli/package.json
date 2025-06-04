@@ -1,0 +1,43 @@
+{
+  "name": "@gepick/cli",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js",
+    "./commands/*/command": "./dist/commands/*/command.js"
+  },
+  "bin": {
+    "gepick": "./bin/gepick-cli.js"
+  },
+  "scripts": {
+    "dev": "npx tsc -b --watch",
+    "build": "npx tsc -b"
+  },
+  "dependencies": {
+    "@gepick/monorepo": "workspace:*",
+    "@vitest/coverage-istanbul": "^3.1.3",
+    "chalk": "^5.3.0",
+    "chokidar": "^4.0.3",
+    "copyfiles": "^2.4.1",
+    "find-package-json": "^1.2.0",
+    "find-up": "^7.0.0",
+    "fs-extra": "^11.3.0",
+    "jsdom": "*",
+    "lerna": "^8.1.9",
+    "ora": "^8.1.1",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.4.5",
+    "vite": "^4.4.5",
+    "vitest": "^3.1.3",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/copyfiles": "^2",
+    "@types/find-package-json": "^1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/yargs": "^17.0.33"
+  }
+}

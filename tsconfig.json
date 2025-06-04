@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "references": [
+    {
+      "path": "./packages/basic/algorithms"
+    },
+    {
+      "path": "./packages/basic/structures"
+    },
+    {
+      "path": "./packages/basic/core"
+    }
+  ],
+  "include": []
+}

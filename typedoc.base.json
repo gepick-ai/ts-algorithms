@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "includeVersion": true,
+  "alwaysCreateEntryPointModule": true,
+  "sort": [
+    "enum-member-source-order",
+    "static-first",
+    "kind"
+  ],
+  "darkHighlightTheme": "dark-plus"
+}

@@ -1,0 +1,72 @@
+{
+  "name": "@gepick/monorepo",
+  "type": "module",
+  "private": true,
+  "packageManager": "yarn@4.3.1",
+  "workspaces": [
+    ".",
+    "apps/*",
+    "packages/basic/*",
+    "packages/leetcode/*",
+    "tools/*",
+    "mock/*"
+  ],
+  "engines": {
+    "node": "22.11.0",
+    "yarn": "4.3.1"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "postinstall": "yarn compile",
+    "compile": "gepick compile",
+    "clean": "gepick clean",
+    "docs": "rimraf docs/gh-pages && typedoc",
+    "test": "gepick test",
+    "dev:cli": "yarn workspace @gepick/cli dev"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.20.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.3.0",
+    "@gepick/cli": "workspace:*",
+    "@types/dotenv-parse-variables": "^2.0.3",
+    "@types/eslint__js": "^8.42.3",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.11.25",
+    "@types/semver": "^7.5.8",
+    "@types/sinon": "^10.0.6",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.3.0",
+    "dotenv-parse-variables": "^2.0.0",
+    "esbuild-plugin-define": "^0.4.0",
+    "eslint": "^8.57.0",
+    "execa": "5.0.0",
+    "husky": "^9.0.11",
+    "lerna": "^8.1.9",
+    "lint-staged": "^15.2.5",
+    "minimist": "^1.2.8",
+    "rimraf": "^6.0.1",
+    "semver": "^7.6.0",
+    "sinon": "^12.0.0",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.28.3",
+    "typedoc-github-theme": "^0.3.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-tsconfig-paths": "^4.2.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
+  }
+}
