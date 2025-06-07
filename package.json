@@ -22,7 +22,8 @@
     "clean": "gepick clean",
     "docs": "rimraf docs/gh-pages && typedoc",
     "test": "gepick test",
-    "dev:cli": "yarn workspace @gepick/cli dev"
+    "dev:cli": "yarn workspace @gepick/cli dev",
+    "debug": "yarn workspace @gepick/debug dev"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.20.0",

@@ -16,7 +16,7 @@ export default {
     handler: (argv) => {
         const target = argv.target;
         const pathsToDelete = [];
-        if (['client', 'server'].includes(target)) {
+        if (['client', 'server', 'debug'].includes(target)) {
             pathsToDelete.push(...[
                 `apps/${target}/tsconfig.tsbuildinfo`,
                 `apps/${target}/dist`,

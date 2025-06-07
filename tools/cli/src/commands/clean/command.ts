@@ -18,7 +18,7 @@ export default <CommandModule>{
     const target = argv.target as string;
     const pathsToDelete = [];
 
-    if (['client', 'server'].includes(target)) {
+    if (['client', 'server', 'debug'].includes(target)) {
       pathsToDelete.push(...[
         `apps/${target}/tsconfig.tsbuildinfo`,
         `apps/${target}/dist`,
