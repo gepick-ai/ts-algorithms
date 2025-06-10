@@ -23,6 +23,7 @@
     "watch": "gepick compile --watch"
   },
   "dependencies": {
+    "@gepick/top-100-liked": "workspace:*",
     "@gepick/top-interview-150": "workspace:*"
   },
   "devDependencies": {

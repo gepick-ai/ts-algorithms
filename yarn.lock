@@ -1064,6 +1064,7 @@ __metadata:
   resolution: "@gepick/debug@workspace:apps/debug"
   dependencies:
     "@gepick/cli": "workspace:*"
+    "@gepick/top-100-liked": "workspace:*"
     "@gepick/top-interview-150": "workspace:*"
     nodemon: "npm:^3.1.7"
   languageName: unknown
@@ -1115,6 +1116,14 @@ __metadata:
   dependencies:
     "@gepick/cli": "workspace:*"
     "@gepick/core": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"@gepick/top-100-liked@workspace:*, @gepick/top-100-liked@workspace:packages/leetcode/top-100-liked":
+  version: 0.0.0-use.local
+  resolution: "@gepick/top-100-liked@workspace:packages/leetcode/top-100-liked"
+  dependencies:
+    "@gepick/cli": "workspace:*"
   languageName: unknown
   linkType: soft
 

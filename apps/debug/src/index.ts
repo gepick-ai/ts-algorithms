@@ -1,5 +1,13 @@
-import { longest_consecutive_sequence } from "@gepick/top-interview-150/common";
+/* eslint-disable new-cap */
+import { lru_cache } from "@gepick/top-100-liked/common";
 
-const ans = longest_consecutive_sequence([1, 0, 1, 2]);
+const lruCache = new lru_cache(1);
+
+lruCache.put(2, 1);
+lruCache.get(2);
+lruCache.put(3, 2);
+lruCache.get(2);
+lruCache.get(3);
+
 // eslint-disable-next-line no-console
-console.log("🚀 ~ ans:", ans);
+console.log("🚀 ~ lruCache:", lruCache);

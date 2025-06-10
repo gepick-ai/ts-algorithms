@@ -8,6 +8,9 @@
   },
   "references": [
     {
+      "path": "../../packages/leetcode/top-100-liked"
+    },
+    {
       "path": "../../packages/leetcode/top-interview-150"
     }
   ],
