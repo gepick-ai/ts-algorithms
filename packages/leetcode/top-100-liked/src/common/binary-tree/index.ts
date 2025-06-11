@@ -6,3 +6,6 @@ export * from "./binary-tree-level-order-traversal";
 export * from "./convert-sorted-array-to-binary-search-tree";
 export * from "./kth-smallest-element-in-a-bst";
 export * from "./binary-tree-right-side-view";
+export * from "./flatten-binary-tree-to-linked-list";
+export * from "./construct-binary-tree-from-preorder-and-inorder-traversal";
+export * from "./validate-binary-search-tree";
