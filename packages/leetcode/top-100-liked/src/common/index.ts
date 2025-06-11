@@ -4,3 +4,4 @@ export * from './structures/linkedlist';
 
 export * from './algorithms/two-pointers';
 export * from './algorithms/sliding-window';
+export * from './algorithms/backtracking';
