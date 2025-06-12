@@ -1,7 +1,7 @@
 import { swap } from "@gepick/core/common";
-import { IHeap } from "./types";
+import { IHeap1 } from "./types";
 
-export class MaxHeap<E> implements IHeap<E> {
+export class MaxHeap<E> implements IHeap1<E> {
   private _data: Array<E>;
   private _capacity: number;
 

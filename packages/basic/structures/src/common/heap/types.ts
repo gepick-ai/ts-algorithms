@@ -1,14 +1,21 @@
-export interface IHeap<E> {
+export interface IHeap<T> {
+  insert(e: T): void;
+  extract(): T;
+  swim(index: number): void;
+  sink(index: number): void;
+}
+
+export interface IHeap1<E> {
   /** 返回堆中的元素个数 */
-  size: () => number
+  size: () => number;
   /** 返回堆是否为空 */
-  isEmpty: () => boolean
+  isEmpty: () => boolean;
   /** 向堆中添加元素 */
-  add: (e: E) => void
+  add: (e: E) => void;
   /** 看堆中的最大元素 */
-  findMax: () => E
+  findMax: () => E;
   /** 取出堆中的最大元素 */
-  extractMax: () => E
+  extractMax: () => E;
 }
 
 /**
@@ -21,20 +28,3 @@ export interface IHeap<E> {
  * 3. 索引为 i 的父节点的索引是 Math.floor(i / 2)
  *
  */
-export abstract class Heap {
-  private static readonly None: number = -1;
-
-  private _data: number[] = [Heap.None]
-
-  protected getLeftChildIndex(index: number): number {
-    return 2 * index
-  }
-
-  protected getRightChildIndex(index: number): number {
-    return 2 * index + 1
-  }
-
-  protected getParentIndex(index: number): number {
-    return Math.floor(index / 2)
-  }
-}
