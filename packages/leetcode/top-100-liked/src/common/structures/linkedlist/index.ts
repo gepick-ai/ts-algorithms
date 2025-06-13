@@ -8,3 +8,4 @@ export * from './add-two-numbers';
 export * from './remove-nth-node-from-end-of-list';
 export * from './copy-list-with-random-pointer';
 export * from './lru-cache';
+export * from './sort-list';
