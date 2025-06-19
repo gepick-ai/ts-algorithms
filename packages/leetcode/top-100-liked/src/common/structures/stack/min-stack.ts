@@ -122,4 +122,7 @@ class MinHeap {
  */
 // @lc code=end
 
+/**
+ * @category 栈
+ */
 export const min_stack = MinStack;

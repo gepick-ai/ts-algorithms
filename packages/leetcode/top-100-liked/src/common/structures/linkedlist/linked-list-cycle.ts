@@ -37,5 +37,7 @@ function hasCycle(head: ListNode | null): boolean {
 
 /**
  * 用set记录遍历过的节点，如果遍历到set中存在的节点，说明有环。
+ *
+ * @category 链表
  */
 export const linked_list_cycle = hasCycle;

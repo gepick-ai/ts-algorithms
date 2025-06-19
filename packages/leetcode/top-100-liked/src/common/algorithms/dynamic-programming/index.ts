@@ -6,3 +6,4 @@ export * from "./maximum-product-subarray";
 export * from "./unique-paths";
 export * from "./word-break";
 export * from "./partition-equal-subset-sum";
+export * from "./minimum-path-sum";

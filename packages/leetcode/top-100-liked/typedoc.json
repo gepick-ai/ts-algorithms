@@ -1,3 +1,4 @@
 {
-  "extends": ["../../../typedoc.base.json"]
+  "extends": ["../../../typedoc.base.json"],
+   "name": "Top-100-Liked"
 }

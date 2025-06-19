@@ -31,4 +31,7 @@ function rob(nums: number[]): number {
 };
 // @lc code=end
 
+/**
+ * @category 动态规划
+ */
 export const house_robber = rob;

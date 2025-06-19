@@ -46,4 +46,7 @@ function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: Tree
 };
 // @lc code=end
 
+/**
+ * @category 二叉树
+ */
 export const lowest_common_ancestor_of_a_binary_tree = lowestCommonAncestor;

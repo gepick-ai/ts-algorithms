@@ -46,5 +46,6 @@ function productExceptSelf(nums: number[]): number[] {
 
 /**
  * 除自己以外找其他位置的加减乘除，想错位操作。每个位置正常累乘，但是我们想它其实是前一个位置的累乘，或者是后一个位置的累乘。这么一错位，我们就可以得到两个数组，一个数组是前一个位置的累乘，一个数组是后一个位置的累乘。然后我们把这两个数组对应位置相乘，就可以得到除自己以外其他位置的累乘。
+ * @category 数组
  */
 export const product_of_array_except_self = productExceptSelf;

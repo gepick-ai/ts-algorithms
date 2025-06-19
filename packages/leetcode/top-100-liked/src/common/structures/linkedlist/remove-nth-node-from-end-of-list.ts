@@ -53,4 +53,7 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
 };
 // @lc code=end
 
+/**
+ * @category 链表
+ */
 export const remove_nth_node_from_end_of_list = removeNthFromEnd;

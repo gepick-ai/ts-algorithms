@@ -108,4 +108,7 @@ function rotate(matrix: number[][]): void {
 
 // @lc code=end
 
+/**
+ * @category 矩阵
+ */
 export const rotate_image = rotate;

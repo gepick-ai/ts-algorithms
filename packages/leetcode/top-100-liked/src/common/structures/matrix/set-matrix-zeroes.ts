@@ -46,4 +46,7 @@ function setZeroes(matrix: number[][]): void {
 };
 // @lc code=end
 
+/**
+ * @category 矩阵
+ */
 export const set_matrix_zeroes = setZeroes;

@@ -1,31 +1,43 @@
 {
   "externalPattern": [
     "**/node_modules/**",
-    "**/lib/**/*.ts"
+    "**/dist/**/*.ts"
   ],
   "entryPointStrategy": "packages",
   "entryPoints": [
-    "packages/basic/*",
     "packages/leetcode/*"
   ],
   "packageOptions": {
     "entryPoints": [
-      "src/**/index.ts"
+      "src/common/index.ts"
     ]
   },
-  "name": "Gepick API Docs",
-  "readme": "./README.md",
+  "name": "Typescript-Algorithms",
   "out": "./docs/gh-pages/docs",
   "navigationLeaves": [
-    "browser",
-    "common",
-    "node"
+    "Top-100-Liked",
+    "Top-Interview-150"
   ],
-  "router": "structure-dir",
+  // 导航条
+  "navigationLinks": {
+    "如何科学刷题": "/docs/gh-pages/docs",
+    "LeetCode热题100": "",
+    "面试经典150题": "https://leetcode.cn/studyplan/top-interview-150/",
+    "Github": "https://github.com/gepick-ai/ts-algorithms"
+  },
   "hideGenerator": true,
   "plugin": [
     "typedoc-github-theme"
   ],
-  "logLevel": "Error"
-  // "showConfig":true
+  "theme": "typedoc-github-theme",
+  "logLevel": "Error",
+  "includeHierarchySummary": false,
+  "headings": {
+    "readme": false,
+    "document": false
+  },
+  "navigation": {
+    "includeGroups": true,
+    "includeCategories": true
+  }
 }

@@ -65,4 +65,7 @@ function spiralOrder(matrix: number[][]): number[] {
 
 // @lc code=end
 
+/**
+ * @category 矩阵
+ */
 export const spiral_matrix = spiralOrder;

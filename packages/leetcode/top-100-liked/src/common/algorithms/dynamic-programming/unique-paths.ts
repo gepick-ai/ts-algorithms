@@ -34,4 +34,7 @@ function uniquePaths(m: number, n: number): number {
 };
 // @lc code=end
 
+/**
+ * @category 动态规划
+ */
 export const unique_paths = uniquePaths;

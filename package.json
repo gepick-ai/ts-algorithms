@@ -20,7 +20,7 @@
     "postinstall": "yarn compile",
     "compile": "gepick compile",
     "clean": "gepick clean",
-    "docs": "rimraf docs/gh-pages && typedoc",
+    "docs": "rimraf docs/gh-pages && typedoc --sourceLinkExternal",
     "test": "gepick test",
     "dev:cli": "yarn workspace @gepick/cli dev",
     "debug": "yarn workspace @gepick/debug dev"

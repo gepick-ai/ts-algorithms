@@ -28,4 +28,8 @@ function twoSum(nums: number[], target: number): number[] {
   return ans;
 };
 // @lc code=end
+
+/**
+ * @category 哈希表
+ */
 export const two_sum = twoSum;

@@ -38,4 +38,7 @@ function _permute(nums: number[], count: number, ans: number[], result: number[]
 }
 // @lc code=end
 
+/**
+ * @category 回溯算法
+ */
 export const permutations = permute;

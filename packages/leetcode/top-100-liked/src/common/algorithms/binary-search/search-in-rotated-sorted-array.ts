@@ -57,4 +57,7 @@ function search(nums: number[], target: number): number {
 
 // @lc code=end
 
+/**
+ * @category 二分算法
+ */
 export const search_in_rotated_sorted_array = search;

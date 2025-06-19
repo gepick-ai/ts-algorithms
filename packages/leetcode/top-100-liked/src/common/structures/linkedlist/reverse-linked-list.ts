@@ -48,4 +48,7 @@ function reverseList(head: ListNode | null): ListNode | null {
 };
 // @lc code=end
 
+/**
+ * @category 链表
+ */
 export const reverse_linked_list = reverseList;

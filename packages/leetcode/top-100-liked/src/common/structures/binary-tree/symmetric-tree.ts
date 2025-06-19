@@ -45,4 +45,7 @@ function _isSymmetric(n1: TreeNode | null, n2: TreeNode | null): boolean {
 }
 // @lc code=end
 
+/**
+ * @category 二叉树
+ */
 export const symmetric_tree = isSymmetric;

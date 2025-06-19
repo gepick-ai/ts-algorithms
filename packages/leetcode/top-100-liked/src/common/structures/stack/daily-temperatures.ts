@@ -32,5 +32,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
  * 1.当遍历到的元素大于当前元素：循环查看栈顶元素，结算，完成后弹出栈顶元素
  * 2.当遍历到的元素小于等于当前元素：元素入栈
  * 直到遍历完所有温度后停止操作
+ *
+ * @category 栈
  */
 export const daily_temperatures = dailyTemperatures;

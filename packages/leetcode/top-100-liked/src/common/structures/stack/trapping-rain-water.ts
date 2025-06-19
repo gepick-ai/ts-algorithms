@@ -38,5 +38,7 @@ function trap(height: number[]): number {
  * 不断维持单调栈，直到答案找完为止。
  *
  * 用单调栈解决，其实是一行一行寻找雨水。横向查找雨水。每次接完雨水，可以看成填充了柱子。
+ *
+ * @category 栈
  */
 export const trapping_rain_water = trap;

@@ -43,4 +43,7 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 };
 // @lc code=end
 
+/**
+ * @category 矩阵
+ */
 export const search_a_2_d_matrix_ii = searchMatrix;

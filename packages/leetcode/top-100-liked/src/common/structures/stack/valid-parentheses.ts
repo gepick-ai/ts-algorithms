@@ -50,5 +50,7 @@ function isValid(s: string): boolean {
  * 然后判断出栈的左括号是否和右括号匹配：方式就是通过右括号拿回左括号，然后判断是否相等
  * 但是这里有个问题，就是如果遇到右括号，但是栈里面没有左括号了，那么就直接返回false
  * 最后判断栈是否为空，如果为空就是true，否则就是false
+ *
+ * @category 栈
  */
 export const valid_parentheses = isValid;

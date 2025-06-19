@@ -39,4 +39,7 @@ function invertTree(root: TreeNode | null): TreeNode | null {
 };
 // @lc code=end
 
+/**
+ * @category 二叉树
+ */
 export const invert_binary_tree = invertTree;

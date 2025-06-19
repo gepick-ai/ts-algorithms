@@ -46,5 +46,7 @@ function lengthOfLongestSubstring(s: string): number {
  * 1. 使用Set来记录当前窗口中的字符
  * 2. 当遇到重复字符时，需要不断移动左指针直到删除重复字符
  * 3. 每次移动右指针时都要更新最大长度
+ *
+ * @category 滑动窗口与双指针
  */
 export const longest_substring_without_repeating_characters = lengthOfLongestSubstring;

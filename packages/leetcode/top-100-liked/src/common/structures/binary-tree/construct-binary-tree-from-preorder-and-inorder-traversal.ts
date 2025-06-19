@@ -56,5 +56,7 @@ function _buildTree(
  * 
  * 左子树的起始位置 preStart + 1：因为在前序遍历中，根节点后面紧跟着的就是左子树的根节点，所以左子树的起始位置就是当前根节点位置 + 1。
  * 右子树的起始位置 preStart + (rootInLoc - inStart) + 1：rootInLoc - inStart 表示左子树中有多少个节点。因为前序遍历是：根节点 + 左子树 + 右子树，所以右子树的起始位置 = 根节点位置 + 左子树节点数 + 1。
+ * 
+ * @category 二叉树
  */
 export const construct_binary_tree_from_preorder_and_inorder_traversal = buildTree;

@@ -57,4 +57,7 @@ function rightSideView(root: TreeNode | null): number[] {
 };
 // @lc code=end
 
+/**
+ * @category 二叉树
+ */
 export const binary_tree_right_side_view = rightSideView;

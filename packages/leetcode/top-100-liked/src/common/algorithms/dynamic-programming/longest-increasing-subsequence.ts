@@ -29,6 +29,7 @@ function lengthOfLIS(nums: number[]): number {
 // @lc code=end
 
 /**
+ *
  * dp[i] 表示以第i个数字结尾的最长递增子序列的长度
  * 这道题里头dp[i]需要多次更新得到最终的值，它不是一次计算得到的。
  *
@@ -36,6 +37,8 @@ function lengthOfLIS(nums: number[]): number {
  * 以第i-1个数字为结尾的最长递增子序列，如果能够让nums[i]接后边，那么dp[i] = dp[i-1] + 1
  * 但是这个思考不够完整，因为第i-1个位置的数字不一定能够被nums[i]接上。所以对于位置i，它还要继续查看是否能够接在i-2,i-3等等位置后边。
  * 因为它有可能是从前面几个状态转移过来的。状态转移不一定是从相邻状态转移过来的
+ *
+ * @category 动态规划
  *
  */
 export const longest_increasing_subsequence = lengthOfLIS;

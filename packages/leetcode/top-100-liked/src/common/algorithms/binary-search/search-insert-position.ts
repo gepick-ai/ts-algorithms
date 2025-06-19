@@ -35,4 +35,7 @@ function lowerBound(nums: number[], target: number): number {
 }
 // @lc code=end
 
+/**
+ * @category 二分算法
+ */
 export const search_insert_position = searchInsert;

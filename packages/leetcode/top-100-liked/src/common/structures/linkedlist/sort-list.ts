@@ -114,4 +114,7 @@ class MinHeap {
 }
 // @lc code=end
 
+/**
+ * @category 链表
+ */
 export const sort_list = sortList;

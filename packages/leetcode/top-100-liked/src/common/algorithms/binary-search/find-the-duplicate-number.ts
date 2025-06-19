@@ -20,7 +20,7 @@ function findDuplicate(nums: number[]): number {
     // 统计前mid个抽屉里放了多少个物品
     let count = 0;
     for (const num of nums) {
-        // 找数组中小于等于mid的数字
+      // 找数组中小于等于mid的数字
       if (num <= mid) {
         count++;
       }
@@ -42,4 +42,7 @@ function findDuplicate(nums: number[]): number {
 
 // @lc code=end
 
+/**
+ * @category 二分算法
+ */
 export const find_the_duplicate_number = findDuplicate;

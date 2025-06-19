@@ -6,7 +6,7 @@ export class BinarySearchTree<T> extends Comparable<T> implements IBinarySearchT
   private _nodeCount: number;
 
   constructor(comparator?: Comparator<T>) {
-    super(comparator);
+    super();
     this._nodeCount = 0;
     this.root = TreeNode.None;
   }

@@ -47,4 +47,7 @@ function buildTree(nums: number[], start: number, end: number) {
 }
 // @lc code=end
 
+/**
+ * @category 二叉树
+ */
 export const convert_sorted_array_to_binary_search_tree = sortedArrayToBST;

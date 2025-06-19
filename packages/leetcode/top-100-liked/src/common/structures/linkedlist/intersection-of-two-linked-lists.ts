@@ -41,5 +41,7 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 
 /**
  * 判断两段链表是否有交点，拿set放入一条链表所有节点，然后遍历另一条链表，如果set中存在越靠前遍历到的节点，说明就是交点。
+ *
+ * @category 链表
  */
 export const intersection_of_two_linked_lists = getIntersectionNode;
