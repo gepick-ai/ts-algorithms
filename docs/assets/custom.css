@@ -1,0 +1,30 @@
+/* Custom styling for the themes and plugins pages */
+.box {
+    padding: 0.5em;
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+.box .box-title {
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.box p {
+    margin: 0;
+    padding-left: 1.5em;
+}
+
+.tsd-page-title {
+   h1{
+    display: none !important;
+   }
+}
+
+.tsd-signature {
+    margin-top:1.5em;
+}
+
+.tsd-type-declaration {
+    display: none !important;
+}
