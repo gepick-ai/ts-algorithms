@@ -1,6 +1,6 @@
 ## 如何科学刷题 
 
-![img](./docs/assets/如何科学刷题.png)
+![img](.typedoc/如何科学刷题.png)
 
 1. [滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）](https://leetcode.cn/circle/discuss/0viNMK/)
 2. [二分算法（二分答案/最小化最大值/最大化最小值/第K小）](https://leetcode.cn/circle/discuss/SqopEo/)

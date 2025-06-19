@@ -13,10 +13,10 @@
     ]
   },
   "name": "Typescript-Algorithms",
-  "out": "./docs/gh-pages/docs",
+  "out": "./docs",
   // 导航条
   "navigationLinks": {
-    "如何科学刷题": "/docs/gh-pages/docs",
+    "如何科学刷题": "/docs",
     "LeetCode热题100": "",
     "面试经典150题": "https://leetcode.cn/studyplan/top-interview-150/",
     "Github": "https://github.com/gepick-ai/ts-algorithms"
@@ -26,7 +26,7 @@
     "typedoc-github-theme"
   ],
   "theme": "typedoc-github-theme",
-  "customCss": "docs/assets/custom.css",
+  "customCss": ".typedoc/custom.css",
   "logLevel": "Error",
   "includeHierarchySummary": false,
   "headings": {
