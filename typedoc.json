@@ -16,7 +16,6 @@
   "out": "./docs",
   // 导航条
   "navigationLinks": {
-    "如何科学刷题": "https://gepick-ai.github.io/ts-algorithms/index.html",
     "LeetCode热题100": "https://leetcode.cn/studyplan/top-100-liked",
     "面试经典150题": "https://leetcode.cn/studyplan/top-interview-150",
     "Github": "https://github.com/gepick-ai/ts-algorithms"
@@ -37,5 +36,20 @@
     "includeGroups": true,
     "includeCategories": true
   },
-  "lang": "zh"
+  "lang": "zh",
+  "projectDocuments": [
+    ".docs/如何科学刷题.md",
+    ".docs/灵茶山艾府题解.md",
+    ".docs/滑动窗口与双指针.md",
+    ".docs/二分算法.md",
+    ".docs/单调栈.md",
+    ".docs/网格图.md",
+    ".docs/图论算法.md",
+    ".docs/动态规划.md",
+    ".docs/常用数据结构.md",
+    ".docs/数学算法.md",
+    ".docs/贪心算法.md",
+    ".docs/链表、二叉树与回溯.md",
+    ".docs/字符串.md"
+  ]
 }

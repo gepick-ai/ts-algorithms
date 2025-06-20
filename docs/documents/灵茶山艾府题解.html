@@ -1,0 +1,974 @@
+<!DOCTYPE html><html class="default" lang="zh" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>灵茶山艾府题解 | Typescript-Algorithms</title><meta name="description" content="Documentation for Typescript-Algorithms"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><link rel="stylesheet" href="../assets/typedoc-github-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Typescript-Algorithms</a><div id="tsd-toolbar-links"><a href="https://leetcode.cn/studyplan/top-100-liked">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms">Github</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="搜索"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="搜索"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="搜索文档" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>正在准备搜索索引...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="菜单"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="" aria-current="page">灵茶山艾府题解</a></li></ul></div><div class="tsd-panel tsd-typography"><h1 id="灵茶山艾府·高质量题解精选" class="tsd-anchor-link">灵茶山艾府·高质量题解精选<a href="#灵茶山艾府·高质量题解精选" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1><p>多数题解配有图片/动画，均包含 Python/Java/C++/Go 等语言。</p>
+<p>相同知识点的题目，按照 <a href="https://huxulm.github.io/lc-rating/zen">难度分</a> 排序。</p>
+<p>❗完整题单和刷题路线请看 <a href="https://leetcode.cn/circle/discuss/RvFUtj/">如何科学刷题</a>。</p>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>题目</th>
+<th>题解</th>
+<th>难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>哈希表</td>
+<td><a href="https://leetcode.cn/problems/two-sum/">1. 两数之和</a></td>
+<td><a href="https://leetcode.cn/problems/two-sum/solution/dong-hua-cong-liang-shu-zhi-he-zhong-wo-0yvmj/">【动画】从两数之和中，我们可以学到什么？</a></td>
+<td>简单</td>
+</tr>
+<tr>
+<td>链表</td>
+<td><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></td>
+<td><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/solution/tu-jie-yi-zhang-tu-miao-dong-xiang-jiao-m6tg1/">【图解】一张图秒懂相交链表！</a></td>
+<td>简单</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></td>
+<td><a href="https://leetcode.cn/problems/add-two-numbers/solution/dong-hua-jian-ji-xie-fa-cong-di-gui-dao-oe0di/">【动画】简洁写法！从递归到迭代！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并 K 个升序链表</a></td>
+<td><a href="https://leetcode.cn/problems/merge-k-sorted-lists/solution/liang-chong-fang-fa-zui-xiao-dui-fen-zhi-zbzx/">两种方法：最小堆/分治</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td>双向链表</td>
+<td><a href="https://leetcode.cn/problems/lru-cache/">146. LRU 缓存</a></td>
+<td><a href="https://leetcode.cn/problems/lru-cache/solution/tu-jie-yi-zhang-tu-miao-dong-lrupythonja-czgt/">【图解】一张图秒懂 LRU！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/lfu-cache/">460. LFU 缓存</a></td>
+<td><a href="https://leetcode.cn/problems/lfu-cache/solution/tu-jie-yi-zhang-tu-miao-dong-lfupythonja-f56h/">【图解】一张图秒懂 LFU！</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td>二叉树</td>
+<td><a href="https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/">1261. 在受污染的二叉树中查找元素</a></td>
+<td><a href="https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/solution/liang-chong-fang-fa-ha-xi-biao-wei-yun-s-6m7w/">【图解】两种方法：哈希表/位运算</a></td>
+<td>1440</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">105. 从前序与中序遍历序列构造二叉树</a></td>
+<td><a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/tu-jie-cong-on2-dao-onpythonjavacgojsrus-aob8/">【图解】从 O(n^2) 到 O(n)</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/">106. 从中序与后序遍历序列构造二叉树</a></td>
+<td><a href="https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/solution/tu-jie-cong-on2-dao-onpythonjavacgojsrus-w8ny/">【图解】从 O(n^2) 到 O(n)</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/">889. 根据前序和后序遍历构造二叉树</a></td>
+<td><a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/solution/tu-jie-cong-on2-dao-onpythonjavacgojsrus-h0o5/">【图解】从 O(n^2) 到 O(n)</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td>滑动窗口</td>
+<td><a href="https://leetcode.cn/problems/number-of-subarrays-with-bounded-maximum/">795. 区间子数组个数</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-subarrays-with-bounded-maximum/solution/tu-jie-yi-ci-bian-li-jian-ji-xie-fa-pyth-n75l/">【图解】一次遍历+简洁写法</a></td>
+<td>1817</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/">1658. 将 x 减到 0 的最小操作数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/solution/ni-xiang-si-wei-pythonjavacgo-by-endless-b4jt/">两种写法：逆向思维/直接双指针</a></td>
+<td>1817</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/replace-the-substring-for-balanced-string/">1234. 替换子串得到平衡字符串</a></td>
+<td><a href="https://leetcode.cn/problems/replace-the-substring-for-balanced-string/solution/tong-xiang-shuang-zhi-zhen-hua-dong-chua-z7tu/">同向双指针（滑动窗口）</a></td>
+<td>1878</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/shortest-subarray-to-be-removed-to-make-array-sorted/">1574. 删除最短的子数组使剩余数组有序</a></td>
+<td><a href="https://leetcode.cn/problems/shortest-subarray-to-be-removed-to-make-array-sorted/solution/dong-hua-yi-xie-jiu-cuo-liang-chong-xie-iijwz/">【动画】一写就错？两种写法，总有一种适合你！</a></td>
+<td>1932</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-fruits-harvested-after-at-most-k-steps/">2106. 摘水果</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-fruits-harvested-after-at-most-k-steps/solution/hua-dong-chuang-kou-jian-ji-xie-fa-pytho-1c2d/">滑动窗口，简洁写法</a></td>
+<td>2062</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/count-pairs-of-nodes/">1782. 统计点对的数目</a></td>
+<td><a href="https://leetcode.cn/problems/count-pairs-of-nodes/solution/ji-bai-100cong-shuang-zhi-zhen-dao-zhong-yhze/">击败 100%！从双指针到终极优化，十万个查询都不怕！</a></td>
+<td>2457</td>
+</tr>
+<tr>
+<td>二分</td>
+<td><a href="https://leetcode.cn/problems/h-index-ii/">275. H 指数 II</a></td>
+<td><a href="https://leetcode.cn/problems/h-index-ii/solution/tu-jie-yi-tu-zhang-wo-er-fen-da-an-si-ch-d15k/">【图解】一图掌握二分答案！四种写法！附题单！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-a-peak-element-ii/">1901. 寻找峰值 II</a></td>
+<td><a href="https://leetcode.cn/problems/find-a-peak-element-ii/solution/tu-jie-li-yong-xing-zui-da-zhi-pan-duan-r4e0n/">【图解】利用行最大值判断峰顶位置</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/nth-magical-number/">878. 第 N 个神奇数字</a></td>
+<td><a href="https://leetcode.cn/problems/nth-magical-number/solution/er-fen-da-an-rong-chi-yuan-li-by-endless-9j34/">【图解】二分答案+容斥原理</a></td>
+<td>1897</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-time-to-repair-cars/">2594. 修车的最少时间</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-time-to-repair-cars/solution/er-fen-da-an-pythonjavacgo-by-endlessche-keqf/">二分答案+优化（附题单！）</a></td>
+<td>1915</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-tastiness-of-candy-basket/">2517. 礼盒的最大甜蜜度</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-tastiness-of-candy-basket/solution/er-fen-da-an-by-endlesscheng-r418/">【套路】二分答案！附题单！</a></td>
+<td>2021</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays/">4. 寻找两个正序数组的中位数</a></td>
+<td><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays/solution/tu-jie-xun-xu-jian-jin-cong-shuang-zhi-z-p2gd/">【图解】循序渐进：从双指针到二分</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-the-k-sum-of-an-array/">2386. 找出数组的第 K 大和</a></td>
+<td><a href="https://leetcode.cn/problems/find-the-k-sum-of-an-array/solution/zhuan-huan-dui-by-endlesscheng-8yiq/">两种方法：二分答案+暴搜/最小堆</a></td>
+<td>2648</td>
+</tr>
+<tr>
+<td>技巧性枚举</td>
+<td><a href="https://leetcode.cn/problems/count-substrings-that-differ-by-one-character/">1638. 统计只差一个字符的子串数目</a></td>
+<td><a href="https://leetcode.cn/problems/count-substrings-that-differ-by-one-character/solution/tu-jie-fei-bao-li-onm-suan-fa-pythonjava-k5og/">【图解】非暴力 O(nm) 算法</a></td>
+<td>1745</td>
+</tr>
+<tr>
+<td>前后缀分解</td>
+<td><a href="https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/">1653. 使字符串平衡的最少删除次数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/solution/qian-hou-zhui-fen-jie-yi-zhang-tu-miao-d-dor2/">【图解】前后缀分解，消除分支的技巧！（附动态规划）</a></td>
+<td>1794</td>
+</tr>
+<tr>
+<td>前缀和</td>
+<td><a href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></td>
+<td><a href="https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/">前缀和及其扩展，附题单！</a></td>
+<td>简单</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/range-sum-query-2d-immutable/">304. 二维区域和检索 - 矩阵不可变</a></td>
+<td><a href="https://leetcode.cn/problems/range-sum-query-2d-immutable/solution/tu-jie-yi-zhang-tu-miao-dong-er-wei-qian-84qp/">【图解】一张图秒懂二维前缀和！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/">1031. 两个非重叠子数组的最大和</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/solution/tu-jie-mei-you-si-lu-yi-zhang-tu-miao-do-3lli/">【图解】没有思路？一张图秒懂！</a></td>
+<td>1680</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/can-make-palindrome-from-substring/">1177. 构建回文串检测</a></td>
+<td><a href="https://leetcode.cn/problems/can-make-palindrome-from-substring/solution/yi-bu-bu-you-hua-cong-qian-zhui-he-dao-q-yh5p/">一步步优化！从前缀和到前缀异或和（附题单！）</a></td>
+<td>1848</td>
+</tr>
+<tr>
+<td>前缀和与哈希表</td>
+<td><a href="https://leetcode.cn/problems/find-longest-subarray-lcci/">面试题 17.05. 字母与数字</a></td>
+<td><a href="https://leetcode.cn/problems/find-longest-subarray-lcci/solution/tao-lu-qian-zhui-he-ha-xi-biao-xiao-chu-3mb11/">【套路】前缀和+哈希表，消除分支的技巧</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/make-sum-divisible-by-p/">1590. 使数组和能被 P 整除</a></td>
+<td><a href="https://leetcode.cn/problems/make-sum-divisible-by-p/solution/tao-lu-qian-zhui-he-ha-xi-biao-pythonjav-rzl0/">【套路】前缀和+哈希表+模运算技巧</a></td>
+<td>2039</td>
+</tr>
+<tr>
+<td>差分数组</td>
+<td><a href="https://leetcode.cn/problems/car-pooling/">1094. 拼车</a></td>
+<td><a href="https://leetcode.cn/problems/car-pooling/solution/suan-fa-xiao-ke-tang-chai-fen-shu-zu-fu-9d4ra/">【模板讲解】差分数组</a></td>
+<td>1441</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-flowers-in-full-bloom/">2251. 花期内花的数目</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-flowers-in-full-bloom/solution/chai-fen-pythonjavacgo-by-endlesscheng-wz35/">两种方法：二分/差分</a></td>
+<td>2022</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/stamping-the-grid/">2132. 用邮票贴满网格图</a></td>
+<td><a href="https://leetcode.cn/problems/stamping-the-grid/solution/wu-nao-zuo-fa-er-wei-qian-zhui-he-er-wei-zwiu/">【图解】从一维差分到二维差分</a></td>
+<td>2364</td>
+</tr>
+<tr>
+<td>合法括号字符串</td>
+<td><a href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid/">2116. 判断一个括号字符串是否有效</a></td>
+<td><a href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid/solutions/1178043/zheng-fan-liang-ci-bian-li-by-endlessche-z8ac/">如何处理合法括号字符串？</a></td>
+<td>2038</td>
+</tr>
+<tr>
+<td>单调栈</td>
+<td><a href="https://leetcode.cn/problems/next-greater-node-in-linked-list/">1019. 链表中的下一个更大节点</a></td>
+<td><a href="https://leetcode.cn/problems/next-greater-node-in-linked-list/solution/tu-jie-dan-diao-zhan-liang-chong-fang-fa-v9ab/">【图解单调栈】两种方法，两张图秒懂！</a></td>
+<td>1571</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/longest-well-performing-interval/">1124. 表现良好的最长时间段</a></td>
+<td><a href="https://leetcode.cn/problems/longest-well-performing-interval/solution/liang-chong-zuo-fa-liang-zhang-tu-miao-d-hysl/">【图解】两种做法，两张图秒懂！</a></td>
+<td>1908</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/sum-of-subarray-minimums/">907. 子数组的最小值之和</a></td>
+<td><a href="https://leetcode.cn/problems/sum-of-subarray-minimums/solution/gong-xian-fa-dan-diao-zhan-san-chong-shi-gxa5/">【图解】贡献法+单调栈+三种实现版本</a></td>
+<td>1976</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-visible-people-in-a-queue/">1944. 队列中可以看到的人数</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-visible-people-in-a-queue/solution/dan-diao-zhan-de-ben-zhi-ji-shi-qu-diao-8tp3s/">单调栈的本质：及时去掉无用数据</a></td>
+<td>2105</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/next-greater-element-iv/">2454. 下一个更大元素 IV</a></td>
+<td><a href="https://leetcode.cn/problems/next-greater-element-iv/solution/by-endlesscheng-q6t5/">O(n) 一次遍历+双单调栈</a></td>
+<td>2175</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/remove-duplicate-letters/">316. 去除重复字母</a></td>
+<td><a href="https://leetcode.cn/problems/remove-duplicate-letters/solution/gen-zhao-wo-guo-yi-bian-shi-li-2ni-jiu-m-zd6u">跟着我过一遍示例 2，你就明白怎么做了</a></td>
+<td>2185</td>
+</tr>
+<tr>
+<td>单调队列</td>
+<td><a href="https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/">862. 和至少为 K 的最短子数组</a></td>
+<td><a href="https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/solution/liang-zhang-tu-miao-dong-dan-diao-dui-li-9fvh/">【图解】两张图秒懂单调队列</a></td>
+<td>2307</td>
+</tr>
+<tr>
+<td>优先队列（堆）</td>
+<td><a href="https://leetcode.cn/problems/take-gifts-from-the-richest-pile/">2558. 从数量最多的堆取走礼物</a></td>
+<td><a href="https://leetcode.cn/problems/take-gifts-from-the-richest-pile/solution/yuan-di-dui-hua-o1-kong-jian-fu-ti-dan-p-fzdh/">【证明】堆化的时间复杂度</a></td>
+<td>1277</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/">373. 查找和最小的 K 对数字</a></td>
+<td><a href="https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solution/jiang-qing-chu-wei-shi-yao-yi-kai-shi-ya-i0dj/">讲清楚为什么一开始要把 (i,0) 都入堆！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/">1439. 有序矩阵中的第 k 个最小数组和</a></td>
+<td><a href="https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/solution/san-chong-suan-fa-bao-li-er-fen-da-an-du-k1vd/">三种算法：暴力/二分答案/堆</a></td>
+<td>2133</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-hire-k-workers/">857. 雇佣 K 名工人的最低成本</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-hire-k-workers/solution/yi-bu-bu-ti-shi-ru-he-si-kao-ci-ti-by-en-1p00/">一步步提示如何思考此题</a></td>
+<td>2260</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-the-k-sum-of-an-array/">2386. 找出数组的第 K 大和</a></td>
+<td><a href="https://leetcode.cn/problems/find-the-k-sum-of-an-array/solution/zhuan-huan-dui-by-endlesscheng-8yiq/">两种方法：二分答案+暴搜/最小堆</a></td>
+<td>2648</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/5TxKeK/">LCP 24. 数字游戏</a></td>
+<td><a href="https://leetcode.cn/problems/5TxKeK/solution/zhuan-huan-zhong-wei-shu-tan-xin-dui-din-7r9b/">转换+中位数贪心+对顶堆</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td>位运算</td>
+<td><a href="https://leetcode.cn/problems/jewels-and-stones/">771. 宝石与石头</a></td>
+<td><a href="https://leetcode.cn/problems/jewels-and-stones/solution/ben-ti-zui-you-jie-xian-xing-shi-jian-ch-ddw3/">本题最优解！线性时间+常数空间</a></td>
+<td>1165</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/">1457. 二叉树中的伪回文路径</a></td>
+<td><a href="https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/solution/yi-bu-bu-you-hua-cong-shu-zu-dao-wei-yun-hu0b/">一步步优化：从数组到位运算</a></td>
+<td>1405</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/">1261. 在受污染的二叉树中查找元素</a></td>
+<td><a href="https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/solution/liang-chong-fang-fa-ha-xi-biao-wei-yun-s-6m7w/">【图解】两种方法：哈希表/位运算</a></td>
+<td>1440</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/single-number-ii/">137. 只出现一次的数字 II</a></td>
+<td><a href="https://leetcode.cn/problems/single-number-ii/solution/dai-ni-yi-bu-bu-tui-dao-chu-wei-yun-suan-wnwy/">带你一步步推导出位运算公式！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/single-number-iii/">260. 只出现一次的数字 III</a></td>
+<td><a href="https://leetcode.cn/problems/single-number-iii/solution/tu-jie-yi-zhang-tu-miao-dong-zhuan-huan-np9d2/">【图解】一张图秒懂！转换成 136！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/">421. 数组中两个数的最大异或值</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/solution/tu-jie-jian-ji-gao-xiao-yi-tu-miao-dong-1427d/">【图解】简洁高效，一图秒懂！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td>贡献法</td>
+<td><a href="https://leetcode.cn/problems/distribute-coins-in-binary-tree/">979. 在二叉树中分配硬币</a></td>
+<td><a href="https://leetcode.cn/problems/distribute-coins-in-binary-tree/solution/tu-jie-mei-you-si-lu-jin-lai-miao-dong-p-vrni/">【图解】没有思路？进来秒懂！</a></td>
+<td>1709</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/">2477. 到达首都的最少油耗</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/solution/kao-lu-mei-tiao-bian-shang-zhi-shao-xu-y-uamv/">【图解】没有思路？一张图秒懂！</a></td>
+<td>2012</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/sum-of-subsequence-widths/">891. 子序列宽度之和</a></td>
+<td><a href="https://leetcode.cn/problems/sum-of-subsequence-widths/solution/by-endlesscheng-upd1/">【图解】计算每个元素对答案的贡献，多解法</a></td>
+<td>2183</td>
+</tr>
+<tr>
+<td>动态规划</td>
+<td><a href="https://leetcode.cn/problems/climbing-stairs/">70. 爬楼梯</a></td>
+<td><a href="https://leetcode.cn/problems/climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/">教你一步步思考动态规划！</a></td>
+<td>简单</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/min-cost-climbing-stairs/">746. 使用最小花费爬楼梯</a></td>
+<td><a href="https://leetcode.cn/problems/min-cost-climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-j99e/">教你一步步思考动态规划！</a></td>
+<td>1358</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/">剑指 Offer 47. 礼物的最大价值</a></td>
+<td><a href="https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/solution/jiao-ni-yi-bu-bu-si-kao-dpcong-hui-su-da-epvl/">【图解】教你一步步思考动态规划！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-falling-path-sum/">931. 下降路径最小和</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-falling-path-sum/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-2cwkb/">教你一步步思考动态规划！</a></td>
+<td>1573</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/">1155. 掷骰子等于目标和的方法数</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/solution/ji-bai-100cong-ji-yi-hua-sou-suo-dao-di-421ab/">击败 100%！教你一步步思考动态规划！</a></td>
+<td>1654</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-path-cost-in-a-grid/">2304. 网格中的最小路径代价</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-path-cost-in-a-grid/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-bd25/">教你一步步思考动态规划！</a></td>
+<td>1658</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/">1262. 可被三整除的最大和</a></td>
+<td><a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/solution/liang-chong-suan-fa-tan-xin-dong-tai-gui-tsll/">教你一步步思考动态规划！</a></td>
+<td>1762</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-sum-circular-subarray/">918. 环形子数组的最大和</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-sum-circular-subarray/solution/mei-you-si-lu-yi-zhang-tu-miao-dong-pyth-ilqh/">【图解】没有思路？一张图秒懂！</a></td>
+<td>1777</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">1186. 删除一次得到子数组最大和</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-hzz6/">教你一步步思考动态规划！</a></td>
+<td>1799</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/domino-and-tromino-tiling/">790. 多米诺和托米诺平铺</a></td>
+<td><a href="https://leetcode.cn/problems/domino-and-tromino-tiling/solution/by-endlesscheng-umpp/">【图解】找不到规律？请看图！</a></td>
+<td>1830</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/">1227. 飞机座位分配概率</a></td>
+<td><a href="https://leetcode.cn/problems/airplane-seat-assignment-probability/solution/tu-jie-mei-xiang-ming-bai-yi-zhang-tu-mi-8bn4/">【图解】没想明白？一张图秒懂！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-earnings-from-taxi/">2008. 出租车的最大盈利</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-earnings-from-taxi/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-k15a/">教你一步步思考动态规划！</a></td>
+<td>1872</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/binary-trees-with-factors/">823. 带因子的二叉树</a></td>
+<td><a href="https://leetcode.cn/problems/binary-trees-with-factors/solution/cong-ji-yi-hua-sou-suo-dao-di-tui-jiao-n-nbk6/">教你一步步思考动态规划！</a></td>
+<td>1900</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/partition-array-for-maximum-sum/">1043. 分隔数组以得到最大和</a></td>
+<td><a href="https://leetcode.cn/problems/partition-array-for-maximum-sum/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-rq5i/">教你一步步思考动态规划！</a></td>
+<td>1916</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/stone-game-vii/">1690. 石子游戏 VII</a></td>
+<td><a href="https://leetcode.cn/problems/stone-game-vii/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-zktx/">教你一步步思考动态规划！</a></td>
+<td>1951</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/jump-game-vi/">1696. 跳跃游戏 VI</a></td>
+<td><a href="https://leetcode.cn/problems/jump-game-vi/solution/yi-bu-bu-you-hua-cong-di-gui-dao-di-tui-84qn3/">一步步优化：从递归到递推到单调队列</a></td>
+<td>1954</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/cherry-pickup-ii/">1463. 摘樱桃 II</a></td>
+<td><a href="https://leetcode.cn/problems/cherry-pickup-ii/solution/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-i70v/">教你一步步思考动态规划！</a></td>
+<td>1957</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/shortest-common-supersequence/">1092. 最短公共超序列</a></td>
+<td><a href="https://leetcode.cn/problems/shortest-common-supersequence/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-auy8z/">【输出具体方案】从递归到递推，教你一步步思考动态规划！</a></td>
+<td>1977</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/distinct-subsequences-ii/">940. 不同的子序列 II</a></td>
+<td><a href="https://leetcode.cn/problems/distinct-subsequences-ii/solution/xi-fen-wen-ti-fu-za-du-you-hua-pythonjav-1ihu/">细分问题+复杂度优化</a></td>
+<td>1985</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/dice-roll-simulation/">1223. 掷骰子模拟</a></td>
+<td><a href="https://leetcode.cn/problems/dice-roll-simulation/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-sje6/">教你一步步思考动态规划！</a></td>
+<td>2008</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/filling-bookcase-shelves/">1105. 填充书架</a></td>
+<td><a href="https://leetcode.cn/problems/filling-bookcase-shelves/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-0vg6/">教你一步步思考动态规划！</a></td>
+<td>2014</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-profit-in-job-scheduling/">1235. 规划兼职工作</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-profit-in-job-scheduling/solution/dong-tai-gui-hua-er-fen-cha-zhao-you-hua-zkcg/">动态规划+二分查找优化</a></td>
+<td>2023</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/">1335. 工作计划的最低难度</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-68nx/">两种思路：动态规划/单调栈</a></td>
+<td>2034</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/stone-game-ii/">1140. 石子游戏 II</a></td>
+<td><a href="https://leetcode.cn/problems/stone-game-ii/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-jjax/">【博弈 DP】教你一步步思考动态规划！</a></td>
+<td>2035</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/">801. 使序列递增的最小交换次数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/solution/dong-tai-gui-hua-kao-lu-xiang-lin-yuan-s-ni0p/">考虑相邻元素的大小关系</a></td>
+<td>2066</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">1976. 到达目的地的方案数</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/solution/zai-ji-suan-zui-duan-lu-de-tong-shi-dpfu-g4f3/">在计算最短路的同时 DP！附题单</a></td>
+<td>2095</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/letter-tile-possibilities/">1079. 活字印刷</a></td>
+<td><a href="https://leetcode.cn/problems/letter-tile-possibilities/solution/on2-ji-shu-dppythonjavacgo-by-endlessche-hmez/">O(n^2) 计数 DP</a></td>
+<td>*非暴力</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-ways-of-cutting-a-pizza/">1444. 切披萨的方案数</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-ways-of-cutting-a-pizza/solution/ji-bai-100cong-di-gui-dao-di-tui-dao-you-dxz5/">教你一步步思考动态规划！</a></td>
+<td>2127</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-height-by-stacking-cuboids/">1691. 堆叠长方体的最大高度</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-height-by-stacking-cuboids/solution/tu-jie-suan-fa-you-hua-xiang-xi-zheng-mi-b6fq/">【图解】算法优化+详细证明</a></td>
+<td>2172</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/">834. 树中距离之和</a></td>
+<td><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/solution/tu-jie-yi-zhang-tu-miao-dong-huan-gen-dp-6bgb/">【图解】一张图秒懂换根 DP！</a></td>
+<td>2197</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/smallest-sufficient-team/">1125. 最小的必要团队</a></td>
+<td><a href="https://leetcode.cn/problems/smallest-sufficient-team/solution/zhuang-ya-0-1-bei-bao-cha-biao-fa-vs-shu-qode/">状压 0-1 背包，查表法 vs 刷表法</a></td>
+<td>2251</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms/">1997. 访问完所有房间的第一天</a></td>
+<td><a href="https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms/solution/qian-zhui-he-you-hua-dp-by-endlesscheng-j10b/">前缀和优化 DP</a></td>
+<td>2260</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/parallel-courses-ii/">1494. 并行课程 II</a></td>
+<td><a href="https://leetcode.cn/problems/parallel-courses-ii/solution/zi-ji-zhuang-ya-dpcong-ji-yi-hua-sou-suo-oxwd/">子集状压 DP：从记忆化搜索到递推（附题单！）</a></td>
+<td>*非暴力</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/">1617. 统计子树中城市之间最大距离</a></td>
+<td><a href="https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/solution/tu-jie-on3-mei-ju-zhi-jing-duan-dian-che-am2n/">【图解】回溯/二进制枚举/O(n^3)枚举直径端点</a></td>
+<td>2309</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/make-array-strictly-increasing/">1187. 使数组严格递增</a></td>
+<td><a href="https://leetcode.cn/problems/make-array-strictly-increasing/solution/zui-chang-di-zeng-zi-xu-lie-de-bian-xing-jhgg/">最长递增子序列的变形：选或不选/枚举选哪个</a></td>
+<td>2316</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/selling-pieces-of-wood/">2312. 卖木头块</a></td>
+<td><a href="https://leetcode.cn/problems/selling-pieces-of-wood/solution/by-endlesscheng-mrmd/">枚举切割位置+循环优化</a></td>
+<td>2363</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/cherry-pickup/">741. 摘樱桃</a></td>
+<td><a href="https://leetcode.cn/problems/cherry-pickup/solution/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-ruue/">教你一步步思考动态规划！</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-students-taking-exam/">1349. 参加考试的最大学生数</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-students-taking-exam/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-9y5k/">【图解】状压 DP 的两种状态设计思路</a></td>
+<td>2386</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-merge-stones/">1000. 合并石头的最低成本</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-merge-stones/solution/tu-jie-qu-jian-dpzhuang-tai-she-ji-yu-yo-ppv0/">【图解】区间 DP：状态设计与优化</a></td>
+<td>2423</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/">1595. 连通两组点的最小成本</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-djxq/">教你一步步思考动态规划！（附题单）</a></td>
+<td>2423</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-number-of-groups-getting-fresh-donuts/">1815. 得到新鲜甜甜圈的最多组数</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-number-of-groups-getting-fresh-donuts/solution/by-endlesscheng-r5ve/">【图解】位运算的魔法</a></td>
+<td>2559</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-skips-to-arrive-at-meeting-on-time/">1883. 准时抵达会议现场的最小跳过休息次数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-skips-to-arrive-at-meeting-on-time/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-gxd2/">【避免浮点误差】教你一步步思考动态规划！</a></td>
+<td>2588</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/">2902. 和带限制的子多重集合的数目</a></td>
+<td><a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/solution/duo-zhong-bei-bao-fang-an-shu-cong-po-su-f5ay/">多重背包方案数：从朴素 DP 到优化</a></td>
+<td>2758</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-time-to-make-array-sum-at-most-x/">2809. 使数组和小于等于 x 的最少时间</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-time-to-make-array-sum-at-most-x/solution/jiao-ni-yi-bu-bu-si-kao-ben-ti-by-endles-2eho/">教你一步步思考本题！</a></td>
+<td>2979</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-score-from-grid-operations/">3225. 网格图操作后的最大分数</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-score-from-grid-operations/solution/tu-jie-dp-ji-qi-you-hua-by-endlesscheng-pco6/">【图解】DP 及其优化：从 n^4 到 n^3 到 n^2</a></td>
+<td>3028</td>
+</tr>
+<tr>
+<td>数学</td>
+<td><a href="https://leetcode.cn/problems/powx-n/">50. Pow(x, n)</a></td>
+<td><a href="https://leetcode.cn/problems/powx-n/solution/tu-jie-yi-zhang-tu-miao-dong-kuai-su-mi-ykp3i/">【图解】一张图秒懂快速幂！</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-garden-perimeter-to-collect-enough-apples/">1954. 收集足够苹果的最小花园周长</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-garden-perimeter-to-collect-enough-apples/solution/tu-jie-o1-zuo-fa-pythonjavacgojsrust-by-oms4k/">【图解】O(1) 做法</a></td>
+<td>1759</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/binary-string-with-substrings-representing-1-to-n/">1016. 子串能表示从 1 到 N 数字的二进制串</a></td>
+<td><a href="https://leetcode.cn/problems/binary-string-with-substrings-representing-1-to-n/solution/san-chong-suan-fa-cong-bao-li-dao-you-hu-nmtq/">三种算法：从暴力到优化</a></td>
+<td>1779</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/smallest-integer-divisible-by-k/">1015. 可被 K 整除的最小整数</a></td>
+<td><a href="https://leetcode.cn/problems/smallest-integer-divisible-by-k/solution/san-chong-suan-fa-you-hua-pythonjavacgo-tk4cj/">【图解】三种算法+优化</a></td>
+<td>1875</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/reach-a-number/">754. 到达终点数字</a></td>
+<td><a href="https://leetcode.cn/problems/reach-a-number/solution/fen-lei-tao-lun-xiang-xi-zheng-ming-jian-sqj2/">【图解】分类讨论+详细证明+简洁写法+优化</a></td>
+<td>1880</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/">1884. 鸡蛋掉落-两枚鸡蛋</a></td>
+<td><a href="https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/solution/liang-chong-fang-fa-dong-tai-gui-hua-shu-hd4i/">两种方法：动态规划/数学</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/building-boxes/">1739. 放置盒子</a></td>
+<td><a href="https://leetcode.cn/problems/building-boxes/solution/mei-xiang-ming-bai-yi-ge-dong-hua-miao-d-8vbe/">【动画】没想明白？一个动画秒懂！附 O(1) 做法</a></td>
+<td>2198</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimize-manhattan-distances/">3102. 最小化曼哈顿距离</a></td>
+<td><a href="https://leetcode.cn/problems/minimize-manhattan-distances/solution/tu-jie-man-ha-dun-ju-chi-heng-deng-shi-b-op84/">【图解】曼哈顿距离转切比雪夫距离</a></td>
+<td>2216</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/reverse-subarray-to-maximize-array-value/">1330. 翻转子数组得到最大的数组值</a></td>
+<td><a href="https://leetcode.cn/problems/reverse-subarray-to-maximize-array-value/solution/bu-hui-hua-jian-qing-kan-zhe-pythonjavac-c2s6/">不会化简？请看这！</a></td>
+<td>2482</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/count-ways-to-make-array-with-product/">1735. 生成乘积数组的方案数</a></td>
+<td><a href="https://leetcode.cn/problems/count-ways-to-make-array-with-product/solution/tu-jie-zhi-yin-zi-fen-jie-fang-qiu-wen-t-fboo/">【图解】质因子分解+放球问题</a></td>
+<td>2500</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-different-subsequences-gcds/">1819. 序列中不同最大公约数的数目</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-different-subsequences-gcds/solution/ji-bai-100mei-ju-gcdxun-huan-you-hua-pyt-get7/">击败100%！枚举GCD+循环优化</a></td>
+<td>2540</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-equalize-array/">3139. 使数组中所有元素相等的最小开销</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-cost-to-equalize-array/solution/fen-lei-tao-lun-on-zuo-fa-pythonjavacgo-9bsb4/">分类讨论，O(n) 做法</a></td>
+<td>2666</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/check-if-the-rectangle-corner-is-reachable/">3235. 判断矩形的两个角落是否可达</a></td>
+<td><a href="https://leetcode.cn/problems/check-if-the-rectangle-corner-is-reachable/solution/deng-jie-zhuan-huan-bing-cha-ji-pythonja-yf9y/">【图解】转换成图上 DFS + 避免浮点数的做法</a></td>
+<td></td>
+</tr>
+<tr>
+<td>贪心</td>
+<td><a href="https://leetcode.cn/problems/decrease-elements-to-make-array-zigzag/">1144. 递减元素使数组呈锯齿状</a></td>
+<td><a href="https://leetcode.cn/problems/decrease-elements-to-make-array-zigzag/solution/mei-you-si-lu-yi-bu-bu-ti-shi-ni-si-kao-cm0h2/">没有思路？一步步提示你思考！</a></td>
+<td>1559</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-swaps-to-make-strings-equal/">1247. 交换字符使得字符串相同</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-swaps-to-make-strings-equal/solution/mei-xiang-ming-bai-yi-zhang-tu-miao-dong-a6r1/">【图解】没想明白？一张图秒懂！</a></td>
+<td>1597</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/advantage-shuffle/">870. 优势洗牌</a></td>
+<td><a href="https://leetcode.cn/problems/advantage-shuffle/solution/tian-ji-sai-ma-by-endlesscheng-yxm6/">田忌赛马</a></td>
+<td>1648</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/reducing-dishes/">1402. 做菜顺序</a></td>
+<td><a href="https://leetcode.cn/problems/reducing-dishes/solution/mei-ju-zuo-ji-dao-cai-tan-xin-pythonjava-k7w2/">枚举做几道菜+贪心</a></td>
+<td>1679</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/binary-tree-coloring-game/">1145. 二叉树着色游戏</a></td>
+<td><a href="https://leetcode.cn/problems/binary-tree-coloring-game/solution/mei-you-si-lu-yi-zhang-tu-miao-dong-pyth-btav/">【图解】没有思路？一张图秒懂！</a></td>
+<td>1741</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/">1262. 可被三整除的最大和</a></td>
+<td><a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/solution/liang-chong-suan-fa-tan-xin-dong-tai-gui-tsll/">两种算法：贪心/动态规划</a></td>
+<td>1762</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/gas-station/">134. 加油站</a></td>
+<td><a href="https://leetcode.cn/problems/gas-station/solutions/2933132/yong-zhe-xian-tu-zhi-guan-li-jie-pythonj-qccr/">用【折线图】直观理解</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/equal-sum-arrays-with-minimum-number-of-operations/">1775. 通过最少操作次数使数组的和相等</a></td>
+<td><a href="https://leetcode.cn/problems/equal-sum-arrays-with-minimum-number-of-operations/solution/mei-xiang-ming-bai-yi-ge-dong-hua-miao-d-ocuu/">【动画】没想明白？一个动画秒懂！</a></td>
+<td>1850</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/split-two-strings-to-make-palindrome/">1616. 分割两个字符串得到回文串</a></td>
+<td><a href="https://leetcode.cn/problems/split-two-strings-to-make-palindrome/solution/mei-xiang-ming-bai-yi-zhang-tu-miao-dong-imvy/">【图解】没想明白？一张图秒懂！</a></td>
+<td>1868</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-number-of-taps-to-open-to-water-a-garden/">1326. 灌溉花园的最少水龙头数目</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-number-of-taps-to-open-to-water-a-garden/solution/yi-zhang-tu-miao-dong-pythonjavacgo-by-e-wqry/">【图解】没想明白？一张图秒懂！</a></td>
+<td>1885</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/longest-chunked-palindrome-decomposition/">1147. 段式回文</a></td>
+<td><a href="https://leetcode.cn/problems/longest-chunked-palindrome-decomposition/solution/tu-jie-tan-xin-zuo-fa-yi-tu-miao-dong-py-huik/">【图解】贪心做法，一图秒懂！</a></td>
+<td>1912</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-number-of-consecutive-values-you-can-make/">1798. 你能构造出连续值的最大数目</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-number-of-consecutive-values-you-can-make/solution/mei-xiang-ming-bai-yi-zhang-tu-miao-dong-7xlx/">【图解】没想明白？一张图秒懂！</a></td>
+<td>1931</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/stone-game-vi/">1686. 石子游戏 VI</a></td>
+<td><a href="https://leetcode.cn/problems/stone-game-vi/solution/xiang-xi-jie-shi-wei-shi-yao-yao-an-zhao-0zsg/">巧妙转换</a></td>
+<td>2001</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/earliest-possible-day-of-full-bloom/">2136. 全部开花的最早一天</a></td>
+<td><a href="https://leetcode.cn/problems/earliest-possible-day-of-full-bloom/solution/tan-xin-ji-qi-zheng-ming-by-endlesscheng-hfwe/">贪心及其证明</a></td>
+<td>2033</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/course-schedule-iii/">630. 课程表 III</a></td>
+<td><a href="https://leetcode.cn/problems/course-schedule-iii/solution/tan-xin-huan-neng-fan-hui-pythonjavacgoj-lcwp/">贪心还能反悔？</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/5TxKeK/">LCP 24. 数字游戏</a></td>
+<td><a href="https://leetcode.cn/problems/5TxKeK/solution/zhuan-huan-zhong-wei-shu-tan-xin-dui-din-7r9b/">转换+中位数贪心+对顶堆</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-adjacent-swaps-for-k-consecutive-ones/">1703. 得到连续 K 个 1 的最少相邻交换次数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-adjacent-swaps-for-k-consecutive-ones/solution/tu-jie-zhuan-huan-cheng-zhong-wei-shu-ta-iz4v/">【图解】转换成中位数贪心+空间优化</a></td>
+<td>2467</td>
+</tr>
+<tr>
+<td>脑筋急转弯</td>
+<td><a href="https://leetcode.cn/problems/magical-string/">481. 神奇字符串</a></td>
+<td><a href="https://leetcode.cn/problems/magical-string/solution/by-endlesscheng-z8o1/">【动画】一个动画秒懂本题+简洁写法</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/maximum-frequency-stack/">895. 最大频率栈</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-frequency-stack/solution/mei-xiang-ming-bai-yi-ge-dong-hua-miao-d-oich/">【动画】没想明白？一个动画秒懂！</a></td>
+<td>2028</td>
+</tr>
+<tr>
+<td>构造</td>
+<td><a href="https://leetcode.cn/problems/find-valid-matrix-given-row-and-column-sums/">1605. 给定行和列的和求可行矩阵</a></td>
+<td><a href="https://leetcode.cn/problems/find-valid-matrix-given-row-and-column-sums/solution/mei-you-si-lu-yi-ge-dong-hua-miao-dong-f-eezj/">【动画】没有思路？一个动画秒懂！附优化写法</a></td>
+<td>1868</td>
+</tr>
+<tr>
+<td>思维题</td>
+<td><a href="https://leetcode.cn/problems/determine-if-two-strings-are-close/">1657. 确定两个字符串是否接近</a></td>
+<td><a href="https://leetcode.cn/problems/determine-if-two-strings-are-close/solution/li-jie-cao-zuo-ben-zhi-jian-ji-xie-fa-py-b18i/">理解操作本质+简洁写法</a></td>
+<td>1530</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/moving-stones-until-consecutive-ii/">1040. 移动石子直到连续 II</a></td>
+<td><a href="https://leetcode.cn/problems/moving-stones-until-consecutive-ii/solution/tu-jie-xia-tiao-qi-pythonjavacgo-by-endl-r1eb/">【图解】下跳棋</a></td>
+<td>2456</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/count-pairs-with-xor-in-a-range/">1803. 统计异或值在范围内的数对有多少</a></td>
+<td><a href="https://leetcode.cn/problems/count-pairs-with-xor-in-a-range/solution/bu-hui-zi-dian-shu-zhi-yong-ha-xi-biao-y-p2pu/">【图解】不会字典树？只用哈希表也能做！</a></td>
+<td>2479</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/transform-to-chessboard/">782. 变为棋盘</a></td>
+<td><a href="https://leetcode.cn/problems/transform-to-chessboard/solution/tu-jie-ni-xiang-si-wei-pythonjavaccgojsr-mixb/">【图解】逆向思维</a></td>
+<td>困难</td>
+</tr>
+<tr>
+<td>网格图</td>
+<td><a href="https://leetcode.cn/problems/pond-sizes-lcci/">面试题 16.19. 水域大小</a></td>
+<td><a href="https://leetcode.cn/problems/pond-sizes-lcci/solution/mo-ban-wang-ge-tu-dfsfu-ti-dan-by-endles-p0n1/">【模板】网格图 DFS（附题单！）</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-closed-islands/">1254. 统计封闭岛屿的数目</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-closed-islands/solution/liang-chong-si-lu-xian-wai-hou-nei-chu-j-b1e4/">【动画】两种思路：先外后内/出界标记（附题单！）</a></td>
+<td>1659</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/escape-the-spreading-fire/">2258. 逃离火灾</a></td>
+<td><a href="https://leetcode.cn/problems/escape-the-spreading-fire/solution/er-fen-bfspythonjavacgo-by-endlesscheng-ypp1/">【图解】两种方法：二分答案 / 直接计算</a></td>
+<td>2347</td>
+</tr>
+<tr>
+<td>树</td>
+<td><a href="https://leetcode.cn/problems/time-needed-to-inform-all-employees/">1376. 通知所有员工所需的时间</a></td>
+<td><a href="https://leetcode.cn/problems/time-needed-to-inform-all-employees/solution/shen-ru-li-jie-di-gui-zi-ding-xiang-xia-ps0mm/">深入理解递归：自顶向下/自底向上（附 O(1) 空间迭代写法！）</a></td>
+<td>1561</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/frog-position-after-t-seconds/">1377. T 秒后青蛙的位置</a></td>
+<td><a href="https://leetcode.cn/problems/frog-position-after-t-seconds/solution/dfs-ji-yi-ci-you-qu-de-hack-by-endlessch-jtsr/">DFS + 一次有趣的 hack</a></td>
+<td>1824</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/">2003. 每棵子树内缺失的最小基因值</a></td>
+<td><a href="https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/solution/tu-jie-yi-zhang-tu-miao-dong-duo-chong-x-q095/">【图解】一张图秒懂！多种写法！</a></td>
+<td>2415</td>
+</tr>
+<tr>
+<td>图 DFS</td>
+<td><a href="https://leetcode.cn/problems/minimize-malware-spread/">924. 尽量减少恶意软件的传播</a></td>
+<td><a href="https://leetcode.cn/problems/minimize-malware-spread/solution/zhi-bao-han-yi-ge-bei-gan-ran-jie-dian-d-ym39/">只包含一个被感染节点的最大连通块</a></td>
+<td>1869</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimize-malware-spread-ii/">928. 尽量减少恶意软件的传播 II</a></td>
+<td><a href="https://leetcode.cn/problems/minimize-malware-spread-ii/solution/ni-xiang-si-wei-pythonjavaccgojsrust-by-jinc3/">逆向思维</a></td>
+<td>1985</td>
+</tr>
+<tr>
+<td>最短路</td>
+<td><a href="https://leetcode.cn/problems/minimum-sideway-jumps/">1824. 最少侧跳次数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-sideway-jumps/solution/cong-0-dao-1-de-0-1-bfspythonjavacgo-by-1m8z4/">从 0 到 1 的 0-1 BFS</a></td>
+<td>1778</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/">1334. 阈值距离内邻居最少的城市</a></td>
+<td><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solution/dai-ni-fa-ming-floyd-suan-fa-cong-ji-yi-m8s51/">【Floyd 模板】带你发明 Floyd 算法：从记忆化搜索到递推</a></td>
+<td>1885</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/">1210. 穿过迷宫的最少移动次数</a></td>
+<td><a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/solution/huan-zai-if-elseyi-ge-xun-huan-chu-li-li-tw8b/">【诗】还在 if-else？一个循环处理六种移动！</a></td>
+<td>2022</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">1976. 到达目的地的方案数</a></td>
+<td><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/solution/zai-ji-suan-zui-duan-lu-de-tong-shi-dpfu-g4f3/">【Dijkstra 模板】在计算最短路的同时 DP！附题单</a></td>
+<td>2095</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/">882. 细分图中的可到达节点</a></td>
+<td><a href="https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/solution/tu-jie-zhuan-huan-cheng-dan-yuan-zui-dua-6l8o/">【图解】转换成单源最短路问题</a></td>
+<td>2328</td>
+</tr>
+<tr>
+<td>基环树</td>
+<td><a href="https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/">2127. 参加会议的最多员工数</a></td>
+<td><a href="https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/solution/nei-xiang-ji-huan-shu-tuo-bu-pai-xu-fen-c1i1b/">【图解】内向基环树：拓扑排序 + 分类讨论</a></td>
+<td>2449</td>
+</tr>
+<tr>
+<td>LCA</td>
+<td><a href="https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/">1483. 树节点的第 K 个祖先</a></td>
+<td><a href="https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/solution/mo-ban-jiang-jie-shu-shang-bei-zeng-suan-v3rw/">【模板讲解】树上倍增算法（以及最近公共祖先）</a></td>
+<td>2115</td>
+</tr>
+<tr>
+<td>树状数组</td>
+<td><a href="https://leetcode.cn/problems/range-sum-query-mutable/">307. 区域和检索 - 数组可修改</a></td>
+<td><a href="https://leetcode.cn/problems/range-sum-query-mutable/solution/dai-ni-fa-ming-shu-zhuang-shu-zu-fu-shu-lyfll/">【模板讲解】带你发明树状数组！附数学证明</a></td>
+<td>中等</td>
+</tr>
+</tbody>
+</table>
+<p><strong>更多题目请看</strong><a href="https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/README.md">【基础算法精讲】题目列表</a></p>
+<h3 id="算法题单" class="tsd-anchor-link">算法题单<a href="#算法题单" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>🔥<a href="https://leetcode.cn/circle/discuss/RvFUtj/">如何科学刷题？</a></p>
+<ol>
+<li><a href="https://leetcode.cn/circle/discuss/0viNMK/">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/SqopEo/">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/9oZFK9/">单调栈（基础/矩形面积/贡献法/最小字典序）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/YiXPXW/">网格图（DFS/BFS/综合应用）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/dHn9Vk/">位运算（基础/性质/拆位/试填/恒等式/思维）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/01LUak/">图论算法（DFS/BFS/拓扑排序/最短路/最小生成树/二分图/基环树/欧拉路径）</a></li>
+<li>🔥<a href="https://leetcode.cn/circle/discuss/tXLS3i/">动态规划（入门/背包/状态机/划分/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/mOr1u6/">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/IYT3ss/">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/g6KTKL/">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/K0n2gO/">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/SJFwQI/">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a></li>
+</ol>
+<h3 id="周赛总结" class="tsd-anchor-link">周赛总结<a href="#周赛总结" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><a href="https://www.bilibili.com/read/cv22332590/">如何科学上分（科学刷题）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/lUu0KB/">从周赛中学算法 - 2023·下</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/v2RXSN/">从周赛中学算法 - 2023·上</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/WR1MJP/">从周赛中学算法 - 2022·下</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/G0n5iY/">从周赛中学算法 - 2022·上</a></li>
+</ul>
+<h3 id="其他" class="tsd-anchor-link">其他<a href="#其他" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>🔥<a href="https://leetcode.cn/circle/discuss/CaOJ45/">从集合论到位运算，常见位运算技巧分类总结！</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/mDfnkW/">模运算的世界：当加减乘除遇上取模</a></li>
+<li><a href="https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solution/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/">【简单题杀手】分组循环</a></li>
+</ul>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>显示设置</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">成员可见性</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>受保护</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>继承</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>外部</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">配色</label><select id="tsd-theme"><option value="os">自动</option><option value="light">浅色</option><option value="dark">深色</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>目录</h3></summary><div class="tsd-accordion-details"><a href="#灵茶山艾府·高质量题解精选"><span>灵茶山艾府·高质量题解精选</span></a><ul><li><a href="#算法题单"><span>算法题单</span></a></li><li><a href="#周赛总结"><span>周赛总结</span></a></li><li><a href="#其他"><span>其他</span></a></li></ul></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://leetcode.cn/studyplan/top-100-liked" class="tsd-nav-link">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150" class="tsd-nav-link">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms" class="tsd-nav-link">Github</a></nav><nav class="tsd-navigation"><a href="../modules.html">Typescript-Algorithms</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>加载中……</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>

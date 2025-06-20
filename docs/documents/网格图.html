@@ -1,0 +1,109 @@
+<!DOCTYPE html><html class="default" lang="zh" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>网格图 | Typescript-Algorithms</title><meta name="description" content="Documentation for Typescript-Algorithms"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><link rel="stylesheet" href="../assets/typedoc-github-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Typescript-Algorithms</a><div id="tsd-toolbar-links"><a href="https://leetcode.cn/studyplan/top-100-liked">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms">Github</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="搜索"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="搜索"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="搜索文档" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>正在准备搜索索引...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="菜单"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="" aria-current="page">网格图</a></li></ul></div><div class="tsd-panel tsd-typography"><p><img src="https://pic.leetcode.cn/1724834645-OYGBxU-grid004.png" alt="网格图题单 DFS BFS 网格图题目 图论 灵茶山艾府"></p>
+<blockquote>
+<p>小小贪吃蛇，移动花样多。<br>
+平移加旋转，为把迷宫破。<br>
+代码复代码，bug 何其多。<br>
+六步化一步，AC 定我夺。<br>
+—— <a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/">1210. 穿过迷宫的最少移动次数</a></p>
+</blockquote>
+<h2 id="一、网格图-dfs" class="tsd-anchor-link">一、网格图 DFS<a href="#一、网格图-dfs" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>适用于需要计算连通块个数、大小的题目。</p>
+<p>部分题目也可以用 BFS 或并查集解决。</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/number-of-islands/">200. 岛屿数量</a></li>
+<li><a href="https://leetcode.cn/problems/max-area-of-island/">695. 岛屿的最大面积</a></li>
+<li><a href="https://leetcode.cn/problems/pond-sizes-lcci/">面试题 16.19. 水域大小</a></li>
+<li><a href="https://leetcode.cn/problems/YesdPw/">LCS 03. 主题空间</a></li>
+<li><a href="https://leetcode.cn/problems/island-perimeter/">463. 岛屿的周长</a></li>
+<li><a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/">2658. 网格图中鱼的最大数目</a> 1490</li>
+<li><a href="https://leetcode.cn/problems/coloring-a-border/">1034. 边界着色</a> 1579</li>
+<li><a href="https://leetcode.cn/problems/number-of-enclaves/">1020. 飞地的数量</a> 1615</li>
+<li><a href="https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/">2684. 矩阵中移动的最大次数</a> 1626</li>
+<li><a href="https://leetcode.cn/problems/number-of-closed-islands/">1254. 统计封闭岛屿的数目</a> 1659</li>
+<li><a href="https://leetcode.cn/problems/surrounded-regions/">130. 被围绕的区域</a></li>
+<li><a href="https://leetcode.cn/problems/count-sub-islands/">1905. 统计子岛屿</a> 1679</li>
+<li><a href="https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid/">1391. 检查网格中是否存在有效路径</a> 1746</li>
+<li><a href="https://leetcode.cn/problems/pacific-atlantic-water-flow/">417. 太平洋大西洋水流问题</a></li>
+<li><a href="https://leetcode.cn/problems/minesweeper/">529. 扫雷游戏</a></li>
+<li><a href="https://leetcode.cn/problems/detect-cycles-in-2d-grid/">1559. 二维网格图中探测环</a> 1838</li>
+<li><a href="https://leetcode.cn/problems/making-a-large-island/">827. 最大人工岛</a> 1934</li>
+<li><a href="https://leetcode.cn/problems/EXvqDp/">LCP 63. 弹珠游戏</a> 也可以不用 DFS</li>
+<li><a href="https://leetcode.cn/problems/number-of-islands-ii/">305. 岛屿数量 II</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/number-of-spaces-cleaning-robot-cleaned/">2061. 扫地机器人清扫过的空间个数</a>（会员题）也可以迭代</li>
+<li><a href="https://leetcode.cn/problems/sum-of-remoteness-of-all-cells/">2852. 所有单元格的远离程度之和</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/robot-room-cleaner/">489. 扫地机器人</a>（会员题）</li>
+</ul>
+<h2 id="二、网格图-bfs" class="tsd-anchor-link">二、网格图 BFS<a href="#二、网格图-bfs" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>适用于需要计算最短距离（最短路）的题目。</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/">1926. 迷宫中离入口最近的出口</a> 1638</li>
+<li><a href="https://leetcode.cn/problems/shortest-path-in-binary-matrix/">1091. 二进制矩阵中的最短路径</a> 1658</li>
+<li><a href="https://leetcode.cn/problems/as-far-from-land-as-possible/">1162. 地图分析</a> 1666</li>
+<li><a href="https://leetcode.cn/problems/01-matrix/">542. 01 矩阵</a></li>
+<li><a href="https://leetcode.cn/problems/rotting-oranges/">994. 腐烂的橘子</a></li>
+<li><a href="https://leetcode.cn/problems/map-of-highest-peak/">1765. 地图中的最高点</a> 1783</li>
+<li><a href="https://leetcode.cn/problems/shortest-bridge/">934. 最短的桥</a> 1826</li>
+<li><a href="https://leetcode.cn/problems/k-highest-ranked-items-within-a-price-range/">2146. 价格范围内最高排名的 K 样物品</a> 1837</li>
+<li><a href="https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination/">1293. 网格中的最短路径</a> 1967</li>
+<li><a href="https://leetcode.cn/problems/snakes-and-ladders/">909. 蛇梯棋</a> 2020</li>
+<li><a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/">1210. 穿过迷宫的最少移动次数</a> 2022</li>
+<li><a href="https://leetcode.cn/problems/cut-off-trees-for-golf-event/">675. 为高尔夫比赛砍树</a></li>
+<li><a href="https://leetcode.cn/problems/contain-virus/">749. 隔离病毒</a> 2277</li>
+<li><a href="https://leetcode.cn/problems/shortest-path-to-get-food/">1730. 获取食物的最短路径</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/walls-and-gates/">286. 墙与门</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/the-maze/">490. 迷宫</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/the-maze-ii/">505. 迷宫 II</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/the-maze-iii/">499. 迷宫 III</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/shortest-distance-from-all-buildings/">317. 离建筑物最近的距离</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/minimum-time-takes-to-reach-destination-without-drowning/">2814. 避免淹死并到达目的地的最短时间</a>（会员题）</li>
+</ul>
+<h2 id="三、网格图-0-1-bfs" class="tsd-anchor-link">三、网格图 0-1 BFS<a href="#三、网格图-0-1-bfs" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>边权只有 0 和 1 的题目，也可以用 BFS 做。</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/">3286. 穿越网格图的安全路径</a> 做到 O(mn)</li>
+<li><a href="https://leetcode.cn/problems/minimum-obstacle-removal-to-reach-corner/">2290. 到达角落需要移除障碍物的最小数目</a> 2138</li>
+<li><a href="https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/">1368. 使网格图至少有一条有效路径的最小代价</a> 2069</li>
+<li><a href="https://leetcode.cn/problems/grid-teleportation-traversal/">3552. 网格传送门旅游</a> 2036</li>
+<li><a href="https://leetcode.cn/problems/minimum-sideway-jumps/">1824. 最少侧跳次数</a></li>
+<li><a href="https://leetcode.cn/problems/6UEx57/">LCP 56. 信物传送</a></li>
+</ul>
+<h2 id="四、网格图-dijkstra" class="tsd-anchor-link">四、网格图 Dijkstra<a href="#四、网格图-dijkstra" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>见 <a href="https://leetcode.cn/circle/discuss/01LUak/">图论题单</a> 中的 Dijkstra。</p>
+<h2 id="五、综合应用" class="tsd-anchor-link">五、综合应用<a href="#五、综合应用" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><a href="https://leetcode.cn/problems/path-with-minimum-effort/">1631. 最小体力消耗路径</a> 1948</li>
+<li><a href="https://leetcode.cn/problems/swim-in-rising-water/">778. 水位上升的泳池中游泳</a> 2097</li>
+<li><a href="https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/">329. 矩阵中的最长递增路径</a></li>
+<li><a href="https://leetcode.cn/problems/escape-a-large-maze/">1036. 逃离大迷宫</a> 2165</li>
+<li><a href="https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/">3568. 清理教室的最少移动</a> ~2100 状压 BFS（分层图最短路）</li>
+<li><a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/">864. 获取所有钥匙的最短路径</a> 2259 状压 BFS（分层图最短路）</li>
+<li><a href="https://leetcode.cn/problems/minimum-moves-to-move-a-box-to-their-target-location/">1263. 推箱子</a> 2297</li>
+<li><a href="https://leetcode.cn/problems/escape-the-spreading-fire/">2258. 逃离火灾</a> 2347</li>
+<li><a href="https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/">2556. 二进制矩阵中翻转最多一次使路径不连通</a> 2369</li>
+<li><a href="https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/">2577. 在网格图中访问一个格子的最少时间</a> 2382</li>
+<li><a href="https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/">2617. 网格图中最少访问的格子数</a> 2582</li>
+<li><a href="https://leetcode.cn/problems/xun-bao/">LCP 13. 寻宝</a> 状压 DP</li>
+<li><a href="https://leetcode.cn/problems/Db3wC1/">LCP 31. 变换的迷宫</a></li>
+<li><a href="https://leetcode.cn/problems/kplEvH/">LCP 45. 自行车炫技赛场</a></li>
+<li><a href="https://leetcode.cn/problems/rdmXM7/">LCP 75. 传送卷轴</a></li>
+<li><a href="https://leetcode.cn/problems/number-of-distinct-islands/">694. 不同岛屿的数量</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/number-of-distinct-islands-ii/">711. 不同岛屿的数量 II</a>（会员题）</li>
+<li><a href="https://leetcode.cn/problems/path-with-maximum-minimum-value/">1102. 得分最高的路径</a>（会员题）</li>
+</ul>
+<h2 id="思考题" class="tsd-anchor-link">思考题<a href="#思考题" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ol>
+<li>对于 m 行 n 列的网格图，BFS 的队列最多消耗多少空间？DFS 的递归栈最多消耗多少空间？</li>
+<li>构造一个网格图，让 DFS 的递归深度尽量大。如果起点是 (0,0) 要如何构造？如果起点是 (i,j) 要如何构造？</li>
+</ol>
+<p>欢迎在评论区发表你的思路。</p>
+<h2 id="算法题单" class="tsd-anchor-link">算法题单<a href="#算法题单" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="https://leetcode.cn/circle/discuss/RvFUtj/">如何科学刷题？</a></p>
+<ol>
+<li><a href="https://leetcode.cn/circle/discuss/0viNMK/">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/SqopEo/">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/9oZFK9/">单调栈（基础/矩形面积/贡献法/最小字典序）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/YiXPXW/">网格图（DFS/BFS/综合应用）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/dHn9Vk/">位运算（基础/性质/拆位/试填/恒等式/思维）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/01LUak/">图论算法（DFS/BFS/拓扑排序/基环树/最短路/最小生成树/网络流）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/tXLS3i/">动态规划（入门/背包/划分/状态机/区间/状压/数位/数据结构优化/树形/博弈/概率期望）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/mOr1u6/">常用数据结构（前缀和/差分/栈/队列/堆/字典树/并查集/树状数组/线段树）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/IYT3ss/">数学算法（数论/组合/概率期望/博弈/计算几何/随机算法）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/g6KTKL/">贪心与思维（基本贪心策略/反悔/区间/字典序/数学/思维/脑筋急转弯/构造）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/K0n2gO/">链表、二叉树与回溯（前后指针/快慢指针/DFS/BFS/直径/LCA/一般树）</a></li>
+<li><a href="https://leetcode.cn/circle/discuss/SJFwQI/">字符串（KMP/Z函数/Manacher/字符串哈希/AC自动机/后缀数组/子序列自动机）</a></li>
+</ol>
+<p>如果你发现有题目可以补充进来，欢迎评论反馈。</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>显示设置</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">成员可见性</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>受保护</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>继承</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>外部</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">配色</label><select id="tsd-theme"><option value="os">自动</option><option value="light">浅色</option><option value="dark">深色</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>目录</h3></summary><div class="tsd-accordion-details"><a href="#一、网格图-dfs"><span>一、网格图 <wbr/>DFS</span></a><a href="#二、网格图-bfs"><span>二、网格图 <wbr/>BFS</span></a><a href="#三、网格图-0-1-bfs"><span>三、网格图 0-<wbr/>1 <wbr/>BFS</span></a><a href="#四、网格图-dijkstra"><span>四、网格图 <wbr/>Dijkstra</span></a><a href="#五、综合应用"><span>五、综合应用</span></a><a href="#思考题"><span>思考题</span></a><a href="#算法题单"><span>算法题单</span></a></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://leetcode.cn/studyplan/top-100-liked" class="tsd-nav-link">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150" class="tsd-nav-link">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms" class="tsd-nav-link">Github</a></nav><nav class="tsd-navigation"><a href="../modules.html">Typescript-Algorithms</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>加载中……</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>
