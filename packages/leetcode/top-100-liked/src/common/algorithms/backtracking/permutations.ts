@@ -6,35 +6,28 @@
 
 // @lc code=start
 function permute(nums: number[]): number[][] {
-  // [1,2,3]
-  // 根为空的一棵多叉树
-  const result: number[][] = [];
-  const ans: number[] = [];
+  const n = nums.length;
+  const ans: number[][] = [];
+  const path: number[] = [];
 
-  _permute(nums, 0, ans, result);
-
-  return result;
-};
-
-function _permute(nums: number[], count: number, ans: number[], result: number[][]) {
-  if (count === nums.length) {
-    result.push([...ans]);
-    return;
-  }
-
-  for (let i = 0; i < nums.length; i++) {
-    if (ans.includes(nums[i])) {
-      continue;
+  // 从>=i的下标开始构造全排列，剩余可选的数字从s中选取
+  function dfs(i: number, s: Set<number>) {
+    if (i === n) {
+      ans.push([...path]);
+      return;
     }
 
-    ans.push(nums[i]);
-    count++;
-
-    _permute(nums, count, ans, result);
-
-    ans.pop();
-    count--;
+    for (const num of s) {
+      path[i] = num;
+      const copy = new Set(s);
+      copy.delete(num);
+      dfs(i + 1, copy);
+    }
   }
+
+  dfs(0, new Set(nums));
+
+  return ans;
 }
 // @lc code=end
 
