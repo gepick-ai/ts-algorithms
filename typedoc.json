@@ -36,7 +36,23 @@
     "includeGroups": true,
     "includeCategories": true
   },
-  "lang": "zh",
+  "categoryOrder": [
+    "滑动窗口与双指针",
+    "二分算法",
+    "回溯算法",
+    "动态规划",
+    "贪心算法",
+    "哈希表",
+    "字符串",
+    "数组",
+    "矩阵",
+    "栈",
+    "堆",
+    "链表",
+    "二叉树",
+    "网格图"
+  ],
+  // "lang": "zh",
   "projectDocuments": [
     ".docs/如何科学刷题.md",
     ".docs/灵茶山艾府题解.md",

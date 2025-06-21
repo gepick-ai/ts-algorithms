@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+
 function merge(intervals: number[][]): number[][] {
   // 1---3
   // 1-----5

@@ -1,10 +1,10 @@
-<!DOCTYPE html><html class="default" lang="zh" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>动态规划 | Typescript-Algorithms</title><meta name="description" content="Documentation for Typescript-Algorithms"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><link rel="stylesheet" href="../assets/typedoc-github-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Typescript-Algorithms</a><div id="tsd-toolbar-links"><a href="https://leetcode.cn/studyplan/top-100-liked">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms">Github</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="搜索"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="搜索"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="搜索文档" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>正在准备搜索索引...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="菜单"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="" aria-current="page">动态规划</a></li></ul></div><div class="tsd-panel tsd-typography"><h2 id="前言" class="tsd-anchor-link">前言<a href="#前言" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。</p>
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>动态规划 | Typescript-Algorithms</title><meta name="description" content="Documentation for Typescript-Algorithms"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><link rel="stylesheet" href="../assets/custom.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><link rel="stylesheet" href="../assets/typedoc-github-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Typescript-Algorithms</a><div id="tsd-toolbar-links"><a href="https://leetcode.cn/studyplan/top-100-liked">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms">Github</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="" aria-current="page">动态规划</a></li></ul></div><div class="tsd-panel tsd-typography"><h2 id="前言" class="tsd-anchor-link">前言<a href="#前言" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>掌握动态规划（DP）是没有捷径的，咱们唯一能做的，就是投入时间猛猛刷题。好比学数学，只看书看视频而不做习题，是不能说学会的。</p>
 <p>我能做的，是帮你节省找题的时间，并把这些题分类整理好。有着相同套路的题，一起做效率会更高，也更能领悟到 DP 的精髓。所以推荐按照专题刷。</p>
 <p>题目已按照难度分排序（右侧数字为难度分）。如果遇到难度很大，题解都看不懂的题目，建议直接跳过，二刷的时候再来尝试。</p>
-<h2 id="一、入门-dp" class="tsd-anchor-link">一、入门 DP<a href="#一、入门-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><img src="https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg" alt="动态规划算法题DP题单动态规划题单入门动态规划题目动态规划新手教程力扣DP力扣动态规划leetcode动态规划leetcode dp 灵茶山艾府 灵神 灵神题单"></p>
+<h2 id="一、入门-dp" class="tsd-anchor-link">一、入门 DP<a href="#一、入门-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><img src="https://pic.leetcode.cn/1710769845-JRnIfA-dp-2.jpg" alt="动态规划算法题DP题单动态规划题单入门动态规划题目动态规划新手教程力扣DP力扣动态规划leetcode动态规划leetcode dp 灵茶山艾府 灵神 灵神题单"></p>
 <p><strong>记忆化搜索</strong>是新手村神器（甚至可以用到游戏后期），推荐先看 <a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Xj411K7oF%2F">动态规划入门：从记忆化搜索到递推</a>。</p>
 <p>但记忆化搜索并不是万能的，某些题目只有写成递推，才能结合数据结构等来优化时间复杂度，多数题目还可以优化空间复杂度。所以尽量在写完记忆化搜索后，把递推的代码也写一下。熟练之后直接写递推也可以。</p>
-<h3 id="§11-爬楼梯" class="tsd-anchor-link">§1.1 爬楼梯<a href="#§11-爬楼梯" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p><a href="https://leetcode.cn/problems/climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/">讲解</a></p>
+<h3 id="§11-爬楼梯" class="tsd-anchor-link">§1.1 爬楼梯<a href="#§11-爬楼梯" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p><a href="https://leetcode.cn/problems/climbing-stairs/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/">讲解</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/climbing-stairs/">70. 爬楼梯</a></li>
 <li><a href="https://leetcode.cn/problems/min-cost-climbing-stairs/">746. 使用最小花费爬楼梯</a></li>
@@ -13,7 +13,7 @@
 <li><a href="https://leetcode.cn/problems/count-number-of-texts/">2266. 统计打字方案数</a> 1857</li>
 <li><a href="https://leetcode.cn/problems/number-of-good-binary-strings/">2533. 好二进制字符串的数量</a>（会员题）同 2466 题</li>
 </ul>
-<h3 id="§12-打家劫舍" class="tsd-anchor-link">§1.2 打家劫舍<a href="#§12-打家劫舍" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><h4 id="答疑" class="tsd-anchor-link">答疑<a href="#答疑" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><strong>问</strong>：在 1:1 翻译的过程中，如何根据记忆化搜索，确定递推数组（DP 数组）的大小？为什么有时候要开 n+1 大小的数组，有时候要开 n+2 大小的数组？</p>
+<h3 id="§12-打家劫舍" class="tsd-anchor-link">§1.2 打家劫舍<a href="#§12-打家劫舍" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><h4 id="答疑" class="tsd-anchor-link">答疑<a href="#答疑" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><strong>问</strong>：在 1:1 翻译的过程中，如何根据记忆化搜索，确定递推数组（DP 数组）的大小？为什么有时候要开 n+1 大小的数组，有时候要开 n+2 大小的数组？</p>
 <p><strong>答</strong>：看记忆化搜索的参数的范围（最小值和最大值）。例如 i 最小是 −1（递归边界也算），最大是 n−1（递归入口），那么一共有 n+1 个不同的 i，就需要开 n+1 大小的 DP 数组。如果 i 最小是 −2，最大是 n−1，一共有 n+2 个不同的 i，就需要开 n+2 大小的 DP 数组。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/house-robber/">198. 打家劫舍</a></li>
@@ -26,7 +26,7 @@
 <ul>
 <li><a href="https://leetcode.cn/problems/solving-questions-with-brainpower/">2140. 解决智力问题</a> 1709</li>
 </ul>
-<h3 id="§13-最大子数组和（最大子段和）" class="tsd-anchor-link">§1.3 最大子数组和（最大子段和）<a href="#§13-最大子数组和（最大子段和）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>有两种做法：</p>
+<h3 id="§13-最大子数组和（最大子段和）" class="tsd-anchor-link">§1.3 最大子数组和（最大子段和）<a href="#§13-最大子数组和（最大子段和）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>有两种做法：</p>
 <ol>
 <li>定义状态 f[i] 表示以 a[i] 结尾的最大子数组和，不和 i 左边拼起来就是 f[i]=a[i]，和 i 左边拼起来就是 f[i]=f[i−1]+a[i]，取最大值就得到了状态转移方程 f[i]=max(f[i−1],0)+a[i]，答案为 max(f)。这个做法也叫做 Kadane 算法。</li>
 <li>用 <a href="https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/">前缀和</a>，转化成 <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a>。</li>
@@ -43,10 +43,10 @@
 <ul>
 <li><a href="https://leetcode.cn/problems/maximum-product-subarray/">152. 乘积最大子数组</a></li>
 </ul>
-<h3 id="思考题" class="tsd-anchor-link">思考题<a href="#思考题" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>完成本章后，请思考：什么时候要返回 f[n]，什么时候要返回 max(f)？</p>
-<h2 id="二、网格图-dp" class="tsd-anchor-link">二、网格图 DP<a href="#二、网格图-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>对于一些二维 DP（例如背包、最长公共子序列），如果把 DP 矩阵画出来，其实状态转移可以视作<strong>在网格图上的移动</strong>。所以在学习相对更抽象的二维 DP 之前，做一些形象的网格图 DP 会让后续的学习更轻松（比如 0-1 背包的空间优化写法为什么要倒序遍历）。</p>
+<h3 id="思考题" class="tsd-anchor-link">思考题<a href="#思考题" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>完成本章后，请思考：什么时候要返回 f[n]，什么时候要返回 max(f)？</p>
+<h2 id="二、网格图-dp" class="tsd-anchor-link">二、网格图 DP<a href="#二、网格图-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>对于一些二维 DP（例如背包、最长公共子序列），如果把 DP 矩阵画出来，其实状态转移可以视作<strong>在网格图上的移动</strong>。所以在学习相对更抽象的二维 DP 之前，做一些形象的网格图 DP 会让后续的学习更轻松（比如 0-1 背包的空间优化写法为什么要倒序遍历）。</p>
 <p><a href="https://leetcode.cn/problems/minimum-path-sum/solutions/3045828/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-zfb2/">讲解</a></p>
-<h3 id="§21-基础" class="tsd-anchor-link">§2.1 基础<a href="#§21-基础" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§21-基础" class="tsd-anchor-link">§2.1 基础<a href="#§21-基础" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/minimum-path-sum/">64. 最小路径和</a></li>
 <li><a href="https://leetcode.cn/problems/unique-paths/">62. 不同路径</a></li>
 <li><a href="https://leetcode.cn/problems/unique-paths-ii/">63. 不同路径 II</a></li>
@@ -62,7 +62,7 @@
 <ul>
 <li><a href="https://leetcode.cn/problems/minimum-sideway-jumps/">1824. 最少侧跳次数</a> 1778</li>
 </ul>
-<h3 id="§22-进阶" class="tsd-anchor-link">§2.2 进阶<a href="#§22-进阶" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§22-进阶" class="tsd-anchor-link">§2.2 进阶<a href="#§22-进阶" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/">1594. 矩阵的最大非负积</a> 1807</li>
 <li><a href="https://leetcode.cn/problems/number-of-paths-with-max-score/">1301. 最大得分的路径数目</a> 1853</li>
 <li><a href="https://leetcode.cn/problems/paths-in-matrix-whose-sum-is-divisible-by-k/">2435. 矩阵中和能被 K 整除的路径</a> 1952</li>
@@ -77,8 +77,8 @@
 <li><a href="https://leetcode.cn/problems/length-of-longest-v-shaped-diagonal-segment/">3459. 最长 V 形对角线段的长度</a> 2337 状态设计</li>
 <li><a href="https://leetcode.cn/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/">2510. 检查是否有路径经过相同数量的 0 和 1</a>（会员题）</li>
 </ul>
-<h2 id="三、背包" class="tsd-anchor-link">三、背包<a href="#三、背包" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV16Y411v7Y6%2F">0-1 背包 完全背包【基础算法精讲 18】</a></p>
-<h3 id="§31-0-1-背包" class="tsd-anchor-link">§3.1 0-1 背包<a href="#§31-0-1-背包" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>每个物品只能选一次。</p>
+<h2 id="三、背包" class="tsd-anchor-link">三、背包<a href="#三、背包" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV16Y411v7Y6%2F">0-1 背包 完全背包【基础算法精讲 18】</a></p>
+<h3 id="§31-0-1-背包" class="tsd-anchor-link">§3.1 0-1 背包<a href="#§31-0-1-背包" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>每个物品只能选一次。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/partition-equal-subset-sum/">416. 分割等和子集</a></li>
 <li><a href="https://leetcode.cn/problems/target-sum/">494. 目标和</a></li>
@@ -103,8 +103,8 @@
 <li><a href="https://leetcode.cn/problems/maximize-total-tastiness-of-purchased-fruits/">2431. 最大限度地提高购买水果的口味</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-build-house-of-cards/">2189. 建造纸牌屋的方法数</a>（会员题）</li>
 </ul>
-<h3 id="§32-完全背包" class="tsd-anchor-link">§3.2 完全背包<a href="#§32-完全背包" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>物品可以重复选，无个数限制。</p>
-<h4 id="答疑-1" class="tsd-anchor-link">答疑<a href="#答疑-1" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><strong>问</strong>：关于完全背包，有两种写法，一种是外层循环枚举物品，内层循环枚举体积；另一种是外层循环枚举体积，内层循环枚举物品。如何评价这两种写法的优劣？</p>
+<h3 id="§32-完全背包" class="tsd-anchor-link">§3.2 完全背包<a href="#§32-完全背包" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>物品可以重复选，无个数限制。</p>
+<h4 id="答疑-1" class="tsd-anchor-link">答疑<a href="#答疑-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><strong>问</strong>：关于完全背包，有两种写法，一种是外层循环枚举物品，内层循环枚举体积；另一种是外层循环枚举体积，内层循环枚举物品。如何评价这两种写法的优劣？</p>
 <p><strong>答</strong>：两种写法都可以，但更推荐前者。外层循环枚举物品的写法，只会遍历物品数组一次；而内层循环枚举物品的写法，会遍历物品数组多次。从 cache 的角度分析，多次遍历数组会导致额外的 cache miss，带来额外的开销。所以虽然这两种写法的时间空间复杂度是一样的，但外层循环枚举物品的写法常数更小。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/coin-change/">322. 零钱兑换</a></li>
@@ -113,7 +113,7 @@
 <li><a href="https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/">1449. 数位成本和为目标值的最大数字</a> 1927</li>
 <li><a href="https://leetcode.cn/problems/the-number-of-ways-to-make-the-sum/">3183. 达到总和的方法数量</a>（会员题）混合背包</li>
 </ul>
-<h3 id="§33-多重背包（选做）" class="tsd-anchor-link">§3.3 多重背包（选做）<a href="#§33-多重背包（选做）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>物品可以重复选，有个数限制。</p>
+<h3 id="§33-多重背包（选做）" class="tsd-anchor-link">§3.3 多重背包（选做）<a href="#§33-多重背包（选做）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>物品可以重复选，有个数限制。</p>
 <p><strong>求方案数</strong></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-earn-points/">2585. 获得分数的方法数</a> 1910</li>
@@ -124,22 +124,22 @@
 <ul>
 <li><a href="https://leetcode.cn/problems/zero-array-transformation-iv/">3489. 零数组变换 IV</a></li>
 </ul>
-<h3 id="§34-分组背包" class="tsd-anchor-link">§3.4 分组背包<a href="#§34-分组背包" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>同一组内的物品至多/恰好选一个。</p>
+<h3 id="§34-分组背包" class="tsd-anchor-link">§3.4 分组背包<a href="#§34-分组背包" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>同一组内的物品至多/恰好选一个。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/">1155. 掷骰子等于目标和的方法数</a> 1654</li>
 <li><a href="https://leetcode.cn/problems/minimize-the-difference-between-target-and-chosen-elements/">1981. 最小化目标值与所选元素的差</a> 2010</li>
 <li><a href="https://leetcode.cn/problems/maximum-value-of-k-coins-from-piles/">2218. 从栈中取出 K 个硬币的最大面值和</a> 2158</li>
 </ul>
-<h3 id="§35-树形背包（选做）" class="tsd-anchor-link">§3.5 树形背包（选做）<a href="#§35-树形背包（选做）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>也叫树上背包、依赖背包等。</p>
+<h3 id="§35-树形背包（选做）" class="tsd-anchor-link">§3.5 树形背包（选做）<a href="#§35-树形背包（选做）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>也叫树上背包、依赖背包等。</p>
 <blockquote>
 <p>注：目前力扣只有无依赖的背包，时间复杂度为 O(nW2)。如果有依赖，可以优化到 O(nW)。</p>
 </blockquote>
 <ul>
 <li><a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/">3562. 折扣价交易股票的最大利润</a> 2458</li>
 </ul>
-<h2 id="四、经典线性-dp" class="tsd-anchor-link">四、经典线性 DP<a href="#四、经典线性-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§41-最长公共子序列（lcs）" class="tsd-anchor-link">§4.1 最长公共子序列（LCS）<a href="#§41-最长公共子序列（lcs）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1TM4y1o7ug%2F">最长公共子序列 编辑距离【基础算法精讲 19】</a></p>
+<h2 id="四、经典线性-dp" class="tsd-anchor-link">四、经典线性 DP<a href="#四、经典线性-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§41-最长公共子序列（lcs）" class="tsd-anchor-link">§4.1 最长公共子序列（LCS）<a href="#§41-最长公共子序列（lcs）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1TM4y1o7ug%2F">最长公共子序列 编辑距离【基础算法精讲 19】</a></p>
 <p>一般定义 f[i][j] 表示对 (s[:i],t[:j]) 的求解结果。</p>
-<h4 id="§411-基础" class="tsd-anchor-link">§4.1.1 基础<a href="#§411-基础" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<h4 id="§411-基础" class="tsd-anchor-link">§4.1.1 基础<a href="#§411-基础" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
 <li><a href="https://leetcode.cn/problems/longest-common-subsequence/">1143. 最长公共子序列</a></li>
 <li><a href="https://leetcode.cn/problems/delete-operation-for-two-strings/">583. 两个字符串的删除操作</a></li>
 <li><a href="https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/">712. 两个字符串的最小 ASCII 删除和</a></li>
@@ -151,7 +151,7 @@
 <ul>
 <li><a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/">718. 最长重复子数组</a></li>
 </ul>
-<h4 id="§412-进阶" class="tsd-anchor-link">§4.1.2 进阶<a href="#§412-进阶" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<h4 id="§412-进阶" class="tsd-anchor-link">§4.1.2 进阶<a href="#§412-进阶" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
 <li><a href="https://leetcode.cn/problems/maximum-multiplication-score/">3290. 最高乘法得分</a> 1692</li>
 <li><a href="https://leetcode.cn/problems/distinct-subsequences/">115. 不同的子序列</a></li>
 <li><a href="https://leetcode.cn/problems/find-maximum-removals-from-source-string/">3316. 从原字符串里进行删除操作的最多次数</a> 2062</li>
@@ -164,7 +164,7 @@
 <p><strong>思考题</strong>：</p>
 <p>115 题的扩展。给定字符串 s 和 t，你可以在 s 的任意位置插入一个字母，插入后，s 最多有多少个子序列等于 t？</p>
 <p>思路和代码见 <a href="https://leetcode.cn/problems/maximize-number-of-subsequences-in-a-string/solutions/1352039/by-endlesscheng-yfyf/comments/2389140">评论</a>。</p>
-<h3 id="§42-最长递增子序列（lis）" class="tsd-anchor-link">§4.2 最长递增子序列（LIS）<a href="#§42-最长递增子序列（lis）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1ub411Q7sB%2F">最长递增子序列【基础算法精讲 20】</a></p>
+<h3 id="§42-最长递增子序列（lis）" class="tsd-anchor-link">§4.2 最长递增子序列（LIS）<a href="#§42-最长递增子序列（lis）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1ub411Q7sB%2F">最长递增子序列【基础算法精讲 20】</a></p>
 <p>做法有很多：</p>
 <ol>
 <li>枚举选哪个。（见讲解）</li>
@@ -172,14 +172,14 @@
 <li>计算 a 和把 a 排序后的数组 sortedA 的最长公共子序列。（用 LCS 求 LIS）</li>
 <li>数据结构优化。（见 <a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">2407 题</a>）</li>
 </ol>
-<h4 id="§421-基础" class="tsd-anchor-link">§4.2.1 基础<a href="#§421-基础" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<h4 id="§421-基础" class="tsd-anchor-link">§4.2.1 基础<a href="#§421-基础" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
 <li><a href="https://leetcode.cn/problems/longest-increasing-subsequence/">300. 最长递增子序列</a></li>
 <li><a href="https://leetcode.cn/problems/sorting-three-groups/">2826. 将三个组排序</a> 1721</li>
 <li><a href="https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/">1671. 得到山形数组的最少删除次数</a> 1913</li>
 <li><a href="https://leetcode.cn/problems/find-the-longest-valid-obstacle-course-at-each-position/">1964. 找出到每个位置为止最长的有效障碍赛跑路线</a> 1933</li>
 <li><a href="https://leetcode.cn/problems/minimum-operations-to-make-the-array-k-increasing/">2111. 使数组 K 递增的最少操作次数</a> 1941</li>
 </ul>
-<h4 id="§422-进阶" class="tsd-anchor-link">§4.2.2 进阶<a href="#§422-进阶" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<h4 id="§422-进阶" class="tsd-anchor-link">§4.2.2 进阶<a href="#§422-进阶" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
 <li><a href="https://leetcode.cn/problems/best-team-with-no-conflicts/">1626. 无矛盾的最佳球队</a> 2027</li>
 <li><a href="https://leetcode.cn/problems/number-of-longest-increasing-subsequence/">673. 最长递增子序列的个数</a></li>
 <li><a href="https://leetcode.cn/problems/russian-doll-envelopes/">354. 俄罗斯套娃信封问题</a> 二维 LIS</li>
@@ -198,13 +198,13 @@
 <p><strong>思考题</strong>：</p>
 <p>给定整数 k，构造一个数组 a，使得 a 恰好有 k 个最长递增子序列。</p>
 <p><a href="https://leetcode.cn/problems/number-of-longest-increasing-subsequence/description/comments/2218054">解答（评论）</a></p>
-<h2 id="五、划分型-dp" class="tsd-anchor-link">五、划分型 DP<a href="#五、划分型-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§51-判定能否划分" class="tsd-anchor-link">§5.1 判定能否划分<a href="#§51-判定能否划分" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般定义 f[i] 表示长为 i 的前缀 a[:i] 能否划分。</p>
+<h2 id="五、划分型-dp" class="tsd-anchor-link">五、划分型 DP<a href="#五、划分型-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§51-判定能否划分" class="tsd-anchor-link">§5.1 判定能否划分<a href="#§51-判定能否划分" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般定义 f[i] 表示长为 i 的前缀 a[:i] 能否划分。</p>
 <p>枚举最后一个子数组的左端点 L，从 f[L] 转移到 f[i]，并考虑 a[L:i] 是否满足要求。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/check-if-there-is-a-valid-partition-for-the-array/">2369. 检查数组是否存在有效划分</a> 1780</li>
 <li><a href="https://leetcode.cn/problems/word-break/">139. 单词拆分</a></li>
 </ul>
-<h3 id="§52-最优划分" class="tsd-anchor-link">§5.2 最优划分<a href="#§52-最优划分" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>计算最少（最多）可以划分出多少段、最优划分得分等。</p>
+<h3 id="§52-最优划分" class="tsd-anchor-link">§5.2 最优划分<a href="#§52-最优划分" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>计算最少（最多）可以划分出多少段、最优划分得分等。</p>
 <p>一般定义 f[i] 表示长为 i 的前缀 a[:i] 在题目约束下，分割出的最少（最多）子数组个数（或者定义成分割方案数）。</p>
 <p>枚举最后一个子数组的左端点 L，从 f[L] 转移到 f[i]，并考虑 a[L:i] 对最优解的影响。</p>
 <ul>
@@ -231,7 +231,7 @@
 <li><a href="https://leetcode.cn/problems/minimum-cost-to-separate-sentence-into-rows/">2052. 将句子分隔成行的最低成本</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/minimum-subarrays-in-a-valid-split/">2464. 有效分割中的最少子数组数目</a>（会员题）</li>
 </ul>
-<h3 id="§53-约束划分个数" class="tsd-anchor-link">§5.3 约束划分个数<a href="#§53-约束划分个数" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>将数组分成（恰好/至多）k 个连续子数组，计算与这些子数组有关的最优值。</p>
+<h3 id="§53-约束划分个数" class="tsd-anchor-link">§5.3 约束划分个数<a href="#§53-约束划分个数" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>将数组分成（恰好/至多）k 个连续子数组，计算与这些子数组有关的最优值。</p>
 <p>一般定义 f[i][j] 表示将长为 j 的前缀 a[:j] 分成 i 个连续子数组所得到的最优解。</p>
 <p>枚举最后一个子数组的左端点 L，从 f[i−1][L] 转移到 f[i][j]，并考虑 a[L:j] 对最优解的影响。</p>
 <blockquote>
@@ -255,8 +255,8 @@
 <li><a href="https://leetcode.cn/problems/minimum-changes-to-make-k-semi-palindromes/">2911. 得到 K 个半回文串的最少修改次数</a> 2608</li>
 <li><a href="https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array/">3117. 划分数组得到最小的值之和</a> 2735</li>
 </ul>
-<h2 id="六、状态机-dp" class="tsd-anchor-link">六、状态机 DP<a href="#六、状态机-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>一般定义 f[i][j] 表示前缀 a[:i] 在状态 j 下的最优值。j 一般很小。</p>
-<h3 id="§61-买卖股票" class="tsd-anchor-link">§6.1 买卖股票<a href="#§61-买卖股票" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p><a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1ho4y1W7QK%2F">讲解【基础算法精讲 21】</a></p>
+<h2 id="六、状态机-dp" class="tsd-anchor-link">六、状态机 DP<a href="#六、状态机-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>一般定义 f[i][j] 表示前缀 a[:i] 在状态 j 下的最优值。j 一般很小。</p>
+<h3 id="§61-买卖股票" class="tsd-anchor-link">§6.1 买卖股票<a href="#§61-买卖股票" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p><a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1ho4y1W7QK%2F">讲解【基础算法精讲 21】</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a> 交易一次</li>
 <li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122. 买卖股票的最佳时机 II</a> 交易次数不限</li>
@@ -266,7 +266,7 @@
 <li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 买卖股票的最佳时机含冷冻期</a></li>
 <li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></li>
 </ul>
-<h3 id="§62-基础" class="tsd-anchor-link">§6.2 基础<a href="#§62-基础" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§62-基础" class="tsd-anchor-link">§6.2 基础<a href="#§62-基础" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximum-energy-boost-from-two-drinks/">3259. 超级饮料的最大强化能量</a> 1484</li>
 <li><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/">2708. 一个小组的最大实力值</a> 做到 O(n) 时间（联系 152 题）</li>
 <li><a href="https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/">1567. 乘积为正数的最长子数组长度</a> 1710</li>
@@ -275,7 +275,7 @@
 <li><a href="https://leetcode.cn/problems/wiggle-subsequence/">376. 摆动序列</a></li>
 <li><a href="https://leetcode.cn/problems/maximum-coin-collection/">3466. 最大硬币收集量</a>（会员题）</li>
 </ul>
-<h3 id="§63-进阶" class="tsd-anchor-link">§6.3 进阶<a href="#§63-进阶" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§63-进阶" class="tsd-anchor-link">§6.3 进阶<a href="#§63-进阶" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-from-two-arrays/">2771. 构造最长非递减子数组</a> 1792</li>
 <li><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">1186. 删除一次得到子数组最大和</a> 1799</li>
 <li><a href="https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/">1594. 矩阵的最大非负积</a> 1807</li>
@@ -295,7 +295,7 @@
 <li><a href="https://leetcode.cn/problems/minimum-costs-using-the-train-line/">2361. 乘坐火车路线的最少费用</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/constructing-two-increasing-arrays/">3269. 构建两个递增数组</a>（会员题）</li>
 </ul>
-<h2 id="七、其他线性-dp" class="tsd-anchor-link">七、其他线性 DP<a href="#七、其他线性-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§71-一维-dp" class="tsd-anchor-link">§7.1 一维 DP<a href="#§71-一维-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>发生在前缀/后缀之间的转移，例如从 f[i−1] 转移到 f[i]，或者从 f[j] 转移到 f[i]。</p>
+<h2 id="七、其他线性-dp" class="tsd-anchor-link">七、其他线性 DP<a href="#七、其他线性-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§71-一维-dp" class="tsd-anchor-link">§7.1 一维 DP<a href="#§71-一维-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>发生在前缀/后缀之间的转移，例如从 f[i−1] 转移到 f[i]，或者从 f[j] 转移到 f[i]。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">2944. 购买水果需要的最少金币数</a> 1709</li>
 <li><a href="https://leetcode.cn/problems/solving-questions-with-brainpower/">2140. 解决智力问题</a> 1709 可以用刷表法</li>
@@ -315,7 +315,7 @@
 <li><a href="https://leetcode.cn/problems/the-number-of-beautiful-subsets/">2597. 美丽子集的数目</a> 用 DP 解决</li>
 <li><a href="https://leetcode.cn/problems/count-the-number-of-k-free-subsets/">2638. 统计 K-Free 子集的总数</a>（会员题）上面这题的加强版</li>
 </ul>
-<h3 id="§72-不相交区间" class="tsd-anchor-link">§7.2 不相交区间<a href="#§72-不相交区间" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§72-不相交区间" class="tsd-anchor-link">§7.2 不相交区间<a href="#§72-不相交区间" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/">2830. 销售利润最大化</a> 1851</li>
 <li><a href="https://leetcode.cn/problems/maximum-earnings-from-taxi/">2008. 出租车的最大盈利</a> 1872</li>
 <li><a href="https://leetcode.cn/problems/two-best-non-overlapping-events/">2054. 两个最好的不重叠活动</a> 1883</li>
@@ -323,7 +323,7 @@
 <li><a href="https://leetcode.cn/problems/maximum-number-of-events-that-can-be-attended-ii/">1751. 最多可以参加的会议数目 II</a> 2041</li>
 <li><a href="https://leetcode.cn/problems/maximum-score-of-non-overlapping-intervals/">3414. 不重叠区间的最大得分</a> 2723</li>
 </ul>
-<h3 id="§73-子数组-dp" class="tsd-anchor-link">§7.3 子数组 DP<a href="#§73-子数组-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§73-子数组-dp" class="tsd-anchor-link">§7.3 子数组 DP<a href="#§73-子数组-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximum-subarray/">53. 最大子数组和</a></li>
 <li><a href="https://leetcode.cn/problems/maximum-product-subarray/">152. 乘积最大子数组</a></li>
 <li><a href="https://leetcode.cn/problems/find-x-value-of-array-i/">3524. 求出数组的 X 值 I</a> 2008 刷表法</li>
@@ -335,7 +335,7 @@
 <li><a href="https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/">828. 统计子串中的唯一字符</a> 2034</li>
 <li><a href="https://leetcode.cn/problems/unique-substrings-in-wraparound-string/">467. 环绕字符串中唯一的子字符串</a></li>
 </ul>
-<h3 id="§74-合法子序列-dp" class="tsd-anchor-link">§7.4 合法子序列 DP<a href="#§74-合法子序列-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>计算合法子序列的最长长度、个数、元素和等。</p>
+<h3 id="§74-合法子序列-dp" class="tsd-anchor-link">§7.4 合法子序列 DP<a href="#§74-合法子序列-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>计算合法子序列的最长长度、个数、元素和等。</p>
 <p>一般定义 f[x] 表示以元素 x 结尾的合法子序列的最长长度/个数/元素和，从子序列的倒数第二个数转移过来。</p>
 <p>注意这里的 x 不是下标，是元素值。如果 x 不是整数，或者值域范围很大，可以用哈希表代替数组。</p>
 <ul>
@@ -360,14 +360,14 @@
 <li><a href="https://leetcode.cn/problems/distinct-subsequences-ii/">940. 不同的子序列 II</a> 1985</li>
 <li><a href="https://leetcode.cn/problems/number-of-unique-good-subsequences/">1987. 不同的好子序列数目</a> 2422 思考方式同 940 题</li>
 </ul>
-<h3 id="§75-子矩形-dp" class="tsd-anchor-link">§7.5 子矩形 DP<a href="#§75-子矩形-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§75-子矩形-dp" class="tsd-anchor-link">§7.5 子矩形 DP<a href="#§75-子矩形-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximum-difference-score-in-a-grid/">3148. 矩阵中的最大得分</a> 1820</li>
 <li><a href="https://leetcode.cn/problems/maximal-square/">221. 最大正方形</a></li>
 <li><a href="https://leetcode.cn/problems/count-square-submatrices-with-all-ones/">1277. 统计全为 1 的正方形子矩阵</a></li>
 <li><a href="https://leetcode.cn/problems/count-fertile-pyramids-in-a-land/">2088. 统计农场中肥沃金字塔的数目</a> 2105</li>
 <li><a href="https://leetcode.cn/problems/find-the-minimum-area-to-cover-all-ones-ii/">3197. 包含所有 1 的最小矩形面积 II</a> O(mn) 做法</li>
 </ul>
-<h3 id="§76-多维-dp" class="tsd-anchor-link">§7.6 多维 DP<a href="#§76-多维-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§76-多维-dp" class="tsd-anchor-link">§7.6 多维 DP<a href="#§76-多维-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">2222. 选择建筑的方案数</a> 1657 把 3 改成 k 怎么做？</li>
 <li><a href="https://leetcode.cn/problems/sorting-three-groups/">2826. 将三个组排序</a> 1721 做法不止一种</li>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/">2400. 恰好移动 k 步到达某一位置的方法数目</a> 1751</li>
@@ -433,10 +433,10 @@
 <ul>
 <li><a href="https://leetcode.cn/problems/shopping-offers/">638. 大礼包</a></li>
 </ul>
-<h2 id="八、区间-dp" class="tsd-anchor-link">八、区间 DP<a href="#八、区间-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Gs4y1E7EU%2F">区间 DP【基础算法精讲 22】</a></p>
+<h2 id="八、区间-dp" class="tsd-anchor-link">八、区间 DP<a href="#八、区间-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Gs4y1E7EU%2F">区间 DP【基础算法精讲 22】</a></p>
 <p>从数组的左右两端不断缩短，求解关于某段下标区间的最优值。</p>
 <p>一般定义 f[i][j] 表示下标区间 [i,j] 的最优值。</p>
-<h3 id="§81-最长回文子序列" class="tsd-anchor-link">§8.1 最长回文子序列<a href="#§81-最长回文子序列" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§81-最长回文子序列" class="tsd-anchor-link">§8.1 最长回文子序列<a href="#§81-最长回文子序列" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/longest-palindromic-subsequence/">516. 最长回文子序列</a></li>
 <li><a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/">730. 统计不同回文子序列</a></li>
 <li><a href="https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/">1312. 让字符串成为回文串的最少插入次数</a> 1787</li>
@@ -446,7 +446,7 @@
 <li><a href="https://leetcode.cn/problems/valid-palindrome-iii/">1216. 验证回文串 III</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/palindrome-removal/">1246. 删除回文子数组</a>（会员题）</li>
 </ul>
-<h3 id="§82-区间-dp" class="tsd-anchor-link">§8.2 区间 DP<a href="#§82-区间-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>对于类似合法括号字符串（RBS）的消除问题，通常根据题意，会有如下性质：</p>
+<h3 id="§82-区间-dp" class="tsd-anchor-link">§8.2 区间 DP<a href="#§82-区间-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>对于类似合法括号字符串（RBS）的消除问题，通常根据题意，会有如下性质：</p>
 <ol>
 <li>可以消除相邻的匹配字符。</li>
 <li>相邻匹配字符消除后，原本不相邻的字符会变成相邻，可以继续消除。换句话说，设子串 A=x+B+y，如果 x 和 y 是匹配的（可以消除），且子串 B 可以完全消除，那么子串 A 可以完全消除。</li>
@@ -481,7 +481,7 @@
 <li><a href="https://leetcode.cn/problems/encode-string-with-shortest-length/">471. 编码最短长度的字符串</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/maximum-number-of-removal-queries-that-can-be-processed-i/">3018. 可处理的最大删除操作数 I</a>（会员题）</li>
 </ul>
-<h2 id="九、状态压缩-dp（状压-dp）" class="tsd-anchor-link">九、状态压缩 DP（状压 DP）<a href="#九、状态压缩-dp（状压-dp）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§91-排列型-①-相邻无关" class="tsd-anchor-link">§9.1 排列型 ① 相邻无关<a href="#§91-排列型-①-相邻无关" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>学习指南：</p>
+<h2 id="九、状态压缩-dp（状压-dp）" class="tsd-anchor-link">九、状态压缩 DP（状压 DP）<a href="#九、状态压缩-dp（状压-dp）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§91-排列型-①-相邻无关" class="tsd-anchor-link">§9.1 排列型 ① 相邻无关<a href="#§91-排列型-①-相邻无关" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>学习指南：</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/">教你一步步思考状压 DP：从记忆化搜索到递推</a></li>
 <li><a href="https://leetcode.cn/circle/discuss/CaOJ45/">从集合论到位运算，常见位运算技巧分类总结</a></li>
@@ -510,7 +510,7 @@
 <li><a href="https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/">2403. 杀死所有怪物的最短时间</a>（会员题）同 3376 题</li>
 <li><a href="https://leetcode.cn/problems/campus-bikes-ii/">1066. 校园自行车分配 II</a>（会员题）</li>
 </ul>
-<h3 id="§92-排列型-②-相邻相关" class="tsd-anchor-link">§9.2 排列型 ② 相邻相关<a href="#§92-排列型-②-相邻相关" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般定义 f[S][i] 表示未选（或者已选）的集合为 S，且上一个填的元素（下标）为 i 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。</p>
+<h3 id="§92-排列型-②-相邻相关" class="tsd-anchor-link">§9.2 排列型 ② 相邻相关<a href="#§92-排列型-②-相邻相关" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般定义 f[S][i] 表示未选（或者已选）的集合为 S，且上一个填的元素（下标）为 i 时，和题目有关的最优值。通过枚举当前位置要填的元素（下标）来转移。</p>
 <p>时间复杂度（通常来说）是 O(n2⋅2n)。</p>
 <p><a href="https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/solution/zhuang-ya-dpcong-ji-yi-hua-sou-suo-dao-d-s9t5/">讲解：从全排列到状压 DP</a></p>
 <ul>
@@ -520,7 +520,7 @@
 <li><a href="https://leetcode.cn/problems/maximum-number-of-moves-to-kill-all-pawns/">3283. 吃掉所有兵需要的最多移动次数</a> 2473</li>
 <li><a href="https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/">3149. 找出分数最低的排列</a> 2642</li>
 </ul>
-<h3 id="§93-旅行商问题（tsp）" class="tsd-anchor-link">§9.3 旅行商问题（TSP）<a href="#§93-旅行商问题（tsp）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>本质上就是排列型 ②。</p>
+<h3 id="§93-旅行商问题（tsp）" class="tsd-anchor-link">§9.3 旅行商问题（TSP）<a href="#§93-旅行商问题（tsp）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>本质上就是排列型 ②。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/find-the-shortest-superstring/">943. 最短超级串</a> 2186</li>
 <li><a href="https://leetcode.cn/problems/shortest-path-visiting-all-nodes/">847. 访问所有节点的最短路径</a> 2201</li>
@@ -532,7 +532,7 @@
 <li><a href="https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/">3568. 清理教室的最少移动</a> ~2100</li>
 <li><a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/">864. 获取所有钥匙的最短路径</a> 2259</li>
 </ul>
-<h3 id="§94-子集状压-dp" class="tsd-anchor-link">§9.4 子集状压 DP<a href="#§94-子集状压-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般定义 f[S] 表示未选（或者已选）的集合为 S 时，和题目有关的最优值。通过枚举 S（或者 S 的补集 ∁U​S）的子集来转移。</p>
+<h3 id="§94-子集状压-dp" class="tsd-anchor-link">§9.4 子集状压 DP<a href="#§94-子集状压-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般定义 f[S] 表示未选（或者已选）的集合为 S 时，和题目有关的最优值。通过枚举 S（或者 S 的补集 ∁U​S）的子集来转移。</p>
 <p>时间复杂度（通常来说）是 O(3n)，证明：</p>
 <p>对于大小为 n 的集合，它的大小为 m 的子集有 (mn​) 个，每个子集又有 2m 个子集。根据二项式定理，m=0∑n​(mn​)2m=(2+1)n=3n，所以「枚举子集的子集」的总体时间复杂度为 O(3n)。</p>
 <p>值得注意的是，枚举子集的子集还可以用「选或不选」来做，对于存在无效状态的情况，可以做到更优的时间复杂度。具体见 <a href="https://leetcode.cn/problems/maximum-students-taking-exam/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-9y5k/">1349 题解</a> 最后的写法。</p>
@@ -553,7 +553,7 @@
 <li><a href="https://leetcode.cn/problems/optimal-account-balancing/">465. 最优账单平衡</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/minimum-number-of-lines-to-cover-points/">2152. 穿过所有点的所需最少直线数量</a>（会员题）</li>
 </ul>
-<h3 id="§95-其他状压-dp" class="tsd-anchor-link">§9.5 其他状压 DP<a href="#§95-其他状压-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§95-其他状压-dp" class="tsd-anchor-link">§9.5 其他状压 DP<a href="#§95-其他状压-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-paint-n-3-grid/">1411. 给 N x 3 网格图涂色的方案数</a> 1845</li>
 <li><a href="https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/">698. 划分为k个相等的子集</a></li>
 <li><a href="https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/">2002. 两个回文子序列长度的最大乘积</a> 1869</li>
@@ -573,7 +573,7 @@
 <li><a href="https://leetcode.cn/problems/android-unlock-patterns/">351. 安卓系统手势解锁</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-build-sturdy-brick-wall/">2184. 建造坚实的砖墙的方法数</a>（会员题）</li>
 </ul>
-<h2 id="十、数位-dp" class="tsd-anchor-link">十、数位 DP<a href="#十、数位-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1rS4y1s721%2F%3Ft%3D19m36s">数位 DP v1.0 模板讲解</a></p>
+<h2 id="十、数位-dp" class="tsd-anchor-link">十、数位 DP<a href="#十、数位-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1rS4y1s721%2F%3Ft%3D19m36s">数位 DP v1.0 模板讲解</a></p>
 <p><a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Fg4y1Q7wv%2F%3Ft%3D31m28s">数位 DP v2.0 模板讲解</a> 上下界数位 DP</p>
 <p>下面是数位 DP v2.1 模板。相比 v2.0，不需要写 isNum 参数。</p>
 <blockquote>
@@ -650,7 +650,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/number-of-2s-in-range-lcci/">面试题 17.06. 2 出现的次数</a></li>
 <li><a href="https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/">3007. 价值和小于等于 K 的最大数字</a> 2258 做法不止一种</li>
 </ul>
-<h2 id="十一、优化-dp" class="tsd-anchor-link">十一、优化 DP<a href="#十一、优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§111-前缀和优化-dp" class="tsd-anchor-link">§11.1 前缀和优化 DP<a href="#§111-前缀和优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h2 id="十一、优化-dp" class="tsd-anchor-link">十一、优化 DP<a href="#十一、优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="§111-前缀和优化-dp" class="tsd-anchor-link">§11.1 前缀和优化 DP<a href="#§111-前缀和优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/number-of-people-aware-of-a-secret/">2327. 知道秘密的人数</a> 1894</li>
 <li><a href="https://leetcode.cn/problems/jump-game-vii/">1871. 跳跃游戏 VII</a> 1896 也可以用滑动窗口优化</li>
 <li><a href="https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms/">1997. 访问完所有房间的第一天</a> 2260</li>
@@ -666,14 +666,14 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-separate-numbers/">1977. 划分数字的方案数</a> 2817</li>
 <li><a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii/">3130. 找出所有稳定的二进制数组 II</a> 2825 也有组合数学做法</li>
 </ul>
-<h3 id="§112-单调栈优化-dp" class="tsd-anchor-link">§11.2 单调栈优化 DP<a href="#§112-单调栈优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>前置题单：<a href="https://leetcode.cn/circle/discuss/9oZFK9/">单调栈（矩形系列/字典序最小/贡献法）</a></p>
+<h3 id="§112-单调栈优化-dp" class="tsd-anchor-link">§11.2 单调栈优化 DP<a href="#§112-单调栈优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>前置题单：<a href="https://leetcode.cn/circle/discuss/9oZFK9/">单调栈（矩形系列/字典序最小/贡献法）</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/">1335. 工作计划的最低难度</a> 2035</li>
 <li><a href="https://leetcode.cn/problems/beautiful-towers-ii/">2866. 美丽塔 II</a> 2072</li>
 <li><a href="https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/">2617. 网格图中最少访问的格子数</a> 2582</li>
 <li><a href="https://leetcode.cn/problems/maximum-number-of-books-you-can-take/">2355. 你能拿走的最大图书数量</a>（会员题）</li>
 </ul>
-<h3 id="§113-单调队列优化-dp" class="tsd-anchor-link">§11.3 单调队列优化 DP<a href="#§113-单调队列优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般用来维护一段转移来源的最值。</p>
+<h3 id="§113-单调队列优化-dp" class="tsd-anchor-link">§11.3 单调队列优化 DP<a href="#§113-单调队列优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>一般用来维护一段转移来源的最值。</p>
 <ol>
 <li>前提：区间右端点变大时，左端点也在变大（同滑动窗口）。</li>
 <li>转移前，去掉队首无用数据。</li>
@@ -692,7 +692,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">2945. 找到最大非递减数组的长度</a> 2943</li>
 <li><a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits-ii/">2969. 购买水果需要的最少金币数 II</a>（会员题）</li>
 </ul>
-<h3 id="§114-树状数组线段树优化-dp" class="tsd-anchor-link">§11.4 树状数组/线段树优化 DP<a href="#§114-树状数组线段树优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§114-树状数组线段树优化-dp" class="tsd-anchor-link">§11.4 树状数组/线段树优化 DP<a href="#§114-树状数组线段树优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/best-team-with-no-conflicts/">1626. 无矛盾的最佳球队</a> 2027</li>
 <li><a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">2407. 最长递增子序列 II</a> 2280</li>
 <li><a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/">2770. 达到末尾下标所需的最大跳跃次数</a> 见我题解下的 <a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/solutions/2336752/dong-tai-gui-hua-cong-ji-yi-hua-sou-suo-2ptkg/comments/2060234">评论</a></li>
@@ -700,14 +700,14 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/minimum-cost-to-split-an-array/">2547. 拆分数组的最小代价</a> 做到 O(nlogn)</li>
 <li><a href="https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/">2916. 子数组不同元素数目的平方和 II</a> 2816 思路类似 2547 题</li>
 </ul>
-<h3 id="§115-字典树优化-dp" class="tsd-anchor-link">§11.5 字典树优化 DP<a href="#§115-字典树优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§115-字典树优化-dp" class="tsd-anchor-link">§11.5 字典树优化 DP<a href="#§115-字典树优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/word-break/">139. 单词拆分</a></li>
 <li><a href="https://leetcode.cn/problems/word-break-ii/">140. 单词拆分 II</a></li>
 <li><a href="https://leetcode.cn/problems/re-space-lcci/">面试题 17.13. 恢复空格</a></li>
 <li><a href="https://leetcode.cn/problems/concatenated-words/">472. 连接词</a> 约 2300</li>
 <li><a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">2977. 转换字符串的最小成本 II</a> 2696</li>
 </ul>
-<h3 id="§116-矩阵快速幂优化-dp" class="tsd-anchor-link">§11.6 矩阵快速幂优化 DP<a href="#§116-矩阵快速幂优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p><a href="https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/">讲解</a></p>
+<h3 id="§116-矩阵快速幂优化-dp" class="tsd-anchor-link">§11.6 矩阵快速幂优化 DP<a href="#§116-矩阵快速幂优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p><a href="https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/">讲解</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/climbing-stairs/">70. 爬楼梯</a></li>
 <li><a href="https://leetcode.cn/problems/fibonacci-number/">509. 斐波那契数</a></li>
@@ -722,17 +722,17 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/string-transformation/">2851. 字符串转换</a> 2858</li>
 <li><a href="https://leetcode.cn/problems/number-of-ways-to-reach-destination-in-the-grid/">2912. 在网格上移动到目的地的方法数</a>（会员题）</li>
 </ul>
-<h3 id="§117-斜率优化-dp" class="tsd-anchor-link">§11.7 斜率优化 DP<a href="#§117-斜率优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>也叫凸包优化/凸壳优化（CHT，Convex Hull Trick）。</p>
+<h3 id="§117-斜率优化-dp" class="tsd-anchor-link">§11.7 斜率优化 DP<a href="#§117-斜率优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>也叫凸包优化/凸壳优化（CHT，Convex Hull Trick）。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/find-the-minimum-amount-of-time-to-brew-potions/">3494. 酿造药水需要的最少总时间</a></li>
 <li><a href="https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/">3500. 将数组分割为子数组的最小代价</a></li>
 </ul>
-<h3 id="§118-wqs-二分优化-dp" class="tsd-anchor-link">§11.8 WQS 二分优化 DP<a href="#§118-wqs-二分优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>把最多选 k 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。</p>
+<h3 id="§118-wqs-二分优化-dp" class="tsd-anchor-link">§11.8 WQS 二分优化 DP<a href="#§118-wqs-二分优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>把最多选 k 个物品的问题（时间复杂度高）转换成选任意个物品的问题（时间复杂度低）。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188. 买卖股票的最佳时机 IV</a> 做到 O(nlogU)</li>
 <li><a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/">2209. 用地毯覆盖后的最少白色砖块</a> 做到 O(nlogn)</li>
 </ul>
-<h3 id="§119-其他优化-dp" class="tsd-anchor-link">§11.9 其他优化 DP<a href="#§119-其他优化-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§119-其他优化-dp" class="tsd-anchor-link">§11.9 其他优化 DP<a href="#§119-其他优化-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximum-number-of-points-with-cost/">1937. 扣分后的最大得分</a> 2106</li>
 <li><a href="https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/">2713. 矩阵中严格递增的单元格数</a> 2387</li>
 <li><a href="https://leetcode.cn/problems/number-of-distinct-roll-sequences/">2318. 不同骰子序列的数目</a> 容斥优化（类似 CF1943D2）</li>
@@ -743,8 +743,8 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/NfY1m5/">LCP 59. 搭桥过河</a> Slope Trick</li>
 <li><a href="https://leetcode.cn/problems/make-array-non-decreasing-or-non-increasing/">2263. 数组变为有序的最小操作次数</a>（会员题）Slope Trick</li>
 </ul>
-<h2 id="十二、树形-dp" class="tsd-anchor-link">十二、树形 DP<a href="#十二、树形-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>注</strong>：可能有同学觉得树形 DP 没有重复访问同一个状态（重叠子问题），并不能算作 DP，而是算作普通的递归。这么说也有一定道理，不过考虑到思维方式和 DP 是一样的自底向上，所以仍然叫做树形 DP。此外，如果是自顶向下的递归做法，是存在重叠子问题的，一般要结合记忆化搜索实现。</p>
-<h3 id="§121-树的直径" class="tsd-anchor-link">§12.1 树的直径<a href="#§121-树的直径" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV17o4y187h1%2F">树形 DP：树的直径【基础算法精讲 23】</a></p>
+<h2 id="十二、树形-dp" class="tsd-anchor-link">十二、树形 DP<a href="#十二、树形-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>注</strong>：可能有同学觉得树形 DP 没有重复访问同一个状态（重叠子问题），并不能算作 DP，而是算作普通的递归。这么说也有一定道理，不过考虑到思维方式和 DP 是一样的自底向上，所以仍然叫做树形 DP。此外，如果是自顶向下的递归做法，是存在重叠子问题的，一般要结合记忆化搜索实现。</p>
+<h3 id="§121-树的直径" class="tsd-anchor-link">§12.1 树的直径<a href="#§121-树的直径" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV17o4y187h1%2F">树形 DP：树的直径【基础算法精讲 23】</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/diameter-of-binary-tree/">543. 二叉树的直径</a></li>
 <li><a href="https://leetcode.cn/problems/longest-univalue-path/">687. 最长同值路径</a></li>
@@ -762,18 +762,18 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <blockquote>
 <p>注：求直径也有两次 DFS 的做法。</p>
 </blockquote>
-<h3 id="§122-树上最大独立集" class="tsd-anchor-link">§12.2 树上最大独立集<a href="#§122-树上最大独立集" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1vu4y1f7dn%2F">树形 DP：打家劫舍 III【基础算法精讲 24】</a></p>
+<h3 id="§122-树上最大独立集" class="tsd-anchor-link">§12.2 树上最大独立集<a href="#§122-树上最大独立集" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1vu4y1f7dn%2F">树形 DP：打家劫舍 III【基础算法精讲 24】</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/house-robber-iii/">337. 打家劫舍 III</a>（没有上司的舞会）</li>
 <li><a href="https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/">2646. 最小化旅行的价格总和</a> 2238</li>
 <li><a href="https://leetcode.cn/problems/subtree-inversion-sum/">3544. 子树反转和</a> 2545 记忆化搜索 / 树上刷表法</li>
 <li><a href="https://leetcode.cn/problems/choose-edges-to-maximize-score-in-a-tree/">2378. 选择边来最大化树的得分</a>（会员题）</li>
 </ul>
-<h3 id="§123-树上最小支配集" class="tsd-anchor-link">§12.3 树上最小支配集<a href="#§123-树上最小支配集" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1oF411U7qL%2F">树形 DP：监控二叉树【基础算法精讲 25】</a>，包含 968 的变形题。</p>
+<h3 id="§123-树上最小支配集" class="tsd-anchor-link">§12.3 树上最小支配集<a href="#§123-树上最小支配集" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>讲解：<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1oF411U7qL%2F">树形 DP：监控二叉树【基础算法精讲 25】</a>，包含 968 的变形题。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/binary-tree-cameras/">968. 监控二叉树</a> 2124</li>
 </ul>
-<h3 id="§124-换根-dp" class="tsd-anchor-link">§12.4 换根 DP<a href="#§124-换根-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>也叫二次扫描法。</p>
+<h3 id="§124-换根-dp" class="tsd-anchor-link">§12.4 换根 DP<a href="#§124-换根-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><p>也叫二次扫描法。</p>
 <p><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/solution/tu-jie-yi-zhang-tu-miao-dong-huan-gen-dp-6bgb/">【图解】一张图秒懂换根 DP！</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/">834. 树中距离之和</a> 2197</li>
@@ -786,7 +786,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <blockquote>
 <p><strong>注</strong>：前后缀分解，可以视作一条链上的换根 DP。</p>
 </blockquote>
-<h3 id="§125-其他树形-dp" class="tsd-anchor-link">§12.5 其他树形 DP<a href="#§125-其他树形-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<h3 id="§125-其他树形-dp" class="tsd-anchor-link">§12.5 其他树形 DP<a href="#§125-其他树形-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li><a href="https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree/">2925. 在树上执行操作以后得到的最大分数</a> 1940</li>
 <li><a href="https://leetcode.cn/problems/find-the-maximum-sum-of-node-values/">3068. 最大节点价值之和</a> 2268</li>
 <li><a href="https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/">2920. 收集所有金币可获得的最大积分</a> 2351 记忆化搜索</li>
@@ -799,7 +799,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/U7WvvU/">LCP 64. 二叉树灯饰</a></li>
 <li><a href="https://leetcode.cn/problems/minimum-flips-in-binary-tree-to-get-result/">2313. 二叉树中得到结果所需的最少翻转次数</a>（会员题）</li>
 </ul>
-<h2 id="十三、图-dp" class="tsd-anchor-link">十三、图 DP<a href="#十三、图-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<h2 id="十三、图-dp" class="tsd-anchor-link">十三、图 DP<a href="#十三、图-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
 <li><a href="https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/">3243. 新增道路查询后的最短距离 I</a> 1568</li>
 <li><a href="https://leetcode.cn/problems/cheapest-flights-within-k-stops/">787. K 站中转内最便宜的航班</a> 1786</li>
 <li><a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/">1786. 从第一个节点出发到最后一个节点的受限路径数</a> 2079</li>
@@ -814,7 +814,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/the-most-similar-path-in-a-graph/">1548. 图中最相似的路径</a>（会员题）</li>
 </ul>
 <p>另见<a href="https://leetcode.cn/circle/discuss/01LUak/">【题单】图论算法</a> 中的「全源最短路：Floyd」，本质是多维 DP。</p>
-<h2 id="十四、博弈-dp" class="tsd-anchor-link">十四、博弈 DP<a href="#十四、博弈-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<h2 id="十四、博弈-dp" class="tsd-anchor-link">十四、博弈 DP<a href="#十四、博弈-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
 <li><a href="https://leetcode.cn/problems/divisor-game/">1025. 除数博弈</a> 1435 有数学做法</li>
 <li><a href="https://leetcode.cn/problems/stone-game/">877. 石子游戏</a> 1590 有数学做法</li>
 <li><a href="https://leetcode.cn/problems/predict-the-winner/">486. 预测赢家</a></li>
@@ -829,7 +829,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/cat-and-mouse-ii/">1728. 猫和老鼠 II</a> 2849</li>
 <li><a href="https://leetcode.cn/problems/flip-game-ii/">294. 翻转游戏 II</a>（会员题）</li>
 </ul>
-<h2 id="十五、概率期望-dp" class="tsd-anchor-link">十五、概率/期望 DP<a href="#十五、概率期望-dp" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<h2 id="十五、概率期望-dp" class="tsd-anchor-link">十五、概率/期望 DP<a href="#十五、概率期望-dp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
 <li><a href="https://leetcode.cn/problems/knight-probability-in-chessboard/">688. 骑士在棋盘上的概率</a></li>
 <li><a href="https://leetcode.cn/problems/new-21-game/">837. 新 21 点</a> 2350</li>
 <li><a href="https://leetcode.cn/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/">1467. 两个盒子中球的颜色数相同的概率</a> 2357</li>
@@ -838,7 +838,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/contest/ubiquant2022/problems/I3Gm2h/">九坤-04. 筹码游戏</a></li>
 <li><a href="https://leetcode.cn/problems/toss-strange-coins/">1230. 抛掷硬币</a>（会员题）</li>
 </ul>
-<h2 id="专题：输出具体方案（打印方案）" class="tsd-anchor-link">专题：输出具体方案（打印方案）<a href="#专题：输出具体方案（打印方案）" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>注意这些题目和回溯的区别，某些回溯题目要求输出<strong>所有</strong>方案，这里只要求输出<strong>一个</strong>。</p>
+<h2 id="专题：输出具体方案（打印方案）" class="tsd-anchor-link">专题：输出具体方案（打印方案）<a href="#专题：输出具体方案（打印方案）" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>注意这些题目和回溯的区别，某些回溯题目要求输出<strong>所有</strong>方案，这里只要求输出<strong>一个</strong>。</p>
 <p><a href="https://leetcode.cn/problems/shortest-common-supersequence/solution/cong-di-gui-dao-di-tui-jiao-ni-yi-bu-bu-auy8z/">讲解</a></p>
 <ul>
 <li><a href="https://leetcode.cn/problems/largest-divisible-subset/">368. 最大整除子集</a></li>
@@ -855,7 +855,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/coin-path/">656. 金币路径</a>（会员题）字典序</li>
 <li><a href="https://leetcode.cn/problems/encode-string-with-shortest-length/">471. 编码最短长度的字符串</a>（会员题）</li>
 </ul>
-<h2 id="专题：前后缀分解" class="tsd-anchor-link">专题：前后缀分解<a href="#专题：前后缀分解" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>部分题目也可以用状态机 DP 解决。</p>
+<h2 id="专题：前后缀分解" class="tsd-anchor-link">专题：前后缀分解<a href="#专题：前后缀分解" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>部分题目也可以用状态机 DP 解决。</p>
 <p>如果涉及到的只是若干元素，而不是前缀/后缀这样的一段元素。也可以用「枚举右，维护左」思考，详见数据结构题单。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/find-pivot-index/">724. 寻找数组的中心下标</a> 做到 O(n)</li>
@@ -910,7 +910,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <ul>
 <li>输入一个长为 n 的 prices 数组，你需要返回一个长为 n 的 answer 数组，其中 answer[i] 表示删除 prices[i]，也就是禁止在第 i 天买卖股票，在此约束下 <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a> 的答案。</li>
 </ul>
-<h2 id="专题：把-x-变成-y" class="tsd-anchor-link">专题：把 X 变成 Y<a href="#专题：把-x-变成-y" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>部分题目也可以用 BFS 解决。</p>
+<h2 id="专题：把-x-变成-y" class="tsd-anchor-link">专题：把 X 变成 Y<a href="#专题：把-x-变成-y" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p>部分题目也可以用 BFS 解决。</p>
 <ul>
 <li><a href="https://leetcode.cn/problems/integer-replacement/">397. 整数替换</a></li>
 <li><a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/">2998. 使 X 和 Y 相等的最少操作次数</a> 1795</li>
@@ -922,7 +922,7 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <ul>
 <li><a href="https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/">3377. 使两个整数相等的数位操作</a> 2186</li>
 </ul>
-<h2 id="专题：跳跃游戏" class="tsd-anchor-link">专题：跳跃游戏<a href="#专题：跳跃游戏" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<h2 id="专题：跳跃游戏" class="tsd-anchor-link">专题：跳跃游戏<a href="#专题：跳跃游戏" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
 <li><a href="https://leetcode.cn/problems/jump-game-iii/">1306. 跳跃游戏 III</a> 1397</li>
 <li><a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/">2770. 达到末尾下标所需的最大跳跃次数</a> 1533</li>
 <li><a href="https://leetcode.cn/problems/frog-jump/">403. 青蛙过河</a></li>
@@ -936,14 +936,14 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <li><a href="https://leetcode.cn/problems/coin-path/">656. 金币路径</a>（会员题）</li>
 <li><a href="https://leetcode.cn/problems/jump-game-viii/">2297. 跳跃游戏 VIII</a>（会员题）</li>
 </ul>
-<h2 id="其他" class="tsd-anchor-link">其他<a href="#其他" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<h2 id="其他" class="tsd-anchor-link">其他<a href="#其他" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
 <li><a href="https://leetcode.cn/problems/sort-integers-by-the-power-value/">1387. 将整数按权重排序</a> 1507</li>
 <li><a href="https://leetcode.cn/problems/binary-trees-with-factors/">823. 带因子的二叉树</a> 1900</li>
 <li><a href="https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/">2930. 重新排列后包含指定子字符串的字符串数目</a> 2227</li>
 <li><a href="https://leetcode.cn/problems/minimum-cost-to-change-the-final-value-of-expression/">1896. 反转表达式值的最少操作次数</a> 2532</li>
 <li><a href="https://leetcode.cn/problems/qie-fen-shu-zu/">LCP 14. 切分数组</a></li>
 </ul>
-<h2 id="算法题单" class="tsd-anchor-link">算法题单<a href="#算法题单" aria-label="永久链接" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="https://leetcode.cn/circle/discuss/RvFUtj/">如何科学刷题？</a></p>
+<h2 id="算法题单" class="tsd-anchor-link">算法题单<a href="#算法题单" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="https://leetcode.cn/circle/discuss/RvFUtj/">如何科学刷题？</a></p>
 <ol>
 <li><a href="https://leetcode.cn/circle/discuss/0viNMK/">滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）</a></li>
 <li><a href="https://leetcode.cn/circle/discuss/SqopEo/">二分算法（二分答案/最小化最大值/最大化最小值/第K小）</a></li>
@@ -961,4 +961,4 @@ def digitDP(low: int, high: int, target: int) -&gt; int:
 <p><a href="/link/?target=https%3A%2F%2Fgithub.com%2FEndlessCheng%2Fcodeforces-go%2Fblob%2Fmaster%2Fleetcode%2FSOLUTIONS.md">我的题解精选（已分类）</a></p>
 <p>欢迎关注 <a href="/link/?target=https%3A%2F%2Fspace.bilibili.com%2F206214">B站@灵茶山艾府</a></p>
 <p>如果你发现有题目可以补充进来，欢迎评论反馈。</p>
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>显示设置</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">成员可见性</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>受保护</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>继承</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>外部</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">配色</label><select id="tsd-theme"><option value="os">自动</option><option value="light">浅色</option><option value="dark">深色</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>目录</h3></summary><div class="tsd-accordion-details"><a href="#前言"><span>前言</span></a><a href="#一、入门-dp"><span>一、入门 <wbr/>DP</span></a><ul><li><ul><li><a href="#§11-爬楼梯"><span>§1.1 爬楼梯</span></a></li><li><a href="#§12-打家劫舍"><span>§1.2 打家劫舍</span></a></li><li><ul><li><a href="#答疑"><span>答疑</span></a></li></ul></li><li><a href="#§13-最大子数组和（最大子段和）"><span>§1.3 最大子数组和（最大子段和）</span></a></li><li><a href="#思考题"><span>思考题</span></a></li></ul></li></ul><a href="#二、网格图-dp"><span>二、网格图 <wbr/>DP</span></a><ul><li><ul><li><a href="#§21-基础"><span>§2.1 基础</span></a></li><li><a href="#§22-进阶"><span>§2.2 进阶</span></a></li></ul></li></ul><a href="#三、背包"><span>三、背包</span></a><ul><li><ul><li><a href="#§31-0-1-背包"><span>§3.1 0-<wbr/>1 背包</span></a></li><li><a href="#§32-完全背包"><span>§3.2 完全背包</span></a></li><li><ul><li><a href="#答疑-1"><span>答疑</span></a></li></ul></li><li><a href="#§33-多重背包（选做）"><span>§3.3 多重背包（选做）</span></a></li><li><a href="#§34-分组背包"><span>§3.4 分组背包</span></a></li><li><a href="#§35-树形背包（选做）"><span>§3.5 树形背包（选做）</span></a></li></ul></li></ul><a href="#四、经典线性-dp"><span>四、经典线性 <wbr/>DP</span></a><ul><li><ul><li><a href="#§41-最长公共子序列（lcs）"><span>§4.1 最长公共子序列（<wbr/>LCS）</span></a></li><li><ul><li><a href="#§411-基础"><span>§4.1.1 基础</span></a></li><li><a href="#§412-进阶"><span>§4.1.2 进阶</span></a></li></ul></li><li><a href="#§42-最长递增子序列（lis）"><span>§4.2 最长递增子序列（<wbr/>LIS）</span></a></li><li><ul><li><a href="#§421-基础"><span>§4.2.1 基础</span></a></li><li><a href="#§422-进阶"><span>§4.2.2 进阶</span></a></li></ul></li></ul></li></ul><a href="#五、划分型-dp"><span>五、划分型 <wbr/>DP</span></a><ul><li><ul><li><a href="#§51-判定能否划分"><span>§5.1 判定能否划分</span></a></li><li><a href="#§52-最优划分"><span>§5.2 最优划分</span></a></li><li><a href="#§53-约束划分个数"><span>§5.3 约束划分个数</span></a></li></ul></li></ul><a href="#六、状态机-dp"><span>六、状态机 <wbr/>DP</span></a><ul><li><ul><li><a href="#§61-买卖股票"><span>§6.1 买卖股票</span></a></li><li><a href="#§62-基础"><span>§6.2 基础</span></a></li><li><a href="#§63-进阶"><span>§6.3 进阶</span></a></li></ul></li></ul><a href="#七、其他线性-dp"><span>七、其他线性 <wbr/>DP</span></a><ul><li><ul><li><a href="#§71-一维-dp"><span>§7.1 一维 <wbr/>DP</span></a></li><li><a href="#§72-不相交区间"><span>§7.2 不相交区间</span></a></li><li><a href="#§73-子数组-dp"><span>§7.3 子数组 <wbr/>DP</span></a></li><li><a href="#§74-合法子序列-dp"><span>§7.4 合法子序列 <wbr/>DP</span></a></li><li><a href="#§75-子矩形-dp"><span>§7.5 子矩形 <wbr/>DP</span></a></li><li><a href="#§76-多维-dp"><span>§7.6 多维 <wbr/>DP</span></a></li></ul></li></ul><a href="#八、区间-dp"><span>八、区间 <wbr/>DP</span></a><ul><li><ul><li><a href="#§81-最长回文子序列"><span>§8.1 最长回文子序列</span></a></li><li><a href="#§82-区间-dp"><span>§8.2 区间 <wbr/>DP</span></a></li></ul></li></ul><a href="#九、状态压缩-dp（状压-dp）"><span>九、状态压缩 <wbr/>DP（状压 <wbr/>DP）</span></a><ul><li><ul><li><a href="#§91-排列型-①-相邻无关"><span>§9.1 排列型 ① 相邻无关</span></a></li><li><a href="#§92-排列型-②-相邻相关"><span>§9.2 排列型 ② 相邻相关</span></a></li><li><a href="#§93-旅行商问题（tsp）"><span>§9.3 旅行商问题（<wbr/>TSP）</span></a></li><li><a href="#§94-子集状压-dp"><span>§9.4 子集状压 <wbr/>DP</span></a></li><li><a href="#§95-其他状压-dp"><span>§9.5 其他状压 <wbr/>DP</span></a></li></ul></li></ul><a href="#十、数位-dp"><span>十、数位 <wbr/>DP</span></a><a href="#十一、优化-dp"><span>十一、优化 <wbr/>DP</span></a><ul><li><ul><li><a href="#§111-前缀和优化-dp"><span>§11.1 前缀和优化 <wbr/>DP</span></a></li><li><a href="#§112-单调栈优化-dp"><span>§11.2 单调栈优化 <wbr/>DP</span></a></li><li><a href="#§113-单调队列优化-dp"><span>§11.3 单调队列优化 <wbr/>DP</span></a></li><li><a href="#§114-树状数组线段树优化-dp"><span>§11.4 树状数组/线段树优化 <wbr/>DP</span></a></li><li><a href="#§115-字典树优化-dp"><span>§11.5 字典树优化 <wbr/>DP</span></a></li><li><a href="#§116-矩阵快速幂优化-dp"><span>§11.6 矩阵快速幂优化 <wbr/>DP</span></a></li><li><a href="#§117-斜率优化-dp"><span>§11.7 斜率优化 <wbr/>DP</span></a></li><li><a href="#§118-wqs-二分优化-dp"><span>§11.8 <wbr/>WQS 二分优化 <wbr/>DP</span></a></li><li><a href="#§119-其他优化-dp"><span>§11.9 其他优化 <wbr/>DP</span></a></li></ul></li></ul><a href="#十二、树形-dp"><span>十二、树形 <wbr/>DP</span></a><ul><li><ul><li><a href="#§121-树的直径"><span>§12.1 树的直径</span></a></li><li><a href="#§122-树上最大独立集"><span>§12.2 树上最大独立集</span></a></li><li><a href="#§123-树上最小支配集"><span>§12.3 树上最小支配集</span></a></li><li><a href="#§124-换根-dp"><span>§12.4 换根 <wbr/>DP</span></a></li><li><a href="#§125-其他树形-dp"><span>§12.5 其他树形 <wbr/>DP</span></a></li></ul></li></ul><a href="#十三、图-dp"><span>十三、图 <wbr/>DP</span></a><a href="#十四、博弈-dp"><span>十四、博弈 <wbr/>DP</span></a><a href="#十五、概率期望-dp"><span>十五、概率/期望 <wbr/>DP</span></a><a href="#专题：输出具体方案（打印方案）"><span>专题：输出具体方案（打印方案）</span></a><a href="#专题：前后缀分解"><span>专题：前后缀分解</span></a><a href="#专题：把-x-变成-y"><span>专题：把 <wbr/>X 变成 <wbr/>Y</span></a><a href="#专题：跳跃游戏"><span>专题：跳跃游戏</span></a><a href="#其他"><span>其他</span></a><a href="#算法题单"><span>算法题单</span></a></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://leetcode.cn/studyplan/top-100-liked" class="tsd-nav-link">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150" class="tsd-nav-link">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms" class="tsd-nav-link">Github</a></nav><nav class="tsd-navigation"><a href="../modules.html">Typescript-Algorithms</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>加载中……</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#前言"><span>前言</span></a><a href="#一、入门-dp"><span>一、入门 <wbr/>DP</span></a><ul><li><ul><li><a href="#§11-爬楼梯"><span>§1.1 爬楼梯</span></a></li><li><a href="#§12-打家劫舍"><span>§1.2 打家劫舍</span></a></li><li><ul><li><a href="#答疑"><span>答疑</span></a></li></ul></li><li><a href="#§13-最大子数组和（最大子段和）"><span>§1.3 最大子数组和（最大子段和）</span></a></li><li><a href="#思考题"><span>思考题</span></a></li></ul></li></ul><a href="#二、网格图-dp"><span>二、网格图 <wbr/>DP</span></a><ul><li><ul><li><a href="#§21-基础"><span>§2.1 基础</span></a></li><li><a href="#§22-进阶"><span>§2.2 进阶</span></a></li></ul></li></ul><a href="#三、背包"><span>三、背包</span></a><ul><li><ul><li><a href="#§31-0-1-背包"><span>§3.1 0-<wbr/>1 背包</span></a></li><li><a href="#§32-完全背包"><span>§3.2 完全背包</span></a></li><li><ul><li><a href="#答疑-1"><span>答疑</span></a></li></ul></li><li><a href="#§33-多重背包（选做）"><span>§3.3 多重背包（选做）</span></a></li><li><a href="#§34-分组背包"><span>§3.4 分组背包</span></a></li><li><a href="#§35-树形背包（选做）"><span>§3.5 树形背包（选做）</span></a></li></ul></li></ul><a href="#四、经典线性-dp"><span>四、经典线性 <wbr/>DP</span></a><ul><li><ul><li><a href="#§41-最长公共子序列（lcs）"><span>§4.1 最长公共子序列（<wbr/>LCS）</span></a></li><li><ul><li><a href="#§411-基础"><span>§4.1.1 基础</span></a></li><li><a href="#§412-进阶"><span>§4.1.2 进阶</span></a></li></ul></li><li><a href="#§42-最长递增子序列（lis）"><span>§4.2 最长递增子序列（<wbr/>LIS）</span></a></li><li><ul><li><a href="#§421-基础"><span>§4.2.1 基础</span></a></li><li><a href="#§422-进阶"><span>§4.2.2 进阶</span></a></li></ul></li></ul></li></ul><a href="#五、划分型-dp"><span>五、划分型 <wbr/>DP</span></a><ul><li><ul><li><a href="#§51-判定能否划分"><span>§5.1 判定能否划分</span></a></li><li><a href="#§52-最优划分"><span>§5.2 最优划分</span></a></li><li><a href="#§53-约束划分个数"><span>§5.3 约束划分个数</span></a></li></ul></li></ul><a href="#六、状态机-dp"><span>六、状态机 <wbr/>DP</span></a><ul><li><ul><li><a href="#§61-买卖股票"><span>§6.1 买卖股票</span></a></li><li><a href="#§62-基础"><span>§6.2 基础</span></a></li><li><a href="#§63-进阶"><span>§6.3 进阶</span></a></li></ul></li></ul><a href="#七、其他线性-dp"><span>七、其他线性 <wbr/>DP</span></a><ul><li><ul><li><a href="#§71-一维-dp"><span>§7.1 一维 <wbr/>DP</span></a></li><li><a href="#§72-不相交区间"><span>§7.2 不相交区间</span></a></li><li><a href="#§73-子数组-dp"><span>§7.3 子数组 <wbr/>DP</span></a></li><li><a href="#§74-合法子序列-dp"><span>§7.4 合法子序列 <wbr/>DP</span></a></li><li><a href="#§75-子矩形-dp"><span>§7.5 子矩形 <wbr/>DP</span></a></li><li><a href="#§76-多维-dp"><span>§7.6 多维 <wbr/>DP</span></a></li></ul></li></ul><a href="#八、区间-dp"><span>八、区间 <wbr/>DP</span></a><ul><li><ul><li><a href="#§81-最长回文子序列"><span>§8.1 最长回文子序列</span></a></li><li><a href="#§82-区间-dp"><span>§8.2 区间 <wbr/>DP</span></a></li></ul></li></ul><a href="#九、状态压缩-dp（状压-dp）"><span>九、状态压缩 <wbr/>DP（状压 <wbr/>DP）</span></a><ul><li><ul><li><a href="#§91-排列型-①-相邻无关"><span>§9.1 排列型 ① 相邻无关</span></a></li><li><a href="#§92-排列型-②-相邻相关"><span>§9.2 排列型 ② 相邻相关</span></a></li><li><a href="#§93-旅行商问题（tsp）"><span>§9.3 旅行商问题（<wbr/>TSP）</span></a></li><li><a href="#§94-子集状压-dp"><span>§9.4 子集状压 <wbr/>DP</span></a></li><li><a href="#§95-其他状压-dp"><span>§9.5 其他状压 <wbr/>DP</span></a></li></ul></li></ul><a href="#十、数位-dp"><span>十、数位 <wbr/>DP</span></a><a href="#十一、优化-dp"><span>十一、优化 <wbr/>DP</span></a><ul><li><ul><li><a href="#§111-前缀和优化-dp"><span>§11.1 前缀和优化 <wbr/>DP</span></a></li><li><a href="#§112-单调栈优化-dp"><span>§11.2 单调栈优化 <wbr/>DP</span></a></li><li><a href="#§113-单调队列优化-dp"><span>§11.3 单调队列优化 <wbr/>DP</span></a></li><li><a href="#§114-树状数组线段树优化-dp"><span>§11.4 树状数组/线段树优化 <wbr/>DP</span></a></li><li><a href="#§115-字典树优化-dp"><span>§11.5 字典树优化 <wbr/>DP</span></a></li><li><a href="#§116-矩阵快速幂优化-dp"><span>§11.6 矩阵快速幂优化 <wbr/>DP</span></a></li><li><a href="#§117-斜率优化-dp"><span>§11.7 斜率优化 <wbr/>DP</span></a></li><li><a href="#§118-wqs-二分优化-dp"><span>§11.8 <wbr/>WQS 二分优化 <wbr/>DP</span></a></li><li><a href="#§119-其他优化-dp"><span>§11.9 其他优化 <wbr/>DP</span></a></li></ul></li></ul><a href="#十二、树形-dp"><span>十二、树形 <wbr/>DP</span></a><ul><li><ul><li><a href="#§121-树的直径"><span>§12.1 树的直径</span></a></li><li><a href="#§122-树上最大独立集"><span>§12.2 树上最大独立集</span></a></li><li><a href="#§123-树上最小支配集"><span>§12.3 树上最小支配集</span></a></li><li><a href="#§124-换根-dp"><span>§12.4 换根 <wbr/>DP</span></a></li><li><a href="#§125-其他树形-dp"><span>§12.5 其他树形 <wbr/>DP</span></a></li></ul></li></ul><a href="#十三、图-dp"><span>十三、图 <wbr/>DP</span></a><a href="#十四、博弈-dp"><span>十四、博弈 <wbr/>DP</span></a><a href="#十五、概率期望-dp"><span>十五、概率/期望 <wbr/>DP</span></a><a href="#专题：输出具体方案（打印方案）"><span>专题：输出具体方案（打印方案）</span></a><a href="#专题：前后缀分解"><span>专题：前后缀分解</span></a><a href="#专题：把-x-变成-y"><span>专题：把 <wbr/>X 变成 <wbr/>Y</span></a><a href="#专题：跳跃游戏"><span>专题：跳跃游戏</span></a><a href="#其他"><span>其他</span></a><a href="#算法题单"><span>算法题单</span></a></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://leetcode.cn/studyplan/top-100-liked" class="tsd-nav-link">LeetCode热题100</a><a href="https://leetcode.cn/studyplan/top-interview-150" class="tsd-nav-link">面试经典150题</a><a href="https://github.com/gepick-ai/ts-algorithms" class="tsd-nav-link">Github</a></nav><nav class="tsd-navigation"><a href="../modules.html">Typescript-Algorithms</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>

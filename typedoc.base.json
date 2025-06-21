@@ -1,22 +1,5 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "includeVersion": false,
-  "sort": [
-    "enum-member-source-order",
-    "static-first",
-    "kind"
-  ],
-  "categorizeByGroup": true,
-  "groupOrder": [
-    "滑动窗口与双指针",
-    "二分算法",
-    "单调栈",
-    "二叉树",
-    "网格图",
-    "动态规划",
-    "哈希表",
-    "数组",
-    "字符串",
-    "链表"
-  ]
+  "categorizeByGroup": true
 }

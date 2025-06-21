@@ -40,4 +40,7 @@ function jump(nums: number[]): number {
 // 关键点2：看完实时max，我们才看上一个起跳点所能来到的最远位置是否已经来到了。来到了势必要选这个起跳范围里对应着max的那个点跳过去。跳过去后自然step++
 // @lc code=end
 
+/**
+ * @category 贪心算法
+ */
 export const jump_game_ii = jump;
