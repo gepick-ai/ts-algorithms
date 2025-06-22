@@ -12,3 +12,4 @@ export * from "./matrix";
 export * from "./heap";
 export * from "./linkedlist";
 export * from "./binary-tree";
+export * from "./graph";
