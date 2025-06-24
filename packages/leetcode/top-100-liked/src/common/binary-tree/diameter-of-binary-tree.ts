@@ -39,15 +39,15 @@ function diameterOfBinaryTree(root: TreeNode | null): number {
   // 从空节点出发，边长为-1
   function dfs(node: TreeNode | null): number {
     if (node === null) {
-      return -1; 
+      return -1;
     }
 
-    const lLen = dfs(node.left) + 1; // 左子树最大链长+1，就是加上左子树到当前节点的边
-    const rLen = dfs(node.right) + 1; // 右子树最大链长+1，就是加上右子树到当前节点的边
+    const lLen = dfs(node.left); 
+    const rLen = dfs(node.right);
 
-    ans = Math.max(ans, lLen + rLen); // 两条链拼成路径，更新最大值
+    ans = Math.max(ans, lLen + rLen + 2); // 左子树最大链长+1，就是加上左子树到当前节点的边，右子树最大链长+1，就是加上右子树到当前节点的边。两条链拼成路径，更新最大值
 
-    return Math.max(lLen, rLen); // 当前子树最大链长
+    return Math.max(lLen, rLen) + 1; // 当前子树的左右子树最大链长加上当前节点到子树的边就是当前子树的最大链长
   }
 
   dfs(root);
