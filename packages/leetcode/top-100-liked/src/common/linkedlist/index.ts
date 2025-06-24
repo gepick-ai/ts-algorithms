@@ -9,3 +9,4 @@ export * from './remove-nth-node-from-end-of-list';
 export * from './copy-list-with-random-pointer';
 export * from './lru-cache';
 export * from './sort-list';
+export * from './swap-nodes-in-pairs';
