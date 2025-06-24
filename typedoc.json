@@ -21,11 +21,6 @@
     "Github": "https://github.com/gepick-ai/ts-algorithms"
   },
   "hideGenerator": true,
-  "plugin": [
-    "typedoc-github-theme"
-  ],
-  "theme": "typedoc-github-theme",
-  "customCss": ".typedoc/custom.css",
   "logLevel": "Error",
   "includeHierarchySummary": false,
   "headings": {
@@ -68,5 +63,11 @@
     ".docs/贪心算法.md",
     ".docs/链表、二叉树与回溯.md",
     ".docs/字符串.md"
-  ]
+  ],
+  "plugin": [
+    "typedoc-github-theme"
+    // "typedoc-plugin-markdown"
+  ],
+  "theme": "typedoc-github-theme",
+  "customCss": ".typedoc/custom.css"
 }

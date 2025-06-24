@@ -12,3 +12,5 @@ export * from "./heap";
 export * from "./linkedlist";
 export * from "./binary-tree";
 export * from "./graph";
+
+export * from "./misc";
