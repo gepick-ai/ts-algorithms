@@ -11,3 +11,4 @@ export * from './lru-cache';
 export * from './sort-list';
 export * from './swap-nodes-in-pairs';
 export * from './reverse-nodes-in-k-group';
+export * from './merge-k-sorted-lists';
