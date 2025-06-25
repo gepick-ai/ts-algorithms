@@ -66,6 +66,6 @@ function merge(intervals: number[][]): number[][] {
 // @lc code=end
 
 /**
- * @category 数组
+ * @group 数组
  */
 export const merge_intervals = merge;

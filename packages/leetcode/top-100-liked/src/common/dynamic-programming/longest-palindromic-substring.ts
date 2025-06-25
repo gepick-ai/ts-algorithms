@@ -53,6 +53,6 @@ function longestPalindrome(s: string): string {
 
 /**
  *
- * @category 动态规划
+ * @group 动态规划
  */
 export const longest_palindromic_substring = longestPalindrome;

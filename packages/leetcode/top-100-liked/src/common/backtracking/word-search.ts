@@ -76,6 +76,6 @@ function exist(board: string[][], word: string): boolean {
  * 关键点2:回溯撤销时机应该是四个方向访问后，有了结果后回到第一层时，需要撤回出发点，以便让其他出发点开始搜索能够来到当前被撤回的点进行单词位置匹配。
  * 关键点3: 四个方向只要有一个为true，直接返回，不需要继续尝试其他方向了。
  *
- * @category 回溯算法
+ * @group 回溯算法
  */
 export const word_search = exist;

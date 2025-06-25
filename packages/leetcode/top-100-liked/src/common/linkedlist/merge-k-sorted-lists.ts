@@ -65,7 +65,7 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
 // @lc code=end
 
 /**
- * @category 链表
+ * @group 链表
  * @summary 两两合并，循环重置head1和tail
  */
 export const merge_k_sorted_lists = mergeKLists;

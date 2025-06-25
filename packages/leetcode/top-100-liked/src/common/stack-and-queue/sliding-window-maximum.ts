@@ -32,6 +32,7 @@ function maxSlidingWindow(nums: number[], k: number): number[] {
 // @lc code=end
 
 /**
- * @category 队列
+ * @group 栈与队列
+ * @category 单调队列
  */
 export const sliding_window_maximum = maxSlidingWindow;

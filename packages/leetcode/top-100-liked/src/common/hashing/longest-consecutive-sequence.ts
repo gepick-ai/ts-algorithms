@@ -30,6 +30,6 @@ function longestConsecutive(nums: number[]): number {
 // @lc code=end
 
 /**
- * @category 哈希表
+ * @group 哈希表
  */
 export const longest_consecutive_sequence = longestConsecutive;

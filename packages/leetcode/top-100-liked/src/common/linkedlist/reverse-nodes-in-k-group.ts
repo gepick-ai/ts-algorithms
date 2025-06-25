@@ -50,6 +50,6 @@ function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
 // @lc code=end
 
 /**
- * @category 链表
+ * @group 链表
  */
 export const reverse_nodes_in_k_group = reverseKGroup;

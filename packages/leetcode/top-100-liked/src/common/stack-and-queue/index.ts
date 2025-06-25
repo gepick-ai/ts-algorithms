@@ -3,3 +3,5 @@ export * from './daily-temperatures';
 export * from './trapping-rain-water';
 export * from './min-stack';
 export * from './sliding-window-maximum';
+export * from './kth-largest-element-in-an-array';
+export * from "./top-k-frequent-elements";

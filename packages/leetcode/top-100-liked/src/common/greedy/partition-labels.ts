@@ -41,6 +41,6 @@ function partitionLabels(s: string): number[] {
 /**
  * 算法的核心思想是：每个字符只能出现在一个片段中，所以片段必须包含该字符的所有出现位置。
  *
- * @category 贪心算法
+ * @group 贪心算法
  */
 export const partition_labels = partitionLabels;

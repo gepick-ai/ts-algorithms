@@ -11,6 +11,6 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 // @lc code=end
 
 /**
- * @category 动态规划
+ * @group 动态规划
  */
 export const word_break = wordBreak;

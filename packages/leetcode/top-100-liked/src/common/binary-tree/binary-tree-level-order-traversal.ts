@@ -57,6 +57,6 @@ function levelOrder(root: TreeNode | null): number[][] {
 // @lc code=end
 
 /**
- * @category 二叉树
+ * @group 二叉树
  */
 export const binary_tree_level_order_traversal = levelOrder;

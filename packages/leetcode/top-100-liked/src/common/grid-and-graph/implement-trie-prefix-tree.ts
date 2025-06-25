@@ -62,7 +62,8 @@ class TrieNode {
 // @lc code=end
 
 /**
- * @category 网格图
+ * @group 网格图
+ * @category Trie树
  * @summary Trie树
  */
 export const implement_trie_prefix_tree = Trie;

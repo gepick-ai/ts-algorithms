@@ -41,4 +41,8 @@ function nextPermutation(nums: number[]): void {
 };
 // @lc code=end
 
+/**
+ * @group 其他
+ * @category 数学
+ */
 export const next_permutation = nextPermutation;

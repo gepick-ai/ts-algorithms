@@ -1,5 +1,18 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "includeVersion": false,
-  "categorizeByGroup": true
+  "groupOrder": [
+    "双指针",
+    "二分算法",
+    "回溯算法",
+    "动态规划",
+    "贪心算法",
+    "哈希表",
+    "数组",
+    "栈与队列",
+    "链表",
+    "二叉树",
+    "网格图",
+    "字符串"
+  ]
 }

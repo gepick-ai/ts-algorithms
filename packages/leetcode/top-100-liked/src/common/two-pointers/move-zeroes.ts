@@ -29,7 +29,8 @@ function swap(nums: number[], i: number, j: number) {
 // @lc code=end
 
 /**
- * @category 滑动窗口与双指针
- * @see [283. 移动零](https://leetcode.cn/problems/move-zeroes/)
+ * @group 双指针
+ * @category 双指针
+ *
  */
 export const move_zeroes = moveZeroes;

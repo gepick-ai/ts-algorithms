@@ -42,6 +42,6 @@ function _inorderTraverse(root: TreeNode | null, orderArr: number[]) {
 // @lc code=end
 
 /**
- * @category 二叉树
+ * @group 二叉树
  */
 export const kth_smallest_element_in_a_bst = kthSmallest;

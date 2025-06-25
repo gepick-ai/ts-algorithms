@@ -32,6 +32,6 @@ function minPathSum(grid: number[][]): number {
 // @lc code=end
 
 /**
- * @category 动态规划
+ * @group 动态规划
  */
 export const minimum_path_sum = minPathSum;

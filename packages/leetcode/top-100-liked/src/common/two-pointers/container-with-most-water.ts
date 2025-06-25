@@ -62,7 +62,8 @@ function maxArea(height: number[]): number {
  *
  * {@includeCode ./container-with-most-water.ts/#code}
  *
- * @category 滑动窗口与双指针
+ * @group 双指针
+ * @category 双指针
  * @summary 分析柱子高低走法
  */
 export const container_with_most_water = maxArea;

@@ -33,6 +33,6 @@ function maxDepth(root: TreeNode | null): number {
 // @lc code=end
 
 /**
- * @category 二叉树
+ * @group 二叉树
  */
 export const maximum_depth_of_binary_tree = maxDepth;

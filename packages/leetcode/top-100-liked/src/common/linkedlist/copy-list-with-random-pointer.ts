@@ -57,6 +57,6 @@ function copyRandomList(head: _Node | null): _Node | null {
 // @lc code=end
 
 /**
- * @category 链表
+ * @group 链表
  */
 export const copy_list_with_random_pointer = copyRandomList;

@@ -36,7 +36,7 @@ function swapPairs(head: ListNode | null): ListNode | null {
 // @lc code=end
 
 /**
- * @category 链表
+ * @group 链表
  * @summary 按照题意递归模拟
  */
 export const swap_nodes_in_pairs = swapPairs;

@@ -52,6 +52,7 @@ function isAnagrams(cntS: number[], cntP: number[]): boolean {
 /**
  * 既然要是异位词，那么两个单词的每个字母对应出现次数应该是一样的。
  *
- * @category 滑动窗口与双指针
+ * @group 双指针
+ * @category 滑动窗口
  */
 export const find_all_anagrams_in_a_string = findAnagrams;

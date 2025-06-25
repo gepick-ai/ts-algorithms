@@ -51,6 +51,6 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
 // @lc code=end
 
 /**
- * @category 链表
+ * @group 链表
  */
 export const add_two_numbers = addTwoNumbers;

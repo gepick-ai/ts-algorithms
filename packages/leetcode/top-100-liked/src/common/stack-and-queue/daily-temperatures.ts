@@ -33,6 +33,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
  * 2.当遍历到的元素小于等于当前元素：元素入栈
  * 直到遍历完所有温度后停止操作
  *
- * @category 栈
+ * @group 栈与队列
+ * @category 单调栈
  */
 export const daily_temperatures = dailyTemperatures;

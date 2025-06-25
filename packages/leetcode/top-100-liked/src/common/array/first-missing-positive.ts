@@ -33,7 +33,7 @@ function firstMissingPositive(nums: number[]): number {
 // @lc code=end
 
 /**
- * @category 数组
+ * @group 数组
  *
  * @summary
  * ### 41. 缺失的第一个正数

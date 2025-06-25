@@ -41,6 +41,6 @@ function jump(nums: number[]): number {
 // @lc code=end
 
 /**
- * @category 贪心算法
+ * @group 贪心算法
  */
 export const jump_game_ii = jump;

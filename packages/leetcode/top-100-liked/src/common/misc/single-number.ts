@@ -24,5 +24,8 @@ function singleNumber(nums: number[]): number {
 };
 // @lc code=end
 
+/**
+ * @group 其他
+ * @category 位运算
+ */
 export const single_number = singleNumber;
-

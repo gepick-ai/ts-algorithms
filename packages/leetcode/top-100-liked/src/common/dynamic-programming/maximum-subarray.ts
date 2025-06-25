@@ -31,6 +31,6 @@ function maxSubArray(nums: number[]): number {
 // @lc code=end
 
 /**
- * @category 动态规划
+ * @group 动态规划
  */
 export const maximum_subarray = maxSubArray;

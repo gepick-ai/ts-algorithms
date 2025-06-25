@@ -42,6 +42,6 @@ function canPartition(nums: number[]): boolean {
 // @lc code=end
 
 /**
- * @category 动态规划
+ * @group 动态规划
  */
 export const partition_equal_subset_sum = canPartition;

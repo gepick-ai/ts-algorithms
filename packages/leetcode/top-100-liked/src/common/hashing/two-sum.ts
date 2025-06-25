@@ -30,6 +30,6 @@ function twoSum(nums: number[], target: number): number[] {
 // @lc code=end
 
 /**
- * @category 哈希表
+ * @group 哈希表
  */
 export const two_sum = twoSum;

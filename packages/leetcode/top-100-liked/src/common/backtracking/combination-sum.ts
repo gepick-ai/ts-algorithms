@@ -50,6 +50,6 @@ function _combination(candidates: number[], target: number, sum: number, start: 
 // @lc code=end
 
 /**
- * @category 回溯算法
+ * @group 回溯算法
  */
 export const combination_sum = combinationSum;

@@ -54,6 +54,6 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 // @lc code=end
 
 /**
- * @category 链表
+ * @group 链表
  */
 export const merge_two_sorted_lists = mergeTwoLists;

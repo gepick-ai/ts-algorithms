@@ -44,7 +44,8 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
 // @lc code=end
 
 /**
- * @category 网格图
+ * @group 网格图
+ * @category 图-dfs
  * @summary 三色标记法 + dfs
  */
 export const course_schedule = canFinish;

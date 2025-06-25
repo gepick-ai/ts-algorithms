@@ -55,6 +55,6 @@ function isValidBST(root: TreeNode | null): boolean {
  * 中序遍历的顺序是：左根右。
  * 所以前一个节点值>=当前节点值，则不是二叉搜索树。
  *
- * @category 二叉树
+ * @group 二叉树
  */
 export const validate_binary_search_tree = isValidBST;

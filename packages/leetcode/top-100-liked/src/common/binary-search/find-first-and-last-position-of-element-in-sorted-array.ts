@@ -60,6 +60,6 @@ function lowerBound(nums: number[], target: number): number {
 // @lc code=end
 
 /**
- * @category 二分算法
+ * @group 二分算法
  */
 export const find_first_and_last_position_of_element_in_sorted_array = searchRange;

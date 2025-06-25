@@ -43,6 +43,6 @@ function findDuplicate(nums: number[]): number {
 // @lc code=end
 
 /**
- * @category 二分算法
+ * @group 二分算法
  */
 export const find_the_duplicate_number = findDuplicate;

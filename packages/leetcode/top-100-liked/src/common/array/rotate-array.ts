@@ -71,6 +71,6 @@ function rotate(nums: number[], k: number): void {
  * 那么相当于从头开始排新位置，则新的位置newLoc = leftX - 1;
  * 最后记住新位置和数然后放到原数组上。
  *
- * @category 数组
+ * @group 数组
  */
 export const rotate_array = rotate;
