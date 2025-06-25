@@ -11,7 +11,7 @@ function orangesRotting(grid: number[][]): number {
 // @lc code=end
 
 /**
- * @group 网格图
+ * @group 网格与图
  * @category 图-bfs
  * @document ../../../../../../.typedoc/docs/994.腐烂的橘子.md
  */

@@ -62,7 +62,7 @@ class TrieNode {
 // @lc code=end
 
 /**
- * @group 网格图
+ * @group 网格与图
  * @category Trie树
  * @summary Trie树
  */
