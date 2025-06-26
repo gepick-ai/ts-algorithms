@@ -12,3 +12,4 @@ export * from "./validate-binary-search-tree";
 export * from "./lowest-common-ancestor-of-a-binary-tree";
 export * from "./diameter-of-binary-tree";
 export * from "./binary-tree-maximum-path-sum";
+export * from "./path-sum-iii";

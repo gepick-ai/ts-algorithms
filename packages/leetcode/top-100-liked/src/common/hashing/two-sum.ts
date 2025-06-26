@@ -7,7 +7,7 @@
 // @lc code=start
 function twoSum(nums: number[], target: number): number[] {
   const map = new Map<number, number>();
-  const ans: number[] = [];
+  let ans: number[] = [];
 
   // 这个解法的思路就是尝试找差值，如果有nums的元素是差值，最多遍历完最后一次一定能找到，题目说了一定有一个答案
   // 查看当前位置左边是不是有数是我们要找的差值。
@@ -18,8 +18,7 @@ function twoSum(nums: number[], target: number): number[] {
     // 如果差值在map中存在，说明找到了
     // NOTE: JS有隐式类型转换，所以0和false都会被认为是false，所以需要使用 !== undefined 来判断
     if (loc !== undefined) {
-      ans.push(loc, i);
-      break;
+      ans = [loc, i];
     }
 
     // 否则将当前数存入map
