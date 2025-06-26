@@ -4,3 +4,4 @@ export * from "./search-a-2-d-matrix";
 export * from "./search-in-rotated-sorted-array";
 export * from "./find-minimum-in-rotated-sorted-array";
 export * from "./find-the-duplicate-number";
+export * from "./median-of-two-sorted-arrays";
