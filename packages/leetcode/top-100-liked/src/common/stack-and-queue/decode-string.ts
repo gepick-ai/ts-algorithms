@@ -16,14 +16,12 @@ function decodeString(s: string): string {
   // 其中真正需要入栈的只有数字和字母
   // 而[ 和 ] 只是用来保存状态和恢复状态的占位符，它们就相当于一个开关
   for (let i = 0; i < s.length; i++) {
-    const char = s[i];
-
     // 遇到数字，构建多位数(数字不一定是个位 有可能是十位，百位等)
-    if (char >= '0' && char <= '9') {
-      curTimes = curTimes * 10 + (+char);
+    if (s[i] >= '0' && s[i] <= '9') {
+      curTimes = curTimes * 10 + (+s[i]);
     }
     // 保存状态，重置
-    else if (char === '[') {
+    else if (s[i] === '[') {
       // 遇到左括号，将当前数字和字符串入栈
       stack1.push(curTimes);
       stack2.push(curStr);
@@ -32,7 +30,7 @@ function decodeString(s: string): string {
       curStr = '';
     }
     // 恢复状态，处理
-    else if (char === ']') {
+    else if (s[i] === ']') {
       // 遇到右括号，开始解码
       const preStr = stack2.pop()!;
       const times = stack1.pop()!;
@@ -41,7 +39,7 @@ function decodeString(s: string): string {
     }
     // 遇到字母，直接添加到当前字符串
     else {
-      curStr += char;
+      curStr += s[i];
     }
   }
 
