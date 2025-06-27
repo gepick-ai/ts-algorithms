@@ -47,14 +47,45 @@ function decodeString(s: string): string {
 
   return curStr;
 }
+
+// 递归版本的思路
+function decodeString1(s: string): string {
+  // 从指定位置开始，解析并解码字符串，直到遇到右括号或字符串结束，返回解码结果和下一个处理位置
+  function decode(s: string, i: number): [string, number] {
+    let curTimes = 0;
+    let curStr = '';
+
+    while (i < s.length && s[i] !== ']') {
+      if (s[i] >= '0' && s[i] <= '9') {
+        curTimes = curTimes * 10 + (+s[i]);
+      }
+      else if (s[i] === '[') {
+        // 递归调用：进入新层次
+        const [decoded, newIdx] = decode(s, i + 1);
+        curStr += decoded.repeat(curTimes);
+        curTimes = 0; // 重置，因为已经使用过了
+        i = newIdx;
+      }
+      else {
+        curStr += s[i];
+      }
+      i++;
+    }
+
+    return [curStr, i];
+  }
+
+  return decode(s, 0)[0];
+}
 // #endregion code
+
 // @lc code=end
 
 /**
  *
  * @group 栈与队列
  * @category 栈
- * @summary 双栈，看到「[」保存状态、重置状态，看到「]」恢复状态、处理。
+ * @summary 双栈，看到「[」保存状态、重置状态，看到「]」恢复状态、处理。（本质：状态机思维，碰到一类字符先累加状态。）
  * @document ../../../../../../.typedoc/docs/394.字符串解码.md
  *
  * @description
