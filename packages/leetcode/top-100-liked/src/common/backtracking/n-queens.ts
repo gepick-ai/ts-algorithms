@@ -38,5 +38,6 @@ function solveNQueens(n: number): string[][] {
 
 /**
  * @group 回溯算法
+ * @category 回溯算法
  */
 export const n_queens = solveNQueens;

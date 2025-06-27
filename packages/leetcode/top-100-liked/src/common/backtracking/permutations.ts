@@ -33,5 +33,6 @@ function permute(nums: number[]): number[][] {
 
 /**
  * @group 回溯算法
+ * @category 回溯算法
  */
 export const permutations = permute;

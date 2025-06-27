@@ -37,5 +37,6 @@ function partition(s: string): string[][] {
 
 /**
  * @group 回溯算法
+ * @category 回溯算法
  */
 export const palindrome_partitioning = partition;

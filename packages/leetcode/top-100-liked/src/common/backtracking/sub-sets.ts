@@ -35,5 +35,6 @@ function _subsets(nums: number[], loc: number, ans: number[], result: number[][]
 
 /**
  * @group 回溯算法
+ * @category 回溯算法
  */
 export const sub_sets = subsets;
