@@ -82,9 +82,10 @@ function decodeString1(s: string): string {
 /**
  *
  * @group 栈与队列
+ * @document ../../../../../../.typedoc/docs/394.字符串解码.md
+ * 
  * @category 栈
  * @summary 双栈，看到「[」保存状态、重置状态，看到「]」恢复状态、处理。（本质：状态机思维，碰到一类字符先累加状态。）
- * @document ../../../../../../.typedoc/docs/394.字符串解码.md
  *
  * @description
  * 1.有分层的概念：比如 3[a2[c]] ， 每一对括号就是一层。"3[a2[c]]" 等价于 "3(a(2(c)))"。遇到 [ 就进入新的一层
