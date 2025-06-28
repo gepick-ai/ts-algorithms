@@ -5,54 +5,51 @@
  */
 
 // @lc code=start
+
+// #region code
 function findAnagrams(s: string, p: string): number[] {
   const ans: number[] = [];
+  const hash = new Array(26).fill(0);
+  const k = p.length;
+  const code = (c: string) => c.charCodeAt(0) - 'a'.charCodeAt(0);
 
-  // 统计p中每一个出现的字母的次数
-  const cntP = new Array(26).fill(0);
-  for (const char of p) {
-    cntP[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+  // 统计p中每个字符的需求
+  for (const c of p) {
+    hash[code(c)]--;
   }
-  const cntS = new Array(26).fill(0);
 
-  let right = 0;
+  for (let l = 0, r = 0; r < s.length; ++r) {
+    // 入
+    hash[code(s[r])]++;
 
-  while (right < s.length) {
-    // 增加对应看到的字母的次数
-    cntS[s[right].charCodeAt(0) - 'a'.charCodeAt(0)]++;
+    // 出
+    if (r - l + 1 > k) {
+      hash[code(s[l])]--;
+      l++;
+    }
 
-    let left = right - p.length + 1;
-
-    // 说明窗口长度够了
-    if (left >= 0) {
-      if (isAnagrams(cntS, cntP)) {
-        ans.push(left);
+    // 记
+    if (r - l + 1 === k) {
+      if (hash.every(x => x === 0)) {
+        ans.push(l);
       }
-
-      cntS[s[left].charCodeAt(0) - 'a'.charCodeAt(0)]--;
     }
-
-    right++;
   }
-
   return ans;
-};
-
-function isAnagrams(cntS: number[], cntP: number[]): boolean {
-  for (let i = 0; i < 26; i++) {
-    if (cntS[i] !== cntP[i]) {
-      return false;
-    }
-  }
-  return true;
 }
+// #endregion code
 
 // @lc code=end
 
 /**
- * 既然要是异位词，那么两个单词的每个字母对应出现次数应该是一样的。
- *
  * @group 双指针
+ * @document ../../../../../../.typedoc/docs/438.找到字符串中所有字母异位词.md
+ *
  * @category 滑动窗口
+ * @summary 维持定长k的窗口，窗口每前进一步，就判断一次窗口中的字符串是否是p的异位词。
+ *
+ * @description
+ *
+ * {@includeCode ./find-all-anagrams-in-a-string.ts/#code}
  */
 export const find_all_anagrams_in_a_string = findAnagrams;

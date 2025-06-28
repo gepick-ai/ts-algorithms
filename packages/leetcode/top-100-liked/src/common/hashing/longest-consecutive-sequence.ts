@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+// #region code
 function longestConsecutive(nums: number[]): number {
   const set = new Set<number>(nums);
   let max = 0;
@@ -27,9 +28,21 @@ function longestConsecutive(nums: number[]): number {
 
   return max;
 };
+// #endregion code
 // @lc code=end
 
 /**
  * @group 哈希表
+ * @document ../../../../../../.typedoc/docs/128.最长连续序列.md
+ *
+ * @category 哈希表
+ * @summary 遍历数组 + 找开头元素 + 找连续元素。关键点：计数一定是从开头元素开始，如果当前元素不是开头元素，说明在它前面一定会存在一个元素放在set中。
+ *
+ * @description
+ * 1. 遍历数组，将数组中的元素加入到set中。
+ * 2. 遍历set，如果set中存在num-1，则跳过，否则说明当前num是开头，我们不断尝试寻找+1的数，直到找不到为止。
+ * 3. 当找不到+1的数时，更新最大值，拿当前序列的长度，和max比较，取最大值。
+ *
+ * {@includeCode ./longest-consecutive-sequence.ts/#code}
  */
 export const longest_consecutive_sequence = longestConsecutive;

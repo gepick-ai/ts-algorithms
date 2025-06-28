@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+// #region code
 function groupAnagrams(strs: string[]): string[][] {
   const result: string[][] = [];
   const map = new Map<string, string[]>();
@@ -29,13 +30,19 @@ function groupAnagrams(strs: string[]): string[][] {
 
   return result;
 };
-
+// #endregion code
 // @lc code=end
 
 /**
+ * @group 哈希表
+ * @document ../../../../../../.typedoc/docs/49.字母异位词分组.md
+ *
+ * @category 哈希表
+ *
+ * @description
  * 如果是字母异位词，那么排序后，字母的顺序是相同的。我们将排序后的字符串当作key，将字母异位词分组当作value存入map当中。
  * 你只需要通过转换每个字符串获取map的key就可以找到自己应该去的单词分组，加入这个分组即可。
  *
- * @group 哈希表
+ * {@includeCode ./group-anagrams.ts/#code}
  */
 export const group_anagrams = groupAnagrams;

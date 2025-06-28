@@ -30,7 +30,13 @@ function maxArea(height: number[]): number {
 
 /**
  *
- * ## 盛最多水的容器
+ * @group 双指针
+ * @document ../../../../../../.typedoc/docs/11.盛最多水的容器.md
+ *
+ * @category 双指针
+ * @summary 分析柱子高低走法
+ *
+ * @description
  * - 分析两根柱子的情况：
  *   - 柱子A高 === 柱子B高
  *   - 柱子A高 > 柱子B高
@@ -45,13 +51,13 @@ function maxArea(height: number[]): number {
  *     - 移动任意一根柱子，容器高度都会变小
  *
  *   - 当A、B不等高时：
- *    - 移动高柱子：
+ *     - 移动高柱子：
  *      可能变得比矮柱子还矮
  *      可能变得跟矮柱子一样高
  *      可能还是比矮柱子高
  *      结论：移动高柱子只会让容器高度变小
  *
- *    - 移动矮柱子：
+ *     - 移动矮柱子：
  *      可能变得比当前还矮
  *      可能变得跟当前一样高
  *      可能变得跟高柱子一样高
@@ -62,8 +68,5 @@ function maxArea(height: number[]): number {
  *
  * {@includeCode ./container-with-most-water.ts/#code}
  *
- * @group 双指针
- * @category 双指针
- * @summary 分析柱子高低走法
  */
 export const container_with_most_water = maxArea;
