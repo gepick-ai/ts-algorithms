@@ -6,32 +6,23 @@
 
 // @lc code=start
 function subsets(nums: number[]): number[][] {
-  const result: number[][] = [];
-  const ans: number[] = [];
-  const loc = 0;
+  const ans: number[][] = [];
+  const path: number[] = [];
 
-  _subsets(nums, loc, ans, result);
+  function dfs(i: number) {
+    ans.push([...path]);
 
-  return result;
+    for (let j = i; j < nums.length; j++) {
+      path.push(nums[j]);
+      dfs(j + 1);
+      path.pop();
+    }
+  }
+
+  dfs(0);
+
+  return ans;
 };
-
-function _subsets(nums: number[], loc: number, ans: number[], result: number[][]) {
-  if (loc <= nums.length) {
-    result.push([...ans]);
-  }
-  else {
-    return;
-  }
-
-  for (let i = loc; i < nums.length; i++) {
-    ans.push(nums[i]);
-    loc++;
-
-    _subsets(nums, loc, ans, result);
-
-    ans.pop();
-  }
-}
 
 /**
  * @group 回溯算法
