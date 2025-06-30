@@ -36,9 +36,7 @@ function longestValidParentheses(s: string): number {
 // @lc code=end
 
 /**
- *
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/32.最长有效括号.md
+ * {@include ../../../../../../.typedoc/problems/32.最长有效括号.md}
  *
  * @category 栈
  *
@@ -50,5 +48,7 @@ function longestValidParentheses(s: string): number {
  * 5. 如果栈不为空，则计算当前位置与栈顶位置的差值，更新最大长度。
  * 6. 如果栈为空，则将当前位置入栈。
  * {@includeCode ./longest-valid-parentheses.ts/#code}
+ *
+ * @group 栈与队列
  */
 export const longest_valid_parentheses = longestValidParentheses;

@@ -47,9 +47,8 @@ function setZeroes(matrix: number[][]): void {
 // @lc code=end
 
 /**
- * @group 网格图
- * @document ../../../../../../.typedoc/problems/73.矩阵置零.md
+ * {@include ../../../../../../.typedoc/problems/73.矩阵置零.md}
  *
- * @category 矩阵
+ * @group 网格图
  */
 export const set_matrix_zeroes = setZeroes;

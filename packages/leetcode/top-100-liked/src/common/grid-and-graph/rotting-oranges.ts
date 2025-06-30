@@ -52,10 +52,9 @@ function orangesRotting(grid: number[][]): number {
 // @lc code=end
 
 /**
- * @group 网格图
- * @document ../../../../../../.typedoc/problems/994.腐烂的橘子.md
+ * {@include ../../../../../../.typedoc/problems/994.腐烂的橘子.md}
  *
- * @category 图-bfs
+ * @group 网格图
  */
 
 export const rotting_oranges = orangesRotting;

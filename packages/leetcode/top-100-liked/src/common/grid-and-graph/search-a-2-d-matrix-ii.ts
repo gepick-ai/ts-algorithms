@@ -44,9 +44,8 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 // @lc code=end
 
 /**
- * @group 网格图
- * @document ../../../../../../.typedoc/problems/240.搜索二维矩阵II.md
+ * {@include ../../../../../../.typedoc/problems/240.搜索二维矩阵II.md}
  *
- * @category 矩阵
+ * @group 网格图
  */
 export const search_a_2_d_matrix_ii = searchMatrix;

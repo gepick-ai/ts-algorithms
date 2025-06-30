@@ -29,9 +29,7 @@ function lengthOfLIS(nums: number[]): number {
 // @lc code=end
 
 /**
- *
- * @group 动态规划
- * @document ../../../../../../.typedoc/problems/300.最长递增子序列.md
+ * {@include ../../../../../../.typedoc/problems/300.最长递增子序列.md}
  *
  * @description
  * dp[i] 表示以第i个数字结尾的最长递增子序列的长度
@@ -42,5 +40,6 @@ function lengthOfLIS(nums: number[]): number {
  * 但是这个思考不够完整，因为第i-1个位置的数字不一定能够被nums[i]接上。所以对于位置i，它还要继续查看是否能够接在i-2,i-3等等位置后边。
  * 因为它有可能是从前面几个状态转移过来的。状态转移不一定是从相邻状态转移过来的
  *
+ * @group 动态规划
  */
 export const longest_increasing_subsequence = lengthOfLIS;

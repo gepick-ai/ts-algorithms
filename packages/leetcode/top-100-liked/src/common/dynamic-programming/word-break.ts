@@ -11,7 +11,8 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/139.单词拆分.md}
+ *
  * @group 动态规划
- * @document ../../../../../../.typedoc/problems/139.单词拆分.md
  */
 export const word_break = wordBreak;

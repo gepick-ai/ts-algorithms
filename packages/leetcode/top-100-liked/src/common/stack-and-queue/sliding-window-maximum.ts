@@ -32,12 +32,12 @@ function maxSlidingWindow(nums: number[], k: number): number[] {
 // @lc code=end
 
 /**
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/239.滑动窗口最大值.md
+ * {@include ../../../../../../.typedoc/problems/239.滑动窗口最大值.md}
  *
  * @category 单调队列
  *
  * @description
  *
+ * @group 栈与队列
  */
 export const sliding_window_maximum = maxSlidingWindow;

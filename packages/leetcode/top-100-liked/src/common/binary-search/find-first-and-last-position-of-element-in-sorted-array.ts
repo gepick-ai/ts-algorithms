@@ -5,22 +5,27 @@
  */
 
 // @lc code=start
+
+// #region code
 function searchRange(nums: number[], target: number): number[] {
   // >= x
-  const start = lowerBound(nums, target);
-  if (start === nums.length || nums[start] !== target) {
+  const l = lowerBound(nums, target);
+  // l === nums.length说明l左边全是小于target的数
+  // nums[l] !== target说明有大于target的第一个数，但是这个数不是target
+  // 综上两种情况都表明nums中没有target
+  if (l === nums.length || nums[l] !== target) {
     return [-1, -1]; // nums 中没有 target
   }
-  // 如果 start 存在，那么 end 必定存在
-  // >x + 1 ===>  找>=(x+1) - 1 的第一个位置
-  const end = lowerBound(nums, target + 1) - 1;
-  return [start, end];
+  // 如果 l 存在，那么 r 必定存在
+  // >x + 1 ===>  找>=(x+1) - 1 的位置
+  const r = lowerBound(nums, target + 1) - 1;
+  return [l, r];
 };
 // 找到>=target的第一个数的位置
 function lowerBound(nums: number[], target: number): number {
   // [left, right) 左闭右开
-  let left = 0;
-  let right = nums.length;
+  let l = 0;
+  let r = nums.length - 1;
 
   // [1,2,2,3]找>=2
   // Math.floor(((-1 + 4) / 2)) = 1 , mid= 1, num = 2, 所以从mid开始往右都染蓝色。完事让right = mid
@@ -28,39 +33,52 @@ function lowerBound(nums: number[], target: number): number {
 
   // 此时left = 1，right = 1，left 不小于right，停止
   // 返回left就是第一个大于2的数
-  while (left < right) {
-    const mid = Math.floor((left + right) / 2);
+  while (l <= r) {
+    const m = Math.floor((l + r) / 2);
 
-    if (nums[mid] >= target) {
+    if (nums[m] >= target) {
       // mid >= target
       // left --- target --- mid ---right
-      right = mid;
+      r = m - 1;
     }
     else {
       // mid < target
       // left --- mid --- target --- right
-      left = mid + 1;
+      l = m + 1;
     }
   }
 
-  return left;
+  return l;
 }
 
-// 在有序数组上的二分查找分成四种类型：
-// >=x 、>x、<x、<=x
-// 对于数组中都是整数，这四种类型可以互相转换：
-// “找>x的第一个数”  可以转换成 求  “[找>=(x+1)的第一个数]”
-// “找<x的最后一个数” 可以转换成 求  “[找>=x的第一个数]的左边位置的数”
-// “找<=x的最后一个数” 可以转换成  求 “[找>x的第一个数]的左边位置的数”，也就是 “[找>=(x+1)的第一个数]的左边位置的数”
-
-// 找开始位置就找>=,>
-// 找结束位置就找<=,<
-
-// 本题要找开始和结束，就是找>=和<=
+// #endregion code
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/34.在排序数组中查找元素的第一个和最后一个位置.md}
+ *
+ * @description
+ *
+ * 在一个单调递增的数组中，查找元素的第一个位置和最后一个位置。
+ * 其实就是两个任务：
+ * - 找第一个`>=target`的数的位置
+ * - 找第一个`>=(target+1)`的数的左边位置。但前提是要先找到第一个`>=target`的数的位置。
+ *
+ * {@includeCode ./find-first-and-last-position-of-element-in-sorted-array.ts/#code}
+ *
+ * 有序数组上的二分查找常见四种类型：
+ *   - ">= x"
+ *   - "> x"
+ *   - "< x"
+ *   - "<= x"
+ *
+ * 这四种类型可以互相转换（假设数组元素为整数）：
+ *   - “找 > x 的第一个数”  ⇨ 等价于 “找 >= (x+1) 的第一个数”
+ *   - “找 < x 的最后一个数” ⇨ 等价于 “找 >= x 的第一个数的左边一个数”
+ *   - “找 <= x 的最后一个数” ⇨ 等价于 “找 > x 的第一个数的左边一个数”，也就是 “找 >= (x+1) 的第一个数的左边一个数”
+ *
+ *
+ * 本题要找区间的开始和结束位置，即分别找 >= 和 <=。
  *
  * @group 二分查找
  */

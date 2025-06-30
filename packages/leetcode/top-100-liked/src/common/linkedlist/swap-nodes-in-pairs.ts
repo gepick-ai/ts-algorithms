@@ -36,9 +36,10 @@ function swapPairs(head: ListNode | null): ListNode | null {
 // @lc code=end
 
 /**
- * @group 链表
- * @document ../../../../../../.typedoc/problems/24.两两交换链表中的节点.md
+ * {@include ../../../../../../.typedoc/problems/24.两两交换链表中的节点.md}
  *
  * @summary 按照题意递归模拟
+ *
+ * @group 链表
  */
 export const swap_nodes_in_pairs = swapPairs;

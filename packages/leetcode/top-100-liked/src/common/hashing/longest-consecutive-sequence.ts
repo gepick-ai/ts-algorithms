@@ -32,10 +32,8 @@ function longestConsecutive(nums: number[]): number {
 // @lc code=end
 
 /**
- * @group 哈希表
- * @document ../../../../../../.typedoc/problems/128.最长连续序列.md
+ * {@include ../../../../../../.typedoc/problems/128.最长连续序列.md}
  *
- * @category 哈希表
  * @summary 遍历数组 + 找开头元素 + 找连续元素。关键点：计数一定是从开头元素开始，如果当前元素不是开头元素，说明在它前面一定会存在一个元素放在set中。
  *
  * @description
@@ -44,5 +42,7 @@ function longestConsecutive(nums: number[]): number {
  * 3. 当找不到+1的数时，更新最大值，拿当前序列的长度，和max比较，取最大值。
  *
  * {@includeCode ./longest-consecutive-sequence.ts/#code}
+ *
+ * @group 哈希表
  */
 export const longest_consecutive_sequence = longestConsecutive;

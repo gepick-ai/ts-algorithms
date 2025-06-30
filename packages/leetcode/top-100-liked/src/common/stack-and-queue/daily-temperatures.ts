@@ -27,8 +27,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
 // @lc code=end
 
 /**
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/739.每日温度.md
+ * {@include ../../../../../../.typedoc/problems/739.每日温度.md}
  *
  * @category 单调栈
  *
@@ -39,5 +38,6 @@ function dailyTemperatures(temperatures: number[]): number[] {
  * 2.当遍历到的元素小于等于当前元素：元素入栈
  * 直到遍历完所有温度后停止操作
  *
+ * @group 栈与队列
  */
 export const daily_temperatures = dailyTemperatures;

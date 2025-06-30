@@ -26,7 +26,8 @@ function climbStairs(n: number): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/70.爬楼梯.md}
+ *
  * @group 动态规划
- * @document ../../../../../../.typedoc/problems/70.爬楼梯.md
  */
 export const climbing_stairs = climbStairs;

@@ -51,7 +51,8 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/2.两数相加.md}
+ *
  * @group 链表
- * @document ../../../../../../.typedoc/problems/2.两数相加.md
  */
 export const add_two_numbers = addTwoNumbers;

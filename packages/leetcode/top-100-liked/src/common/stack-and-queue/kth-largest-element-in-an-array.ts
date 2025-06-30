@@ -122,8 +122,7 @@ class MinHeap {
 // @lc code=end
 
 /**
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/215.数组中的第K个最大元素.md
+ * {@include ../../../../../../.typedoc/problems/215.数组中的第K个最大元素.md}
  *
  * @category 堆
  *
@@ -134,5 +133,6 @@ class MinHeap {
  * 由于堆的特性，每次都会heapify，所以堆顶会不断放置新的最小元素。当所有元素放完了，在堆内部调整下，重新推到堆顶的元素就是第K大元素。
  * 换句话说，小根堆不允许存在比堆顶小的元素，只要大就会往下沉。一轮下来，小的都被踢出去了，最后留下的堆顶第K个元素就是第K大元素。
  *
+ * @group 栈与队列
  */
 export const kth_largest_element_in_an_array = findKthLargest;

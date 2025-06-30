@@ -32,7 +32,8 @@ function minPathSum(grid: number[][]): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/64.最小路径和.md}
+ *
  * @group 动态规划
- * @document ../../../../../../.typedoc/problems/64.最小路径和.md
  */
 export const minimum_path_sum = minPathSum;

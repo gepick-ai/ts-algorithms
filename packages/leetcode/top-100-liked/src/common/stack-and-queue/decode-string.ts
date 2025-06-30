@@ -80,10 +80,8 @@ function decodeString1(s: string): string {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/394.字符串解码.md}
  *
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/394.字符串解码.md
- * 
  * @category 栈
  * @summary 双栈，看到「[」保存状态、重置状态，看到「]」恢复状态、处理。（本质：状态机思维，碰到一类字符先累加状态。）
  *
@@ -101,5 +99,7 @@ function decodeString1(s: string): string {
  * 第3层：第二个 '[' 到第二个 ']'
  *
  * {@includeCode ./decode-string.ts/#code}
+ *
+ * @group 栈与队列
  */
 export const decode_string = decodeString;

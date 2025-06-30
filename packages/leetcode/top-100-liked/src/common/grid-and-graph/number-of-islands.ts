@@ -46,9 +46,10 @@ function numIslands(grid: string[][]): number {
 // @lc code=end
 
 /**
- * @group 网格图
- * @document ../../../../../../.typedoc/problems/200.岛屿数量.md
- * @category 图-dfs
+ * {@include ../../../../../../.typedoc/problems/200.岛屿数量.md}
+ *
  * @summary 四个方向dfs插旗
+ *
+ * @group 网格图
  */
 export const number_of_islands = numIslands;

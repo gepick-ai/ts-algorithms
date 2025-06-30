@@ -123,9 +123,10 @@ class MinHeap {
 // @lc code=end
 
 /**
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/155.最小栈.md
+ * {@include ../../../../../../.typedoc/problems/155.最小栈.md}
  *
  * @category 堆
+ *
+ * @group 栈与队列
  */
 export const min_stack = MinStack;

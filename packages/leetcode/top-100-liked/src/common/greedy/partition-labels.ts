@@ -39,8 +39,7 @@ function partitionLabels(s: string): number[] {
 // @lc code=end
 
 /**
- * @group 贪心算法
- * @document ../../../../../../.typedoc/problems/763.划分字母区间.md
+ * {@include ../../../../../../.typedoc/problems/763.划分字母区间.md}
  *
  * @description
  * 算法的核心思想是：每个字符只能出现在一个片段中，所以片段必须包含该字符的所有出现位置。
@@ -49,5 +48,7 @@ function partitionLabels(s: string): number[] {
  * 2. 遍历字符串，记录当前片段的结束位置
  * 3. 如果当前位置是结束位置，说明当前片段已经可以结束了。也可以看成i追上了end，说明当前片段已经可以结束了。
  * 4. 更新start为下一个片段的起始位置
+ *
+ * @group 贪心算法
  */
 export const partition_labels = partitionLabels;

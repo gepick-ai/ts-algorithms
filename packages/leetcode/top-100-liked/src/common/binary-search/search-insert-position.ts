@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+
+// #region code
 function searchInsert(nums: number[], target: number): number {
   // 按题目意思其实就是找有序数组当中第一个>=target的数
   return lowerBound(nums, target);
@@ -15,6 +17,7 @@ function lowerBound(nums: number[], target: number): number {
   // 左闭右开
   let left = 0;
   let right = nums.length - 1;
+
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
 
@@ -30,10 +33,15 @@ function lowerBound(nums: number[], target: number): number {
 
   return left;
 }
+// #endregion code
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/35.搜索插入位置.md}
+ *
+ * @description
+ *
+ * {@includeCode ./search-insert-position.ts/#code}
  *
  * @group 二分查找
  */

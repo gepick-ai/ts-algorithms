@@ -52,8 +52,8 @@ function longestPalindrome(s: string): string {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/5.最长回文子串.md}
  *
  * @group 动态规划
- * @document ../../../../../../.typedoc/problems/5.最长回文子串.md
  */
 export const longest_palindromic_substring = longestPalindrome;

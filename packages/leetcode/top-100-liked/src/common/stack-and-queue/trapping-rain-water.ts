@@ -32,8 +32,7 @@ function trap(height: number[]): number {
 // @lc code=end
 
 /**
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/42.接雨水.md
+ * {@include ../../../../../../.typedoc/problems/42.接雨水.md}
  *
  * @category 单调栈
  *
@@ -45,5 +44,6 @@ function trap(height: number[]): number {
  *
  * 用单调栈解决，其实是一行一行寻找雨水。横向查找雨水。每次接完雨水，可以看成填充了柱子。
  *
+ * @group 栈与队列
  */
 export const trapping_rain_water = trap;

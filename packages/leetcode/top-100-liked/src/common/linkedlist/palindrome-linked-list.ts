@@ -45,11 +45,11 @@ function isPalindrome(head: ListNode | null): boolean {
 // @lc code=end
 
 /**
- *
- * @group 链表
- * @document ../../../../../../.typedoc/problems/234.回文链表.md
+ * {@include ../../../../../../.typedoc/problems/234.回文链表.md}
  *
  * @description
  * 转字符串判断回文。循环不变的条件是left<=right，兼容奇数和偶数的情况。
+ *
+ * @group 链表
  */
 export const palindrome_linked_list = isPalindrome;

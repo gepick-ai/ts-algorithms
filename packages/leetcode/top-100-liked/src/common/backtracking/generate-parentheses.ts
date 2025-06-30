@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+
 // #region code
 function generateParenthesis(n: number) {
   const ans: string[] = [];
@@ -22,9 +23,9 @@ function generateParenthesis(n: number) {
     }
 
     // 选左括号的走法，能使用的左括号数量减1
-    dfs(`${str}(`, left - 1, right);
+    dfs(str + '(', left - 1, right);
     // 选右括号的走法，能使用的右括号数量减1
-    dfs(`${str})`, left, right - 1);
+    dfs(str + ')', left, right - 1);
   }
 
   dfs('', n, n);
@@ -39,7 +40,7 @@ function generateParenthesis(n: number) {
  *
  * @category 回溯算法
  *
- *{@includeCode ./generate-parentheses.ts/#code}
+ * @includeCode ./generate-parentheses.ts/#code
  *
  * @group 回溯算法
  */

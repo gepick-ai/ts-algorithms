@@ -36,10 +36,11 @@ function detectCycle(head: ListNode | null): ListNode | null {
 // @lc code=end
 
 /**
- * @group 链表
- * @document ../../../../../../.typedoc/problems/142.环形链表II.md
+ * {@include ../../../../../../.typedoc/problems/142.环形链表II.md}
  *
  * @description
  * 和第一个题型一样，用set记录遍历过的节点，如果遍历到set中存在的节点，说明有环。直接返回该节点
+ *
+ * @group 链表
  */
 export const linked_list_cycle_ii = detectCycle;

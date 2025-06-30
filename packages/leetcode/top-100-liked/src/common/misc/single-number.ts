@@ -25,9 +25,10 @@ function singleNumber(nums: number[]): number {
 // @lc code=end
 
 /**
- * @group 其他
- * @document ../../../../../../.typedoc/problems/136.只出现一次的数字.md
+ * {@include ../../../../../../.typedoc/problems/136.只出现一次的数字.md}
  *
  * @category 位运算
+ *
+ * @group 其他
  */
 export const single_number = singleNumber;

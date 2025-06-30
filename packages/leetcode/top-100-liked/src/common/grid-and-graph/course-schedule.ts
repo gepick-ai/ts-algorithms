@@ -44,10 +44,11 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
 // @lc code=end
 
 /**
- * @group 网格图
- * @document ../../../../../../.typedoc/problems/207.课程表.md
+ * {@include ../../../../../../.typedoc/problems/207.课程表.md}
  *
  * @category 图-dfs
  * @summary 三色标记法 + dfs
+ *
+ * @group 网格图
  */
 export const course_schedule = canFinish;

@@ -31,7 +31,8 @@ function maxSubArray(nums: number[]): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/53.最大子数组和.md}
+ *
  * @group 动态规划
- * @document ../../../../../../.typedoc/problems/53.最大子数组和.md
  */
 export const maximum_subarray = maxSubArray;

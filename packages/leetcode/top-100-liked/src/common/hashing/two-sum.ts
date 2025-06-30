@@ -47,10 +47,7 @@ function twoSum(nums: number[], target: number): number[] {
 // @lc code=end
 
 /**
- * @group 哈希表
- * @document ../../../../../../.typedoc/problems/1.两数之和.md
- *
- * @category 哈希表
+ * {@include ../../../../../../.typedoc/problems/1.两数之和.md}
  *
  * @description
  * 实际上用map是暴力解法的空间换时间优化。
@@ -69,5 +66,7 @@ function twoSum(nums: number[], target: number): number[] {
  * 所以优化解法相当于不断给后边的数提供候选的差值，只不过是它们放到了map里，而不是在遍历的时候直接查找。先把target-nums[i]放到map里，而暴力解法是先枚举i，然后再去找target-nums[i]。
  *
  * {@includeCode ./two-sum.ts/#code}
+ *
+ * @group 哈希表
  */
 export const two_sum = twoSum;

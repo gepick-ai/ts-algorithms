@@ -41,7 +41,8 @@ function jump(nums: number[]): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/45.跳跃游戏II.md}
+ *
  * @group 贪心算法
- * @document ../../../../../../.typedoc/problems/45.跳跃游戏II.md
  */
 export const jump_game_ii = jump;

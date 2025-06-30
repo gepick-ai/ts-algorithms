@@ -147,12 +147,12 @@ class MinHeap {
 // @lc code=end
 
 /**
- * @group 栈与队列
- * @document ../../../../../../.typedoc/problems/347.前K个高频元素.md
+ * {@include ../../../../../../.typedoc/problems/347.前K个高频元素.md}
  *
  * @category 堆
  *
  * @description
  *
+ * @group 栈与队列
  */
 export const top_k_frequent_elements = topKFrequent;

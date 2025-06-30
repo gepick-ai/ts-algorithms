@@ -5,44 +5,54 @@
  */
 
 // @lc code=start
+
+// #region code
 function findMin(nums: number[]): number {
-  // 一个轮转的有序数组肯定能被分成左右两个有序的部分
-  // 并且左边部分一定大于右边部分
-  // 所以min一定在右边部分的开头
+  let n = nums.length;
+  // 左闭右开
+  let l = 0;
+  let r = n - 1;
 
-  // 二分查找，mid位置，判断这个位置和nums[right-1]的关系
-  // 如果mid位置的数比nums[right-1]要大，说明mid落在了左边部分
-  // 因此结果在[mid+1, right)这部分
-  // 否则说明mid落在了右边部分，这个时候说明mid有可能是min，也可能大于min
-  // 此时我们应该更新right，让right = mid在[left, mid)继续查找
+  while (l < r) {
+    let m = Math.floor((l + r) / 2);
 
-  let left = 0;
-  let right = nums.length;
-
-  // 处理特殊情况：数组只有一个元素或未旋转
-  if (nums.length === 1 || nums[0] < nums[right - 1]) {
-    return nums[0];
-  }
-
-  while (left < right) {
-    const mid = left + Math.floor((right - left) / 2);
-
-    // 如果mid位置的数大于等于第一个数，说明在左边部分
-    if (nums[mid] >= nums[0]) {
-      left = mid + 1;
+    // 说明[m, n-1]是递增的
+    if (nums[m] < nums[n - 1]) {
+      r = m;
     }
+    // 说明[m, n-1]是非递增的，比如[4567123]，m此时是7，是峰顶。这种时候最小值一定在[m+1, n-1]之间
     else {
-      right = mid;
+      l = m + 1;
     }
   }
 
-  return nums[left];
+  return nums[l];
 }
+// #endregion code
 
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/153.寻找旋转排序数组中的最小值.md}
+ *
+ * @description
+ *
+ * ### 关键点1：旋转数组的特性
+ * 由于原数组是严格升序的，所以旋转 1 次和旋转多次的结果是类似的：最终数组要么是一个完整的升序数组（即未旋转时的原数组），要么是两个升序数组的组合。
+ * 这两个升序数组的组合形式是：[较大的升序段 + 较小的升序段]，其中较小的升序段的第一个元素就是整个数组的最小值。
+ *
+ * ### 关键点2：本题二分查找的核心思路：区间内的都是还没有确定是否小于 nums[len-1] 的数的下标，既然 right=mid，说明 right 已经确定清楚了，自然就不能在区间内了
+ * 使用二分查找，每次通过比较中值 nums[mid] 与 nums[right] 来判断中值 mid 属于哪个升序段：
+ *    - 如果 nums[mid] < nums[right]：说明 mid 位于右升序段（即较小的升序段），mid 可能是最小值，因此将 right 更新为 mid。
+ *    - 否则（nums[mid] > nums[right]）：说明 mid 位于左升序段（即较大的升序段），此时最小值一定在 mid 右侧，因此将 left 更新为 mid + 1
+ *    - 当 left == right 时，说明找到了最小值，直接返回 nums[left] 即可。所以循环不变的条件是：while(left < right)而不是while(left <= right)。区间收缩到剩下一个元素时停止。
+ *
+ * ### 关键点3：为什么不用 mid 和最左边的值比较？
+ * 因为这是一个旋转之后的递增序列：
+ * - 用 mid 和 left 比较时：mid > left，无法确定最小值在 mid 的左边还是右边。
+ * - 用 mid 和 right 比较时：
+ *   - 如果 mid > right，说明最小值在 mid 的右边（不包含 mid，因为 right 比 mid 小）。
+ *   - 如果 mid <= right，说明右边是有序的（或者干脆只有一段递增区间，旋转回来了），且最小值就是 mid 或在 mid 的左边（包含 mid）。
  *
  * @group 二分查找
  */

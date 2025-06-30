@@ -50,6 +50,7 @@ export default antfu(
       'accessor-pairs': 'off',
       'jsonc/indent': 'off',
       'import/no-mutable-exports': 'off',
+      'prefer-template': 'off',
     },
   },
 );

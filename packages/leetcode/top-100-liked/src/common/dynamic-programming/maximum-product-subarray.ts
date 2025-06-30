@@ -42,7 +42,8 @@ function maxProduct(nums: number[]): number {
 // @lc code=end
 
 /**
+ * {@include  ../../../../../../.typedoc/problems/152.乘积最大子数组.md}
+ *
  * @group 动态规划
- * @document ../../../../../../.typedoc/problems/152.乘积最大子数组.md
  */
 export const maximum_product_subarray = maxProduct;
