@@ -34,7 +34,7 @@ function permute(nums: number[]): number[][] {
 /**
  * {@include ../../../../../../.typedoc/problems/46.全排列.md}
  *
- * @category 回溯算法
+ * 
  *
  * @group 回溯算法
  */

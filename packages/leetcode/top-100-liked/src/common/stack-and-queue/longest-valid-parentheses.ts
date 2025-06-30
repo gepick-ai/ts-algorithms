@@ -38,7 +38,7 @@ function longestValidParentheses(s: string): number {
 /**
  * {@include ../../../../../../.typedoc/problems/32.最长有效括号.md}
  *
- * @category 栈
+ * 
  *
  * @description
  * 1. 使用栈来记录括号的位置，遇到「(」入栈，遇到「)」出栈。

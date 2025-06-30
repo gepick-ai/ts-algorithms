@@ -64,7 +64,7 @@ function threeSum(nums: number[]): number[][] {
  * {@include ../../../../../../.typedoc/problems/15.三数之和.md}
  *
  *
- * @category 双指针
+ * 
  * @summary 排序 + 转换成两数之和 + 去重
  *
  * @description

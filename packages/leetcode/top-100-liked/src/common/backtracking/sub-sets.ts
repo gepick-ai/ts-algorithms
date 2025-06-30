@@ -27,7 +27,7 @@ function subsets(nums: number[]): number[][] {
 /**
  * {@include ../../../../../../.typedoc/problems/78.子集.md}
  *
- * @category 回溯算法
+ * 
  *
  * @group 回溯算法
  */

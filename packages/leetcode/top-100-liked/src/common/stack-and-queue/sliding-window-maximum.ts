@@ -34,7 +34,7 @@ function maxSlidingWindow(nums: number[], k: number): number[] {
 /**
  * {@include ../../../../../../.typedoc/problems/239.滑动窗口最大值.md}
  *
- * @category 单调队列
+ * 
  *
  * @description
  *

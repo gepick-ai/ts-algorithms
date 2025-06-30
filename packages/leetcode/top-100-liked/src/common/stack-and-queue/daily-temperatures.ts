@@ -29,7 +29,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
 /**
  * {@include ../../../../../../.typedoc/problems/739.每日温度.md}
  *
- * @category 单调栈
+ * 
  *
  * @description
  * 知识点1:单调栈应用

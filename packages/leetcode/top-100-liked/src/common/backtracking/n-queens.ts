@@ -40,7 +40,7 @@ function solveNQueens(n: number): string[][] {
  * {@include ../../../../../../.typedoc/problems/51.N皇后.md}
  *
  *
- * @category 回溯算法
+ * 
  *
  * @group 回溯算法
  */

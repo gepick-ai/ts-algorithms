@@ -34,7 +34,7 @@ function trap(height: number[]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/42.接雨水.md}
  *
- * @category 单调栈
+ * 
  *
  * @description
  * 单调栈，找到每一个柱子左右两边第一个比它高的柱子，然后计算这个柱子能接多少雨水。

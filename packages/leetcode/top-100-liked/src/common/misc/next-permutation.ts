@@ -44,7 +44,7 @@ function nextPermutation(nums: number[]): void {
 /**
  * {@include ../../../../../../.typedoc/problems/31.下一个排列.md}
  *
- * @category 数学
+ * 
  *
  * @group 其他
  */

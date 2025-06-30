@@ -124,7 +124,7 @@ class MinHeap {
 /**
  * {@include ../../../../../../.typedoc/problems/215.数组中的第K个最大元素.md}
  *
- * @category 堆
+ * 
  *
  * @description
  * 要找第K大元素，我们可以维护一个具有K个元素的小根堆。

@@ -38,7 +38,7 @@ function generateParenthesis(n: number) {
 /**
  * {@include ../../../../../../.typedoc/problems/22.括号生成.md}
  *
- * @category 回溯算法
+ * 
  *
  * @includeCode ./generate-parentheses.ts/#code
  *

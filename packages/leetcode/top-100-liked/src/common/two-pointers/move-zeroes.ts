@@ -27,7 +27,7 @@ function moveZeroes(nums: number[]): void {
  * {@include ../../../../../../.typedoc/problems/283.移动零.md}
  *
  *
- * @category 双指针
+ * 
  * @summary 将left左边区域看作是非0的区域。遍历过程中不断扩大left区域，非0就扩大区域，是0就跳过，直到数组遍历完成。
  *
  * @description

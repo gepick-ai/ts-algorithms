@@ -47,7 +47,7 @@ function isValid(s: string): boolean {
 /**
  * {@include ../../../../../../.typedoc/problems/20.有效的括号.md}
  *
- * @category 栈
+ * 
  *
  * @description
  * 思路：用一个map记录每一个括号的对应关系，再用set记录下左括号

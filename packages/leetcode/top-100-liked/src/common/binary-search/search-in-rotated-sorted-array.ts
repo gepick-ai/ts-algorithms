@@ -65,5 +65,6 @@ function lowerBound(nums: number[], l: number, r: number, target: number) {
  * {@includeCode  ./search-in-rotated-sorted-array.ts/#code}
  *
  * @group 二分查找
+ * @summary ✅
  */
 export const search_in_rotated_sorted_array = search;

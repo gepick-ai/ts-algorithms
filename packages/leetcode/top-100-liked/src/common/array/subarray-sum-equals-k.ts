@@ -132,7 +132,7 @@ function subarraySum(nums: number[], k: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/560.和为K的子数组.md}
  *
- * @category 前缀和
+ * 
  *
  * @description
  * 前缀和s[i] = nums[0] + nums[1] + ... + nums[i-1]，表示下标[0,i-1]前缀的和。

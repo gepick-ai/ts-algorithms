@@ -27,7 +27,7 @@ function singleNumber(nums: number[]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/136.只出现一次的数字.md}
  *
- * @category 位运算
+ * 
  *
  * @group 其他
  */

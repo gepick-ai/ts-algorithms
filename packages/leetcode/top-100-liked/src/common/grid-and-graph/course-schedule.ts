@@ -46,7 +46,7 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
 /**
  * {@include ../../../../../../.typedoc/problems/207.课程表.md}
  *
- * @category 图-dfs
+ * 
  * @summary 三色标记法 + dfs
  *
  * @group 网格图

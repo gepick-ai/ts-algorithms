@@ -32,7 +32,7 @@ function lengthOfLongestSubstring(s: string): number {
  * {@include ../../../../../../.typedoc/problems/3.无重复字符的最长子串.md}
  *
  *
- * @category 滑动窗口
+ * 
  * @summary 滑动窗口 + Map记录当前窗口中的字符
  *
  * @description

@@ -38,7 +38,7 @@ function partition(s: string): string[][] {
 /**
  * {@include ../../../../../../.typedoc/problems/131.分割回文串.md}
  *
- * @category 回溯算法
+ * 
  *
  * @group 回溯算法
  */
