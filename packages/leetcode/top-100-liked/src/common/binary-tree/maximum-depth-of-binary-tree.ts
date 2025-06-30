@@ -33,6 +33,8 @@ function maxDepth(root: TreeNode | null): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/104.二叉树的最大深度.md}
+ *
  * @group 二叉树
  */
 export const maximum_depth_of_binary_tree = maxDepth;

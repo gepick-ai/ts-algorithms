@@ -48,6 +48,8 @@ function buildTree(nums: number[], start: number, end: number) {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/108.将有序数组转换为二叉搜索树.md}
+ *
  * @group 二叉树
  */
 export const convert_sorted_array_to_binary_search_tree = sortedArrayToBST;

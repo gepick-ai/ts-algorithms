@@ -42,7 +42,7 @@ function diameterOfBinaryTree(root: TreeNode | null): number {
       return -1;
     }
 
-    const lLen = dfs(node.left); 
+    const lLen = dfs(node.left);
     const rLen = dfs(node.right);
 
     ans = Math.max(ans, lLen + rLen + 2); // 左子树最大链长+1，就是加上左子树到当前节点的边，右子树最大链长+1，就是加上右子树到当前节点的边。两条链拼成路径，更新最大值
@@ -57,6 +57,8 @@ function diameterOfBinaryTree(root: TreeNode | null): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/543.二叉树的直径.md}
+ *
  * @group 二叉树
  */
 export const diameter_of_binary_tree = diameterOfBinaryTree;

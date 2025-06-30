@@ -58,6 +58,8 @@ function rightSideView(root: TreeNode | null): number[] {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/199.二叉树的右视图.md}
+ *
  * @group 二叉树
  */
 export const binary_tree_right_side_view = rightSideView;

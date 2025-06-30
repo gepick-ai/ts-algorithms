@@ -46,6 +46,8 @@ function _isSymmetric(n1: TreeNode | null, n2: TreeNode | null): boolean {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/101.对称二叉树.md}
+ *
  * @group 二叉树
  */
 export const symmetric_tree = isSymmetric;

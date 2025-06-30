@@ -50,6 +50,8 @@ function _preorderTraverse(root: TreeNode | null, orderArr: TreeNode[]): void {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/114.二叉树展开为链表.md}
+ *
  * @group 二叉树
  */
 export const flatten_binary_tree_to_linked_list = flatten;

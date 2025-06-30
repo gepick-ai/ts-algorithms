@@ -35,12 +35,12 @@ function generateParenthesis(n: number) {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/22.括号生成.md}
  *
- * {@includeCode ./generate-parentheses.ts/#code}
+ * @category 回溯算法
+ *
+ *{@includeCode ./generate-parentheses.ts/#code}
  *
  * @group 回溯算法
- * @category 回溯算法
- * @document ../../../../../../.typedoc/docs/22.括号生成.md
- *
  */
 export const generate_parentheses = generateParenthesis;

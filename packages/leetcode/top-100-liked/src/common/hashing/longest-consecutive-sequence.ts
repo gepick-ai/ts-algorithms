@@ -33,7 +33,7 @@ function longestConsecutive(nums: number[]): number {
 
 /**
  * @group 哈希表
- * @document ../../../../../../.typedoc/docs/128.最长连续序列.md
+ * @document ../../../../../../.typedoc/problems/128.最长连续序列.md
  *
  * @category 哈希表
  * @summary 遍历数组 + 找开头元素 + 找连续元素。关键点：计数一定是从开头元素开始，如果当前元素不是开头元素，说明在它前面一定会存在一个元素放在set中。

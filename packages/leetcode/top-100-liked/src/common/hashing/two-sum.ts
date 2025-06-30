@@ -48,7 +48,7 @@ function twoSum(nums: number[], target: number): number[] {
 
 /**
  * @group 哈希表
- * @document ../../../../../../.typedoc/docs/1.两数之和.md
+ * @document ../../../../../../.typedoc/problems/1.两数之和.md
  *
  * @category 哈希表
  *

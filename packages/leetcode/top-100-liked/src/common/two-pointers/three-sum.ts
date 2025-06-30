@@ -61,9 +61,8 @@ function threeSum(nums: number[]): number[][] {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/15.三数之和.md}
  *
- * @group 双指针
- * @document ../../../../../../.typedoc/docs/15.三数之和.md
  *
  * @category 双指针
  * @summary 排序 + 转换成两数之和 + 去重
@@ -77,5 +76,6 @@ function threeSum(nums: number[]): number[][] {
  *
  * {@includeCode ./three-sum.ts/#code}
  *
+ * @group 双指针
  */
 export const three_sum = threeSum;

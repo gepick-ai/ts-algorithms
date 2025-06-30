@@ -50,5 +50,6 @@ function reverseList(head: ListNode | null): ListNode | null {
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/206.反转链表.md
  */
 export const reverse_linked_list = reverseList;

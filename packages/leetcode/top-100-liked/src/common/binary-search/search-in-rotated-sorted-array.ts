@@ -58,6 +58,8 @@ function search(nums: number[], target: number): number {
 // @lc code=end
 
 /**
- * @group 二分算法
+ * {@include ../../../../../../.typedoc/problems/33.搜索旋转排序数组.md}
+ *
+ * @group 二分查找
  */
 export const search_in_rotated_sorted_array = search;

@@ -25,5 +25,6 @@ class MedianFinder {
 
 /**
  * @group 栈与队列
+ * @document ../../../../../../.typedoc/problems/295.数据流的中位数.md
  */
 export const find_median_from_data_stream = MedianFinder;

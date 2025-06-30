@@ -29,8 +29,8 @@ function lengthOfLongestSubstring(s: string): number {
 
 /**
  *
- * @group 双指针
- * @document ../../../../../../.typedoc/docs/3.无重复字符的最长子串.md
+ * {@include ../../../../../../.typedoc/problems/3.无重复字符的最长子串.md}
+ *
  *
  * @category 滑动窗口
  * @summary 滑动窗口 + Map记录当前窗口中的字符
@@ -47,5 +47,6 @@ function lengthOfLongestSubstring(s: string): number {
  *
  * {@includeCode ./longest-substring-without-repeating-characters.ts/#code}
  *
+ * @group 双指针
  */
 export const longest_substring_without_repeating_characters = lengthOfLongestSubstring;

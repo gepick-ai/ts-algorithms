@@ -36,7 +36,10 @@ function partition(s: string): string[][] {
 // @lc code=end
 
 /**
- * @group 回溯算法
+ * {@include ../../../../../../.typedoc/problems/131.分割回文串.md}
+ *
  * @category 回溯算法
+ *
+ * @group 回溯算法
  */
 export const palindrome_partitioning = partition;

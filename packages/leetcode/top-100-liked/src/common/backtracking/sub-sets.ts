@@ -25,7 +25,10 @@ function subsets(nums: number[]): number[][] {
 };
 
 /**
- * @group 回溯算法
+ * {@include ../../../../../../.typedoc/problems/78.子集.md}
+ *
  * @category 回溯算法
+ *
+ * @group 回溯算法
  */
 export const sub_sets = subsets;

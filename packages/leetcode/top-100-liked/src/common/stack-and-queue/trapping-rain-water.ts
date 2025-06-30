@@ -32,6 +32,12 @@ function trap(height: number[]): number {
 // @lc code=end
 
 /**
+ * @group 栈与队列
+ * @document ../../../../../../.typedoc/problems/42.接雨水.md
+ *
+ * @category 单调栈
+ *
+ * @description
  * 单调栈，找到每一个柱子左右两边第一个比它高的柱子，然后计算这个柱子能接多少雨水。
  * 如果你找到比当前栈顶要大的元素，那么你只要尝试查看栈顶前面是否还有元素，有这个元素就是左边第一个比他大的元素。
  * 这样子就能够拿到当前柱子左右两边第一个比它高的柱子。结算答案即可。
@@ -39,7 +45,5 @@ function trap(height: number[]): number {
  *
  * 用单调栈解决，其实是一行一行寻找雨水。横向查找雨水。每次接完雨水，可以看成填充了柱子。
  *
- * @group 栈与队列
- * @category 单调栈
  */
 export const trapping_rain_water = trap;

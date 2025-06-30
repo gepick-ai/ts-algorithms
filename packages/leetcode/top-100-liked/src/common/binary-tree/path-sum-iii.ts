@@ -56,9 +56,11 @@ function pathSum(root: TreeNode | null, targetSum: number): number {
 // @lc code=end
 
 /**
- * @group 二叉树
+ * {@include ../../../../../../.typedoc/problems/437.路径总和III.md}
+ *
  * @category 前缀和
  * @summary 560.和为K的连续子数组解法一致。将每个遍历到的node作为终点，统计有多少个起点到终点node的路径总和恰好等于targetSum。再转化成前缀和问题。
- * @document ../../../../../../.typedoc/docs/437.路径总和III.md
+ *
+ * @group 二叉树
  */
 export const path_sum_iii = pathSum;

@@ -41,7 +41,9 @@ function _inorderTraverse(root: TreeNode | null, orderArr: number[]) {
 }
 // @lc code=end
 
-/**
+/** 
+ * {@include ../../../../../../.typedoc/problems/230.二叉搜索树中第K小的元素.md}
+ *
  * @group 二叉树
  */
 export const kth_smallest_element_in_a_bst = kthSmallest;

@@ -33,5 +33,6 @@ function rob(nums: number[]): number {
 
 /**
  * @group 动态规划
+ * @document ../../../../../../.typedoc/problems/198.打家劫舍.md
  */
 export const house_robber = rob;

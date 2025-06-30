@@ -55,5 +55,6 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/21.合并两个有序链表.md
  */
 export const merge_two_sorted_lists = mergeTwoLists;

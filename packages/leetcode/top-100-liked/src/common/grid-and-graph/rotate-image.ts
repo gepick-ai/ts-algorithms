@@ -109,7 +109,9 @@ function rotate(matrix: number[][]): void {
 // @lc code=end
 
 /**
- * @group 网格与图
+ * @group 网格图
+ * @document ../../../../../../.typedoc/problems/48.旋转图像.md
+ *
  * @category 矩阵
  */
 export const rotate_image = rotate;

@@ -14,20 +14,17 @@ function searchInsert(nums: number[], target: number): number {
 function lowerBound(nums: number[], target: number): number {
   // 左闭右开
   let left = 0;
-  let right = nums.length;
-  while (left < right) {
+  let right = nums.length - 1;
+  while (left <= right) {
     const mid = Math.floor((left + right) / 2);
 
     // left---target---mid---right
-    if (nums[mid] > target) {
-      right = mid;
+    if (nums[mid] >= target) {
+      right = mid - 1;
     }
     // left---mid---target---right
-    else if (nums[mid] < target) {
-      left = mid + 1;
-    }
     else {
-      return mid;
+      left = mid + 1;
     }
   }
 
@@ -36,6 +33,8 @@ function lowerBound(nums: number[], target: number): number {
 // @lc code=end
 
 /**
- * @group 二分算法
+ * {@include ../../../../../../.typedoc/problems/35.搜索插入位置.md}
+ *
+ * @group 二分查找
  */
 export const search_insert_position = searchInsert;

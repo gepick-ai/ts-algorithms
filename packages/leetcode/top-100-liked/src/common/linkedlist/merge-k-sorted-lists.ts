@@ -66,6 +66,8 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/23.合并K个升序链表.md
+ *
  * @summary 两两合并，循环重置head1和tail
  */
 export const merge_k_sorted_lists = mergeKLists;

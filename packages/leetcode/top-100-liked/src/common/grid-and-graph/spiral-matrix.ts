@@ -66,7 +66,9 @@ function spiralOrder(matrix: number[][]): number[] {
 // @lc code=end
 
 /**
- * @group 网格与图
+ * @group 网格图
+ * @document ../../../../../../.typedoc/problems/54.螺旋矩阵.md
+ *
  * @category 矩阵
  */
 export const spiral_matrix = spiralOrder;

@@ -47,6 +47,8 @@ function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: Tree
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/236.二叉树的最近公共祖先.md}
+ *
  * @group 二叉树
  */
 export const lowest_common_ancestor_of_a_binary_tree = lowestCommonAncestor;

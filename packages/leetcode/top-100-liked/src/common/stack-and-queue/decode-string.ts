@@ -82,7 +82,7 @@ function decodeString1(s: string): string {
 /**
  *
  * @group 栈与队列
- * @document ../../../../../../.typedoc/docs/394.字符串解码.md
+ * @document ../../../../../../.typedoc/problems/394.字符串解码.md
  * 
  * @category 栈
  * @summary 双栈，看到「[」保存状态、重置状态，看到「]」恢复状态、处理。（本质：状态机思维，碰到一类字符先累加状态。）

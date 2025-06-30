@@ -51,5 +51,6 @@ function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/25.K个一组翻转链表.md
  */
 export const reverse_nodes_in_k_group = reverseKGroup;

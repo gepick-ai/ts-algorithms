@@ -37,7 +37,11 @@ function solveNQueens(n: number): string[][] {
 // @lc code=end
 
 /**
- * @group 回溯算法
+ * {@include ../../../../../../.typedoc/problems/51.N皇后.md}
+ *
+ *
  * @category 回溯算法
+ *
+ * @group 回溯算法
  */
 export const n_queens = solveNQueens;

@@ -43,5 +43,6 @@ function canPartition(nums: number[]): boolean {
 
 /**
  * @group 动态规划
+ * @document ../../../../../../.typedoc/problems/416.分割等和子集.md
  */
 export const partition_equal_subset_sum = canPartition;

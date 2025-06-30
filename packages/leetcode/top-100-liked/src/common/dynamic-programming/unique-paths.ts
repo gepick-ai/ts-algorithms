@@ -36,5 +36,6 @@ function uniquePaths(m: number, n: number): number {
 
 /**
  * @group 动态规划
+ * @document ../../../../../../.typedoc/problems/62.不同路径.md
  */
 export const unique_paths = uniquePaths;

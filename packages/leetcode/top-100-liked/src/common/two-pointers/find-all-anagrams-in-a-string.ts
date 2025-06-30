@@ -42,8 +42,7 @@ function findAnagrams(s: string, p: string): number[] {
 // @lc code=end
 
 /**
- * @group 双指针
- * @document ../../../../../../.typedoc/docs/438.找到字符串中所有字母异位词.md
+ * {@include ../../../../../../.typedoc/problems/438.找到字符串中所有字母异位词.md}
  *
  * @category 滑动窗口
  * @summary 维持定长k的窗口，窗口每前进一步，就判断一次窗口中的字符串是否是p的异位词。
@@ -51,5 +50,7 @@ function findAnagrams(s: string, p: string): number[] {
  * @description
  *
  * {@includeCode ./find-all-anagrams-in-a-string.ts/#code}
+ *
+ * @group 双指针
  */
 export const find_all_anagrams_in_a_string = findAnagrams;

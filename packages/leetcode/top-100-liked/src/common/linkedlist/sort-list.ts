@@ -116,5 +116,6 @@ class MinHeap {
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/148.排序链表.md
  */
 export const sort_list = sortList;

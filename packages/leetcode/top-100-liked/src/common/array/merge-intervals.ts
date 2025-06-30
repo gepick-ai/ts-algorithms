@@ -66,6 +66,8 @@ function merge(intervals: number[][]): number[][] {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/56.合并区间.md}
+ *
  * @group 数组
  */
 export const merge_intervals = merge;

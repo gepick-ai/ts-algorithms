@@ -38,7 +38,7 @@ function longestValidParentheses(s: string): number {
 /**
  *
  * @group 栈与队列
- * @document ../../../../../../.typedoc/docs/32.最长有效括号.md
+ * @document ../../../../../../.typedoc/problems/32.最长有效括号.md
  *
  * @category 栈
  *

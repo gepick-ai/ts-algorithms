@@ -51,6 +51,8 @@ function maxPathSum(root: TreeNode | null): number {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/124.二叉树中的最大路径和.md}
+ *
  * @group 二叉树
  */
 export const binary_tree_maximum_path_sum = maxPathSum;

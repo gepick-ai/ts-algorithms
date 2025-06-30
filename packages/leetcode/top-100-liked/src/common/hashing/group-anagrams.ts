@@ -35,7 +35,7 @@ function groupAnagrams(strs: string[]): string[][] {
 
 /**
  * @group 哈希表
- * @document ../../../../../../.typedoc/docs/49.字母异位词分组.md
+ * @document ../../../../../../.typedoc/problems/49.字母异位词分组.md
  *
  * @category 哈希表
  *

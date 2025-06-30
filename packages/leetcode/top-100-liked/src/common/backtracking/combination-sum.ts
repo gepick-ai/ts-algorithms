@@ -50,7 +50,10 @@ function _combination(candidates: number[], target: number, sum: number, start: 
 // @lc code=end
 
 /**
- * @group 回溯算法
+ * {@include ../../../../../../.typedoc/problems/39.组合总和.md}
+ *
  * @category 回溯算法
+ * 
+ * @group 回溯算法
  */
 export const combination_sum = combinationSum;

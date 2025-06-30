@@ -24,8 +24,8 @@ function moveZeroes(nums: number[]): void {
 // @lc code=end
 
 /**
- * @group 双指针
- * @document ../../../../../../.typedoc/docs/283.移动零.md
+ * {@include ../../../../../../.typedoc/problems/283.移动零.md}
+ *
  *
  * @category 双指针
  * @summary 将left左边区域看作是非0的区域。遍历过程中不断扩大left区域，非0就扩大区域，是0就跳过，直到数组遍历完成。
@@ -36,5 +36,7 @@ function moveZeroes(nums: number[]): void {
  * - 遍历结束后，left左边的区域全是非0的元素。
  *
  * {@includeCode ./move-zeroes.ts/#code}
+ *
+ * @group 双指针
  */
 export const move_zeroes = moveZeroes;

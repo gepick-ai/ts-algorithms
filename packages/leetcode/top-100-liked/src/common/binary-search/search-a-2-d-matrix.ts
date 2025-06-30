@@ -52,6 +52,8 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 // @lc code=end
 
 /**
- * @group 二分算法
+ * {@include ../../../../../../.typedoc/problems/74.搜索二维矩阵.md}
+ *
+ * @group 二分查找
  */
 export const search_a_2_d_matrix = searchMatrix;

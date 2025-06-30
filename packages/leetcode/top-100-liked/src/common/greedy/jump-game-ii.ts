@@ -42,5 +42,6 @@ function jump(nums: number[]): number {
 
 /**
  * @group 贪心算法
+ * @document ../../../../../../.typedoc/problems/45.跳跃游戏II.md
  */
 export const jump_game_ii = jump;

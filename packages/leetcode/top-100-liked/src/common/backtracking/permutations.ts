@@ -32,7 +32,10 @@ function permute(nums: number[]): number[][] {
 // @lc code=end
 
 /**
- * @group 回溯算法
+ * {@include ../../../../../../.typedoc/problems/46.全排列.md}
+ *
  * @category 回溯算法
+ *
+ * @group 回溯算法
  */
 export const permutations = permute;

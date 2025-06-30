@@ -51,6 +51,9 @@ function isValidBST(root: TreeNode | null): boolean {
 // 右子树的所有节点值都大于根节点
 
 /**
+ * {@include ../../../../../../.typedoc/problems/98.验证二叉搜索树.md}
+ *
+ * @description
  * 利用二叉搜索树的中序遍历结果是升序的特性，来判断是否是二叉搜索树。
  * 中序遍历的顺序是：左根右。
  * 所以前一个节点值>=当前节点值，则不是二叉搜索树。

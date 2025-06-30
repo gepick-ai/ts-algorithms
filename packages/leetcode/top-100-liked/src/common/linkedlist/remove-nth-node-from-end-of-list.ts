@@ -55,5 +55,6 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/19.删除链表的倒数第N个结点.md
  */
 export const remove_nth_node_from_end_of_list = removeNthFromEnd;

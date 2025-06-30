@@ -62,7 +62,8 @@ class TrieNode {
 // @lc code=end
 
 /**
- * @group 网格与图
+ * @group 网格图
+ * @document ../../../../../../.typedoc/problems/208.实现Trie(前缀树).md
  * @category Trie树
  * @summary Trie树
  */

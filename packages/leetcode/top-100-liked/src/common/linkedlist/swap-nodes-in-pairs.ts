@@ -20,23 +20,25 @@ import { ListNode } from "./types";
  */
 
 function swapPairs(head: ListNode | null): ListNode | null {
-    if (!head || !head.next) {
-        return head;
-    }
+  if (!head || !head.next) {
+    return head;
+  }
 
-    const node1 = head;
-    const node2 = head.next;
-    const node3 = node2.next;
+  const node1 = head;
+  const node2 = head.next;
+  const node3 = node2.next;
 
-    node2.next = node1;
-    node1.next = swapPairs(node3);
+  node2.next = node1;
+  node1.next = swapPairs(node3);
 
-    return node2;
+  return node2;
 };
 // @lc code=end
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/24.两两交换链表中的节点.md
+ *
  * @summary 按照题意递归模拟
  */
 export const swap_nodes_in_pairs = swapPairs;

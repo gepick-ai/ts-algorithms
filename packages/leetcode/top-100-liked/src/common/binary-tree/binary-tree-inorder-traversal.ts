@@ -42,6 +42,8 @@ function inorderTraversal(root: TreeNode | null): number[] {
 // @lc code=end
 
 /**
+ * {@include ../../../../../../.typedoc/problems/94.二叉树的中序遍历.md}
+ *
  * @group 二叉树
  */
 export const binary_tree_inorder_traversal = inorderTraversal;

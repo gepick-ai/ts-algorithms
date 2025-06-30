@@ -58,5 +58,6 @@ function copyRandomList(head: _Node | null): _Node | null {
 
 /**
  * @group 链表
+ * @document ../../../../../../.typedoc/problems/138.复制带随机指针的链表.md
  */
 export const copy_list_with_random_pointer = copyRandomList;

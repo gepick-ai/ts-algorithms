@@ -49,9 +49,9 @@ function lowerBound(nums: number[], target: number): number {
 // 在有序数组上的二分查找分成四种类型：
 // >=x 、>x、<x、<=x
 // 对于数组中都是整数，这四种类型可以互相转换：
-// >x可以看成  >=(x + 1)
-// <x可以看成  (>=x) - 1
-// <=x可以看成 (>x) - 1，又可以看成(>=(x + 1)) - 1
+// “找>x的第一个数”  可以转换成 求  “[找>=(x+1)的第一个数]”
+// “找<x的最后一个数” 可以转换成 求  “[找>=x的第一个数]的左边位置的数”
+// “找<=x的最后一个数” 可以转换成  求 “[找>x的第一个数]的左边位置的数”，也就是 “[找>=(x+1)的第一个数]的左边位置的数”
 
 // 找开始位置就找>=,>
 // 找结束位置就找<=,<
@@ -60,6 +60,8 @@ function lowerBound(nums: number[], target: number): number {
 // @lc code=end
 
 /**
- * @group 二分算法
+ * {@include ../../../../../../.typedoc/problems/34.在排序数组中查找元素的第一个和最后一个位置.md}
+ *
+ * @group 二分查找
  */
 export const find_first_and_last_position_of_element_in_sorted_array = searchRange;

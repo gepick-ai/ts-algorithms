@@ -42,6 +42,8 @@ function findMin(nums: number[]): number {
 // @lc code=end
 
 /**
- * @group 二分算法
+ * {@include ../../../../../../.typedoc/problems/153.寻找旋转排序数组中的最小值.md}
+ *
+ * @group 二分查找
  */
 export const find_minimum_in_rotated_sorted_array = findMin;

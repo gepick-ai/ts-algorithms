@@ -124,6 +124,8 @@ class MinHeap {
 
 /**
  * @group 栈与队列
+ * @document ../../../../../../.typedoc/problems/155.最小栈.md
+ *
  * @category 堆
  */
 export const min_stack = MinStack;

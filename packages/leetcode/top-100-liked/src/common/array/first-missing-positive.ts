@@ -33,7 +33,7 @@ function firstMissingPositive(nums: number[]): number {
 // @lc code=end
 
 /**
- * @group 数组
+ * {@include ../../../../../../.typedoc/problems/41.缺失的第一个正数.md}
  *
  * @summary
  * ### 41. 缺失的第一个正数
@@ -75,6 +75,6 @@ function firstMissingPositive(nums: number[]): number {
  *
  *
  *
- *
+ * @group 数组
  */
 export const first_missing_positive = firstMissingPositive;

@@ -27,13 +27,17 @@ function dailyTemperatures(temperatures: number[]): number[] {
 // @lc code=end
 
 /**
+ * @group 栈与队列
+ * @document ../../../../../../.typedoc/problems/739.每日温度.md
+ *
+ * @category 单调栈
+ *
+ * @description
  * 知识点1:单调栈应用
  * 要寻找右边第一个比当前温度更高的温度，维持一个递增的单调栈。
  * 1.当遍历到的元素大于当前元素：循环查看栈顶元素，结算，完成后弹出栈顶元素
  * 2.当遍历到的元素小于等于当前元素：元素入栈
  * 直到遍历完所有温度后停止操作
  *
- * @group 栈与队列
- * @category 单调栈
  */
 export const daily_temperatures = dailyTemperatures;
