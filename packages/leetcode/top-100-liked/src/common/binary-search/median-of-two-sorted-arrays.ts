@@ -34,5 +34,7 @@ function findMedianSortedArrays(a: number[], b: number[]): number {
  * {@include ../../../../../../.typedoc/problems/4.寻找两个正序数组的中位数.md}
  *
  * @group 二分查找
+ *
+ * @hidden
  */
 export const median_of_two_sorted_arrays = findMedianSortedArrays;

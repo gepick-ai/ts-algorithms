@@ -9,15 +9,20 @@
 // #region code
 function findMin(nums: number[]): number {
   let n = nums.length;
-  // 左闭右开
-  let l = 0;
-  let r = n - 1;
+  let target = nums[n - 1];
 
+  // 左闭右开，[l, r)，即从r开始往右都是蓝色，从l - 1开始往左都是红色
+  // 我们把蓝色定义成 <=target，红色定义成 >target
+  let l = 0;
+  let r = n - 1; // 从n-1开始是因为第二段递增区间最后一个一定是蓝色，所以左闭右开[l,r)，搜索区间在[0,n-2]
+
+  // 把<=target染成蓝色，>target染成红色
   while (l < r) {
     let m = Math.floor((l + r) / 2);
 
     // 说明[m, n-1]是递增的
-    if (nums[m] < nums[n - 1]) {
+    // 说明落在第二段递增区间，或者压根只有一段递增区间（此时相当于没有旋转）
+    if (nums[m] <= target) {
       r = m;
     }
     // 说明[m, n-1]是非递增的，比如[4567123]，m此时是7，是峰顶。这种时候最小值一定在[m+1, n-1]之间
@@ -26,7 +31,7 @@ function findMin(nums: number[]): number {
     }
   }
 
-  return nums[l];
+  return nums[r];
 }
 // #endregion code
 
@@ -55,5 +60,10 @@ function findMin(nums: number[]): number {
  *   - 如果 mid <= right，说明右边是有序的（或者干脆只有一段递增区间，旋转回来了），且最小值就是 mid 或在 mid 的左边（包含 mid）。
  *
  * @group 二分查找
+ * @summary #### 寻找旋转排序数组中的最小值 ✅
+ *
+ * 跟数组中最后一个数比较。将蓝色定义成>=nums[n-1]的数，将红色定义成<nums[n-1]的数。
+ * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。
+ * 从n-1开始是因为第二段递增区间最后一个一定是蓝色，所以左闭右开[l,r)，搜索区间在[0,n-2]。二分不断确定nums[m]和nums[n-1]的大小关系进行染色。
  */
 export const find_minimum_in_rotated_sorted_array = findMin;

@@ -7,19 +7,19 @@
 // @lc code=start
 // #region code
 function maxArea(height: number[]): number {
-  let left = 0;
-  let right = height.length - 1;
+  let l = 0;
+  let r = height.length - 1;
   let max = 0; // 面积= 长*宽
 
-  while (left < right) {
-    const area = (right - left) * Math.min(height[left], height[right]);
+  while (l < r) {
+    const area = (r - l) * Math.min(height[l], height[r]);
     max = Math.max(area, max);
 
-    if (height[left] <= height[right]) {
-      left++;
+    if (height[l] <= height[r]) {
+      l++;
     }
     else {
-      right--;
+      r--;
     }
   }
 

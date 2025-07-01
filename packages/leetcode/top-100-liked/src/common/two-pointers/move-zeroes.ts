@@ -10,12 +10,12 @@
  */
 // #region code
 function moveZeroes(nums: number[]): void {
-  let left = -1;
+  let l = -1;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== 0) {
-      [nums[left + 1], nums[i]] = [nums[i], nums[left + 1]];
-      left++;
+      [nums[l + 1], nums[i]] = [nums[i], nums[l + 1]];
+      l++;
     }
   }
 };

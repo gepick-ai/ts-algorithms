@@ -25,28 +25,23 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 
   const len = matrix.length * matrix[0].length;
   const cols = matrix[0].length;
-  let left = 0;
-  let right = len;
+  // 通过当前一维数组的遍历所到的下标获取二维矩阵中所指的位置找到对应num
+  const nums = (i: number) => matrix[Math.floor(i / cols)][i % cols];
+  let l = 0;
+  let r = len;
 
-  while (left < right) {
-    const mid = Math.floor((left + right) / 2);
-    // 通过当前一维数组的遍历所到的下标获取二维矩阵中所指的位置找到对应num
-    const num = matrix[Math.floor(mid / cols)][mid % cols];
+  while (l < r) {
+    const m = Math.floor((l + r) / 2);
 
-    // left---target---mid---right
-    if (num > target) {
-      right = mid;
-    }
-    // left---mid---target---right
-    else if (num < target) {
-      left = mid + 1;
+    if (nums(m) >= target) {
+      r = m;
     }
     else {
-      return true;
+      l = m + 1;
     }
   }
 
-  return false;
+  return r < len && nums(r) === target;
 };
 
 // @lc code=end
@@ -55,5 +50,12 @@ function searchMatrix(matrix: number[][], target: number): boolean {
  * {@include ../../../../../../.typedoc/problems/74.搜索二维矩阵.md}
  *
  * @group 二分查找
+ * @summary #### 搜索二维矩阵 ✅
+ *
+ * 按照题目意思，其实可以将整个二维数组，从左往右看，从上往下看，串联成成一个一维有序数组。我们就在这个有序数组上进行二分查找。将>=target染成蓝色，<target染成红色。
+ * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。
+ * 二分不断确定nums[m]和target的大小关系进行染色。
+ * 另一个关键点就是matrix到一维数组的映射关系。它们的关系是 `const nums = (i: number) => matrix[Math.floor(i / cols)][i % cols]`
+ *
  */
 export const search_a_2_d_matrix = searchMatrix;

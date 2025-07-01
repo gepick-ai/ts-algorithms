@@ -81,5 +81,10 @@ function lowerBound(nums: number[], target: number): number {
  * 本题要找区间的开始和结束位置，即分别找 >= 和 <=。
  *
  * @group 二分查找
+ * @summary #### 在排序数组中查找元素的第一个和最后一个位置 ✅
+ *
+ * 按题目意思其实就是找有序数组当中第一个>=target的数和第一个>=(target+1)的数。不过寻找>=(target+1)的数需要先找到>=target的数。否则中途应该停止继续查找。
+ * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。
+ * 二分不断确定nums[m]和target的大小关系进行染色。
  */
 export const find_first_and_last_position_of_element_in_sorted_array = searchRange;
