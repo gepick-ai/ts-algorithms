@@ -5,6 +5,10 @@
  */
 
 // @lc code=start
+
+// #region code
+
+// 枚举答案的每一个数的角度 （子集型回溯）
 function subsets(nums: number[]): number[][] {
   const ans: number[][] = [];
   const path: number[] = [];
@@ -24,11 +28,44 @@ function subsets(nums: number[]): number[][] {
   return ans;
 };
 
+// 选或者不选的角度 （子集型回溯）
+function subsets2(nums: number[]): number[][] {
+  const path: number[] = [];
+  const ans: number[][] = [];
+
+  function dfs(i: number) {
+    if (i === nums.length) {
+      ans.push([...path]);
+      return;
+    }
+
+    dfs(i + 1);
+
+    path.push(nums[i]);
+    dfs(i + 1);
+    path.pop();
+  }
+
+  dfs(0);
+
+  return ans;
+}
+// #endregion code
+
 /**
  * {@include ../../../../../../.typedoc/problems/78.子集.md}
  *
- * 
+ *
+ * @description
+ * {@include ./README.md}
+ *
+ *
+ * {@includeCode ./sub-sets.ts/#code}
  *
  * @group 回溯算法
+ *
+ * @summary #### 78.子集 ✅
+ *
+ * 子集型回溯。
  */
 export const sub_sets = subsets;

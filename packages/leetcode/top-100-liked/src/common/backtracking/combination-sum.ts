@@ -5,55 +5,52 @@
  */
 
 // @lc code=start
+
+// #region code
+
+// 选或者不选的角度 （组合型回溯）
 function combinationSum(candidates: number[], target: number): number[][] {
-  const ans: number[] = [];
-  const result: number[][] = [];
+  const ans: number[][] = [];
+  const path: number[] = [];
 
-  _combination(candidates, target, 0, 0, ans, result);
-
-  return result;
-};
-
-function _combination(candidates: number[], target: number, sum: number, start: number, ans: number[], result: number[][]): void {
-  if (sum === target) {
-    result.push([...ans]);
-    ans = [];
-
-    return;
-  }
-
-  if (sum > target) {
-    return;
-  }
-
-  if (start > candidates.length - 1) {
-    return;
-  }
-
-  // 比如[2,3,6,7]
-  // start = 0; 说明递归每层都可以从0开始选取
-  // start = 1；说明递归每层都可以从1开始选取
-  // 为啥这么取，比如2,2,3是一个结果，那么来到3开始选取，如果也能选2，就又回到3，2，2了，也就是2，2，3了。所以必须从位1开始选。
-  for (let i = start; i < candidates.length; i++) {
-    if (i < start) {
-      continue;
+  function dfs(i: number, k: number) {
+    if (k === target) {
+      ans.push([...path]);
+      return;
     }
 
-    const num = candidates[i];
-    ans.push(num);
-    _combination(candidates, target, sum + num, start, ans, result);
-    ans.pop();
-    start++;
+    if (k > target) {
+      return;
+    }
+
+    if (i === candidates.length) {
+      return;
+    }
+
+    dfs(i + 1, k);
+
+    path.push(candidates[i]);
+    dfs(i, k + candidates[i]);
+    path.pop();
   }
-}
+
+  dfs(0, 0);
+
+  return ans;
+};
+
+// #endregion code
 
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/39.组合总和.md}
  *
- * 
- * 
+ *
+ *
  * @group 回溯算法
+ * @summary #### 39.组合总和 ✅
+ *
+ * 组合型回溯。
  */
 export const combination_sum = combinationSum;

@@ -5,32 +5,28 @@
  */
 
 // @lc code=start
+
 // #region code
 function groupAnagrams(strs: string[]): string[][] {
-  const result: string[][] = [];
   const map = new Map<string, string[]>();
+  const ans: string[][] = [];
 
   for (let i = 0; i < strs.length; i++) {
-    const target = strs[i].split('').sort().join('');
-    const ans = map.get(target);
+    const key = strs[i].split('').sort().join('');
+    const group = map.get(key) ?? [];
 
-    if (!ans) {
-      map.set(target, [strs[i]]);
-    }
-    else {
-      ans.push(strs[i]);
-
-      map.set(target, ans);
-    }
+    group.push(strs[i]);
+    map.set(key, group);
   }
 
-  for (const value of map.values()) {
-    result.push(value);
+  for (const [_, g] of map) {
+    ans.push(g);
   }
 
-  return result;
+  return ans;
 };
 // #endregion code
+
 // @lc code=end
 
 /**
@@ -43,5 +39,8 @@ function groupAnagrams(strs: string[]): string[][] {
  * {@includeCode ./group-anagrams.ts/#code}
  *
  * @group 哈希表
+ * @summary #### 49.字母异位词分组 ✅
+ *
+ * 异位词排序后可以得到同一个单词，该单词作为map key，value是所有异位词的集合。所以只需要转换每个异位词排序后的单词，如果是一样的，都会找到map同一个key，进入自己的分组就好了。
  */
 export const group_anagrams = groupAnagrams;

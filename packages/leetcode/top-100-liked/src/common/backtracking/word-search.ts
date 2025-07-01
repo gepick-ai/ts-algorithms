@@ -74,7 +74,7 @@ function exist(board: string[][], word: string): boolean {
 /**
  * {@include ../../../../../../.typedoc/problems/79.单词搜索.md}
  *
- * 
+ *
  *
  * @description
  * 关键点1: 四个方向是回溯的横向遍历，单词位置是回溯的纵向遍历
@@ -82,5 +82,8 @@ function exist(board: string[][], word: string): boolean {
  * 关键点3: 四个方向只要有一个为true，直接返回，不需要继续尝试其他方向了。
  *
  * @group 回溯算法
+ * @summary #### 79.单词搜索 ✅
+ *
+ * 网格图 + 回溯
  */
 export const word_search = exist;

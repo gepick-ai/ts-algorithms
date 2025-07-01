@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+
+// #region code
 function partition(s: string): string[][] {
   const n = s.length;
   const ans: string[][] = [];
@@ -33,13 +35,21 @@ function partition(s: string): string[][] {
 
   return ans;
 };
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/131.分割回文串.md}
  *
- * 
+ * @description
+ *
+ * {@includeCode ./palindrome-partitioning.ts/#code}
  *
  * @group 回溯算法
+ *
+ * @summary #### 131.分割回文串 ✅
+ *
+ * 子集型回溯。枚举逗号的位置
  */
 export const palindrome_partitioning = partition;

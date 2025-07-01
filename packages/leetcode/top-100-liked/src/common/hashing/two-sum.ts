@@ -68,5 +68,8 @@ function twoSum(nums: number[], target: number): number[] {
  * {@includeCode ./two-sum.ts/#code}
  *
  * @group 哈希表
+ * @summary #### 1.两数之和 ✅
+ *
+ * 不断枚举位置i，我们看i的左边那些存在map中的数里头，是否有我们需要的差值数，题目说了一定有一个答案，那一趟遍历下来一定能找到答案。
  */
 export const two_sum = twoSum;

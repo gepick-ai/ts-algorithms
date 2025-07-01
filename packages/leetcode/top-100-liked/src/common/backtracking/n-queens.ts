@@ -40,8 +40,11 @@ function solveNQueens(n: number): string[][] {
  * {@include ../../../../../../.typedoc/problems/51.N皇后.md}
  *
  *
- * 
+ *
  *
  * @group 回溯算法
+ * @summary #### 51.N皇后 ✅
+ *
+ * 排列型回溯。
  */
 export const n_queens = solveNQueens;
