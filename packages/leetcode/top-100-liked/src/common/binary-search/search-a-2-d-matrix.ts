@@ -50,7 +50,7 @@ function searchMatrix(matrix: number[][], target: number): boolean {
  * {@include ../../../../../../.typedoc/problems/74.搜索二维矩阵.md}
  *
  * @group 二分查找
- * @summary #### 搜索二维矩阵 ✅
+ * @summary #### 74.搜索二维矩阵 ✅
  *
  * 按照题目意思，其实可以将整个二维数组，从左往右看，从上往下看，串联成成一个一维有序数组。我们就在这个有序数组上进行二分查找。将>=target染成蓝色，<target染成红色。
  * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。

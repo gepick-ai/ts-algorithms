@@ -13,8 +13,9 @@ function findDuplicate(nums: number[]): number {
   // - 抽屉：1到n的每个数字
   // - 物品：数组中的n+1个数字
 
+  const n = nums.length - 1;
   let l = 1;
-  let r = nums.length - 1;
+  let r = n;
 
   while (l < r) {
     // 有1-n个抽屉，m代表前m个抽屉。
@@ -75,7 +76,7 @@ function findDuplicate(nums: number[]): number {
  * {@includeCode ./find-the-duplicate-number.ts/#code}
  *
  * @group 二分查找
- * @summary #### 寻找重复数 ✅
+ * @summary #### 287.寻找重复数 ✅
  *
  * 利用鸽巢原理：将 n+1 个整数放入编号为 [1, n] 的抽屉里，必有一个抽屉放了两个数。
  * - 对抽屉编号进行二分，每次猜一个编号 m。

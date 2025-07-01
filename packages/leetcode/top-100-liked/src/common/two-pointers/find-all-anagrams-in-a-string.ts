@@ -48,8 +48,9 @@ function findAnagrams(s: string, p: string): number[] {
  *
  * {@includeCode ./find-all-anagrams-in-a-string.ts/#code}
  *
- * @summary ✅ 维持定长k的窗口，窗口每前进一步，就判断一次窗口中的字符串是否是p的异位词。
- *
  * @group 双指针
+ * @summary #### 438.找到字符串中所有字母异位词 ✅
+ *
+ * 维持定长k的窗口，窗口每前进一步，就判断一次窗口中的字符串是否是p的异位词。
  */
 export const find_all_anagrams_in_a_string = findAnagrams;

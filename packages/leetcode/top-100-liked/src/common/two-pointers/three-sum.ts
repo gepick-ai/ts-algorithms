@@ -12,46 +12,44 @@ function threeSum(nums: number[]): number[][] {
 
   nums.sort((a, b) => a - b);
 
+  const n = nums.length;
   const ans: number[][] = [];
-  let i = 0;
 
-  while (i < nums.length - 2) {
-    const target = 0 - nums[i]; // 这就是在剩下的子数组里找两数之和
-    let left = i + 1;
-    let right = nums.length - 1;
-
-    // 这个位置循环不变的条件不能是left!==right，因为可能在内部循环去重的过程，就导致了left跳过了right
-    while (left < right) {
-      const sum = nums[left] + nums[right];
-
-      if (sum > target) {
-        right--;
-      }
-      else if (sum < target) {
-        left++;
-      }
-      else {
-        // 说明满足条件，找到一个解
-        ans.push([nums[i], nums[left], nums[right]]);
-
-        left++;
-        right--;
-
-        // 跳过重复的，对于left和right来说，如果重复，那么就跳过，因为已经找到一个解了
-        while (nums[left] === nums[left - 1]) {
-          left++;
-        }
-        while (nums[right] === nums[right + 1]) {
-          right--;
-        }
-      }
+  // i只能到n-3，因为假如有新三元组的话，要留n-2、n-1凑新的三元组。
+  for (let i = 0; i < n - 2; i++) {
+    // 重复枚举的数所对应的三元组是一样的，去重跳过
+    if (i > 0 && nums[i] === nums[i - 1]) {
+      continue;
     }
 
-    i++;
+    // 转换为有序递增数组上的两数之和
+    let target = 0 - nums[i];
+    let l = i + 1;
+    let r = n - 1;
 
-    // 跳过重复的，不需要重复寻找同一个相反数
-    while (nums[i] === nums[i - 1]) {
-      i++;
+    while (l < r) {
+      const sum = nums[l] + nums[r];
+      if (sum < target) { // 找的数比target小了，l++
+        l++;
+      }
+      else if (sum > target) { // 找的数比target大了，r--
+        r--;
+      }
+      else {
+        ans.push([nums[i], nums[l], nums[r]]);
+
+        // 找到符合条件的l了，要去重，不要重复选一样的
+        l++;
+        while (l < r && nums[l] === nums[l - 1]) {
+          l++;
+        }
+
+        // 找到符合条件的r了，要去重，不要重复选一样的
+        r--;
+        while (l < r && nums[r] === nums[r + 1]) {
+          r--;
+        }
+      }
     }
   }
 
@@ -63,10 +61,6 @@ function threeSum(nums: number[]): number[][] {
 /**
  * {@include ../../../../../../.typedoc/problems/15.三数之和.md}
  *
- *
- * 
- * @summary 排序 + 转换成两数之和 + 去重
- *
  * @description
  * - 先排序
  * - 三数之和其实就是找相反数，这样一来就是变成了排序的数组中找两数之和的题目。
@@ -77,5 +71,8 @@ function threeSum(nums: number[]): number[][] {
  * {@includeCode ./three-sum.ts/#code}
  *
  * @group 双指针
+ * @summary #### 15.三数之和 ✅
+ *
+ * 排序 + 转换成两数之和 + 去重
  */
 export const three_sum = threeSum;

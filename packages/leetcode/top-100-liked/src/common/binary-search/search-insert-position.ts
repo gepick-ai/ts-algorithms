@@ -44,7 +44,7 @@ function lowerBound(nums: number[], target: number): number {
  * {@includeCode ./search-insert-position.ts/#code}
  *
  * @group 二分查找
- * @summary #### 搜索插入位置 ✅
+ * @summary #### 35.搜索插入位置 ✅
  * 
  * 按题目意思其实就是找有序数组当中第一个>=target的数。
  * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。
