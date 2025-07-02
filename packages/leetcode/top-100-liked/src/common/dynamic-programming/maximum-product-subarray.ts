@@ -5,45 +5,38 @@
  */
 
 // @lc code=start
+
+// #region code
 function maxProduct(nums: number[]): number {
-  // dp[i]： 表示以nums[i]为结尾的子数组的最大乘积
-  // 状态转移方程：
-  //       1. 如果以nums[i-1]结尾的子数组的最大乘积是正数，同时nums[i]是正数，那么dp[i] = dp[i-1] * nums[i]
-  //       2. 如果以nums[i-1]结尾的子数组的最大乘积是负数，同时nums[i]是负数，那么dp[i] = dp[i-1] * nums[i]
-  //       3. 如果以nums[i-1]结尾的子数组的最大乘积是正数，同时nums[i]是负数，那么dp[i] = dp[i-1]
-  //       4. 如果以nums[i-1]结尾的子数组的最大乘积是负数，同时nums[i]是正数，那么dp[i] = nums[i]
+  // 维护两个dp，其中minDp[i]代表以i为终点的子数组的最小乘积，maxDp[i]代表以i为终点的子数组的最大乘积
+  // 这道题不同于其他题是，状态的转移不是从前一个位置转移过来的。不具有最优子结构。
+  // 按照惯性思维，会直接想到Math.max(dp[i-1] * nums[i], nums[i])，但是dp[i-1] * nums[i]不一定能推出最大值。
+  // 比如这个数组[-2,4,-3], dp[1] = 4, dp[2] = -3是错的，正确dp[2] = -2 * 4 * -3 = 24。原因是没记住前面的乘积最小子数组，它的存在可能让整个值变大
 
-  // dp[0] = nums[0]
+  const minDp: number[] = [];
+  const maxDp: number[] = [];
 
-  const dp: number[] = [];
-  dp[0] = nums[0];
-
-  let max = dp[0];
+  minDp[0] = nums[0];
+  maxDp[0] = nums[0];
 
   for (let i = 1; i < nums.length; i++) {
-    if (dp[i - 1] >= 0 && nums[i] >= 0) {
-      dp[i] = dp[i - 1] * nums[i];
-    }
-    else if (dp[i - 1] >= 0 && nums[i] < 0) {
-      dp[i] = dp[i - 1];
-    }
-    else if (dp[i - 1] < 0 && nums[i] >= 0) {
-      dp[i] = nums[i];
-    }
-    else {
-      dp[i] = dp[i - 1] * nums[i];
-    }
-
-    max = Math.max(dp[i], max);
+    maxDp[i] = Math.max(nums[i], minDp[i - 1] * nums[i], maxDp[i - 1] * nums[i]);
+    minDp[i] = Math.min(nums[i], minDp[i - 1] * nums[i], maxDp[i - 1] * nums[i]);
   }
 
-  return max;
+  return Math.max(...maxDp);
 };
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include  ../../../../../../.typedoc/problems/152.乘积最大子数组.md}
  *
  * @group 动态规划
+ * @summary #### 152.乘积最大子数组 ✅
+ *
+ * - 这道题不具备最优子结构，所以不能用一个dp来解决。维护两个dp，其中minDp[i]代表以i为终点的子数组的最小乘积，maxDp[i]代表以i为终点的子数组的最大乘积。
+ * - 最小乘积* nums[i]可能变大，最大乘积* nums[i]可能变小。
  */
 export const maximum_product_subarray = maxProduct;

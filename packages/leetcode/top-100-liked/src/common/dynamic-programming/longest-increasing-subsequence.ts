@@ -5,27 +5,33 @@
  */
 
 // @lc code=start
-function lengthOfLIS(nums: number[]): number {
-  // 1、dp[i]定义：以第i个数字为结尾的最长递增子序列的长度
-  // 2、状态转移方程：设j变量，从第0个数字开始依次查看，直到看到i-1个。
-  //               如果一次查看发现nums[i] > nums[j]，那么说明nums[i]可以接在以当前j位置为结尾的最长递增子序列的后头
-  //               否则dp[i] =1(默认就是1，所以不需要写dp[i] = 1这一步)
 
-  const dp: number[] = new Array(nums.length).fill(1); // 默认以第i个数字为结尾的最长递增子序列的长度最少就是1，即这个数字本身
-  let max = 1;
+// #region code
+function lengthOfLIS(nums: number[]): number {
+  // dp[i]表示以i为终点的最长递增子序列的长度
+  // 状态转移方程：
+  // 不断寻找i之前的终点的最长递增子序列的长度，比如j，如果nums[i] > nums[j]，则最长递增子序列的长度dp[i] = dp[j] + 1
+  // 我们不断枚举j来找到以i为终点的最长递增子序列的长度
+
+  // 初始化，所有下标的数最开始都可以看成以自己为开头和终点的最长递增子序列，长度为1
+
+  const dp: number[] = new Array(nums.length).fill(1);
+  let ans = 1;
 
   for (let i = 1; i < nums.length; i++) {
-    // 依次查看[0,i)这个范围的dp[j]，判断是否能够在它们的基础上接上一个nums[i]
-    for (let j = 0; j < i; j++) {
+    for (let j = 0; j <= i; j++) {
       if (nums[i] > nums[j]) {
         dp[i] = Math.max(dp[i], dp[j] + 1);
       }
     }
-    max = Math.max(dp[i], max);
+    ans = Math.max(dp[i], ans);
   }
 
-  return max;
+  return ans;
 };
+
+// #endregion code
+
 // @lc code=end
 
 /**
@@ -41,5 +47,6 @@ function lengthOfLIS(nums: number[]): number {
  * 因为它有可能是从前面几个状态转移过来的。状态转移不一定是从相邻状态转移过来的
  *
  * @group 动态规划
+ * @summary #### 300.最长递增子序列 ✅
  */
 export const longest_increasing_subsequence = lengthOfLIS;

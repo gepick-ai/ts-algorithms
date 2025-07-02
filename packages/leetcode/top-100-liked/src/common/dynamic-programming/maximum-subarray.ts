@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+
+// #region code
 function maxSubArray(nums: number[]): number {
   // 1、dp[i]: 以第i个元素为结尾的子数组的最大和为dp[i]
   // 2、递推公式：
@@ -28,11 +30,20 @@ function maxSubArray(nums: number[]): number {
 
   return max;
 };
+
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/53.最大子数组和.md}
  *
+ * @description
+ * {@includeCode ./maximum-subarray.ts/#code}
+ *
  * @group 动态规划
+ * @summary #### 53.最大子数组和 ✅
+ *
+ * 以i为终点的子数组，要么与它前面的子数组拼接成一个和更大的子数组，要么就是以i本身为开头和终点的子数组，两者取最大的和就是以i为终点的最大子数组和。
  */
 export const maximum_subarray = maxSubArray;

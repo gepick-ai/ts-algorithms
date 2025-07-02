@@ -5,38 +5,42 @@
  */
 
 // @lc code=start
+
+// #region code
 function uniquePaths(m: number, n: number): number {
-  // 1、dp[i][j]: 表示到达位置(i,j)总共有n种不同的路径
-  // 2、状态转移方程：机器人只能往下走和往右走，那么(i,j)位置只可能
-  // 从(i, j-1)往右走一步达到，或者从(i-1,j)往下走一步达到。
-  // 因此dp[i][j] = dp[i][j-1] + dp[i-1][j];
+  // dp[i][j]表示机器人来到第i行第j列的不同路径总数
 
-  // 3、dp初始化：dp[i][0]第一列每一行只能往下走，所以只有一种走法。dp[i][0] = 1.
-  //            dp[0][i]第一行每一列只能往右走，所以只能一种走法,dp[0][i] = 1;
+  // 状态转移方程：
+  // 由于机器人只能够从(i-1,j)向下走一步达到(i,j)，或者从(i, j-1)向右走一步达到(i,j)
+  // 因此dp[i][j] = dp[i-1][j] + dp[i][j-1];
 
-  const dp: number[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  // 初始化
+  // 机器人在(0,j)，那么从(0,0)出发，只有向右一条路径可走
+  // 机器人在(i, 0),那么从(0,0)出发，只有向下一条路径可走
+  const dp: number[][] = Array.from({ length: m }, () => new Array(n).fill(1));
 
-  for (let i = 1; i <= m; i++) {
-    dp[i][1] = 1;
-  }
-
-  for (let i = 1; i <= n; i++) {
-    dp[1][i] = 1;
-  }
-
-  for (let i = 2; i <= m; i++) {
-    for (let j = 2; j <= n; j++) {
-      dp[i][j] = dp[i][j - 1] + dp[i - 1][j];
+  for (let i = 1; i < m; i++) {
+    for (let j = 1; j < n; j++) {
+      dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
     }
   }
 
-  return dp[m][n];
+  return dp[m - 1][n - 1];
 };
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/problems/62.不同路径.md}
  *
+ * @description
+ * {@includeCode ./unique-paths.ts/#code}
+ *
  * @group 动态规划
+ * @summary #### 62.不同路径 ✅
+ *
+ * 机器人从左上角走到右下角，只能向下或者向右走，问有多少种不同的路径。
+ * 假如机器人到达(i,j)，那么机器人只能从(i-1,j)向下走一步达到(i,j)，或者从(i, j-1)向右走一步达到(i,j)。
  */
 export const unique_paths = uniquePaths;

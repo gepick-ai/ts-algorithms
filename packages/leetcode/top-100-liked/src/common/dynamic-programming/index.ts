@@ -8,3 +8,5 @@ export * from "./word-break";
 export * from "./partition-equal-subset-sum";
 export * from "./minimum-path-sum";
 export * from "./longest-palindromic-substring";
+export * from "./perfect-squares";
+export * from "./coin-change";

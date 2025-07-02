@@ -27,7 +27,9 @@ function climbStairs(n: number): number {
 
 /**
  * {@include ../../../../../../.typedoc/problems/70.爬楼梯.md}
+ * 
  *
  * @group 动态规划
+ * @summary #### 70.爬楼梯 ✅
  */
 export const climbing_stairs = climbStairs;
