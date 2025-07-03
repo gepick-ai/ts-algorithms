@@ -97,7 +97,7 @@ function canPartition1(nums: number[]): boolean {
 /**
  * {@include ../../../../../../.typedoc/problems/416.分割等和子集.md}
  *
- * @answer
+ * @description
  * {@includeCode ./partition-equal-subset-sum.ts/#code}
  *
  * @group 动态规划

@@ -36,7 +36,7 @@ function maxSlidingWindow(nums: number[], k: number): number[] {
  *
  * 
  *
- * @answer
+ * @description
  *
  * @group 栈与队列
  */

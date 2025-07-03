@@ -39,7 +39,7 @@ function lowerBound(nums: number[], target: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/35.搜索插入位置.md}
  *
- * @answer
+ * @description
  *
  * {@includeCode ./search-insert-position.ts/#code}
  *

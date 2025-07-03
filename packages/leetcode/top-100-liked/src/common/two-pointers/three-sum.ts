@@ -61,7 +61,7 @@ function threeSum(nums: number[]): number[][] {
 /**
  * {@include ../../../../../../.typedoc/problems/15.三数之和.md}
  *
- * @answer
+ * @description
  * - 先排序
  * - 三数之和其实就是找相反数，这样一来就是变成了排序的数组中找两数之和的题目。
  * - 由于可能会有重复的数，所以需要跳过重复的数。

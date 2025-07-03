@@ -26,7 +26,7 @@ function moveZeroes(nums: number[]): void {
 /**
  * {@include ../../../../../../.typedoc/problems/283.移动零.md}
  *
- * @answer
+ * @description
  * - 将left左边区域看作全是非0的区域，一开始left在整个数组的最左边。
  * - 我们遍历数组，如果当前元素不为0，则将当前元素和left位置的元素交换，然后left++。如果当前元素为0，则跳过
  * - 遍历结束后，left左边的区域全是非0的元素。

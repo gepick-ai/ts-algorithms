@@ -54,7 +54,7 @@ function longestPalindrome(s: string): string {
 /**
  * {@include ../../../../../../.typedoc/problems/5.最长回文子串.md}
  *
- * @answer
+ * @description
  * 如果s[i] === s[j]，那么s[i..j]是回文串的条件是s[i+1..j-1]是回文串。
  * 如果s[i] !== s[j]，那么s[i..j]不是回文串。
  *

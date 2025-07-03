@@ -29,8 +29,8 @@
     display: none !important;
 }
 
-/* 针对 .tsd-tag-answer 的折叠功能 */
-.tsd-tag-answer {
+/* 针对 .tsd-tag-description 的折叠功能 */
+.tsd-tag-description {
   position: relative;
   margin: 1em 0;
   border: 1px solid #e0e0e0;
@@ -41,7 +41,7 @@
   transition: all 0.3s ease;
 }
 
-.tsd-tag-answer::before {
+.tsd-tag-description::before {
   content: '💡 点击查看答案';
   display: block;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -56,14 +56,14 @@
   transition: all 0.3s ease;
 }
 
-.tsd-tag-answer::before:hover {
+.tsd-tag-description::before:hover {
   background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
   color: #212529;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.tsd-tag-answer::after {
+.tsd-tag-description::after {
   content: '▼';
   position: absolute;
   right: 16px;
@@ -75,7 +75,7 @@
 }
 
 /* 内容容器 */
-.tsd-tag-answer-content {
+.tsd-tag-description-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
@@ -86,35 +86,35 @@
 }
 
 /* 隐藏所有内容 */
-.tsd-tag-answer > * {
+.tsd-tag-description > * {
   display: none !important;
 }
 
 /* 展开状态 */
-.tsd-tag-answer.expanded {
+.tsd-tag-description.expanded {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: translateY(-2px);
 }
 
-.tsd-tag-answer.expanded::before {
+.tsd-tag-description.expanded::before {
   content: '💡 点击收起答案';
   background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
   color: #1565c0;
   border-bottom-color: #bbdefb;
 }
 
-.tsd-tag-answer.expanded::after {
+.tsd-tag-description.expanded::after {
   transform: rotate(180deg);
   color: #1565c0;
 }
 
-.tsd-tag-answer.expanded .tsd-tag-answer-content {
+.tsd-tag-description.expanded .tsd-tag-description-content {
   max-height: 2000px;
   opacity: 1;
   padding: 16px;
 }
 
-.tsd-tag-answer.expanded > * {
+.tsd-tag-description.expanded > * {
   display: block !important;
   margin: 0 !important;
   background-color: #f5f7fa !important;
@@ -135,29 +135,29 @@
 }
 
 /* 特殊处理第一个和最后一个元素 */
-.tsd-tag-answer.expanded > *:first-child {
+.tsd-tag-description.expanded > *:first-child {
   padding-top: 16px;
   margin-top: 0 !important;
 }
 
-.tsd-tag-answer.expanded > *:last-child {
+.tsd-tag-description.expanded > *:last-child {
   padding-bottom: 16px;
   margin-bottom: 0 !important;
 }
 
 /* 隐藏标题中的锚点链接 */
-.tsd-tag-answer .tsd-anchor-link,
-.tsd-tag-answer .tsd-anchor-icon {
+.tsd-tag-description .tsd-anchor-link,
+.tsd-tag-description .tsd-anchor-icon {
   display: none !important;
 }
 
 /* 优化标题样式 */
-.tsd-tag-answer.expanded h1,
-.tsd-tag-answer.expanded h2,
-.tsd-tag-answer.expanded h3,
-.tsd-tag-answer.expanded h4,
-.tsd-tag-answer.expanded h5,
-.tsd-tag-answer.expanded h6 {
+.tsd-tag-description.expanded h1,
+.tsd-tag-description.expanded h2,
+.tsd-tag-description.expanded h3,
+.tsd-tag-description.expanded h4,
+.tsd-tag-description.expanded h5,
+.tsd-tag-description.expanded h6 {
   margin-top: 0 !important;
   margin-bottom: 12px !important;
   padding-top: 0 !important;
@@ -167,7 +167,7 @@
 }
 
 /* 代码块样式优化 */
-.tsd-tag-answer.expanded pre {
+.tsd-tag-description.expanded pre {
   margin: 8px 0 !important;
   border-radius: 6px !important;
   border: 1px solid #e9ecef !important;
@@ -188,13 +188,13 @@
   }
 }
 
-.tsd-tag-answer.expanded pre code {
+.tsd-tag-description.expanded pre code {
   background: transparent !important;
   padding: 0 !important;
 }
 
 /* 复制按钮样式 */
-.tsd-tag-answer.expanded pre button {
+.tsd-tag-description.expanded pre button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -220,14 +220,14 @@
   }
 }
 
-.tsd-tag-answer.expanded pre button:hover {
+.tsd-tag-description.expanded pre button:hover {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transform: translateY(-1px);
 }
 
 /* 段落样式 */
-.tsd-tag-answer.expanded p {
+.tsd-tag-description.expanded p {
   margin: 8px 0 !important;
   line-height: 1.6;
   color: #495057;
@@ -236,14 +236,14 @@
 }
 
 /* 列表样式 */
-.tsd-tag-answer.expanded ul,
-.tsd-tag-answer.expanded ol {
+.tsd-tag-description.expanded ul,
+.tsd-tag-description.expanded ol {
   margin: 8px 0 !important;
   padding-left: 20px !important;
   background-color: transparent !important;
 }
 
-.tsd-tag-answer.expanded li {
+.tsd-tag-description.expanded li {
   margin: 4px 0 !important;
   line-height: 1.5;
   background-color: transparent !important;
@@ -251,101 +251,101 @@
 }
 
 /* 确保所有子元素都继承背景色 */
-.tsd-tag-answer.expanded * {
+.tsd-tag-description.expanded * {
   background-color: inherit !important;
 }
 
 /* 代码块除外，保持原有样式 */
-.tsd-tag-answer.expanded pre,
-.tsd-tag-answer.expanded pre *,
-.tsd-tag-answer.expanded code {
+.tsd-tag-description.expanded pre,
+.tsd-tag-description.expanded pre *,
+.tsd-tag-description.expanded code {
   background-color: #f8f9fa !important;
 }
 
 /* 暗色主题适配 */
-[data-theme="dark"] .tsd-tag-answer {
+[data-theme="dark"] .tsd-tag-description {
   border-color: #4a5568;
   background-color: #2d3748;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded {
+[data-theme="dark"] .tsd-tag-description.expanded {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-[data-theme="dark"] .tsd-tag-answer::before {
+[data-theme="dark"] .tsd-tag-description::before {
   background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
   color: #e2e8f0;
   border-bottom-color: #4a5568;
 }
 
-[data-theme="dark"] .tsd-tag-answer::before:hover {
+[data-theme="dark"] .tsd-tag-description::before:hover {
   background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
   color: #f7fafc;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-[data-theme="dark"] .tsd-tag-answer::after {
+[data-theme="dark"] .tsd-tag-description::after {
   color: #a0aec0;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded::before {
+[data-theme="dark"] .tsd-tag-description.expanded::before {
   background: linear-gradient(135deg, #2b6cb0 0%, #1e4a72 100%);
   color: #90cdf4;
   border-bottom-color: #2b6cb0;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded::after {
+[data-theme="dark"] .tsd-tag-description.expanded::after {
   color: #90cdf4;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded > * {
+[data-theme="dark"] .tsd-tag-description.expanded > * {
   background-color: #2d3748 !important;
   color: #e2e8f0;
   border-left-color: #2b6cb0;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded h1,
-[data-theme="dark"] .tsd-tag-answer.expanded h2,
-[data-theme="dark"] .tsd-tag-answer.expanded h3,
-[data-theme="dark"] .tsd-tag-answer.expanded h4,
-[data-theme="dark"] .tsd-tag-answer.expanded h5,
-[data-theme="dark"] .tsd-tag-answer.expanded h6 {
+[data-theme="dark"] .tsd-tag-description.expanded h1,
+[data-theme="dark"] .tsd-tag-description.expanded h2,
+[data-theme="dark"] .tsd-tag-description.expanded h3,
+[data-theme="dark"] .tsd-tag-description.expanded h4,
+[data-theme="dark"] .tsd-tag-description.expanded h5,
+[data-theme="dark"] .tsd-tag-description.expanded h6 {
   color: #f7fafc;
   background-color: transparent !important;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded pre {
+[data-theme="dark"] .tsd-tag-description.expanded pre {
   background-color: #1a202c !important;
   border-color: #4a5568 !important;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded pre button {
+[data-theme="dark"] .tsd-tag-description.expanded pre button {
   background: rgba(45, 55, 72, 0.9);
   border-color: #4a5568;
   color: #e2e8f0;
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded pre button:hover {
+[data-theme="dark"] .tsd-tag-description.expanded pre button:hover {
   background: #2d3748;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   transform: translateY(-1px);
 }
 
-[data-theme="dark"] .tsd-tag-answer.expanded p {
+[data-theme="dark"] .tsd-tag-description.expanded p {
   color: #cbd5e0;
   background-color: transparent !important;
 }
 
 /* 暗色主题下确保所有子元素都继承背景色 */
-[data-theme="dark"] .tsd-tag-answer.expanded * {
+[data-theme="dark"] .tsd-tag-description.expanded * {
   background-color: inherit !important;
 }
 
 /* 暗色主题代码块除外 */
-[data-theme="dark"] .tsd-tag-answer.expanded pre,
-[data-theme="dark"] .tsd-tag-answer.expanded pre *,
-[data-theme="dark"] .tsd-tag-answer.expanded code {
+[data-theme="dark"] .tsd-tag-description.expanded pre,
+[data-theme="dark"] .tsd-tag-description.expanded pre *,
+[data-theme="dark"] .tsd-tag-description.expanded code {
   background-color: #1a202c !important;
 }

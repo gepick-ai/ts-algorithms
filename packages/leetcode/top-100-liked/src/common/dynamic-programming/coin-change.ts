@@ -52,7 +52,7 @@ function coinChange(coins: number[], amount: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/322.零钱兑换.md}
  *
- * @answer
+ * @description
  * {@includeCode ./coin-change.ts/#code}
  *
  * @group 动态规划

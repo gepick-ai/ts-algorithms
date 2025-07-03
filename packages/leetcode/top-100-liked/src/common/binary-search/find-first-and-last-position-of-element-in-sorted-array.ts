@@ -57,7 +57,7 @@ function lowerBound(nums: number[], target: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/34.在排序数组中查找元素的第一个和最后一个位置.md}
  *
- * @answer
+ * @description
  *
  * 在一个单调递增的数组中，查找元素的第一个位置和最后一个位置。
  * 其实就是两个任务：

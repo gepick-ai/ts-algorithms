@@ -42,7 +42,7 @@ function letterCombinations(digits: string): string[] {
 /**
  * {@include ../../../../../../.typedoc/problems/17.电话号码的字母组合.md}
  *
- * @answer
+ * @description
  * 如果我们把digits转换成对应字母后。实际上题目求的就是从每个字母中选一个字母，然后组合成一个字符串。
  * 这道题是一道组合型回溯题。
  *

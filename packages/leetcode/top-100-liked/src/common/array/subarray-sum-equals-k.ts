@@ -134,7 +134,7 @@ function subarraySum(nums: number[], k: number): number {
  *
  * 
  *
- * @answer
+ * @description
  * 前缀和s[i] = nums[0] + nums[1] + ... + nums[i-1]，表示下标[0,i-1]前缀的和。
  *
  * @group 数组

@@ -37,8 +37,8 @@ function lengthOfLIS(nums: number[]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/300.最长递增子序列.md}
  *
- * @answer
- * 
+ * @description
+ *
  * dp[i] 表示以第i个数字结尾的最长递增子序列的长度
  * 这道题里头dp[i]需要多次更新得到最终的值，它不是一次计算得到的。
  *

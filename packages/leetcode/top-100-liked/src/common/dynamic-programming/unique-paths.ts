@@ -34,8 +34,8 @@ function uniquePaths(m: number, n: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/62.不同路径.md}
  *
- * @answer 
- * 
+ * @description
+ *
  * {@include ../../../../../../.typedoc/notes/62.不同路径.md}
  * {@includeCode ./unique-paths.ts/#code}
  *

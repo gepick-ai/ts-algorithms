@@ -65,7 +65,7 @@ function rotate(nums: number[], k: number): void {
 /**
  * {@include ../../../../../../.typedoc/problems/189.轮转数组.md}
  *
- * @answer
+ * @description
  * 找轮转规律，看三个角色的关系：轮转次数k，数组长度nums.length，位置i剩余向右轮转次数maxX = nums.length - i - 1。
  * 先看k跟数组长度关系，k小于数组长度，那么k一定会转至少一轮让整个数组元素回到原来位置，比如这里0转3次回到原位，那么需要不断削减k直到小于nums.length
  * 削减完成后，再看k跟maxX关系，k小于maxX，那么计算各元素的位置就是

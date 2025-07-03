@@ -40,7 +40,7 @@ function findMin(nums: number[]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/153.寻找旋转排序数组中的最小值.md}
  *
- * @answer
+ * @description
  *
  * ### 关键点1：旋转数组的特性
  * 由于原数组是严格升序的，所以旋转 1 次和旋转多次的结果是类似的：最终数组要么是一个完整的升序数组（即未旋转时的原数组），要么是两个升序数组的组合。

@@ -77,7 +77,7 @@ function minPathSum1(grid: number[][]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/64.最小路径和.md}
  *
- * @answer
+ * @description
  * {@includeCode ./minimum-path-sum.ts/#code}
  *
  * @group 动态规划

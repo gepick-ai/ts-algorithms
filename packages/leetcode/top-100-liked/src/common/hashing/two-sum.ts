@@ -49,7 +49,7 @@ function twoSum(nums: number[], target: number): number[] {
 /**
  * {@include ../../../../../../.typedoc/problems/1.两数之和.md}
  *
- * @answer
+ * @description
  * 实际上用map是暴力解法的空间换时间优化。
  *
  * 本质是补数查找，对于每个位置i，我们想知道："x (target - nums[i]) 这个数在之前的位置出现过吗？"。

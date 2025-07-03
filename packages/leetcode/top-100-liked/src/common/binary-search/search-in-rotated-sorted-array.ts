@@ -59,7 +59,7 @@ function lowerBound(nums: number[], l: number, r: number, target: number) {
 /**
  * {@include ../../../../../../.typedoc/problems/33.搜索旋转排序数组.md}
  *
- * @answer
+ * @description
  * 先在旋转数组中找到最小值，然后根据最小值将数组分为两部分，然后分别在两部分中进行二分查找。
  *
  * {@includeCode  ./search-in-rotated-sorted-array.ts/#code}

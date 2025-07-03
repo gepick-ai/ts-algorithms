@@ -54,7 +54,7 @@ function numSquares(n: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/279.完全平方数.md}
  *
- * @answer
+ * @description
  * {@includeCode ./perfect-squares.ts/#code}
  *
  * @group 动态规划
