@@ -32,7 +32,8 @@ function maxArea(height: number[]): number {
  *
  * {@include ../../../../../../.typedoc/problems/11.盛最多水的容器.md}
  *
- * @description
+ * @answer
+ *
  * - 分析两根柱子的情况：
  *   - 柱子A高 === 柱子B高
  *   - 柱子A高 > 柱子B高

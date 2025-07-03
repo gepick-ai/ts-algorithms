@@ -49,7 +49,7 @@ function isValid(s: string): boolean {
  *
  * 
  *
- * @description
+ * @answer
  * 思路：用一个map记录每一个括号的对应关系，再用set记录下左括号
  * 遇到左括号就入栈，遇到右括号就出栈，
  * 然后判断出栈的左括号是否和右括号匹配：方式就是通过右括号拿回左括号，然后判断是否相等

@@ -31,7 +31,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
  *
  * 
  *
- * @description
+ * @answer
  * 知识点1:单调栈应用
  * 要寻找右边第一个比当前温度更高的温度，维持一个递增的单调栈。
  * 1.当遍历到的元素大于当前元素：循环查看栈顶元素，结算，完成后弹出栈顶元素

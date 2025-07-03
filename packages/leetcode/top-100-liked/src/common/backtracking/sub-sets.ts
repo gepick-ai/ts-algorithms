@@ -56,7 +56,7 @@ function subsets2(nums: number[]): number[][] {
  * {@include ../../../../../../.typedoc/problems/78.子集.md}
  *
  *
- * @description
+ * @answer
  * {@include ./README.md}
  *
  *

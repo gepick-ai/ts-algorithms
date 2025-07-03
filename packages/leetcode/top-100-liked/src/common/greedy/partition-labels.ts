@@ -41,7 +41,7 @@ function partitionLabels(s: string): number[] {
 /**
  * {@include ../../../../../../.typedoc/problems/763.划分字母区间.md}
  *
- * @description
+ * @answer
  * 算法的核心思想是：每个字符只能出现在一个片段中，所以片段必须包含该字符的所有出现位置。
  *
  * 1. 遍历字符串，记录每个字符最后出现的位置

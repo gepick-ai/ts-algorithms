@@ -54,12 +54,12 @@ function numSquares(n: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/279.完全平方数.md}
  *
- * @description
+ * @answer
  * {@includeCode ./perfect-squares.ts/#code}
  *
  * @group 动态规划
  * @summary #### 279.完全平方数 ✅
  *
- * 完全背包问题
+ * 完全背包：背包容量：n；物品：nums（所有小于等于n的完全平方数）。
  */
 export const perfect_squares = numSquares;

@@ -54,7 +54,7 @@ function findDuplicate(nums: number[]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/287.寻找重复数.md}
  *
- * @description
+ * @answer
  *
  * 将n+1个整数，一一对应[1,n]的抽屉里，那么至少有一个抽屉里放了两个数。对抽屉编号进行二分，每次二分猜编号m。
  * 那么如果n+1个数中，每个<=m的数一一对应到[1,m]的抽屉里，没有重复放，那么抽屉的数量应该是m。

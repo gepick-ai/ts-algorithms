@@ -40,7 +40,7 @@ function longestValidParentheses(s: string): number {
  *
  * 
  *
- * @description
+ * @answer
  * 1. 使用栈来记录括号的位置，遇到「(」入栈，遇到「)」出栈。
  * 2. 如果栈为空，则将当前位置入栈。
  * 3. 如果栈不为空，则计算当前位置与栈顶位置的差值，更新最大长度。

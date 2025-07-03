@@ -42,7 +42,7 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 /**
  * {@include ../../../../../../.typedoc/problems/160.相交链表.md}
  *
- * @description
+ * @answer
  * 判断两段链表是否有交点，拿set放入一条链表所有节点，然后遍历另一条链表，如果set中存在越靠前遍历到的节点，说明就是交点。
  *
  * @group 链表

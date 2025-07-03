@@ -31,7 +31,7 @@ function lengthOfLongestSubstring(s: string): number {
  *
  * {@include ../../../../../../.typedoc/problems/3.无重复字符的最长子串.md}
  *
- * @description
+ * @answer
  * 本题用滑动窗口和Map记录字符出现次数的方法，寻找最长无重复子串。
  * - 用两个指针l和r维护一个窗口，窗口内没有重复字符。
  * - 用Map记录窗口内每个字符出现的次数。

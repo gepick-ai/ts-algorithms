@@ -42,7 +42,7 @@ function partition(s: string): string[][] {
 /**
  * {@include ../../../../../../.typedoc/problems/131.分割回文串.md}
  *
- * @description
+ * @answer
  *
  * {@includeCode ./palindrome-partitioning.ts/#code}
  *

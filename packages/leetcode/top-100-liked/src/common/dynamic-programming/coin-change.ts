@@ -52,12 +52,12 @@ function coinChange(coins: number[], amount: number): number {
 /**
  * {@include ../../../../../../.typedoc/problems/322.零钱兑换.md}
  *
- * @description
+ * @answer
  * {@includeCode ./coin-change.ts/#code}
  *
  * @group 动态规划
  * @summary #### 322.零钱兑换 ✅
  *
- * 完全背包问题
+ * 完全背包：背包容量：amount；物品：coins。
  */
 export const coin_change = coinChange;

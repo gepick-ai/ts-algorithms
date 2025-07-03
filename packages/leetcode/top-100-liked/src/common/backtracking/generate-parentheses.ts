@@ -72,7 +72,7 @@ function generateParenthesis2(n: number) {
 /**
  * {@include ../../../../../../.typedoc/problems/22.括号生成.md}
  *
- * @description
+ * @answer
  *
  *
  * @includeCode ./generate-parentheses.ts/#code

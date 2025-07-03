@@ -38,7 +38,7 @@ function maxSubArray(nums: number[]): number {
 /**
  * {@include ../../../../../../.typedoc/problems/53.最大子数组和.md}
  *
- * @description
+ * @answer
  * {@includeCode ./maximum-subarray.ts/#code}
  *
  * @group 动态规划

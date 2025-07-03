@@ -54,5 +54,6 @@
     "typedoc-github-theme"
   ],
   "theme": "typedoc-github-theme",
-  "customCss": ".typedoc/custom.css"
+  "customCss": ".typedoc/custom.css",
+  "customJs": ".typedoc/collapsible.js"
 }

@@ -38,7 +38,7 @@ function hasCycle(head: ListNode | null): boolean {
 /**
  * {@include ../../../../../../.typedoc/problems/141.环形链表.md}
  *
- * @description
+ * @answer
  * 用set记录遍历过的节点，如果遍历到set中存在的节点，说明有环。
  *
  * @group 链表
