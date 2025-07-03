@@ -301,16 +301,24 @@
   background-color: var(--color-background-secondary) !important;
 }
 
+/* Light主题下的代码复制按钮样式 */
 [data-theme="light"] .tsd-tag-description.expanded pre button {
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInDelay 0.5s ease-out 0.2s both;
   background: var(--color-background);
   border: 1px solid var(--color-accent);
   color: var(--color-text);
 }
 
 [data-theme="light"] .tsd-tag-description.expanded pre button:hover {
+  transform: translateY(-1px);
   background: var(--color-background-secondary);
   border-color: var(--color-link);
-  color: var(--color-contrast-text);
+  color: var(--color-text);
 }
 
 /* 针对 .tsd-tag-description 的折叠功能 - Dark主题 */
@@ -387,16 +395,24 @@
   background-color: var(--color-background-secondary) !important;
 }
 
+/* Dark主题下的代码复制按钮样式 */
 [data-theme="dark"] .tsd-tag-description.expanded pre button {
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInDelay 0.5s ease-out 0.2s both;
   background: var(--color-background);
   border: 1px solid var(--color-accent);
   color: var(--color-text);
 }
 
 [data-theme="dark"] .tsd-tag-description.expanded pre button:hover {
+  transform: translateY(-1px);
   background: var(--color-background-secondary);
   border-color: var(--color-link);
-  color: var(--color-contrast-text);
+  color: var(--color-text);
 }
 
 /* 通用折叠功能样式 */
@@ -502,31 +518,6 @@
 .tsd-tag-description.expanded pre code {
   background: transparent !important;
   padding: 0 !important;
-}
-
-/* 复制按钮样式 */
-.tsd-tag-description.expanded pre button {
-  border-radius: 4px;
-  padding: 4px 8px;
-  font-size: 11px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: fadeInDelay 0.5s ease-out 0.2s both;
-}
-
-@keyframes fadeInDelay {
-  0% {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.tsd-tag-description.expanded pre button:hover {
-  transform: translateY(-1px);
 }
 
 /* 段落和列表样式 */
@@ -640,16 +631,35 @@
   background-color: var(--color-background-secondary) !important;
 }
 
+/* OS主题下的代码复制按钮样式 */
 [data-theme="os"] .tsd-tag-description.expanded pre button {
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInDelay 0.5s ease-out 0.2s both;
   background: var(--color-background);
   border: 1px solid var(--color-accent);
   color: var(--color-text);
 }
 
 [data-theme="os"] .tsd-tag-description.expanded pre button:hover {
+  transform: translateY(-1px);
   background: var(--color-background-secondary);
   border-color: var(--color-link);
-  color: var(--color-contrast-text);
+  color: var(--color-text);
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* React主题代码高亮样式 - Dark主题 */
@@ -986,6 +996,176 @@
 @media (prefers-color-scheme: light) {
   [data-theme="os"] .tsd-navigation a.current .tsd-kind-icon ~ span {
     color: #f8f9fa !important;
+  }
+}
+
+/* 分类面板卡片样式 */
+.tsd-panel-group.tsd-member-group.tsd-accordion {
+  margin: 20px 0;
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  background: var(--color-background);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tsd-panel-group.tsd-member-group.tsd-accordion:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* 分类标题样式 */
+.tsd-accordion-summary {
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-background-secondary) 100%);
+  border-bottom: 1px solid var(--color-accent);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tsd-accordion-summary:hover {
+  background: linear-gradient(135deg, var(--color-background-secondary) 0%, var(--color-background-active) 100%);
+}
+
+.tsd-accordion-summary h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 分类内容区域样式 */
+.tsd-member-summaries {
+  padding: 16px 20px;
+  background: var(--color-background);
+}
+
+/* 分类项样式 - 保持简洁 */
+.tsd-member-summary {
+  margin: 8px 0;
+  padding: 8px 0;
+}
+
+/* 分类项链接样式 */
+.tsd-member-summary-name a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.tsd-member-summary-name a:hover {
+  color: var(--color-focus-outline);
+  text-decoration: underline;
+}
+
+/* 分类项描述样式 */
+.tsd-member-summary .tsd-comment {
+  margin-top: 4px;
+  color: var(--color-text-aside);
+  font-size: 14px;
+}
+
+/* 深色主题下的特殊样式 */
+[data-theme="dark"] .tsd-panel-group.tsd-member-group.tsd-accordion {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .tsd-panel-group.tsd-member-group.tsd-accordion:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* OS主题深色模式下的特殊样式 */
+@media (prefers-color-scheme: dark) {
+  [data-theme="os"] .tsd-panel-group.tsd-member-group.tsd-accordion {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  [data-theme="os"] .tsd-panel-group.tsd-member-group.tsd-accordion:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* 每道题的独立卡片样式 - dt和dd组合 */
+.tsd-member-summary[id] {
+  margin: 16px 0 0 0;
+  padding: 16px 16px 8px 16px;
+  border: 1px dashed var(--color-accent);
+  border-radius: 8px 8px 0 0;
+  background: var(--color-background-secondary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* 对应的dd样式 */
+.tsd-member-summary[id] + dd {
+  margin: 0 0 16px 0;
+  padding: 8px 16px 16px 16px;
+  border: 1px dashed var(--color-accent);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  background: var(--color-background-secondary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* 题目标题样式 */
+.tsd-member-summary[id] .tsd-member-summary-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tsd-member-summary[id] .tsd-member-summary-name a {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tsd-member-summary[id] .tsd-member-summary-name a:hover {
+  color: var(--color-focus-outline);
+  text-decoration: underline;
+}
+
+/* 题目描述内容样式 */
+.tsd-member-summary[id] + dd .tsd-comment {
+  margin-top: 8px;
+  padding: 12px;
+}
+
+.tsd-member-summary[id] + dd .tsd-comment h4 {
+  margin: 0 0 8px 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tsd-member-summary[id] + dd .tsd-comment p {
+  margin: 8px 0;
+  color: var(--color-text-aside);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 深色主题下的特殊样式 */
+[data-theme="dark"] .tsd-member-summary[id],
+[data-theme="dark"] .tsd-member-summary[id] + dd {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* OS主题深色模式下的特殊样式 */
+@media (prefers-color-scheme: dark) {
+  [data-theme="os"] .tsd-member-summary[id],
+  [data-theme="os"] .tsd-member-summary[id] + dd {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
 }
 

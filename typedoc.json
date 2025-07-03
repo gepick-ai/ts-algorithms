@@ -32,8 +32,7 @@
   ],
   "navigation": {
     "includeGroups": true,
-    "includeFolders": true,
-    "compactFolders": true
+    "includeFolders": true
   },
   "projectDocuments": [
     ".typedoc/0x3f/如何科学刷题.md",
