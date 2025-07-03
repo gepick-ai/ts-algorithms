@@ -1,103 +1,128 @@
-/* 覆盖TypeDoc内置的light主题变量，实现流行现代的浅色主题 */
+/* 覆盖TypeDoc内置的light主题变量，实现Vue主题风格的浅色主题 */
 :root[data-theme="light"] {
-  /* 主背景色 - 流行的浅米色系 */
-  --light-color-background: #fefefe;
-  --light-color-background-secondary: #f8f9fa;
-  --light-color-background-active: #e9ecef;
+  /* 覆盖TypeDoc内置变量 - 主背景色 - Vue主题浅色风格 */
+  --color-background: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-active: #e9ecef;
   
-  /* 文字颜色 - 流行的深色系 */
-  --light-color-text: #212529;
-  --light-color-contrast-text: #000000;
-  --light-color-text-aside: #6c757d;
+  /* 覆盖TypeDoc内置变量 - 文字颜色 - Vue主题文字风格 */
+  --color-text: #2c3e50;
+  --color-contrast-text: #ffffff;
+  --color-text-aside: #6c757d;
   
-  /* 边框和强调色 - 流行的灰色系 */
-  --light-color-accent: #dee2e6;
-  --light-color-active-menu-item: #e9ecef;
+  /* 覆盖TypeDoc内置变量 - 边框和强调色 - Vue主题风格 */
+  --color-accent: #dee2e6;
+  --color-active-menu-item: #42b883;
   
-  /* 链接颜色 - 流行的蓝色系 */
-  --light-color-link: #0d6efd;
-  --light-color-focus-outline: #0a58ca;
+  /* 覆盖TypeDoc内置变量 - 链接颜色 - Vue主题绿色 */
+  --color-link: #42b883;
+  --color-focus-outline: #369870;
   
-  /* 图标背景和文字 */
-  --light-color-icon-background: #f8f9fa;
-  --light-color-icon-text: #212529;
+  /* 覆盖TypeDoc内置变量 - 图标背景和文字 */
+  --color-icon-background: #f8f9fa;
+  --color-icon-text: #2c3e50;
   
-  /* 注释标签 */
-  --light-color-comment-tag-text: #212529;
-  --light-color-comment-tag: #fefefe;
+  /* 覆盖TypeDoc内置变量 - 注释标签 */
+  --color-comment-tag-text: #2c3e50;
+  --color-comment-tag: #ffffff;
   
-  /* 警告背景 */
-  --light-color-background-warning: #fff3cd;
-  --light-color-warning-text: #856404;
+  /* 覆盖TypeDoc内置变量 - 警告背景 */
+  --color-background-warning: #fff3cd;
+  --color-warning-text: #856404;
   
-  /* 代码高亮背景 */
-  --light-code-background: #f8f9fa;
+  /* 覆盖TypeDoc内置变量 - 代码高亮背景 */
+  --code-background: #f8f9fa;
+  
+  /* Vue主题代码高亮颜色 */
+  --code-keyword: #42b883;      /* 关键字 - Vue绿色 */
+  --code-string: #e74c3c;       /* 字符串 - 红色 */
+  --code-comment: #95a5a6;      /* 注释 - 灰色 */
+  --code-function: #3498db;     /* 函数名 - 蓝色 */
+  --code-number: #e67e22;       /* 数字 - 橙色 */
+  --code-operator: #9b59b6;     /* 操作符 - 紫色 */
+  --code-variable: #2c3e50;     /* 变量 - 深灰色 */
+  --code-type: #f39c12;         /* 类型 - 黄色 */
+  --code-selector: #42b883;     /* 选择器 - Vue绿色 */
+  --code-property: #34495e;     /* 属性 - 深灰色 */
 }
 
-/* 覆盖TypeDoc内置的dark主题变量，实现流行现代的深色主题 */
+/* 覆盖TypeDoc内置的dark主题变量，实现React主题风格的深色主题 */
 :root[data-theme="dark"] {
-  /* 主背景色 - 流行的深色系 */
-  --dark-color-background: #2b2e33;
-  --dark-color-background-secondary: #1e2024;
-  --dark-color-background-active: #5d5d6a;
+  /* 覆盖TypeDoc内置变量 - 主背景色 - React主题深色风格，稍微深一些 */
+  --color-background: #1e2127;
+  --color-background-secondary: #181a1f;
+  --color-background-active: #2f333a;
   
-  /* 文字颜色 - 流行的浅色系 */
-  --dark-color-text: #f5f5f5;
-  --dark-color-contrast-text: #ffffff;
-  --dark-color-text-aside: #dddddd;
+  /* 覆盖TypeDoc内置变量 - 文字颜色 - React主题文字风格 */
+  --color-text: #abb2bf;
+  --color-contrast-text: #ffffff;
+  --color-text-aside: #5c6370;
+  --color-text-bright: #ffffff;
   
-  /* 边框和强调色 - 流行的灰色系 */
-  --dark-color-accent: #9096a2;
-  --dark-color-active-menu-item: #5d5d6a;
+  /* 覆盖TypeDoc内置变量 - 边框和强调色 - React主题风格 */
+  --color-accent: #2f333a;
+  --color-active-menu-item: #4a5568;
   
-  /* 链接颜色 - 流行的蓝色系 */
-  --dark-color-link: #00aff4;
-  --dark-color-focus-outline: #4c97f2;
+  /* 覆盖TypeDoc内置变量 - 链接颜色 - React主题蓝色 */
+  --color-link: #61dafb;
+  --color-focus-outline: #61dafb;
   
-  /* 图标背景和文字 */
-  --dark-color-icon-background: #1e2024;
-  --dark-color-icon-text: #f5f5f5;
+  /* 覆盖TypeDoc内置变量 - 图标背景和文字 */
+  --color-icon-background: #181a1f;
+  --color-icon-text: #abb2bf;
   
-  /* 注释标签 */
-  --dark-color-comment-tag-text: #f5f5f5;
-  --dark-color-comment-tag: #2b2e33;
+  /* 覆盖TypeDoc内置变量 - 注释标签 */
+  --color-comment-tag-text: #abb2bf;
+  --color-comment-tag: #1e2127;
   
-  /* 警告背景 */
-  --dark-color-background-warning: #bebe00;
-  --dark-color-warning-text: #222;
+  /* 覆盖TypeDoc内置变量 - 警告背景 */
+  --color-background-warning: #e5c07b;
+  --color-warning-text: #1e2127;
   
-  /* 代码高亮背景 */
-  --dark-code-background: #1e1e1e;
+  /* 覆盖TypeDoc内置变量 - 代码高亮背景 */
+  --code-background: #181a1f;
+  
+  /* React主题代码高亮颜色 */
+  --code-keyword: #c678dd;      /* 关键字 - 紫色 */
+  --code-string: #98c379;       /* 字符串 - 绿色 */
+  --code-comment: #5c6370;      /* 注释 - 灰色 */
+  --code-function: #61dafb;     /* 函数名 - React蓝 */
+  --code-number: #d19a66;       /* 数字 - 橙色 */
+  --code-operator: #56b6c2;     /* 操作符 - 青色 */
+  --code-variable: #e06c75;     /* 变量 - 红色 */
+  --code-type: #e5c07b;         /* 类型 - 黄色 */
+  --code-selector: #61dafb;     /* 选择器 - React蓝 */
+  --code-property: #e06c75;     /* 属性 - 红色 */
 }
 
 /* OS主题在浅色模式下的样式 */
 @media (prefers-color-scheme: light) {
   :root[data-theme="os"] {
-      /* 主背景色 - 流行的浅米色系 */
-      --color-background: #fefefe;
+      /* 主背景色 - Vue主题浅色风格 */
+      --color-background: #ffffff;
       --color-background-secondary: #f8f9fa;
       --color-background-active: #e9ecef;
       
-      /* 文字颜色 - 流行的深色系 */
-      --color-text: #212529;
-      --color-contrast-text: #000000;
+      /* 文字颜色 - Vue主题文字风格 */
+      --color-text: #2c3e50;
+      --color-contrast-text: #ffffff;
       --color-text-aside: #6c757d;
       
-      /* 边框和强调色 - 流行的灰色系 */
+      /* 边框和强调色 - Vue主题风格 */
       --color-accent: #dee2e6;
-      --color-active-menu-item: #e9ecef;
+      --color-active-menu-item: #42b883;
       
-      /* 链接颜色 */
-      --color-link: #0d6efd;
-      --color-focus-outline: #0a58ca;
+      /* 链接颜色 - Vue主题绿色 */
+      --color-link: #42b883;
+      --color-focus-outline: #369870;
       
       /* 图标背景和文字 */
       --color-icon-background: #f8f9fa;
-      --color-icon-text: #212529;
+      --color-icon-text: #2c3e50;
       
       /* 注释标签 */
-      --color-comment-tag-text: #212529;
-      --color-comment-tag: #fefefe;
+      --color-comment-tag-text: #2c3e50;
+      --color-comment-tag: #ffffff;
       
       /* 警告背景 */
       --color-background-warning: #fff3cd;
@@ -105,44 +130,69 @@
       
       /* 代码高亮背景 */
       --code-background: #f8f9fa;
+      
+      /* Vue主题代码高亮颜色 */
+      --code-keyword: #42b883;      /* 关键字 - Vue绿色 */
+      --code-string: #e74c3c;       /* 字符串 - 红色 */
+      --code-comment: #95a5a6;      /* 注释 - 灰色 */
+      --code-function: #3498db;     /* 函数名 - 蓝色 */
+      --code-number: #e67e22;       /* 数字 - 橙色 */
+      --code-operator: #9b59b6;     /* 操作符 - 紫色 */
+      --code-variable: #2c3e50;     /* 变量 - 深灰色 */
+      --code-type: #f39c12;         /* 类型 - 黄色 */
+      --code-selector: #42b883;     /* 选择器 - Vue绿色 */
+      --code-property: #34495e;     /* 属性 - 深灰色 */
   }
 }
 
 /* OS主题在深色模式下的样式 */
 @media (prefers-color-scheme: dark) {
   :root[data-theme="os"] {
-      /* 主背景色 - 流行的深色系 */
-      --color-background: #2b2e33;
-      --color-background-secondary: #1e2024;
-      --color-background-active: #5d5d6a;
+      /* 主背景色 - React主题深色风格，稍微深一些 */
+      --color-background: #1e2127;
+      --color-background-secondary: #181a1f;
+      --color-background-active: #2f333a;
       
-      /* 文字颜色 - 流行的浅色系 */
-      --color-text: #f5f5f5;
+      /* 文字颜色 - React主题文字风格 */
+      --color-text: #abb2bf;
       --color-contrast-text: #ffffff;
-      --color-text-aside: #dddddd;
+      --color-text-aside: #5c6370;
+      --color-text-bright: #ffffff;
       
-      /* 边框和强调色 - 流行的灰色系 */
-      --color-accent: #9096a2;
-      --color-active-menu-item: #5d5d6a;
+      /* 边框和强调色 - React主题风格 */
+      --color-accent: #2f333a;
+      --color-active-menu-item: #4a5568;
       
-      /* 链接颜色 */
-      --color-link: #00aff4;
-      --color-focus-outline: #4c97f2;
+      /* 链接颜色 - React主题蓝色 */
+      --color-link: #61dafb;
+      --color-focus-outline: #61dafb;
       
       /* 图标背景和文字 */
-      --color-icon-background: #1e2024;
-      --color-icon-text: #f5f5f5;
+      --color-icon-background: #181a1f;
+      --color-icon-text: #abb2bf;
       
       /* 注释标签 */
-      --color-comment-tag-text: #f5f5f5;
-      --color-comment-tag: #2b2e33;
+      --color-comment-tag-text: #abb2bf;
+      --color-comment-tag: #1e2127;
       
       /* 警告背景 */
-      --color-background-warning: #bebe00;
-      --color-warning-text: #222;
+      --color-background-warning: #e5c07b;
+      --color-warning-text: #1e2127;
       
       /* 代码高亮背景 */
-      --code-background: #1e1e1e;
+      --code-background: #181a1f;
+      
+      /* React主题代码高亮颜色 */
+      --code-keyword: #c678dd;      /* 关键字 - 紫色 */
+      --code-string: #98c379;       /* 字符串 - 绿色 */
+      --code-comment: #5c6370;      /* 注释 - 灰色 */
+      --code-function: #61dafb;     /* 函数名 - React蓝 */
+      --code-number: #d19a66;       /* 数字 - 橙色 */
+      --code-operator: #56b6c2;     /* 操作符 - 青色 */
+      --code-variable: #e06c75;     /* 变量 - 红色 */
+      --code-type: #e5c07b;         /* 类型 - 黄色 */
+      --code-selector: #61dafb;     /* 选择器 - React蓝 */
+      --code-property: #e06c75;     /* 属性 - 红色 */
   }
 }
 
@@ -184,7 +234,7 @@
   border: 1px solid var(--color-accent);
   border-radius: 8px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: var(--color-background);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
@@ -192,7 +242,7 @@
 [data-theme="light"] .tsd-tag-description::before {
   content: '💡 查看答案';
   display: block;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-background-secondary) 100%);
   border-bottom: 1px solid var(--color-accent);
   padding: 12px 16px;
   cursor: pointer;
@@ -205,7 +255,7 @@
 }
 
 [data-theme="light"] .tsd-tag-description::before:hover {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, var(--color-background-secondary) 0%, var(--color-background-active) 100%);
   color: var(--color-contrast-text);
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -230,35 +280,35 @@
 [data-theme="light"] .tsd-tag-description.expanded::before {
   content: '💡 收起答案';
   background: linear-gradient(135deg, var(--color-link) 0%, var(--color-focus-outline) 100%);
-  color: #ffffff;
+  color: var(--color-contrast-text);
   border-bottom-color: var(--color-link);
 }
 
 [data-theme="light"] .tsd-tag-description.expanded::after {
   transform: rotate(180deg);
-  color: #ffffff;
+  color: var(--color-contrast-text);
 }
 
 [data-theme="light"] .tsd-tag-description.expanded > * {
   display: block !important;
   margin: 0 !important;
-  background-color: #ffffff !important;
+  background-color: var(--color-background) !important;
   border-left: 3px solid var(--color-link);
   animation: slideInFade 0.4s ease-out;
 }
 
 [data-theme="light"] .tsd-tag-description.expanded pre {
-  background-color: #f8f9fa !important;
+  background-color: var(--color-background-secondary) !important;
 }
 
 [data-theme="light"] .tsd-tag-description.expanded pre button {
-  background: #ffffff;
+  background: var(--color-background);
   border: 1px solid var(--color-accent);
   color: var(--color-text);
 }
 
 [data-theme="light"] .tsd-tag-description.expanded pre button:hover {
-  background: #f8f9fa;
+  background: var(--color-background-secondary);
   border-color: var(--color-link);
   color: var(--color-contrast-text);
 }
@@ -315,7 +365,7 @@
 
 [data-theme="dark"] .tsd-tag-description.expanded::before {
   content: '💡 收起答案';
-  background: linear-gradient(135deg, var(--color-link) 0%, var(--color-focus-outline) 100%);
+  background: linear-gradient(135deg, #2d5a7a 0%, #1e3a5f 100%);
   color: var(--color-contrast-text);
   border-bottom-color: var(--color-link);
 }
@@ -568,7 +618,7 @@
 
 [data-theme="os"] .tsd-tag-description.expanded::before {
   content: '💡 收起答案';
-  background: linear-gradient(135deg, var(--color-link) 0%, var(--color-focus-outline) 100%);
+  background: linear-gradient(135deg, #2d5a7a 0%, #1e3a5f 100%);
   color: var(--color-contrast-text);
   border-bottom-color: var(--color-link);
 }
@@ -600,5 +650,342 @@
   background: var(--color-background-secondary);
   border-color: var(--color-link);
   color: var(--color-contrast-text);
+}
+
+/* React主题代码高亮样式 - Dark主题 */
+[data-theme="dark"] pre code,
+[data-theme="dark"] .tsd-tag-description pre code {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] pre code .keyword,
+[data-theme="dark"] .tsd-tag-description pre code .keyword {
+  color: var(--code-keyword) !important;
+}
+
+[data-theme="dark"] pre code .string,
+[data-theme="dark"] .tsd-tag-description pre code .string {
+  color: var(--code-string) !important;
+}
+
+[data-theme="dark"] pre code .comment,
+[data-theme="dark"] .tsd-tag-description pre code .comment {
+  color: var(--code-comment) !important;
+}
+
+[data-theme="dark"] pre code .function,
+[data-theme="dark"] .tsd-tag-description pre code .function {
+  color: var(--code-function) !important;
+}
+
+[data-theme="dark"] pre code .number,
+[data-theme="dark"] .tsd-tag-description pre code .number {
+  color: var(--code-number) !important;
+}
+
+[data-theme="dark"] pre code .operator,
+[data-theme="dark"] .tsd-tag-description pre code .operator {
+  color: var(--code-operator) !important;
+}
+
+[data-theme="dark"] pre code .variable,
+[data-theme="dark"] .tsd-tag-description pre code .variable {
+  color: var(--code-variable) !important;
+}
+
+[data-theme="dark"] pre code .type,
+[data-theme="dark"] .tsd-tag-description pre code .type {
+  color: var(--code-type) !important;
+}
+
+[data-theme="dark"] pre code .selector,
+[data-theme="dark"] .tsd-tag-description pre code .selector {
+  color: var(--code-selector) !important;
+}
+
+[data-theme="dark"] pre code .property,
+[data-theme="dark"] .tsd-tag-description pre code .property {
+  color: var(--code-property) !important;
+}
+
+/* React主题代码高亮样式 - OS主题深色模式 */
+@media (prefers-color-scheme: dark) {
+  [data-theme="os"] pre code,
+  [data-theme="os"] .tsd-tag-description pre code {
+    color: var(--color-text);
+  }
+
+  [data-theme="os"] pre code .keyword,
+  [data-theme="os"] .tsd-tag-description pre code .keyword {
+    color: var(--code-keyword) !important;
+    }
+
+  [data-theme="os"] pre code .string,
+  [data-theme="os"] .tsd-tag-description pre code .string {
+    color: var(--code-string) !important;
+    }
+    
+  [data-theme="os"] pre code .comment,
+  [data-theme="os"] .tsd-tag-description pre code .comment {
+    color: var(--code-comment) !important;
+  }
+
+  [data-theme="os"] pre code .function,
+  [data-theme="os"] .tsd-tag-description pre code .function {
+    color: var(--code-function) !important;
+    }
+    
+  [data-theme="os"] pre code .number,
+  [data-theme="os"] .tsd-tag-description pre code .number {
+    color: var(--code-number) !important;
+    }
+    
+  [data-theme="os"] pre code .operator,
+  [data-theme="os"] .tsd-tag-description pre code .operator {
+    color: var(--code-operator) !important;
+    }
+
+  [data-theme="os"] pre code .variable,
+  [data-theme="os"] .tsd-tag-description pre code .variable {
+    color: var(--code-variable) !important;
+    }
+    
+  [data-theme="os"] pre code .type,
+  [data-theme="os"] .tsd-tag-description pre code .type {
+    color: var(--code-type) !important;
+    }
+    
+  [data-theme="os"] pre code .selector,
+  [data-theme="os"] .tsd-tag-description pre code .selector {
+    color: var(--code-selector) !important;
+    }
+    
+  [data-theme="os"] pre code .property,
+  [data-theme="os"] .tsd-tag-description pre code .property {
+    color: var(--code-property) !important;
+    }
+}
+
+/* 绿色系代码高亮样式 - Light主题 */
+[data-theme="light"] pre code,
+[data-theme="light"] .tsd-tag-description pre code {
+  color: var(--color-text);
+}
+
+[data-theme="light"] pre code .keyword,
+[data-theme="light"] .tsd-tag-description pre code .keyword {
+  color: var(--code-keyword) !important;
+}
+
+[data-theme="light"] pre code .string,
+[data-theme="light"] .tsd-tag-description pre code .string {
+  color: var(--code-string) !important;
+}
+
+[data-theme="light"] pre code .comment,
+[data-theme="light"] .tsd-tag-description pre code .comment {
+  color: var(--code-comment) !important;
+}
+
+[data-theme="light"] pre code .function,
+[data-theme="light"] .tsd-tag-description pre code .function {
+  color: var(--code-function) !important;
+}
+
+[data-theme="light"] pre code .number,
+[data-theme="light"] .tsd-tag-description pre code .number {
+  color: var(--code-number) !important;
+}
+
+[data-theme="light"] pre code .operator,
+[data-theme="light"] .tsd-tag-description pre code .operator {
+  color: var(--code-operator) !important;
+}
+
+[data-theme="light"] pre code .variable,
+[data-theme="light"] .tsd-tag-description pre code .variable {
+  color: var(--code-variable) !important;
+}
+
+[data-theme="light"] pre code .type,
+[data-theme="light"] .tsd-tag-description pre code .type {
+  color: var(--code-type) !important;
+}
+
+[data-theme="light"] pre code .selector,
+[data-theme="light"] .tsd-tag-description pre code .selector {
+  color: var(--code-selector) !important;
+}
+
+[data-theme="light"] pre code .property,
+[data-theme="light"] .tsd-tag-description pre code .property {
+  color: var(--code-property) !important;
+}
+
+/* 绿色系代码高亮样式 - OS主题浅色模式 */
+@media (prefers-color-scheme: light) {
+  [data-theme="os"] pre code,
+  [data-theme="os"] .tsd-tag-description pre code {
+    color: var(--color-text);
+  }
+
+  [data-theme="os"] pre code .keyword,
+  [data-theme="os"] .tsd-tag-description pre code .keyword {
+    color: var(--code-keyword) !important;
+  }
+
+  [data-theme="os"] pre code .string,
+  [data-theme="os"] .tsd-tag-description pre code .string {
+    color: var(--code-string) !important;
+  }
+
+  [data-theme="os"] pre code .comment,
+  [data-theme="os"] .tsd-tag-description pre code .comment {
+    color: var(--code-comment) !important;
+  }
+
+  [data-theme="os"] pre code .function,
+  [data-theme="os"] .tsd-tag-description pre code .function {
+    color: var(--code-function) !important;
+  }
+
+  [data-theme="os"] pre code .number,
+  [data-theme="os"] .tsd-tag-description pre code .number {
+    color: var(--code-number) !important;
+  }
+
+  [data-theme="os"] pre code .operator,
+  [data-theme="os"] .tsd-tag-description pre code .operator {
+    color: var(--code-operator) !important;
+  }
+
+  [data-theme="os"] pre code .variable,
+  [data-theme="os"] .tsd-tag-description pre code .variable {
+    color: var(--code-variable) !important;
+  }
+
+  [data-theme="os"] pre code .type,
+  [data-theme="os"] .tsd-tag-description pre code .type {
+    color: var(--code-type) !important;
+  }
+
+  [data-theme="os"] pre code .selector,
+  [data-theme="os"] .tsd-tag-description pre code .selector {
+    color: var(--code-selector) !important;
+  }
+
+  [data-theme="os"] pre code .property,
+  [data-theme="os"] .tsd-tag-description pre code .property {
+    color: var(--code-property) !important;
+  }
+}
+
+/* Vue主题侧边栏导航样式 - Light主题 */
+[data-theme="light"] .tsd-navigation a:hover,
+[data-theme="light"] .tsd-page-navigation a:hover {
+  background-color: rgba(66, 184, 131, 0.1);
+  color: var(--color-link);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .tsd-navigation a.current,
+[data-theme="light"] .tsd-page-navigation a.current {
+  background: var(--color-active-menu-item);
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(66, 184, 131, 0.2);
+}
+
+/* React主题侧边栏导航样式 - Dark主题 */
+[data-theme="dark"] .tsd-navigation a:hover,
+[data-theme="dark"] .tsd-page-navigation a:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+  color: var(--color-link);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .tsd-navigation a.current,
+[data-theme="dark"] .tsd-page-navigation a.current {
+  background: var(--color-active-menu-item);
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(97, 218, 251, 0.2);
+}
+
+/* Vue主题侧边栏导航样式 - OS主题浅色模式 */
+@media (prefers-color-scheme: light) {
+  [data-theme="os"] .tsd-navigation a:hover,
+  [data-theme="os"] .tsd-page-navigation a:hover {
+    background-color: rgba(66, 184, 131, 0.1);
+    color: var(--color-link);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  [data-theme="os"] .tsd-navigation a.current,
+  [data-theme="os"] .tsd-page-navigation a.current {
+    background: var(--color-active-menu-item);
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(66, 184, 131, 0.2);
+  }
+}
+
+/* React主题侧边栏导航样式 - OS主题深色模式 */
+@media (prefers-color-scheme: dark) {
+  [data-theme="os"] .tsd-navigation a:hover,
+  [data-theme="os"] .tsd-page-navigation a:hover {
+    background-color: var(--color-active-menu-item);
+    color: var(--color-link);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  [data-theme="os"] .tsd-navigation a.current,
+  [data-theme="os"] .tsd-page-navigation a.current {
+    background: var(--color-active-menu-item);
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px var(--color-link-shadow, rgba(97, 218, 251, 0.2));
+  }
+}
+
+/* 深色主题下的图标文字颜色优化 */
+[data-theme="dark"] .tsd-kind-icon ~ span {
+  color: var(--color-text-bright) !important;
+}
+
+/* OS主题深色模式下的图标文字颜色优化 */
+@media (prefers-color-scheme: dark) {
+  [data-theme="os"] .tsd-kind-icon ~ span {
+    color: var(--color-text-bright) !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme="os"] .tsd-tag-description.expanded::before {
+    background: linear-gradient(135deg, var(--color-link) 0%, var(--color-focus-outline) 100%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="os"] .tsd-tag-description.expanded::before {
+    background: linear-gradient(135deg, #2d5a7a 0%, #1e3a5f 100%);
+  }
+}
+
+/* Light主题下的图标文字颜色优化 - 高亮状态 */
+[data-theme="light"] .tsd-navigation a.current .tsd-kind-icon ~ span {
+  color: #f8f9fa !important;
+}
+
+/* OS主题浅色模式下的图标文字颜色优化 - 高亮状态 */
+@media (prefers-color-scheme: light) {
+  [data-theme="os"] .tsd-navigation a.current .tsd-kind-icon ~ span {
+    color: #f8f9fa !important;
+  }
 }
 
