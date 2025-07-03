@@ -30,7 +30,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/739.每日温度.md}
+ * {@include ../../../../../../.typedoc/leetcode/739.每日温度/problem.md}
  *
  *
  *
@@ -38,7 +38,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
  * {@include ../../../../../../.typedoc/notes/739.每日温度.md}
  * {@includeCode ./daily-temperatures.ts/#code}
  *
- * @group 栈与队列
- * @summary ✅ 739.每日温度
+ * @group 栈和队列
+ * @summary {@include ../../../../../../.typedoc/leetcode/739.每日温度/summary.md}
  */
 export const daily_temperatures = dailyTemperatures;

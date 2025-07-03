@@ -40,7 +40,7 @@ function letterCombinations(digits: string): string[] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/17.电话号码的字母组合.md}
+ * {@include ../../../../../../.typedoc/leetcode/17.电话号码的字母组合/problem.md}
  *
  * @description
  * 如果我们把digits转换成对应字母后。实际上题目求的就是从每个字母中选一个字母，然后组合成一个字符串。
@@ -48,19 +48,15 @@ function letterCombinations(digits: string): string[] {
  *
  * 用一个path数组记录递归路径上枚举的字母。
  *
- * **回溯三问**
+ * 回溯三问**
  * - 当前操作？枚举path[i]要填入的字母
  * - 子问题？构造字符串>=i的部分
  * - 下一个子问题？构造字符串>=i+1的部分
  * dfs(i) → dfs(i+1)，递归参数的i的含义是对于>=i的这部分我们还需要枚举。
  *
- *
  * {@includeCode ./letter-combinations-of-a-phone-number.ts/#code}
  *
- *
  * @group 回溯算法
- * @summary #### 17.电话号码的字母组合 ✅
- *
- * 组合型回溯。
+ * @summary {@include ../../../../../../.typedoc/leetcode/17.电话号码的字母组合/summary.md}
  */
 export const letter_combinations_of_a_phone_number = letterCombinations;

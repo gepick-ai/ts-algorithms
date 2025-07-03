@@ -10,14 +10,14 @@ import { TreeNode } from "./types";
 /**
  * Definition for a binary tree node.
  * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
+ * val: number
+ * left: TreeNode | null
+ * right: TreeNode | null
+ * constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
+ * }
  * }
  */
 
@@ -51,7 +51,7 @@ function isValidBST(root: TreeNode | null): boolean {
 // 右子树的所有节点值都大于根节点
 
 /**
- * {@include ../../../../../../.typedoc/problems/98.验证二叉搜索树.md}
+ * {@include ../../../../../../.typedoc/leetcode/98.验证二叉搜索树/problem.md}
  *
  * @description
  * 利用二叉搜索树的中序遍历结果是升序的特性，来判断是否是二叉搜索树。

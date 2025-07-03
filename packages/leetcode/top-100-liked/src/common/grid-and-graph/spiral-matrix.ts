@@ -66,7 +66,7 @@ function spiralOrder(matrix: number[][]): number[] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/54.螺旋矩阵.md}
+ * {@include ../../../../../../.typedoc/leetcode/54.螺旋矩阵/problem.md}
  *
  * @group 网格图
  */

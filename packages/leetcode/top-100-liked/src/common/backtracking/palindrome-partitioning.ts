@@ -40,16 +40,12 @@ function partition(s: string): string[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/131.分割回文串.md}
+ * {@include ../../../../../../.typedoc/leetcode/131.分割回文串/problem.md}
  *
  * @description
- *
  * {@includeCode ./palindrome-partitioning.ts/#code}
  *
  * @group 回溯算法
- *
- * @summary #### 131.分割回文串 ✅
- *
- * 子集型回溯。枚举逗号的位置
+ * @summary {@include ../../../../../../.typedoc/leetcode/131.分割回文串/summary.md}
  */
 export const palindrome_partitioning = partition;

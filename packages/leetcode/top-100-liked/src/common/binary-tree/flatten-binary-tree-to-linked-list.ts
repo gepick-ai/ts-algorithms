@@ -10,19 +10,19 @@ import { TreeNode } from "./types";
 /**
  * Definition for a binary tree node.
  * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
+ * val: number
+ * left: TreeNode | null
+ * right: TreeNode | null
+ * constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
+ * }
  * }
  */
 
 /**
- Do not return anything, modify root in-place instead.
+ * Do not return anything, modify root in-place instead.
  */
 function flatten(root: TreeNode | null): void {
   const orderArr: TreeNode[] = [];
@@ -50,7 +50,7 @@ function _preorderTraverse(root: TreeNode | null, orderArr: TreeNode[]): void {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/114.二叉树展开为链表.md}
+ * {@include ../../../../../../.typedoc/leetcode/114.二叉树展开为链表/problem.md}
  *
  * @group 二叉树
  */

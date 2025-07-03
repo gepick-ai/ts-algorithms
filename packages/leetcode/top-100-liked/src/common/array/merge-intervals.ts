@@ -66,7 +66,7 @@ function merge(intervals: number[][]): number[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/56.合并区间.md}
+ * {@include ../../../../../../.typedoc/leetcode/56.合并区间/problem.md}
  *
  * @group 数组
  */

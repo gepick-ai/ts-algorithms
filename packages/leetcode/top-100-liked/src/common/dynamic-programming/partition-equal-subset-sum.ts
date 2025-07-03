@@ -95,14 +95,11 @@ function canPartition1(nums: number[]): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/416.分割等和子集.md}
+ * {@include ../../../../../../.typedoc/leetcode/416.分割等和子集/problem.md}
  *
  * @description
  * {@includeCode ./partition-equal-subset-sum.ts/#code}
- *
  * @group 动态规划
- * @summary #### 416.分割等和子集 ✅
- *
- * 0-1背包：背包容量：sum / 2 ；物品：nums。
+ * @summary {@include ../../../../../../.typedoc/leetcode/416.分割等和子集/summary.md}
  */
 export const partition_equal_subset_sum = canPartition;

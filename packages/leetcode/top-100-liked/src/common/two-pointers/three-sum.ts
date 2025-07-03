@@ -59,7 +59,7 @@ function threeSum(nums: number[]): number[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/15.三数之和.md}
+ * {@include ../../../../../../.typedoc/leetcode/15.三数之和/problem.md}
  *
  * @description
  * - 先排序
@@ -67,12 +67,8 @@ function threeSum(nums: number[]): number[][] {
  * - 由于可能会有重复的数，所以需要跳过重复的数。
  * - 这里去重的操作关键是：要先移动，拿移动后的来判断。而不是先拿+1或者-1通过计算来判断然后才+1或者-1，因为就算你判断重复了，继续移动还是来到你计算的重复的那个数。并没有真正意义做到去重
  * 所以碰到数要去重，一定要先执行移动操作，然后拿它跟移动前的比较。然后不断判断，知道这个数不再跟移动前的数重复为止，这个数就是新数。
- *
  * {@includeCode ./three-sum.ts/#code}
- *
  * @group 双指针
- * @summary #### 15.三数之和 ✅
- *
- * 排序 + 转换成两数之和 + 去重
+ * @summary {@include ../../../../../../.typedoc/leetcode/15.三数之和/summary.md}
  */
 export const three_sum = threeSum;

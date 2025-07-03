@@ -39,7 +39,7 @@ function partitionLabels(s: string): number[] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/763.划分字母区间.md}
+ * {@include ../../../../../../.typedoc/leetcode/763.划分字母区间/problem.md}
  *
  * @description
  * 算法的核心思想是：每个字符只能出现在一个片段中，所以片段必须包含该字符的所有出现位置。

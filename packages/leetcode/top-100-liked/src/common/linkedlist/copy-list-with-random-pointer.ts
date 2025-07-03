@@ -57,7 +57,7 @@ function copyRandomList(head: _Node | null): _Node | null {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/138.随机链表的复制.md}
+ * {@include ../../../../../../.typedoc/leetcode/138.随机链表的复制/problem.md}
  *
  * @group 链表
  */

@@ -10,12 +10,12 @@ import { ListNode } from "./types";
 /**
  * Definition for singly-linked list.
  * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
+ * val: number
+ * next: ListNode | null
+ * constructor(val?: number, next?: ListNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.next = (next===undefined ? null : next)
+ * }
  * }
  */
 
@@ -65,10 +65,9 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/23.合并K个升序链表.md}
- *
- * @summary 两两合并，循环重置head1和tail
+ * {@include ../../../../../../.typedoc/leetcode/23.合并K个升序链表/problem.md}
  *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/23.合并K个升序链表/summary.md}
  */
 export const merge_k_sorted_lists = mergeKLists;

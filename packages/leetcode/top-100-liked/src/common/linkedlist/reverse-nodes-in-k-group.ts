@@ -10,12 +10,12 @@ import { ListNode } from "./types";
 /**
  * Definition for singly-linked list.
  * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
+ * val: number
+ * next: ListNode | null
+ * constructor(val?: number, next?: ListNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.next = (next===undefined ? null : next)
+ * }
  * }
  */
 
@@ -50,7 +50,7 @@ function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/25.K个一组翻转链表.md}
+ * {@include ../../../../../../.typedoc/leetcode/25.K个一组翻转链表/problem.md}
  *
  * @group 链表
  */

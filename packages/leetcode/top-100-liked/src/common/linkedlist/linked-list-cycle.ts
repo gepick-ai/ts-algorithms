@@ -10,12 +10,12 @@ import { ListNode } from "./types";
 /**
  * Definition for singly-linked list.
  * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
+ * val: number
+ * next: ListNode | null
+ * constructor(val?: number, next?: ListNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.next = (next===undefined ? null : next)
+ * }
  * }
  */
 
@@ -36,7 +36,7 @@ function hasCycle(head: ListNode | null): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/141.环形链表.md}
+ * {@include ../../../../../../.typedoc/leetcode/141.环形链表/problem.md}
  *
  * @description
  * 用set记录遍历过的节点，如果遍历到set中存在的节点，说明有环。

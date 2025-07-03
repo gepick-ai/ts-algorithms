@@ -10,14 +10,14 @@ import { TreeNode } from "./types";
 /**
  * Definition for a binary tree node.
  * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
+ * val: number
+ * left: TreeNode | null
+ * right: TreeNode | null
+ * constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
+ * }
  * }
  */
 
@@ -49,7 +49,7 @@ function _buildTree(
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/105.从前序与中序遍历序列构造二叉树.md}
+ * {@include ../../../../../../.typedoc/leetcode/105.从前序与中序遍历序列构造二叉树/problem.md}
  *
  * @description
  * 通过前序遍历和中序遍历构建二叉树，关键点在于通过不断改变追踪索引，确定新子树的前序遍历和后序遍历的结果。

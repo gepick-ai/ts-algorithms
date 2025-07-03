@@ -45,9 +45,9 @@ function isValid(s: string): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/20.有效的括号.md}
+ * {@include ../../../../../../.typedoc/leetcode/20.有效的括号/problem.md}
  *
- * 
+ *
  *
  * @description
  * 思路：用一个map记录每一个括号的对应关系，再用set记录下左括号
@@ -56,6 +56,6 @@ function isValid(s: string): boolean {
  * 但是这里有个问题，就是如果遇到右括号，但是栈里面没有左括号了，那么就直接返回false
  * 最后判断栈是否为空，如果为空就是true，否则就是false
  *
- *  @group 栈与队列
+ * @group 栈和队列
  */
 export const valid_parentheses = isValid;

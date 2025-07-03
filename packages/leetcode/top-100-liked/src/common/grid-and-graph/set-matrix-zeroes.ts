@@ -6,7 +6,7 @@
 
 // @lc code=start
 /**
- Do not return anything, modify matrix in-place instead.
+ * Do not return anything, modify matrix in-place instead.
  */
 function setZeroes(matrix: number[][]): void {
   const rows = matrix.length;
@@ -47,7 +47,7 @@ function setZeroes(matrix: number[][]): void {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/73.矩阵置零.md}
+ * {@include ../../../../../../.typedoc/leetcode/73.矩阵置零/problem.md}
  *
  * @group 网格图
  */

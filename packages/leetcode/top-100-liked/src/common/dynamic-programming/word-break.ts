@@ -11,7 +11,7 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/139.单词拆分.md}
+ * {@include ../../../../../../.typedoc/leetcode/139.单词拆分/problem.md}
  *
  * @group 动态规划
  */

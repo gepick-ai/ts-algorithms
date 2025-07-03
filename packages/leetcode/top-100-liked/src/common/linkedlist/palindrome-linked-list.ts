@@ -10,12 +10,12 @@ import { ListNode } from "./types";
 /**
  * Definition for singly-linked list.
  * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
+ * val: number
+ * next: ListNode | null
+ * constructor(val?: number, next?: ListNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.next = (next===undefined ? null : next)
+ * }
  * }
  */
 
@@ -45,7 +45,7 @@ function isPalindrome(head: ListNode | null): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/234.回文链表.md}
+ * {@include ../../../../../../.typedoc/leetcode/234.回文链表/problem.md}
  *
  * @description
  * 转字符串判断回文。循环不变的条件是left<=right，兼容奇数和偶数的情况。

@@ -29,17 +29,13 @@ function maxArea(height: number[]): number {
 // @lc code=end
 
 /**
- *
- * {@include ../../../../../../.typedoc/problems/11.盛最多水的容器.md}
+ * {@include ../../../../../../.typedoc/leetcode/11.盛最多水的容器/problem.md}
  *
  * @description
- *
  * {@include ../../../../../../.typedoc/notes/11.盛最多水的容器.md}
  * {@includeCode ./container-with-most-water.ts/#code}
  *
  * @group 双指针
- * @summary ✅ 11.盛最多水的容器
- *
- * 分析柱子高低走法
+ * @summary {@include ../../../../../../.typedoc/leetcode/11.盛最多水的容器/summary.md}
  */
 export const container_with_most_water = maxArea;

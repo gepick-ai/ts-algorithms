@@ -25,9 +25,9 @@ function singleNumber(nums: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/136.只出现一次的数字.md}
+ * {@include ../../../../../../.typedoc/leetcode/136.只出现一次的数字/problem.md}
  *
- * 
+ *
  *
  * @group 其他
  */

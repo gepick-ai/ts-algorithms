@@ -36,24 +36,20 @@
     "compactFolders": true
   },
   "projectDocuments": [
-    ".docs/如何科学刷题.md",
-    ".docs/灵茶山艾府题解.md",
-    ".docs/滑动窗口与双指针.md",
-    ".docs/二分查找.md",
-    ".docs/单调栈.md",
-    ".docs/网格图.md",
-    ".docs/图论算法.md",
-    ".docs/动态规划.md",
-    ".docs/常用数据结构.md",
-    ".docs/数学算法.md",
-    ".docs/贪心算法.md",
-    ".docs/链表、二叉树与回溯.md",
-    ".docs/字符串.md"
+    ".typedoc/0x3f/如何科学刷题.md",
+    ".typedoc/0x3f/灵茶山艾府题解.md",
+    ".typedoc/0x3f/滑动窗口与双指针.md",
+    ".typedoc/0x3f/二分查找.md",
+    ".typedoc/0x3f/单调栈.md",
+    ".typedoc/0x3f/网格图.md",
+    ".typedoc/0x3f/图论算法.md",
+    ".typedoc/0x3f/动态规划.md",
+    ".typedoc/0x3f/常用数据结构.md",
+    ".typedoc/0x3f/数学算法.md",
+    ".typedoc/0x3f/贪心算法.md",
+    ".typedoc/0x3f/链表、二叉树与回溯.md",
+    ".typedoc/0x3f/字符串.md"
   ],
-  "plugin": [
-    "typedoc-github-theme"
-  ],
-  "theme": "typedoc-github-theme",
   "customCss": ".typedoc/custom.css",
   "customJs": ".typedoc/collapsible.js"
 }

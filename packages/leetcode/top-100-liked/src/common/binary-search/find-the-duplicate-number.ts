@@ -52,7 +52,7 @@ function findDuplicate(nums: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/287.寻找重复数.md}
+ * {@include ../../../../../../.typedoc/leetcode/287.寻找重复数/problem.md}
  *
  * @description
  *
@@ -72,14 +72,9 @@ function findDuplicate(nums: number[]): number {
  * 我们继续二分，如果m=5，抽屉的编号是5，表明前五个抽屉它可以放1，2，3，4，5这五个数。此时我们开始从[1,2,3,4,5,5]中逐个看，哪些数能往里头放。
  * 第一个数是1，可以放，第二个数是2，可以放，第三个数是3，可以放。第四个数是4，可以放，第五个数是5，可以放。第六个数是5，可以放。此时我们发现5个抽屉放了6个数。
  * 说明5就是我们要找的那个放了重复数的抽屉。
- *
  * {@includeCode ./find-the-duplicate-number.ts/#code}
  *
  * @group 二分查找
- * @summary #### 287.寻找重复数 ✅
- *
- * 利用鸽巢原理：将 n+1 个整数放入编号为 [1, n] 的抽屉里，必有一个抽屉放了两个数。
- * - 对抽屉编号进行二分，每次猜一个编号 m。
- * - 统计数组中小于等于 编号m 的数字的个数 cnt。表示如果每个抽屉都放一个数，那么最多放 m 个数。cnt > m 说明重复数在 [1, m] 这个范围编号的抽屉里。
+ * @summary {@include ../../../../../../.typedoc/leetcode/287.寻找重复数/summary.md}
  */
 export const find_the_duplicate_number = findDuplicate;

@@ -52,9 +52,8 @@ function orangesRotting(grid: number[][]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/994.腐烂的橘子.md}
+ * {@include ../../../../../../.typedoc/leetcode/994.腐烂的橘子/problem.md}
  *
  * @group 网格图
  */
-
 export const rotting_oranges = orangesRotting;

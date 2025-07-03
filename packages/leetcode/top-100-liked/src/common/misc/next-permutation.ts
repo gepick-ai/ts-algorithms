@@ -6,7 +6,7 @@
 
 // @lc code=start
 /**
- Do not return anything, modify nums in-place instead.
+ * Do not return anything, modify nums in-place instead.
  */
 function nextPermutation(nums: number[]): void {
   // 从右往左，找第一个升序对
@@ -42,9 +42,9 @@ function nextPermutation(nums: number[]): void {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/31.下一个排列.md}
+ * {@include ../../../../../../.typedoc/leetcode/31.下一个排列/problem.md}
  *
- * 
+ *
  *
  * @group 其他
  */

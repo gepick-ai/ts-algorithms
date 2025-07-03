@@ -55,7 +55,7 @@ function lowerBound(nums: number[], target: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/34.在排序数组中查找元素的第一个和最后一个位置.md}
+ * {@include ../../../../../../.typedoc/leetcode/34.在排序数组中查找元素的第一个和最后一个位置/problem.md}
  *
  * @description
  *
@@ -63,28 +63,23 @@ function lowerBound(nums: number[], target: number): number {
  * 其实就是两个任务：
  * - 找第一个`>=target`的数的位置
  * - 找第一个`>=(target+1)`的数的左边位置。但前提是要先找到第一个`>=target`的数的位置。
- *
  * {@includeCode ./find-first-and-last-position-of-element-in-sorted-array.ts/#code}
  *
  * 有序数组上的二分查找常见四种类型：
- *   - ">= x"
- *   - "> x"
- *   - "< x"
- *   - "<= x"
+ * - ">= x"
+ * - "> x"
+ * - "< x"
+ * - "<= x"
  *
  * 这四种类型可以互相转换（假设数组元素为整数）：
- *   - “找 > x 的第一个数”  ⇨ 等价于 “找 >= (x+1) 的第一个数”
- *   - “找 < x 的最后一个数” ⇨ 等价于 “找 >= x 的第一个数的左边一个数”
- *   - “找 <= x 的最后一个数” ⇨ 等价于 “找 > x 的第一个数的左边一个数”，也就是 “找 >= (x+1) 的第一个数的左边一个数”
+ * - “找 > x 的第一个数”  ⇨ 等价于 “找 >= (x+1) 的第一个数”
+ * - “找 < x 的最后一个数” ⇨ 等价于 “找 >= x 的第一个数的左边一个数”
+ * - “找 <= x 的最后一个数” ⇨ 等价于 “找 > x 的第一个数的左边一个数”，也就是 “找 >= (x+1) 的第一个数的左边一个数”
  *
  *
  * 本题要找区间的开始和结束位置，即分别找 >= 和 <=。
  *
  * @group 二分查找
- * @summary #### 34.在排序数组中查找元素的第一个和最后一个位置 ✅
- *
- * 按题目意思其实就是找有序数组当中第一个>=target的数和第一个>=(target+1)的数。不过寻找>=(target+1)的数需要先找到>=target的数。否则中途应该停止继续查找。
- * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。
- * 二分不断确定nums[m]和target的大小关系进行染色。
+ * @summary {@include ../../../../../../.typedoc/leetcode/34.在排序数组中查找元素的第一个和最后一个位置/summary.md}
  */
 export const find_first_and_last_position_of_element_in_sorted_array = searchRange;

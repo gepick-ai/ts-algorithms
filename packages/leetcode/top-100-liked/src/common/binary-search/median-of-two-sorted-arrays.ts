@@ -31,7 +31,7 @@ function findMedianSortedArrays(a: number[], b: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/4.寻找两个正序数组的中位数.md}
+ * {@include ../../../../../../.typedoc/leetcode/4.寻找两个正序数组的中位数/problem.md}
  *
  * @group 二分查找
  *

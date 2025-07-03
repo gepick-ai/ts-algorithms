@@ -10,14 +10,14 @@ import { TreeNode } from "./types";
 /**
  * Definition for a binary tree node.
  * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
+ * val: number
+ * left: TreeNode | null
+ * right: TreeNode | null
+ * constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
+ * }
  * }
  */
 
@@ -47,7 +47,7 @@ function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: Tree
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/236.二叉树的最近公共祖先.md}
+ * {@include ../../../../../../.typedoc/leetcode/236.二叉树的最近公共祖先/problem.md}
  *
  * @group 二叉树
  */

@@ -52,14 +52,11 @@ function numSquares(n: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/279.完全平方数.md}
+ * {@include ../../../../../../.typedoc/leetcode/279.完全平方数/problem.md}
  *
  * @description
  * {@includeCode ./perfect-squares.ts/#code}
- *
  * @group 动态规划
- * @summary #### 279.完全平方数 ✅
- *
- * 完全背包：背包容量：n；物品：nums（所有小于等于n的完全平方数）。
+ * @summary {@include ../../../../../../.typedoc/leetcode/279.完全平方数/summary.md}
  */
 export const perfect_squares = numSquares;

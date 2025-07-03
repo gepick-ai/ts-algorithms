@@ -32,17 +32,12 @@ function uniquePaths(m: number, n: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/62.不同路径.md}
+ * {@include ../../../../../../.typedoc/leetcode/62.不同路径/problem.md}
  *
  * @description
- *
  * {@include ../../../../../../.typedoc/notes/62.不同路径.md}
  * {@includeCode ./unique-paths.ts/#code}
- *
  * @group 动态规划
- * @summary #### 62.不同路径 ✅
- *
- * 机器人从左上角走到右下角，只能向下或者向右走。如果机器人来到(i,j)，那么机器人只能从(i-1,j)向下走一步达到(i,j)，或者从(i, j-1)向右走一步达到(i,j)。
- *
+ * @summary {@include ../../../../../../.typedoc/leetcode/62.不同路径/summary.md}
  */
 export const unique_paths = uniquePaths;

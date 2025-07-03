@@ -52,7 +52,7 @@ function longestPalindrome(s: string): string {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/5.最长回文子串.md}
+ * {@include ../../../../../../.typedoc/leetcode/5.最长回文子串/problem.md}
  *
  * @description
  * 如果s[i] === s[j]，那么s[i..j]是回文串的条件是s[i+1..j-1]是回文串。
@@ -63,13 +63,8 @@ function longestPalindrome(s: string): string {
  * 2. 如果字符串长度只有2，那么只需要判断s[i] === s[j]，即dp[i][i+1] = s[i] === s[j]
  *
  *
- *
  * {@includeCode ./longest-palindromic-substring.ts/#code}
- *
  * @group 动态规划
- * @summary #### 5.最长回文子串 ✅
- *
- * - [i,j]区间内的子串是否是回文串，在满足s[i] === s[j]的前提下，取决于[i+1,j-1]区间内的子串是否是回文串。
- * - 我们可以不断枚举子串长度，然后从左到右枚举左边界，根据左边界和长度计算右边界，然后判断[i,j]区间内的子串是否是回文串。所以动态规划的做法只不过是用dp表记录了是否是回文串，并没比暴力枚举快多少。优化了检查的逻辑，并没有改变时间复杂度。
+ * @summary {@include ../../../../../../.typedoc/leetcode/5.最长回文子串/summary.md}
  */
 export const longest_palindromic_substring = longestPalindrome;

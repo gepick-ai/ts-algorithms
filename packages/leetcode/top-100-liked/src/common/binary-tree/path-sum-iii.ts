@@ -10,14 +10,14 @@ import { TreeNode } from "./types";
 /**
  * Definition for a binary tree node.
  * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
+ * val: number
+ * left: TreeNode | null
+ * right: TreeNode | null
+ * constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.left = (left===undefined ? null : left)
+ * this.right = (right===undefined ? null : right)
+ * }
  * }
  */
 
@@ -56,11 +56,9 @@ function pathSum(root: TreeNode | null, targetSum: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/437.路径总和III.md}
- *
- * 
- * @summary 560.和为K的连续子数组解法一致。将每个遍历到的node作为终点，统计有多少个起点到终点node的路径总和恰好等于targetSum。再转化成前缀和问题。
+ * {@include ../../../../../../.typedoc/leetcode/437.路径总和III/problem.md}
  *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/437.路径总和III/summary.md}
  */
 export const path_sum_iii = pathSum;

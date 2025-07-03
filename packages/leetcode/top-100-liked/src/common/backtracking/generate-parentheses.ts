@@ -70,16 +70,12 @@ function generateParenthesis2(n: number) {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/22.括号生成.md}
+ * {@include ../../../../../../.typedoc/leetcode/22.括号生成/problem.md}
  *
  * @description
- *
- *
  * @includeCode ./generate-parentheses.ts/#code
  *
  * @group 回溯算法
- * @summary #### 22.括号生成 ✅
- *
- * 组合型回溯。
+ * @summary {@include ../../../../../../.typedoc/leetcode/22.括号生成/summary.md}
  */
 export const generate_parentheses = generateParenthesis;

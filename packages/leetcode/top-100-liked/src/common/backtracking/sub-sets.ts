@@ -53,19 +53,13 @@ function subsets2(nums: number[]): number[][] {
 // #endregion code
 
 /**
- * {@include ../../../../../../.typedoc/problems/78.子集.md}
- *
+ * {@include ../../../../../../.typedoc/leetcode/78.子集/problem.md}
  *
  * @description
  * {@include ./README.md}
- *
- *
  * {@includeCode ./sub-sets.ts/#code}
  *
  * @group 回溯算法
- *
- * @summary #### 78.子集 ✅
- *
- * 子集型回溯。
+ * @summary {@include ../../../../../../.typedoc/leetcode/78.子集/summary.md}
  */
 export const sub_sets = subsets;

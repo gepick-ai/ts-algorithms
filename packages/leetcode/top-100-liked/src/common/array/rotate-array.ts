@@ -6,7 +6,7 @@
 
 // @lc code=start
 /**
- Do not return anything, modify nums in-place instead.
+ * Do not return anything, modify nums in-place instead.
  */
 function rotate(nums: number[], k: number): void {
   // 数组长度比k小：
@@ -63,7 +63,7 @@ function rotate(nums: number[], k: number): void {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/189.轮转数组.md}
+ * {@include ../../../../../../.typedoc/leetcode/189.轮转数组/problem.md}
  *
  * @description
  * 找轮转规律，看三个角色的关系：轮转次数k，数组长度nums.length，位置i剩余向右轮转次数maxX = nums.length - i - 1。

@@ -60,8 +60,8 @@ class MinHeap {
   }
 
   /**
-     * 如果父节点的值大于子节点的值，那么就交换父子节点的位置
-     * @param index 从哪里开始上浮
+ * 如果父节点的值大于子节点的值，那么就交换父子节点的位置
+ * @param index 从哪里开始上浮
      */
   swim(index: number): void {
     while (this.els[this.getParentIndex(index)] > this.els[index]) {
@@ -71,11 +71,11 @@ class MinHeap {
   }
 
   /**
-     * - 如果父节点是叶子节点：啥都不做。
-     * - 如果父节点不是叶子节点：
-     *   那就一定至少有一个左节点，那可能有一个右节点。那么我们的策略就是父比两个子的最小还要大，交换它们。直到不满足此条件位置
-     *
-     * @param index 从哪里开始下沉
+ * - 如果父节点是叶子节点：啥都不做。
+ * - 如果父节点不是叶子节点：
+ * 那就一定至少有一个左节点，那可能有一个右节点。那么我们的策略就是父比两个子的最小还要大，交换它们。直到不满足此条件位置
+ *
+ * @param index 从哪里开始下沉
      */
   sink(index: number): void {
     while (true) {
@@ -122,9 +122,9 @@ class MinHeap {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/215.数组中的第K个最大元素.md}
+ * {@include ../../../../../../.typedoc/leetcode/215.数组中的第K个最大元素/problem.md}
  *
- * 
+ *
  *
  * @description
  * 要找第K大元素，我们可以维护一个具有K个元素的小根堆。
@@ -133,6 +133,6 @@ class MinHeap {
  * 由于堆的特性，每次都会heapify，所以堆顶会不断放置新的最小元素。当所有元素放完了，在堆内部调整下，重新推到堆顶的元素就是第K大元素。
  * 换句话说，小根堆不允许存在比堆顶小的元素，只要大就会往下沉。一轮下来，小的都被踢出去了，最后留下的堆顶第K个元素就是第K大元素。
  *
- * @group 栈与队列
+ * @group 栈和队列
  */
 export const kth_largest_element_in_an_array = findKthLargest;

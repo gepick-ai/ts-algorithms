@@ -42,15 +42,12 @@ function findAnagrams(s: string, p: string): number[] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/438.找到字符串中所有字母异位词.md}
+ * {@include ../../../../../../.typedoc/leetcode/438.找到字符串中所有字母异位词/problem.md}
  *
  * @description
- *
  * {@includeCode ./find-all-anagrams-in-a-string.ts/#code}
  *
  * @group 双指针
- * @summary #### 438.找到字符串中所有字母异位词 ✅
- *
- * 维持定长k的窗口，窗口每前进一步，就判断一次窗口中的字符串是否是p的异位词。
+ * @summary {@include ../../../../../../.typedoc/leetcode/438.找到字符串中所有字母异位词/summary.md}
  */
 export const find_all_anagrams_in_a_string = findAnagrams;

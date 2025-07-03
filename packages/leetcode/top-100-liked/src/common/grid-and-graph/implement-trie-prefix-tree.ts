@@ -62,10 +62,9 @@ class TrieNode {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/208.实现Trie(前缀树).md}
- *
- * @summary Trie树
+ * {@include ../../../../../../.typedoc/leetcode/208.实现Trie(前缀树)/problem.md}
  *
  * @group 网格图
+ * @summary {@include ../../../../../../.typedoc/leetcode/208.实现Trie(前缀树)/summary.md}
  */
 export const implement_trie_prefix_tree = Trie;

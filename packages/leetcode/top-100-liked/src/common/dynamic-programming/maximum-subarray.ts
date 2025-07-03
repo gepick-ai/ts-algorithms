@@ -36,14 +36,11 @@ function maxSubArray(nums: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/53.最大子数组和.md}
+ * {@include ../../../../../../.typedoc/leetcode/53.最大子数组和/problem.md}
  *
  * @description
  * {@includeCode ./maximum-subarray.ts/#code}
- *
  * @group 动态规划
- * @summary #### 53.最大子数组和 ✅
- *
- * 以i为终点的子数组，要么与它前面的子数组拼接成一个和更大的子数组，要么就是以i本身为开头和终点的子数组，两者取最大的和就是以i为终点的最大子数组和。
+ * @summary {@include ../../../../../../.typedoc/leetcode/53.最大子数组和/summary.md}
  */
 export const maximum_subarray = maxSubArray;

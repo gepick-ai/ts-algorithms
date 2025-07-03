@@ -37,14 +37,11 @@ function solveNQueens(n: number): string[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/51.N皇后.md}
- *
+ * {@include ../../../../../../.typedoc/leetcode/51.N皇后/problem.md}
  *
  *
  *
  * @group 回溯算法
- * @summary #### 51.N皇后 ✅
- *
- * 排列型回溯。
+ * @summary {@include ../../../../../../.typedoc/leetcode/51.N皇后/summary.md}
  */
 export const n_queens = solveNQueens;

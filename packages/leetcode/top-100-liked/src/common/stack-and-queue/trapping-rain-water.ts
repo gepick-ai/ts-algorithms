@@ -32,9 +32,9 @@ function trap(height: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/42.接雨水.md}
+ * {@include ../../../../../../.typedoc/leetcode/42.接雨水/problem.md}
  *
- * 
+ *
  *
  * @description
  * 单调栈，找到每一个柱子左右两边第一个比它高的柱子，然后计算这个柱子能接多少雨水。
@@ -44,6 +44,6 @@ function trap(height: number[]): number {
  *
  * 用单调栈解决，其实是一行一行寻找雨水。横向查找雨水。每次接完雨水，可以看成填充了柱子。
  *
- * @group 栈与队列
+ * @group 栈和队列
  */
 export const trapping_rain_water = trap;

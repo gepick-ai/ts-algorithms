@@ -44,13 +44,10 @@ function combinationSum(candidates: number[], target: number): number[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/39.组合总和.md}
- *
+ * {@include ../../../../../../.typedoc/leetcode/39.组合总和/problem.md}
  *
  *
  * @group 回溯算法
- * @summary #### 39.组合总和 ✅
- *
- * 组合型回溯。
+ * @summary {@include ../../../../../../.typedoc/leetcode/39.组合总和/summary.md}
  */
 export const combination_sum = combinationSum;

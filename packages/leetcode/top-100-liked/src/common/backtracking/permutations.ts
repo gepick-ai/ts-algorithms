@@ -40,13 +40,10 @@ function permute(nums: number[]): number[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/46.全排列.md}
- *
+ * {@include ../../../../../../.typedoc/leetcode/46.全排列/problem.md}
  *
  *
  * @group 回溯算法
- * @summary #### 46.全排列 ✅
- *
- * 排列型回溯。
+ * @summary {@include ../../../../../../.typedoc/leetcode/46.全排列/summary.md}
  */
 export const permutations = permute;

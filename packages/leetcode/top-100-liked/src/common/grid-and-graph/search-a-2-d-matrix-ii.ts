@@ -44,7 +44,7 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/240.搜索二维矩阵II.md}
+ * {@include ../../../../../../.typedoc/leetcode/240.搜索二维矩阵II/problem.md}
  *
  * @group 网格图
  */

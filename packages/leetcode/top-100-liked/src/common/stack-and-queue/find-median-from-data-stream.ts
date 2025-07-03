@@ -24,8 +24,8 @@ class MedianFinder {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/295.数据流的中位数.md}
+ * {@include ../../../../../../.typedoc/leetcode/295.数据流的中位数/problem.md}
  *
- * @group 栈与队列
+ * @group 栈和队列
  */
 export const find_median_from_data_stream = MedianFinder;

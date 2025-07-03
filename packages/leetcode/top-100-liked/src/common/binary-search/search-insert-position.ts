@@ -37,17 +37,12 @@ function lowerBound(nums: number[], target: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/35.搜索插入位置.md}
+ * {@include ../../../../../../.typedoc/leetcode/35.搜索插入位置/problem.md}
  *
  * @description
- *
  * {@includeCode ./search-insert-position.ts/#code}
  *
  * @group 二分查找
- * @summary #### 35.搜索插入位置 ✅
- * 
- * 按题目意思其实就是找有序数组当中第一个>=target的数。
- * 左闭右开，[l, r)，即r和r右边都是蓝色，l左边都是红色。
- * 二分不断确定nums[m]和target的大小关系进行染色。
+ * @summary {@include ../../../../../../.typedoc/leetcode/35.搜索插入位置/summary.md}
  */
 export const search_insert_position = searchInsert;

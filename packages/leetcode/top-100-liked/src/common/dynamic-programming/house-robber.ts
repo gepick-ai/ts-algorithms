@@ -32,9 +32,8 @@ function rob(nums: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/198.打家劫舍.md}
- *
+ * {@include ../../../../../../.typedoc/leetcode/198.打家劫舍/problem.md}
  * @group 动态规划
- * @summary #### 198.打家劫舍 ✅
+ * @summary {@include ../../../../../../.typedoc/leetcode/198.打家劫舍/summary.md}
  */
 export const house_robber = rob;

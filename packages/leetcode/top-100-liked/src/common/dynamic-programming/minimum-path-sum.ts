@@ -75,14 +75,11 @@ function minPathSum1(grid: number[][]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/64.最小路径和.md}
+ * {@include ../../../../../../.typedoc/leetcode/64.最小路径和/problem.md}
  *
  * @description
  * {@includeCode ./minimum-path-sum.ts/#code}
- *
  * @group 动态规划
- * @summary #### 64.最小路径和 ✅
- *
- * 解法类似62题“不同路径”。区别在于这道题要的是最小路径和，而62题要的是不同路径数。
+ * @summary {@include ../../../../../../.typedoc/leetcode/64.最小路径和/summary.md}
  */
 export const minimum_path_sum = minPathSum;

@@ -47,7 +47,7 @@ function twoSum(nums: number[], target: number): number[] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/1.两数之和.md}
+ * {@include ../../../../../../.typedoc/leetcode/1.两数之和/problem.md}
  *
  * @description
  * 实际上用map是暴力解法的空间换时间优化。
@@ -56,20 +56,16 @@ function twoSum(nums: number[], target: number): number[] {
  * 如果出现过，那么就找到答案了。否则说明在之前的位置没出现过，就把当前数字记住，供后续位置使用。
  * - 暴力解法是，先枚举nums[i]，再看i位置右边是否存在target-nums[i]。
  * - 优化解法是，先看在i位置左边是否存在target-nums[i]。跟暴力解法操作相反。
- *   - 0，左边是空，不存在target-nums[0]
- *   - 1，左边是0，如果0位置的数字是target-nums[1]，那么就找到答案了。
- *   - 2，左边是0和1，如果0和1位置的数字是target-nums[2]，那么就找到答案了。
- *   - 3，左边是0、1和2，如果0、1和2位置的数字是target-nums[3]，那么就找到答案了。
- *   - 4，左边是0、1、2和3，如果0、1、2和3位置的数字是target-nums[4]，那么就找到答案了。
- *   - 5，左边是0、1、2、3和4，如果0、1、2、3和4位置的数字是target-nums[5]，那么就找到答案了。
- *   - 6，左边是0、1、2、3、4和5，如果0、1、2、3、4和5位置的数字是target-nums[6]，那么就找到答案了。
+ * - 0，左边是空，不存在target-nums[0]
+ * - 1，左边是0，如果0位置的数字是target-nums[1]，那么就找到答案了。
+ * - 2，左边是0和1，如果0和1位置的数字是target-nums[2]，那么就找到答案了。
+ * - 3，左边是0、1和2，如果0、1和2位置的数字是target-nums[3]，那么就找到答案了。
+ * - 4，左边是0、1、2和3，如果0、1、2和3位置的数字是target-nums[4]，那么就找到答案了。
+ * - 5，左边是0、1、2、3和4，如果0、1、2、3和4位置的数字是target-nums[5]，那么就找到答案了。
+ * - 6，左边是0、1、2、3、4和5，如果0、1、2、3、4和5位置的数字是target-nums[6]，那么就找到答案了。
  * 所以优化解法相当于不断给后边的数提供候选的差值，只不过是它们放到了map里，而不是在遍历的时候直接查找。先把target-nums[i]放到map里，而暴力解法是先枚举i，然后再去找target-nums[i]。
- *
  * {@includeCode ./two-sum.ts/#code}
- *
  * @group 哈希表
- * @summary #### 1.两数之和 ✅
- *
- * 不断枚举位置i，我们看i的左边那些存在map中的数里头，是否有我们需要的差值数，题目说了一定有一个答案，那一趟遍历下来一定能找到答案。
+ * @summary {@include ../../../../../../.typedoc/leetcode/1.两数之和/summary.md}
  */
 export const two_sum = twoSum;

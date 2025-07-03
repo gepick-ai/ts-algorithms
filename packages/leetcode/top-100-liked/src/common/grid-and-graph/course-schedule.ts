@@ -44,11 +44,9 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/207.课程表.md}
- *
- * 
- * @summary 三色标记法 + dfs
+ * {@include ../../../../../../.typedoc/leetcode/207.课程表/problem.md}
  *
  * @group 网格图
+ * @summary {@include ../../../../../../.typedoc/leetcode/207.课程表/summary.md}
  */
 export const course_schedule = canFinish;

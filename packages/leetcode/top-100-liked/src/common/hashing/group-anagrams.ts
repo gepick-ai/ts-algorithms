@@ -30,17 +30,13 @@ function groupAnagrams(strs: string[]): string[][] {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/49.字母异位词分组.md}
+ * {@include ../../../../../../.typedoc/leetcode/49.字母异位词分组/problem.md}
  *
  * @description
  * 如果是字母异位词，那么排序后，字母的顺序是相同的。我们将排序后的字符串当作key，将字母异位词分组当作value存入map当中。
  * 你只需要通过转换每个字符串获取map的key就可以找到自己应该去的单词分组，加入这个分组即可。
- *
  * {@includeCode ./group-anagrams.ts/#code}
- *
  * @group 哈希表
- * @summary #### 49.字母异位词分组 ✅
- *
- * 异位词排序后可以得到同一个单词，该单词作为map key，value是所有异位词的集合。所以只需要转换每个异位词排序后的单词，如果是一样的，都会找到map同一个key，进入自己的分组就好了。
+ * @summary {@include ../../../../../../.typedoc/leetcode/49.字母异位词分组/summary.md}
  */
 export const group_anagrams = groupAnagrams;

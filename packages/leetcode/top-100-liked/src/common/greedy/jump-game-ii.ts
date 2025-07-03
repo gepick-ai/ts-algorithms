@@ -41,7 +41,7 @@ function jump(nums: number[]): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/45.跳跃游戏II.md}
+ * {@include ../../../../../../.typedoc/leetcode/45.跳跃游戏II/problem.md}
  *
  * @group 贪心算法
  */

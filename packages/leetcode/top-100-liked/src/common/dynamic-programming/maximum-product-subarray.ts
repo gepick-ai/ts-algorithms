@@ -31,12 +31,8 @@ function maxProduct(nums: number[]): number {
 // @lc code=end
 
 /**
- * {@include  ../../../../../../.typedoc/problems/152.乘积最大子数组.md}
- *
+ * {@include ../../../../../../.typedoc/leetcode/152.乘积最大子数组/problem.md}
  * @group 动态规划
- * @summary #### 152.乘积最大子数组 ✅
- *
- * - 这道题不具备最优子结构，所以不能用一个dp来解决。维护两个dp，其中minDp[i]代表以i为终点的子数组的最小乘积，maxDp[i]代表以i为终点的子数组的最大乘积。
- * - 最小乘积* nums[i]可能变大，最大乘积* nums[i]可能变小。
+ * @summary {@include ../../../../../../.typedoc/leetcode/152.乘积最大子数组/summary.md}
  */
 export const maximum_product_subarray = maxProduct;

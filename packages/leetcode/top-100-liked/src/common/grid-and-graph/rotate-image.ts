@@ -6,7 +6,7 @@
 
 // @lc code=start
 /**
- Do not return anything, modify matrix in-place instead.
+ * Do not return anything, modify matrix in-place instead.
  */
 function rotate(matrix: number[][]): void {
   // 规律是从left bottom -> left top -> right top -> right bottom依次替换这些位置的数。比如
@@ -109,7 +109,7 @@ function rotate(matrix: number[][]): void {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/48.旋转图像.md}
+ * {@include ../../../../../../.typedoc/leetcode/48.旋转图像/problem.md}
  *
  * @group 网格图
  */

@@ -72,7 +72,7 @@ function exist(board: string[][], word: string): boolean {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/79.单词搜索.md}
+ * {@include ../../../../../../.typedoc/leetcode/79.单词搜索/problem.md}
  *
  *
  *
@@ -82,8 +82,6 @@ function exist(board: string[][], word: string): boolean {
  * 关键点3: 四个方向只要有一个为true，直接返回，不需要继续尝试其他方向了。
  *
  * @group 回溯算法
- * @summary #### 79.单词搜索 ✅
- *
- * 网格图 + 回溯
+ * @summary {@include ../../../../../../.typedoc/leetcode/79.单词搜索/summary.md}
  */
 export const word_search = exist;

@@ -10,12 +10,12 @@ import { ListNode } from "./types";
 /**
  * Definition for singly-linked list.
  * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
+ * val: number
+ * next: ListNode | null
+ * constructor(val?: number, next?: ListNode | null) {
+ * this.val = (val===undefined ? 0 : val)
+ * this.next = (next===undefined ? null : next)
+ * }
  * }
  */
 
@@ -40,7 +40,7 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/160.相交链表.md}
+ * {@include ../../../../../../.typedoc/leetcode/160.相交链表/problem.md}
  *
  * @description
  * 判断两段链表是否有交点，拿set放入一条链表所有节点，然后遍历另一条链表，如果set中存在越靠前遍历到的节点，说明就是交点。

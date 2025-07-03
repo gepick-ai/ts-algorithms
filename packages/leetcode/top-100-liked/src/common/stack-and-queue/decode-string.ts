@@ -80,26 +80,9 @@ function decodeString1(s: string): string {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/394.字符串解码.md}
+ * {@include ../../../../../../.typedoc/leetcode/394.字符串解码/problem.md}
  *
- * 
- * @summary 双栈，看到「[」保存状态、重置状态，看到「]」恢复状态、处理。（本质：状态机思维，碰到一类字符先累加状态。）
- *
- * @description
- * 1.有分层的概念：比如 3[a2[c]] ， 每一对括号就是一层。"3[a2[c]]" 等价于 "3(a(2(c)))"。遇到 [ 就进入新的一层
- *
- * 数 '[' 的个数
- * "3[a2[c]]"
- *    ^  ^
- *    1  2
- *
- * 有2个 '['，所以有3层
- * 第1层：最外层（没有 '[' 的部分）
- * 第2层：第一个 '[' 到第一个 ']'
- * 第3层：第二个 '[' 到第二个 ']'
- *
- * {@includeCode ./decode-string.ts/#code}
- *
- * @group 栈与队列
+ * @group 栈和队列
+ * @summary {@include ../../../../../../.typedoc/leetcode/394.字符串解码/summary.md}
  */
 export const decode_string = decodeString;

@@ -28,8 +28,7 @@ function lengthOfLongestSubstring(s: string): number {
 // @lc code=end
 
 /**
- *
- * {@include ../../../../../../.typedoc/problems/3.无重复字符的最长子串.md}
+ * {@include ../../../../../../.typedoc/leetcode/3.无重复字符的最长子串/problem.md}
  *
  * @description
  * 本题用滑动窗口和Map记录字符出现次数的方法，寻找最长无重复子串。
@@ -40,12 +39,9 @@ function lengthOfLongestSubstring(s: string): number {
  * - 每次窗口合法（没有重复字符）时，更新最长子串的长度。
  * - 最后返回最长的长度。
  * 形象比喻：就像用尺子量一段没有重复字母的区间，遇到重复就从左边一个个移出，直到没有重复为止。
- *
  * {@includeCode ./longest-substring-without-repeating-characters.ts/#code}
  *
  * @group 双指针
- * @summary #### 3.无重复字符的最长子串 ✅
- *  
- * 滑动窗口 + Map记录次数。碰到一个字符，记录对应次数。如果次数大于1，不断收缩窗口。直到碰到的那个字符在窗口中的次数不再大于1为止。实时更新最大值。
+ * @summary {@include ../../../../../../.typedoc/leetcode/3.无重复字符的最长子串/summary.md}
  */
 export const longest_substring_without_repeating_characters = lengthOfLongestSubstring;

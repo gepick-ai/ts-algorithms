@@ -60,9 +60,9 @@ class LRUCache {
   }
 
   /**
-        * O(1)
-        * 如果key存在，返回key对应的value
-        * 如果key不存在，返回-1
+ * O(1)
+ * 如果key存在，返回key对应的value
+ * 如果key不存在，返回-1
         */
   get(key: number): number {
     const node = this.getNode(key);
@@ -77,8 +77,8 @@ class LRUCache {
   }
 
   /**
-       * 如果key存在，变更key对应的value；
-       * 如果key不存在，插入key。（如果插入的时候超出了容量capacity，那么应该放弃最久没使用的key）
+ * 如果key存在，变更key对应的value；
+ * 如果key不存在，插入key。（如果插入的时候超出了容量capacity，那么应该放弃最久没使用的key）
        */
   put(key: number, value: number): void {
     const node = this.getNode(key);
@@ -147,8 +147,8 @@ class LRUCache {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/146.LRU缓存.md}
-
+ * {@include ../../../../../../.typedoc/leetcode/146.LRU缓存/problem.md}
+ *
  *
  * @description
  * 题目要求get和put时间复杂度在O(1)。那么需要找到符合get或者put复杂度在O(1)内，符合这样的常见结构有链表、哈希表、数组，同时满足的只有map。但是map没法表达“最久没用”这个概念，同时我们还需要在超出容量的时候O(1)删除最久没用的key，因此我们想到双链表：

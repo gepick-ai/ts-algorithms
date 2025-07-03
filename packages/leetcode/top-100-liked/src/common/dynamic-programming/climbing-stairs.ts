@@ -26,10 +26,9 @@ function climbStairs(n: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/70.爬楼梯.md}
- * 
+ * {@include ../../../../../../.typedoc/leetcode/70.爬楼梯/problem.md}
  *
  * @group 动态规划
- * @summary #### 70.爬楼梯 ✅
+ * @summary {@include ../../../../../../.typedoc/leetcode/70.爬楼梯/summary.md}
  */
 export const climbing_stairs = climbStairs;

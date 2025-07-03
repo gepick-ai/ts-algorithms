@@ -130,9 +130,9 @@ function subarraySum(nums: number[], k: number): number {
 // @lc code=end
 
 /**
- * {@include ../../../../../../.typedoc/problems/560.和为K的子数组.md}
+ * {@include ../../../../../../.typedoc/leetcode/560.和为K的子数组/problem.md}
  *
- * 
+ *
  *
  * @description
  * 前缀和s[i] = nums[0] + nums[1] + ... + nums[i-1]，表示下标[0,i-1]前缀的和。
