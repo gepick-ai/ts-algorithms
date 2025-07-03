@@ -50,6 +50,10 @@
     ".typedoc/0x3f/链表、二叉树与回溯.md",
     ".typedoc/0x3f/字符串.md"
   ],
-  "customCss": ".typedoc/custom.css",
-  "customJs": ".typedoc/collapsible.js"
+  "customCss": [
+    ".typedoc/assets/custom.css"
+  ],
+  "customJs": [
+    ".typedoc/assets/collapsible.js"
+  ]
 }
