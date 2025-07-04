@@ -5,45 +5,48 @@
  */
 
 // @lc code=start
-function trap(height: number[]): number {
-  let result = 0;
-  const stack: number[] = [0];
 
-  for (let i = 1; i < height.length; i++) {
-    while (stack.length > 0 && height[i] > height[stack[stack.length - 1]]) {
-      const top = stack.pop()!;
+// #region code
+function trap(hs: number[]): number {
+  const n = hs.length;
+  let ans = 0;
+  const st: number[] = [0]; // 维护递减单调栈，存储索引
 
-      if (stack.length === 0) {
+  for (let i = 1; i < n; i++) {
+    // 当遇到比栈顶高的柱子时，可以计算接水量
+    while (st.length > 0 && hs[i] > hs[st[st.length - 1]]) {
+      const top = st.pop()!;
+
+      // 如果栈为空，说明左边没有更高的柱子，无法接水
+      if (st.length === 0) {
         break;
       }
 
-      const left = stack[stack.length - 1];
-      const h = Math.min(height[i], height[left]) - height[top];
-      const w = i - left - 1;
+      // 计算接水量：宽度 * 高度
+      const l = st[st.length - 1]; // 左边第一个比top高的柱子
+      const w = i - l - 1; // 宽度
+      const h = Math.min(hs[i], hs[l]) - hs[top]; // 高度
 
-      result += h * w;
+      ans += w * h;
     }
 
-    stack.push(i);
+    st.push(i);
   }
 
-  return result;
-};
+  return ans;
+}
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/42.接雨水/problem.md}
  *
- *
- *
  * @description
- * 单调栈，找到每一个柱子左右两边第一个比它高的柱子，然后计算这个柱子能接多少雨水。
- * 如果你找到比当前栈顶要大的元素，那么你只要尝试查看栈顶前面是否还有元素，有这个元素就是左边第一个比他大的元素。
- * 这样子就能够拿到当前柱子左右两边第一个比它高的柱子。结算答案即可。
- * 不断维持单调栈，直到答案找完为止。
- *
- * 用单调栈解决，其实是一行一行寻找雨水。横向查找雨水。每次接完雨水，可以看成填充了柱子。
+ * {@include ../../../../../../.typedoc/leetcode/42.接雨水/description.md}
+ * {@includeCode ./trapping-rain-water.ts#code}
  *
  * @group 栈和队列
+ * @summary {@include ../../../../../../.typedoc/leetcode/42.接雨水/summary.md}
  */
 export const trapping_rain_water = trap;

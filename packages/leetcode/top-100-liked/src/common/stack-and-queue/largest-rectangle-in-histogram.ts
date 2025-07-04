@@ -12,24 +12,19 @@
 function largestRectangleArea(hs: number[]): number {
   const n = hs.length;
   let st: number[] = [];
-  const lMin: number[] = new Array(n).fill(-1);
-  const rMin: number[] = new Array(n).fill(n);
+  const lSt: number[] = new Array(n).fill(-1);
+  const rSt: number[] = new Array(n).fill(n);
 
   // 找每个数右边第一个比它小的位置
   for (let i = 0; i < n; i++) {
     while (st.length && hs[st[st.length - 1]] > hs[i]) {
       const j = st.pop()!;
-      rMin[j] = i;
+      rSt[j] = i;
     }
 
-    st.push(i);
-  }
-
-  st.length = 0;
-  for (let i = n - 1; i >= 0; i--) {
-    while (st.length && hs[st[st.length - 1]] > hs[i]) {
-      const j = st.pop()!;
-      lMin[j] = i;
+    // 如果栈为空，说明左边没有比它小的位置
+    if (st.length !== 0) {
+      lSt[i] = st[st.length - 1];
     }
 
     st.push(i);
@@ -40,10 +35,12 @@ function largestRectangleArea(hs: number[]): number {
   // 相对于暴力，我们相当于预处理了当前柱子的左右边界
   let ans = hs[0];
   for (let i = 0; i < n; i++) {
-    let l = lMin[i];
-    let r = rMin[i];
+    let l = lSt[i];
+    let r = rSt[i];
 
-    ans = Math.max(((r - 1) - (l + 1) + 1) * hs[i], ans);
+    const w = (r - 1) - (l + 1) + 1;
+    const h = hs[i];
+    ans = Math.max(w * h, ans);
   }
 
   return ans;
