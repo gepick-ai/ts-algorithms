@@ -32,7 +32,7 @@ function maxArea(height: number[]): number {
  * {@include ../../../../../../.typedoc/leetcode/11.盛最多水的容器/problem.md}
  *
  * @description
- * {@include ../../../../../../.typedoc/notes/11.盛最多水的容器.md}
+ * {@include ../../../../../../.typedoc/leetcode/11.盛最多水的容器/description.md}
  * {@includeCode ./container-with-most-water.ts/#code}
  *
  * @group 双指针

@@ -5,75 +5,37 @@
  */
 
 // @lc code=start
+
 // #region code
 function decodeString(s: string): string {
-  const stack1: number[] = [];
-  const stack2: string[] = [];
-  let curTimes = 0;
-  let curStr = '';
+  const st1: number[] = []; // 数字栈
+  const st2: string[] = []; // 字母栈
+  let accNum: number = 0; // 当前累积的数字
+  let accStr: string = ''; // 当前累积的字母
 
-  // 可能碰到的字符：数字 、字母 、[ 、 ]
-  // 其中真正需要入栈的只有数字和字母
-  // 而[ 和 ] 只是用来保存状态和恢复状态的占位符，它们就相当于一个开关
   for (let i = 0; i < s.length; i++) {
-    // 遇到数字，构建多位数(数字不一定是个位 有可能是十位，百位等)
     if (s[i] >= '0' && s[i] <= '9') {
-      curTimes = curTimes * 10 + (+s[i]);
+      accNum = accNum * 10 + (+s[i]);
     }
-    // 保存状态，重置
+    else if (s[i].charCodeAt(0) - 'a'.charCodeAt(0) >= 0 && s[i].charCodeAt(0) - 'a'.charCodeAt(0) <= 25) {
+      accStr += s[i];
+    }
     else if (s[i] === '[') {
-      // 遇到左括号，将当前数字和字符串入栈
-      stack1.push(curTimes);
-      stack2.push(curStr);
-      // 重置当前状态
-      curTimes = 0;
-      curStr = '';
+      st1.push(accNum);
+      st2.push(accStr);
+
+      accNum = 0;
+      accStr = '';
     }
-    // 恢复状态，处理
-    else if (s[i] === ']') {
-      // 遇到右括号，开始解码
-      const preStr = stack2.pop()!;
-      const times = stack1.pop()!;
-      // 重复字符串
-      curStr = preStr + curStr.repeat(times);
-    }
-    // 遇到字母，直接添加到当前字符串
     else {
-      curStr += s[i];
+      const times = st1.pop()!;
+      const prevStr = st2.pop()!;
+
+      accStr = prevStr + accStr.repeat(times);
     }
   }
 
-  return curStr;
-}
-
-// 递归版本的思路
-function decodeString1(s: string): string {
-  // 从指定位置开始，解析并解码字符串，直到遇到右括号或字符串结束，返回解码结果和下一个处理位置
-  function decode(s: string, i: number): [string, number] {
-    let curTimes = 0;
-    let curStr = '';
-
-    while (i < s.length && s[i] !== ']') {
-      if (s[i] >= '0' && s[i] <= '9') {
-        curTimes = curTimes * 10 + (+s[i]);
-      }
-      else if (s[i] === '[') {
-        // 递归调用：进入新层次
-        const [decoded, newIdx] = decode(s, i + 1);
-        curStr += decoded.repeat(curTimes);
-        curTimes = 0; // 重置，因为已经使用过了
-        i = newIdx;
-      }
-      else {
-        curStr += s[i];
-      }
-      i++;
-    }
-
-    return [curStr, i];
-  }
-
-  return decode(s, 0)[0];
+  return accStr;
 }
 // #endregion code
 
@@ -81,6 +43,10 @@ function decodeString1(s: string): string {
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/394.字符串解码/problem.md}
+ *
+ * @description
+ * {@include ../../../../../../.typedoc/leetcode/394.字符串解码/description.md}
+ * {@includeCode ./decode-string.ts#code}
  *
  * @group 栈和队列
  * @summary {@include ../../../../../../.typedoc/leetcode/394.字符串解码/summary.md}

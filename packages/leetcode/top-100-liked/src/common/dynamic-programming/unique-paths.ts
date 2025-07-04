@@ -35,7 +35,7 @@ function uniquePaths(m: number, n: number): number {
  * {@include ../../../../../../.typedoc/leetcode/62.不同路径/problem.md}
  *
  * @description
- * {@include ../../../../../../.typedoc/notes/62.不同路径.md}
+ * {@include ../../../../../../.typedoc/leetcode/62.不同路径/description.md}
  * {@includeCode ./unique-paths.ts/#code}
  * @group 动态规划
  * @summary {@include ../../../../../../.typedoc/leetcode/62.不同路径/summary.md}

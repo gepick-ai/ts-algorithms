@@ -227,6 +227,10 @@
     display: none !important;
 }
 
+.tsd-anchor-link#description {
+    display: none !important;
+}
+
 /* 针对 .tsd-tag-description 的折叠功能 - Light主题 */
 [data-theme="light"] .tsd-tag-description {
   position: relative;
@@ -438,8 +442,8 @@
   padding: 0 16px;
 }
 
-/* 隐藏所有内容 */
-.tsd-tag-description > * {
+/* 隐藏所有内容，但保留内容容器 */
+.tsd-tag-description > *:not(.tsd-tag-description-content) {
   display: none !important;
 }
 
@@ -447,6 +451,11 @@
   max-height: 2000px;
   opacity: 1;
   padding: 16px;
+}
+
+/* 确保展开状态下内容容器内的所有元素都显示 */
+.tsd-tag-description.expanded .tsd-tag-description-content > * {
+  display: block !important;
 }
 
 /* 滑入淡入动画 */
@@ -488,7 +497,7 @@
   margin-top: 0 !important;
   margin-bottom: 12px !important;
   padding-top: 0 !important;
-  color: var(--color-contrast-text);
+  color: var(--color-text);
   background-color: transparent !important;
   transition: color 0.3s ease;
 }
@@ -586,7 +595,7 @@
 
 [data-theme="os"] .tsd-tag-description::before:hover {
   background: linear-gradient(135deg, var(--color-background-secondary) 0%, var(--color-background-active) 100%);
-  color: var(--color-contrast-text);
+  color: var(--color-text);
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -610,13 +619,13 @@
 [data-theme="os"] .tsd-tag-description.expanded::before {
   content: '💡 收起答案';
   background: linear-gradient(135deg, #2d5a7a 0%, #1e3a5f 100%);
-  color: var(--color-contrast-text);
+  color: var(--color-text);
   border-bottom-color: var(--color-link);
 }
 
 [data-theme="os"] .tsd-tag-description.expanded::after {
   transform: rotate(180deg);
-  color: var(--color-contrast-text);
+  color: var(--color-text);
 }
 
 [data-theme="os"] .tsd-tag-description.expanded > * {
@@ -979,11 +988,19 @@
 @media (prefers-color-scheme: light) {
   [data-theme="os"] .tsd-tag-description.expanded::before {
     background: linear-gradient(135deg, var(--color-link) 0%, var(--color-focus-outline) 100%);
+    color: var(--color-contrast-text);
+  }
+  [data-theme="os"] .tsd-tag-description.expanded::after {
+    color: var(--color-contrast-text);
   }
 }
 @media (prefers-color-scheme: dark) {
   [data-theme="os"] .tsd-tag-description.expanded::before {
     background: linear-gradient(135deg, #2d5a7a 0%, #1e3a5f 100%);
+    color: var(--color-contrast-text);
+  }
+  [data-theme="os"] .tsd-tag-description.expanded::after {
+    color: var(--color-contrast-text);
   }
 }
 

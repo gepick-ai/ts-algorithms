@@ -8,23 +8,32 @@
 
 // #region code
 function dailyTemperatures(temperatures: number[]): number[] {
-  // 由于需要求相对间隔天数，我们在stack中存放下标而不是存放具体元素。具体元素可以通过temperatures[i]得到
-  const stack: number[] = [0];
-  const result: number[] = new Array(temperatures.length).fill(0);
+  // 由于需要求相对间隔天数，我们在s中存放下标而不是存放具体元素。具体元素可以通过temperatures[i]得到
+  const n = temperatures.length;
+  const s: number[] = []; // 我们让栈从栈底到栈顶维持单调递增
+  const ans: number[] = new Array(n).fill(0); // 按照题意创建n个位置，每个位置默认0，代表如果右边没有比当前位置更大的第一个数。
 
-  for (let i = 1; i < temperatures.length; i++) {
-    // 只要栈顶坐标所对应元素值比当前元素值小，说明找到了第一个比栈顶元素大的温度，结算一次。
-    // 结算完成该元素就没有存在的必要，出栈。
-    while (stack.length > 0 && temperatures[i] > temperatures[stack[stack.length - 1]]) {
-      const index = stack[stack.length - 1];
-      result[index] = i - index;
-      stack.pop();
+  // 从左往右，逐步查看每个数
+  for (let i = 0; i < n; i++) {
+    // 如果栈空，我们放入当前数
+    if (s.length === 0) {
+      s.push(i);
     }
+    else {
+      // 否则栈不为空，如果我们要放入当前数，那么为了维持单调递减，我们需要不断查看栈顶元素：
+      // 栈顶元素如果总是比当前数小，那么就出栈
+      // 最后我们放入当前数，这样一来栈维持单调递减。
+      // 由于栈里总是保持着没找到右边第一个比自己大的数，那么当我们能够出栈就代表我们看到了比栈顶数更大的第一个数了。于是我们记录结果
+      while (temperatures[s[s.length - 1]] < temperatures[i]) {
+        const j = s.pop()!;
+        ans[j] = i - j;
+      }
 
-    stack.push(i);
+      s.push(i);
+    }
   }
 
-  return result;
+  return ans;
 };
 // #endregion code
 // @lc code=end
@@ -35,7 +44,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
  *
  *
  * @description
- * {@include ../../../../../../.typedoc/notes/739.每日温度.md}
+ * {@include ../../../../../../.typedoc/leetcode/739.每日温度/description.md}
  * {@includeCode ./daily-temperatures.ts/#code}
  *
  * @group 栈和队列
