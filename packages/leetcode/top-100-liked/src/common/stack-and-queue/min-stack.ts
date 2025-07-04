@@ -5,110 +5,36 @@
  */
 
 // @lc code=start
+
+// #region code
 class MinStack {
-  private minHeap = new MinHeap();
-  private stack: number[] = [];
+  private minSt: number[] = [];
+  private st: number[] = [];
 
   push(val: number): void {
-    this.minHeap.add(val);
-    this.stack.push(val);
+    const minSt = this.minSt;
+    this.st.push(val);
+
+    if (minSt.length === 0 || minSt[minSt.length - 1] >= val) {
+      minSt.push(val);
+    }
   }
 
   pop(): void {
-    const num = this.stack.pop()!;
-    this.minHeap.del(num);
+    const minSt = this.minSt;
+    const top = this.st.pop()!;
+
+    if (top === minSt[minSt.length - 1]) {
+      minSt.pop();
+    }
   }
 
   top(): number {
-    return this.stack[this.stack.length - 1];
+    return this.st[this.st.length - 1]!;
   }
 
   getMin(): number {
-    return this.minHeap.getMin();
-  }
-}
-
-class MinHeap {
-  els: number[] = [];
-
-  getParentIndex(index: number): number {
-    return Math.floor((index - 1) / 2);
-  }
-
-  getLeftIndex(index: number): number {
-    return 2 * index + 1;
-  }
-
-  getRightIndex(index: number): number {
-    return 2 * index + 2;
-  }
-
-  swap(i: number, j: number): void {
-    [this.els[i], this.els[j]] = [this.els[j], this.els[i]];
-  }
-
-  swim(index: number) {
-    while (index > 0 && this.els[this.getParentIndex(index)] > this.els[index]) {
-      this.swap(this.getParentIndex(index), index);
-      index = this.getParentIndex(index);
-    }
-  }
-
-  sink(index: number) {
-    while (true) {
-      let leftIndex = this.getLeftIndex(index);
-
-      if (leftIndex > this.els.length - 1) {
-        break;
-      }
-
-      let minIndex = leftIndex;
-
-      if (this.getRightIndex(index) < this.els.length && this.els[this.getRightIndex(index)] < this.els[minIndex]) {
-        minIndex = this.getRightIndex(index);
-      }
-
-      if (this.els[minIndex] > this.els[index]) {
-        break;
-      }
-
-      this.swap(index, minIndex);
-
-      index = minIndex;
-    }
-  }
-
-  add(v: number) {
-    this.els.push(v);
-
-    this.swim(this.els.length - 1);
-  }
-
-  getMin() {
-    return this.els[0];
-  }
-
-  extractMin() {
-    const min = this.els[0];
-
-    this.swap(0, this.els.length - 1);
-    this.els.pop();
-
-    this.sink(0);
-
-    return min;
-  }
-
-  isEmpty() {
-    return this.els.length === 0;
-  }
-
-  del(v: number) {
-    const index = this.els.findIndex(n => v === n);
-
-    this.swap(index, this.els.length - 1);
-    this.els.pop();
-    this.sink(index);
+    return this.minSt[this.minSt.length - 1]!;
   }
 }
 
@@ -120,12 +46,19 @@ class MinHeap {
  * var param_3 = obj.top()
  * var param_4 = obj.getMin()
  */
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/155.最小栈/problem.md}
  *
+ * @description
+ * {@include ../../../../../../.typedoc/leetcode/155.最小栈/description.md}
+ * {@includeCode ./min-stack.ts#code}
  *
+ * @summary
+ * {@include ../../../../../../.typedoc/leetcode/155.最小栈/summary.md}
  *
  * @group 栈和队列
  */
