@@ -6,6 +6,7 @@
 
 import { ListNode } from "./types";
 
+// #region code
 // @lc code=start
 /**
  * Definition for singly-linked list.
@@ -19,7 +20,22 @@ import { ListNode } from "./types";
  * }
  */
 
+// 头插法
 function reverseList(head: ListNode | null): ListNode | null {
+  const dummy = new ListNode(-1);
+
+  while (head) {
+      const nxt = head.next;
+      head.next = dummy.next;
+      dummy.next = head;
+      head = nxt;
+  }
+
+  return dummy.next;
+}
+
+// 递归解法
+function reverseList1(head: ListNode | null): ListNode | null {
   // 要反转链表a->b->c，可以先反转b->c，然后让其next为a
   // 要反转b->c，可以先反转c，然后让其next为b
 
@@ -46,10 +62,14 @@ function reverseList(head: ListNode | null): ListNode | null {
 
   return newHead;
 };
+// #endregion code
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/206.反转链表/problem.md}
+ *
+ * @description {@include ../../../../../../.typedoc/leetcode/206.反转链表/description.md}
+ * {@includeCode ./reverse-linked-list.ts#code}
  *
  * @group 链表
  * @summary {@include ../../../../../../.typedoc/leetcode/206.反转链表/summary.md}
