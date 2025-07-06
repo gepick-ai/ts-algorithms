@@ -52,5 +52,6 @@ function reverseList(head: ListNode | null): ListNode | null {
  * {@include ../../../../../../.typedoc/leetcode/206.反转链表/problem.md}
  *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/206.反转链表/summary.md}
  */
 export const reverse_linked_list = reverseList;

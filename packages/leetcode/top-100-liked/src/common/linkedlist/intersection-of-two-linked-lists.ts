@@ -7,6 +7,8 @@
 import { ListNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -19,7 +21,21 @@ import { ListNode } from "./types";
  * }
  */
 
+// 双指针解法
 function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
+  let a = headA;
+  let b = headB;
+
+  while (a !== b) {
+    a = a ? a.next : headB;
+    b = b ? b.next : headA;
+  }
+
+  return a;
+};
+
+// Set解法
+function getIntersectionNode1(headA: ListNode | null, headB: ListNode | null): ListNode | null {
   const aSet = new WeakSet<ListNode>();
 
   while (headA) {
@@ -37,14 +53,16 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 
   return null;
 };
+// #endregion code
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/160.相交链表/problem.md}
  *
  * @description
- * 判断两段链表是否有交点，拿set放入一条链表所有节点，然后遍历另一条链表，如果set中存在越靠前遍历到的节点，说明就是交点。
+ * 
  *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/160.相交链表/summary.md}
  */
 export const intersection_of_two_linked_lists = getIntersectionNode;

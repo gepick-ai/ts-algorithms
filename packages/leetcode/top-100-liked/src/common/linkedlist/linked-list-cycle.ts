@@ -7,6 +7,9 @@
 import { ListNode } from "./types";
 
 // @lc code=start
+
+// #region code
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -19,7 +22,25 @@ import { ListNode } from "./types";
  * }
  */
 
+// 快慢指针解法
 function hasCycle(head: ListNode | null): boolean {
+  let slow = head;
+  let fast = head;
+
+  while (fast && fast.next) {
+    slow = slow!.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+// 哈希解法
+function hasCycle1(head: ListNode | null): boolean {
   const set = new WeakSet<ListNode>();
 
   while (head) {
@@ -33,6 +54,9 @@ function hasCycle(head: ListNode | null): boolean {
 
   return false;
 };
+
+// #endregion code
+
 // @lc code=end
 
 /**
@@ -42,5 +66,6 @@ function hasCycle(head: ListNode | null): boolean {
  * 用set记录遍历过的节点，如果遍历到set中存在的节点，说明有环。
  *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/141.环形链表/summary.md}
  */
 export const linked_list_cycle = hasCycle;

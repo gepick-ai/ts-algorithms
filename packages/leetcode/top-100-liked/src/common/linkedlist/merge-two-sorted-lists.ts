@@ -7,6 +7,8 @@
 import { ListNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -22,40 +24,38 @@ import { ListNode } from "./types";
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   const dummy = new ListNode(-1, null);
   let tail = dummy;
+  let l1 = list1;
+  let l2 = list2;
 
-  while (list1 && list2) {
-    if (list1.val <= list2.val) {
-      tail.next = list1;
-      list1 = list1.next;
-      tail = tail.next;
+  while (l1 && l2) {
+    if (l1.val <= l2.val) {
+      tail.next = l1;
+      l1 = l1.next;
     }
     else {
-      tail.next = list2;
-      list2 = list2.next;
-      tail = tail.next;
+      tail.next = l2;
+      l2 = l2.next;
     }
-  }
 
-  while (list1) {
-    tail.next = list1;
-    list1 = list1.next;
     tail = tail.next;
   }
 
-  while (list2) {
-    tail.next = list2;
-    list2 = list2.next;
-    tail = tail.next;
-  }
+  tail.next = l1 ?? l2;
 
   return dummy.next;
 };
+
+// #endregion code
 
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/21.合并两个有序链表/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/21.合并两个有序链表/description.md}
+ * {@includeCode ./merge-two-sorted-lists.ts#code}
+ *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/21.合并两个有序链表/summary.md}
  */
 export const merge_two_sorted_lists = mergeTwoLists;

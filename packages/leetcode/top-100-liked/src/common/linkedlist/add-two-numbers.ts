@@ -7,6 +7,9 @@
 import { ListNode } from "./types";
 
 // @lc code=start
+
+// #region code
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -20,17 +23,15 @@ import { ListNode } from "./types";
  */
 
 function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-  const dummy = new ListNode(-1, null);
+  const dummy = new ListNode(-1);
   let tail = dummy;
   let carry = 0;
 
   while (l1 || l2) {
-    const val1 = l1 ? l1.val : 0;
-    const val2 = l2 ? l2.val : 0;
-    const sum = val1 + val2 + carry;
+    let sum = (l1?.val ?? 0) + (l2?.val ?? 0) + carry;
     carry = Math.floor(sum / 10);
-    const val = sum % 10;
-    tail.next = new ListNode(val, null);
+
+    tail.next = new ListNode(sum % 10);
     tail = tail.next;
 
     if (l1) {
@@ -42,17 +43,23 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
     }
   }
 
-  if (carry) {
-    tail.next = new ListNode(carry, null);
+  if (carry > 0) {
+    tail.next = new ListNode(carry);
   }
 
   return dummy.next;
 };
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/2.两数相加/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/2.两数相加/description.md}
+ * {@includeCode ./add-two-numbers.ts#code}
+ *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/2.两数相加/summary.md}
  */
 export const add_two_numbers = addTwoNumbers;

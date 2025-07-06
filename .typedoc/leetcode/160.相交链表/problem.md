@@ -9,6 +9,7 @@
 ## 示例 1：
 
 ![示例1](../images/160.相交链表.jpg)
+
 **输入：** `intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3`
 
 **输出：** `Intersected at '8'`
