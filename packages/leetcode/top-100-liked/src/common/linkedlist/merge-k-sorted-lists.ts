@@ -7,6 +7,8 @@
 import { ListNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -19,6 +21,7 @@ import { ListNode } from "./types";
  * }
  */
 
+// 暴力解法
 function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
   if (lists.length === 0) {
     return null;
@@ -62,10 +65,15 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
 
   return dummy.next;
 };
+
+// #endregion code
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/23.合并K个升序链表/problem.md}
+ *
+ * @description {@include ../../../../../../.typedoc/leetcode/23.合并K个升序链表/description.md}
+ * {@includeCode ./merge-k-sorted-lists.ts#code}
  *
  * @group 链表
  * @summary {@include ../../../../../../.typedoc/leetcode/23.合并K个升序链表/summary.md}

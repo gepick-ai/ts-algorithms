@@ -7,6 +7,9 @@
 import { ListNode } from "./types";
 
 // @lc code=start
+
+// #region code
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -20,103 +23,67 @@ import { ListNode } from "./types";
  */
 
 function sortList(head: ListNode | null): ListNode | null {
-  const minHeap = new MinHeap();
+  function mergeTwoLists(l1: ListNode | null, l2: ListNode | null) {
+    const dummy = new ListNode(-1, null);
+    let tail = dummy;
 
-  while (head) {
-    const val = head.val;
-    minHeap.add(val);
-    head = head.next;
+    while (l1 && l2) {
+      if (l1.val <= l2.val) {
+        tail.next = l1;
+        l1 = l1.next;
+      }
+      else {
+        tail.next = l2;
+        l2 = l2.next;
+      }
+
+      tail = tail.next;
+    }
+
+    tail.next = l1 || l2;
+
+    return dummy.next;
   }
-  const dummy = new ListNode(-1);
-  let tail = dummy;
 
-  while (minHeap.hasNode()) {
-    tail.next = new ListNode(minHeap.getMin());
-    tail = tail.next;
+  function middleNode(head: ListNode | null) {
+    let slow = head;
+    let fast = head;
+    let pre = head;
+
+    while (fast && fast.next) {
+      pre = slow;
+      slow = slow!.next;
+      fast = fast.next.next;
+    }
+
+    pre!.next = null;
+
+    return slow;
   }
 
-  return dummy.next;
+  if (!head || !head.next) {
+    return head;
+  }
+
+  const mid = middleNode(head);
+
+  const l1 = sortList(head);
+  const l2 = sortList(mid);
+
+  return mergeTwoLists(l1, l2);
 };
 
-class MinHeap {
-  els: number[] = [];
+// #endregion code
 
-  getParentIndex(index: number): number {
-    return Math.floor((index - 1) / 2);
-  }
-
-  getLeftIndex(index: number): number {
-    return 2 * index + 1;
-  }
-
-  getRightIndex(index: number): number {
-    return 2 * index + 2;
-  }
-
-  swap(i: number, j: number): void {
-    const temp = this.els[i];
-    this.els[i] = this.els[j];
-    this.els[j] = temp;
-  }
-
-  swim(index: number): void {
-    while (this.els[this.getParentIndex(index)] > this.els[index]) {
-      this.swap(index, this.getParentIndex(index));
-
-      index = this.getParentIndex(index);
-    }
-  }
-
-  sink(index: number): void {
-    while (true) {
-      let leftIndex = this.getLeftIndex(index);
-
-      if (leftIndex > this.els.length - 1) {
-        break;
-      }
-
-      let minIndex = leftIndex;
-
-      if (this.getRightIndex(index) < this.els.length && this.els[this.getRightIndex(index)] < this.els[minIndex]) {
-        minIndex = this.getRightIndex(index);
-      }
-
-      if (this.els[minIndex] > this.els[index]) {
-        break;
-      }
-
-      this.swap(minIndex, index);
-
-      index = minIndex;
-    }
-  }
-
-  add(node: number) {
-    this.els.push(node);
-
-    this.swim(this.els.length - 1);
-  }
-
-  hasNode() {
-    return this.els.length > 0;
-  }
-
-  getMin(): number {
-    const min = this.els[0];
-
-    this.swap(0, this.els.length - 1);
-    this.els.pop();
-
-    this.sink(0);
-
-    return min;
-  }
-}
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/148.排序链表/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/148.排序链表/description.md}
+ * {@includeCode ./sort-list.ts#code}
+ *
  * @group 链表
+ * @summary {@include ../../../../../../.typedoc/leetcode/148.排序链表/summary.md}
  */
 export const sort_list = sortList;
