@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,26 +24,34 @@ import { TreeNode } from "./types";
  */
 
 function invertTree(root: TreeNode | null): TreeNode | null {
-  if (!root) {
-    return null;
+  function dfs(node: TreeNode | null) {
+    if (!node) {
+      return null;
+    }
+
+    const left = dfs(node.left);
+    const right = dfs(node.right);
+
+    node.left = right;
+    node.right = left;
+
+    return node;
   }
 
-  const left = root.left;
-  const right = root.right;
-
-  root.left = right;
-  root.right = left;
-
-  invertTree(left);
-  invertTree(right);
-
-  return root;
+  return dfs(root);
 };
+
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/226.翻转二叉树/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/226.翻转二叉树/description.md}
+ * {@includeCode ./invert-binary-tree.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/226.翻转二叉树/summary.md}
  */
 export const invert_binary_tree = invertTree;

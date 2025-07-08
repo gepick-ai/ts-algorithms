@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,28 +24,37 @@ import { TreeNode } from "./types";
  */
 
 function kthSmallest(root: TreeNode | null, k: number): number {
-  // 二叉搜索树的中序遍历就是一个升序的数组，直接找数组当中的k-1位置就是整个树第K小的元素。
-  const orderArr: number[] = [];
+  let ans = -Infinity;
+  
+  function dfs(node: TreeNode | null) {
+    if (!node) {
+      return;
+    }
 
-  _inorderTraverse(root, orderArr);
+    dfs(node.left);
 
-  return orderArr[k - 1];
-};
+    if (k > 0) {
+      ans = Math.max(ans, node.val);
+      k--;
+    }
 
-function _inorderTraverse(root: TreeNode | null, orderArr: number[]) {
-  if (!root) {
-    return;
+    dfs(node.right);
   }
 
-  _inorderTraverse(root.left, orderArr);
-  orderArr.push(root.val);
-  _inorderTraverse(root.right, orderArr);
-}
+  dfs(root);
+
+  return ans;
+};
+// #endregion code
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/230.二叉搜索树中第K小的元素/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/230.二叉搜索树中第K小的元素/description.md}
+ * {@includeCode ./kth-smallest-element-in-a-bst.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/230.二叉搜索树中第K小的元素/summary.md}
  */
 export const kth_smallest_element_in_a_bst = kthSmallest;

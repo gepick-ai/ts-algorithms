@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -24,26 +26,32 @@ import { TreeNode } from "./types";
 function inorderTraversal(root: TreeNode | null): number[] {
   const ans: number[] = [];
 
-  function _inorderTraversal(root: TreeNode | null) {
-    if (!root) {
+  function dfs(node: TreeNode | null) {
+    if (!node) {
       return;
     }
 
-    _inorderTraversal(root.left);
-    ans.push(root.val);
-
-    _inorderTraversal(root.right);
+    dfs(node.left);
+    ans.push(node.val);
+    dfs(node.right);
   }
 
-  _inorderTraversal(root);
+  dfs(root);
 
   return ans;
 };
+
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/94.二叉树的中序遍历/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/94.二叉树的中序遍历/description.md}
+ * {@includeCode ./binary-tree-inorder-traversal.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/94.二叉树的中序遍历/summary.md}
  */
 export const binary_tree_inorder_traversal = inorderTraversal;

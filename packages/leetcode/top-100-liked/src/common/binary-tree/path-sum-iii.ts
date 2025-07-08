@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -21,7 +23,40 @@ import { TreeNode } from "./types";
  * }
  */
 
+// 实现1
 function pathSum(root: TreeNode | null, targetSum: number): number {
+  let ans = 0;
+  let pre = 0;
+  const preToCnt = new Map<number, number>();
+  preToCnt.set(0, 1);
+
+  function dfs(node: TreeNode | null) {
+    if (!node) {
+      return;
+    }
+
+    pre += node.val;
+
+    const pre1 = pre - targetSum;
+    const cnt = preToCnt.get(pre1) ?? 0;
+
+    ans += cnt;
+    preToCnt.set(pre, (preToCnt.get(pre) ?? 0) + 1);
+
+    dfs(node.left);
+    dfs(node.right);
+
+    preToCnt.set(pre, (preToCnt.get(pre) ?? 0) - 1);
+    pre -= node.val;
+  }
+
+  dfs(root);
+
+  return ans;
+};
+
+// 实现2
+function pathSum1(root: TreeNode | null, targetSum: number): number {
   // 这道题给了“路径”限制：从上到下，也就是父到子的方向
   // DFS 遍历这棵树，遍历到节点 node 时，假设 node 是路径的终点，那么有多少个起点，满足起点到终点node的路径总和恰好等于targetSum？
   let k = targetSum;
@@ -53,10 +88,15 @@ function pathSum(root: TreeNode | null, targetSum: number): number {
   return ans;
 };
 
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/437.路径总和III/problem.md}
+ *
+ * @description {@include ../../../../../../.typedoc/leetcode/437.路径总和III/description.md}
+ * {@includeCode ./path-sum-iii.ts#code}
  *
  * @group 二叉树
  * @summary {@include ../../../../../../.typedoc/leetcode/437.路径总和III/summary.md}

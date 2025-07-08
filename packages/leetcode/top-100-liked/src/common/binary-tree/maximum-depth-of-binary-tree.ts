@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,19 +24,27 @@ import { TreeNode } from "./types";
  */
 
 function maxDepth(root: TreeNode | null): number {
-  // 整个二叉树的最大深度为根1 + Math.max(maxDepth(left), maxDepth(right))
+  function dfs(node: TreeNode | null): number {
+    if (!node) {
+      return 0;
+    }
 
-  if (!root) {
-    return 0;
+    return 1 + Math.max(dfs(node.left), dfs(node.right));
   }
 
-  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+  return dfs(root);
 };
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/104.二叉树的最大深度/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/104.二叉树的最大深度/description.md}
+ * {@includeCode ./maximum-depth-of-binary-tree.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/104.二叉树的最大深度/summary.md}
  */
 export const maximum_depth_of_binary_tree = maxDepth;

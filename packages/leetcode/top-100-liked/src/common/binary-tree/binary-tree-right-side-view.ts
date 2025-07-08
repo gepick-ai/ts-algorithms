@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,44 +24,41 @@ import { TreeNode } from "./types";
  */
 
 function rightSideView(root: TreeNode | null): number[] {
-  const queue: TreeNode[] = [];
   const ans: number[] = [];
+  const queue: TreeNode[] = [];
 
-  if (!root) {
-    return ans;
+  if (root) {
+    queue.push(root);
   }
 
-  queue.push(root);
-
   while (queue.length > 0) {
-    // 当前层的节点个数
-    let curLevelSize = queue.length;
+    const n = queue.length;
 
-    while (curLevelSize > 0) {
-      const root = queue.shift()!;
+    for (let i = 0; i < n; i++) {
+      const node = queue.shift()!;
 
-      // 说明当前的root是本层最右的节点，应该收集答案了
-      if (--curLevelSize === 0) {
-        ans.push(root.val);
+      if (i === n - 1) {
+        ans.push(node.val);
       }
 
-      if (root.left) {
-        queue.push(root.left);
-      }
-
-      if (root.right) {
-        queue.push(root.right);
-      }
+      node.left && queue.push(node.left);
+      node.right && queue.push(node.right);
     }
   }
 
   return ans;
 };
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/199.二叉树的右视图/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/199.二叉树的右视图/description.md}
+ * {@includeCode ./binary-tree-right-side-view.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/199.二叉树的右视图/summary.md}
  */
 export const binary_tree_right_side_view = rightSideView;

@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -25,33 +27,43 @@ import { TreeNode } from "./types";
  * Do not return anything, modify root in-place instead.
  */
 function flatten(root: TreeNode | null): void {
-  const orderArr: TreeNode[] = [];
-
-  _preorderTraverse(root, orderArr);
-  for (let i = 0; i < orderArr.length; i++) {
-    const node = orderArr[i];
-
-    if (i + 1 < orderArr.length) {
-      node.right = orderArr[i + 1];
-      node.left = null;
-    }
-  }
-};
-
-function _preorderTraverse(root: TreeNode | null, orderArr: TreeNode[]): void {
   if (!root) {
     return;
   }
 
-  orderArr.push(root);
-  _preorderTraverse(root.left, orderArr);
-  _preorderTraverse(root.right, orderArr);
-}
+  let cur = new TreeNode(-1);
+
+  function dfs(node: TreeNode | null) {
+    if (!node) {
+      return;
+    }
+
+    const l = node.left;
+    const r = node.right;
+
+    cur.right = node;
+    node.left = null;
+    cur = node;
+
+    dfs(l);
+    dfs(r);
+  }
+
+  dfs(root);
+
+  root = cur.right;
+};
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/114.二叉树展开为链表/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/114.二叉树展开为链表/description.md}
+ * {@includeCode ./flatten-binary-tree-to-linked-list.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/114.二叉树展开为链表/summary.md}
  */
 export const flatten_binary_tree_to_linked_list = flatten;

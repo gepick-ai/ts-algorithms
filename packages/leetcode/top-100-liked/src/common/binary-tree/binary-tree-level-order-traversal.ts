@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,43 +24,42 @@ import { TreeNode } from "./types";
  */
 
 function levelOrder(root: TreeNode | null): number[][] {
-  let queue: TreeNode[] = [];
-  let nextLevelNodes: TreeNode[] = [];
-  let levelAns: number[] = [];
-  let ans: number[][] = [];
+  const ans: number[][] = [];
+  const queue: TreeNode[] = [];
 
   if (root) {
     queue.push(root);
   }
 
   while (queue.length > 0) {
-    const node = queue.shift()!;
+    const n = queue.length;
+    const path: number[] = [];
 
-    levelAns.push(node.val);
+    for (let i = 0; i < n; i++) {
+      const node = queue.shift()!;
+      path.push(node.val);
 
-    if (node.left) {
-      nextLevelNodes.push(node.left);
+      node.left && queue.push(node.left);
+      node.right && queue.push(node.right);
     }
 
-    if (node.right) {
-      nextLevelNodes.push(node.right);
-    }
-
-    if (queue.length === 0) {
-      queue.push(...nextLevelNodes);
-      ans.push(levelAns);
-      levelAns = [];
-      nextLevelNodes = [];
-    }
+    ans.push([...path]);
   }
 
   return ans;
 };
+
+// #endregion code
+
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/102.二叉树的层序遍历/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/102.二叉树的层序遍历/description.md}
+ * {@includeCode ./binary-tree-level-order-traversal.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/102.二叉树的层序遍历/summary.md}
  */
 export const binary_tree_level_order_traversal = levelOrder;

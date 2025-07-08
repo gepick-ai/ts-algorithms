@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,32 +24,32 @@ import { TreeNode } from "./types";
  */
 
 function isSymmetric(root: TreeNode | null): boolean {
-  // 在判断自己的左右子树值一样的情况下：
-  // 继续判断自己的左子树的left和右子树的right，以及左子树的right和右子树的left是否相等
+  // 判断一颗二叉树轴对称就看它的所有子树的左右子树是否轴对称，如果是那么整棵二叉树就轴对称
+  function dfs(n1: TreeNode | null, n2: TreeNode | null): boolean {
+    if (!n1 && !n2) {
+      return true;
+    }
 
-  if (!root) {
-    return true;
+    if (!n1 || !n2) {
+      return false;
+    }
+
+    return n1.val === n2.val && dfs(n1.left, n2.right) && dfs(n1.right, n2.left);
   }
 
-  return _isSymmetric(root.left, root.right);
+  return !!root && dfs(root.left, root.right);
 };
+// #endregion code
 
-function _isSymmetric(n1: TreeNode | null, n2: TreeNode | null): boolean {
-  if (!n1 && !n2) {
-    return true;
-  }
-
-  if (!n1 || !n2) {
-    return false;
-  }
-
-  return n1.val === n2.val && _isSymmetric(n1.left, n2.right) && _isSymmetric(n1.right, n2.left);
-}
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/101.对称二叉树/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/101.对称二叉树/description.md}
+ * {@includeCode ./symmetric-tree.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/101.对称二叉树/summary.md}
  */
 export const symmetric_tree = isSymmetric;

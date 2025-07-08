@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -21,35 +23,30 @@ import { TreeNode } from "./types";
  * }
  */
 function sortedArrayToBST(nums: number[]): TreeNode | null {
-  // 二叉搜索树的中序遍历的结果就是一个升序的数组。
-  // 中序遍历的顺序是：左根右。
-  // 分治处理：每次都二分寻找有序数组的根
+  function dfs(l: number, r: number): TreeNode | null {
+    if (l > r) {
+      return null;
+    }
 
-  return buildTree(nums, 0, nums.length);
-};
+    const m = Math.floor((l + r) / 2);
 
-/**
- * 建树，其中start和end是左闭右开的,[start, end)
- */
-function buildTree(nums: number[], start: number, end: number) {
-  if (start === end) {
-    return null;
+    return new TreeNode(nums[m], dfs(l, m - 1), dfs(m + 1, r));
   }
 
-  let rootLoc = Math.floor((start + end) / 2);
+  return dfs(0, nums.length - 1);
+};
 
-  const root = new TreeNode(nums[rootLoc]);
+// #endregion code
 
-  root.left = buildTree(nums, start, rootLoc);
-  root.right = buildTree(nums, rootLoc + 1, end);
-
-  return root;
-}
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/108.将有序数组转换为二叉搜索树/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/108.将有序数组转换为二叉搜索树/description.md}
+ * {@includeCode ./convert-sorted-array-to-binary-search-tree.ts#code}
+ *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/108.将有序数组转换为二叉搜索树/summary.md}
  */
 export const convert_sorted_array_to_binary_search_tree = sortedArrayToBST;

@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -24,40 +26,35 @@ import { TreeNode } from "./types";
 function isValidBST(root: TreeNode | null): boolean {
   let pre = -Infinity;
 
-  function _isValidBST(root: TreeNode | null): boolean {
-    if (!root) {
+  function dfs(node: TreeNode | null): boolean {
+    if (!node) {
       return true;
     }
 
-    if (!_isValidBST(root.left)) {
+    const l = dfs(node.left);
+
+    if (pre >= node.val) {
       return false;
     }
+    pre = node.val;
 
-    if (pre >= root.val) {
-      return false;
-    }
+    const r = dfs(node.right);
 
-    pre = root.val;
+    return l && r;
+  }
 
-    return _isValidBST(root.right);
-  };
+  return dfs(root);
+};
+// #endregion code
 
-  return _isValidBST(root);
-}
 // @lc code=end
-
-// 二叉搜索树要求：
-// 左子树的所有节点值都小于根节点
-// 右子树的所有节点值都大于根节点
-
 /**
  * {@include ../../../../../../.typedoc/leetcode/98.验证二叉搜索树/problem.md}
  *
- * @description
- * 利用二叉搜索树的中序遍历结果是升序的特性，来判断是否是二叉搜索树。
- * 中序遍历的顺序是：左根右。
- * 所以前一个节点值>=当前节点值，则不是二叉搜索树。
+ * @description {@include ../../../../../../.typedoc/leetcode/98.验证二叉搜索树/description.md}
+ * {@includeCode ./validate-binary-search-tree.ts#code}
  *
  * @group 二叉树
+ * @summary {@include ../../../../../../.typedoc/leetcode/98.验证二叉搜索树/summary.md}
  */
 export const validate_binary_search_tree = isValidBST;

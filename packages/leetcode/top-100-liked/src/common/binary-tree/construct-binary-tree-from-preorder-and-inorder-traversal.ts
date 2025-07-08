@@ -7,6 +7,8 @@
 import { TreeNode } from "./types";
 
 // @lc code=start
+
+// #region code
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -22,29 +24,32 @@ import { TreeNode } from "./types";
  */
 
 function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
-  return _buildTree(preorder, inorder, 0, 0, inorder.length - 1);
-}
+  const valToIdx = new Map<number, number>(inorder.map((v, i) => [v, i]));
 
-function _buildTree(
-  preorder: number[],
-  inorder: number[],
-  preStart: number, // 追踪 preorder 的当前位置
-  inStart: number,
-  inEnd: number,
-): TreeNode | null {
-  if (preStart >= preorder.length || inStart > inEnd) {
-    return null;
+  // 前序遍历序列的第一个节点是当前子树的根
+  // 中序遍历序列可以根据这个节点划分成左右两部分，对应的就是当前子树的左右子树
+  // 根据中序遍历划分子树节点个数
+  // 当前操作：根据描述寻找当前子树的根
+  // 下一个子问题：将preorder缩小为对应子树的preorder，inorder为对应子树的inorder
+
+  function dfs(preL: number, inL: number, inR: number): TreeNode | null {
+    if (preL >= preorder.length || inL > inR) {
+      return null;
+    }
+
+    const val = preorder[preL];
+    const mid = valToIdx.get(val)!;
+    const lSize = mid - inL;
+
+    const l = dfs(preL + 1, inL, mid - 1);
+    const r = dfs(preL + lSize + 1, mid + 1, inR);
+
+    return new TreeNode(val, l, r);
   }
 
-  const rootVal = preorder[preStart]; // 使用索引而不是 shift
-  const root = new TreeNode(rootVal);
-  const rootInLoc = inorder.findIndex(val => val === rootVal)!;
-
-  root.left = _buildTree(preorder, inorder, preStart + 1, inStart, rootInLoc - 1);
-  root.right = _buildTree(preorder, inorder, preStart + (rootInLoc - inStart) + 1, rootInLoc + 1, inEnd);
-
-  return root;
-}
+  return dfs(0, 0, inorder.length - 1);
+};
+// #endregion code
 
 // @lc code=end
 
@@ -52,14 +57,12 @@ function _buildTree(
  * {@include ../../../../../../.typedoc/leetcode/105.从前序与中序遍历序列构造二叉树/problem.md}
  *
  * @description
- * 通过前序遍历和中序遍历构建二叉树，关键点在于通过不断改变追踪索引，确定新子树的前序遍历和后序遍历的结果。
- * 如果每一层都拿根子树的前序遍历结果，那么就无法确定新子树的根节点。
- * 很容易错的地方在于正确处理了中序遍历的索引，但是没处理前序遍历的索引。理所当然认为不断shift preorder的头元素就是新子树的根。这是不对的。
- * 左右子树的前序遍历节点范围是需要重新计算的。
- *
- * 左子树的起始位置 preStart + 1：因为在前序遍历中，根节点后面紧跟着的就是左子树的根节点，所以左子树的起始位置就是当前根节点位置 + 1。
- * 右子树的起始位置 preStart + (rootInLoc - inStart) + 1：rootInLoc - inStart 表示左子树中有多少个节点。因为前序遍历是：根节点 + 左子树 + 右子树，所以右子树的起始位置 = 根节点位置 + 左子树节点数 + 1。
+ * {@include ../../../../../../.typedoc/leetcode/105.从前序与中序遍历序列构造二叉树/description.md}
+ * {@includeCode ./construct-binary-tree-from-preorder-and-inorder-traversal.ts#code}
  *
  * @group 二叉树
+ * @summary
+ * {@include ../../../../../../.typedoc/leetcode/105.从前序与中序遍历序列构造二叉树/summary.md}
+ *
  */
 export const construct_binary_tree_from_preorder_and_inorder_traversal = buildTree;
