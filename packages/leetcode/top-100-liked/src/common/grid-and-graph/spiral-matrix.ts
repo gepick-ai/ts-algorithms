@@ -5,69 +5,94 @@
  */
 
 // @lc code=start
+
+// #region code
+
+// 标记解法
 function spiralOrder(matrix: number[][]): number[] {
-  const rows = matrix.length;
-  const cols = matrix[0].length;
-  const result: number[] = [];
-
-  // 设置四个指针top、bottom、left、right
-  // 从右、下、左、上每朝一个方向跑完一次，对应指针跳动一次
-
-  let top = 0;
-  let bottom = rows - 1;
-  let left = 0;
-  let right = cols - 1;
-  const visited: boolean[][] = Array.from({ length: rows }, () => new Array(cols).fill(false));
-
-  while (top <= bottom && left <= right) {
-    // 顺时针开始跑动
-
-    // 朝右跑
-    for (let i = left; i <= right; i++) {
-      if (!visited[top][i]) {
-        result.push(matrix[top][i]);
-        visited[top][i] = true;
-      }
+  const ans: number[] = [];
+  const m = matrix.length;
+  const n = matrix[0].length;
+  const visit = (i: number, j: number) => {
+    if (matrix[i][j] !== Infinity) {
+      ans.push(matrix[i][j]);
+      matrix[i][j] = Infinity;
     }
+  };
 
-    top++;
+  let t = 0;
+  let b = m - 1;
+  let l = 0;
+  let r = n - 1;
 
-    for (let i = top; i <= bottom; i++) {
-      if (!visited[i][right]) {
-        result.push(matrix[i][right]);
-        visited[i][right] = true;
-      }
+  while (t <= b && l <= r) {
+    for (let i = l; i <= r; i++) {
+      visit(t, i);
     }
+    t++;
 
-    right--;
-
-    for (let i = right; i >= left; i--) {
-      if (!visited[bottom][i]) {
-        result.push(matrix[bottom][i]);
-        visited[bottom][i] = true;
-      }
+    for (let i = t; i <= b; i++) {
+      visit(i, r);
     }
+    r--;
 
-    bottom--;
-
-    for (let i = bottom; i >= top; i--) {
-      if (!visited[i][left]) {
-        result.push(matrix[i][left]);
-        visited[i][left] = true;
-      }
+    for (let i = r; i >= l; i--) {
+      visit(b, i);
     }
+    b--;
 
-    left++;
+    for (let i = b; i >= t; i--) {
+      visit(i, l);
+    }
+    l++;
   }
 
-  return result;
+  return ans;
 };
+
+// 不标记解法
+function spiralOrder1(matrix: number[][]): number[] {
+  const ans: number[] = [];
+  const m = matrix.length;
+  const n = matrix[0].length;
+
+  let t = 0;
+  let b = m - 1;
+  let l = 0;
+  let r = n - 1;
+
+  while (t <= b && l <= r) {
+    for (let i = l; i <= r; i++) {
+      ans.push(matrix[t][i]);
+    }
+    t++;
+    for (let i = t; i <= b; i++) {
+      ans.push(matrix[i][r]);
+    }
+    r--;
+    for (let i = r; i >= l; i--) {
+      ans.push(matrix[b][i]);
+    }
+    b--;
+    for (let i = b; i >= t; i--) {
+      ans.push(matrix[i][l]);
+    }
+    l++;
+  }
+
+  return ans;
+};
+// #endregion code
 
 // @lc code=end
 
 /**
  * {@include ../../../../../../.typedoc/leetcode/54.螺旋矩阵/problem.md}
  *
+ * @description {@include ../../../../../../.typedoc/leetcode/54.螺旋矩阵/description.md}
+ * {@includeCode ./spiral-matrix.ts#code}
+ *
  * @group 网格图
+ * @summary {@include ../../../../../../.typedoc/leetcode/54.螺旋矩阵/summary.md}
  */
 export const spiral_matrix = spiralOrder;
