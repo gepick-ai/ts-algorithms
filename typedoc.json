@@ -14,25 +14,31 @@
   },
   "name": "Typescript-Algorithms",
   "out": "./docs",
-  // 导航条
-  "navigationLinks": {
-    "LeetCode热题100": "https://leetcode.cn/studyplan/top-100-liked",
-    "面试经典150题": "https://leetcode.cn/studyplan/top-interview-150",
-    "Github": "https://github.com/gepick-ai/ts-algorithms"
-  },
   "hideGenerator": true,
   "logLevel": "Error",
   "includeHierarchySummary": false,
+  "sort": [
+    "source-order"
+  ],
   "headings": {
     "readme": false,
     "document": false
   },
-  "sort": [
-    "source-order"
-  ],
   "navigation": {
     "includeGroups": true,
     "includeFolders": true
+  },
+  "customCss": [
+    ".typedoc/assets/custom.css"
+  ],
+  "customJs": [
+    ".typedoc/assets/collapsible.js"
+  ],
+   // 导航条
+   "navigationLinks": {
+    "LeetCode热题100": "https://leetcode.cn/studyplan/top-100-liked",
+    "面试经典150题": "https://leetcode.cn/studyplan/top-interview-150",
+    "Github": "https://github.com/gepick-ai/ts-algorithms"
   },
   "projectDocuments": [
     ".typedoc/0x3f/如何科学刷题.md",
@@ -48,11 +54,5 @@
     ".typedoc/0x3f/贪心算法.md",
     ".typedoc/0x3f/链表、二叉树与回溯.md",
     ".typedoc/0x3f/字符串.md"
-  ],
-  "customCss": [
-    ".typedoc/assets/custom.css"
-  ],
-  "customJs": [
-    ".typedoc/assets/collapsible.js"
   ]
 }
